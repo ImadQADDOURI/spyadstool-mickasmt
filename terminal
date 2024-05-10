@@ -1,0 +1,12 @@
+#install pnpm first
+
+npx create-next-app my-saas-project --example "https://github.com/mickasmt/next-saas-stripe-starter"
+pnpm install
+cp .env.example .env.local
+
+---------------------------------------------------PRISMA----------------------------------------------------
+npx prisma
+npx prisma db push
+
+Whenever you make changes to your database that are reflected in the Prisma schema, you need to manually re-generate Prisma Client to update the generated code in the node_modules/.prisma/client directory:
+-->prisma generate (see DOCUMENTATION FOR MORE INFO https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/introduction )
