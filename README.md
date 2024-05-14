@@ -64,7 +64,6 @@ pnpm run dev
 >
 > After upgrade Auth.js to v5: `NEXTAUTH_URL` has removed from `.env.example`.
 
-
 ## Roadmap
 
 - [x] ~Fix Vaul drawer for mobile sign in~
@@ -135,3 +134,331 @@ This project was inspired by shadcn's [Taxonomy](https://github.com/shadcn-ui/ta
 - Shadcn ([@shadcn](https://twitter.com/shadcn))
 - Steven Tey ([@steventey](https://twitter.com/steventey))
 - Antonio Erdeljac ([@YTCodeAntonio](https://twitter.com/AntonioErdeljac))
+
+```
+spyadstool-mickasmt
+├─ .commitlintrc.json
+├─ .dependencygraph
+│  └─ setting.json
+├─ .eslintrc.json
+├─ .git
+│  ├─ COMMIT_EDITMSG
+│  ├─ config
+│  ├─ description
+│  ├─ HEAD
+│  ├─ hooks
+│  │  ├─ applypatch-msg.sample
+│  │  ├─ commit-msg.sample
+│  │  ├─ fsmonitor-watchman.sample
+│  │  ├─ post-update.sample
+│  │  ├─ pre-applypatch.sample
+│  │  ├─ pre-commit.sample
+│  │  ├─ pre-merge-commit.sample
+│  │  ├─ pre-push.sample
+│  │  ├─ pre-rebase.sample
+│  │  ├─ pre-receive.sample
+│  │  ├─ prepare-commit-msg.sample
+│  │  ├─ push-to-checkout.sample
+│  │  ├─ sendemail-validate.sample
+│  │  └─ update.sample
+│  ├─ index
+│  ├─ info
+│  │  └─ exclude
+│  ├─ logs
+│  │  ├─ HEAD
+│  │  └─ refs
+│  │     ├─ heads
+│  │     │  └─ main
+│  │     └─ remotes
+│  │        └─ origin
+│  │           └─ main
+│  ├─ objects
+│  │  ├─ 00
+│  │  │  ├─ 4cedeb4d53ef596713f162d8b8f452165d8378
+│  │  │  └─ e65b1eae58d072b4bb2e80f9a0050d17ee1dfc
+│  │  ├─ 01
+│  │  ...
+│  │  ├─ fe
+│  │  │  └─ 8c79d9caa9594f555137ec92b725a930f6c341
+│  │  ├─ ff
+│  │  │  ├─ 45de2bce47d1eb6c3a780794698a2e4ab9c877
+│  │  │  └─ d6c4464b37069d9cd97d465801f85db0209757
+│  │  ├─ info
+│  │  └─ pack
+│  └─ refs
+│     ├─ heads
+│     │  └─ main
+│     ├─ remotes
+│     │  └─ origin
+│     │     └─ main
+│     └─ tags
+├─ .gitignore
+├─ .husky
+│  ├─ commit-msg
+│  └─ pre-commit
+├─ .nvmrc
+├─ .prettierignore
+├─ actions
+│  ├─ generate-user-stripe.ts
+│  ├─ open-customer-portal.ts
+│  └─ update-user-name.ts
+├─ app
+│  ├─ (auth)
+│  │  ├─ layout.tsx
+│  │  ├─ login
+│  │  │  └─ page.tsx
+│  │  └─ register
+│  │     └─ page.tsx
+│  ├─ (dashboard)
+│  │  └─ dashboard
+│  │     ├─ billing
+│  │     │  ├─ loading.tsx
+│  │     │  └─ page.tsx
+│  │     ├─ layout.tsx
+│  │     ├─ loading.tsx
+│  │     ├─ page.tsx
+│  │     └─ settings
+│  │        ├─ loading.tsx
+│  │        └─ page.tsx
+│  ├─ (docs)
+│  │  ├─ docs
+│  │  │  ├─ layout.tsx
+│  │  │  └─ [[...slug]]
+│  │  │     └─ page.tsx
+│  │  ├─ guides
+│  │  │  ├─ layout.tsx
+│  │  │  ├─ page.tsx
+│  │  │  └─ [...slug]
+│  │  │     └─ page.tsx
+│  │  └─ layout.tsx
+│  ├─ (marketing)
+│  │  ├─ blog
+│  │  │  ├─ page.tsx
+│  │  │  └─ [...slug]
+│  │  │     └─ page.tsx
+│  │  ├─ error.tsx
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  ├─ pricing
+│  │  │  ├─ loading.tsx
+│  │  │  └─ page.tsx
+│  │  └─ [...slug]
+│  │     └─ page.tsx
+│  ├─ api
+│  │  ├─ auth
+│  │  │  └─ [...nextauth]
+│  │  │     └─ route.ts
+│  │  ├─ og
+│  │  │  └─ route.tsx
+│  │  └─ webhooks
+│  │     └─ stripe
+│  │        └─ route.ts
+│  ├─ layout.tsx
+│  ├─ opengraph-image.jpg
+│  └─ robots.ts
+├─ assets
+│  └─ fonts
+│     ├─ CalSans-SemiBold.ttf
+│     ├─ CalSans-SemiBold.woff2
+│     ├─ index.ts
+│     ├─ Inter-Bold.ttf
+│     └─ Inter-Regular.ttf
+├─ auth.config.ts
+├─ auth.ts
+├─ components
+│  ├─ analytics.tsx
+│  ├─ billing-info.tsx
+│  ├─ blog-posts.tsx
+│  ├─ content
+│  │  ├─ mdx-card.tsx
+│  │  └─ mdx-components.tsx
+│  ├─ dashboard
+│  │  ├─ header.tsx
+│  │  └─ shell.tsx
+│  ├─ docs
+│  │  ├─ page-header.tsx
+│  │  ├─ pager.tsx
+│  │  ├─ search.tsx
+│  │  └─ sidebar-nav.tsx
+│  ├─ forms
+│  │  ├─ billing-form-button.tsx
+│  │  ├─ customer-portal-button.tsx
+│  │  ├─ newsletter-form.tsx
+│  │  ├─ user-auth-form.tsx
+│  │  └─ user-name-form.tsx
+│  ├─ layout
+│  │  ├─ main-nav.tsx
+│  │  ├─ mobile-nav.tsx
+│  │  ├─ mode-toggle.tsx
+│  │  ├─ nav.tsx
+│  │  ├─ navbar.tsx
+│  │  ├─ sign-in-modal.tsx
+│  │  ├─ site-footer.tsx
+│  │  └─ user-account-nav.tsx
+│  ├─ modal-provider.tsx
+│  ├─ pricing-cards.tsx
+│  ├─ pricing-faq.tsx
+│  ├─ sections
+│  │  ├─ bentogrid.tsx
+│  │  ├─ features.tsx
+│  │  ├─ hero-landing.tsx
+│  │  ├─ info-landing.tsx
+│  │  ├─ powered.tsx
+│  │  ├─ preview-landing.tsx
+│  │  └─ testimonials.tsx
+│  ├─ shared
+│  │  ├─ callout.tsx
+│  │  ├─ card-skeleton.tsx
+│  │  ├─ copy-button.tsx
+│  │  ├─ empty-placeholder.tsx
+│  │  ├─ header-section.tsx
+│  │  ├─ icons.tsx
+│  │  ├─ modal.tsx
+│  │  ├─ toc.tsx
+│  │  └─ user-avatar.tsx
+│  ├─ tailwind-indicator.tsx
+│  └─ ui
+│     ├─ accordion.tsx
+│     ├─ alert-dialog.tsx
+│     ├─ alert.tsx
+│     ├─ aspect-ratio.tsx
+│     ├─ avatar.tsx
+│     ├─ badge.tsx
+│     ├─ button.tsx
+│     ├─ calendar.tsx
+│     ├─ card.tsx
+│     ├─ checkbox.tsx
+│     ├─ collapsible.tsx
+│     ├─ command.tsx
+│     ├─ context-menu.tsx
+│     ├─ dialog.tsx
+│     ├─ dropdown-menu.tsx
+│     ├─ form.tsx
+│     ├─ hover-card.tsx
+│     ├─ input.tsx
+│     ├─ label.tsx
+│     ├─ menubar.tsx
+│     ├─ navigation-menu.tsx
+│     ├─ popover.tsx
+│     ├─ progress.tsx
+│     ├─ radio-group.tsx
+│     ├─ scroll-area.tsx
+│     ├─ select.tsx
+│     ├─ separator.tsx
+│     ├─ sheet.tsx
+│     ├─ skeleton.tsx
+│     ├─ slider.tsx
+│     ├─ switch.tsx
+│     ├─ tabs.tsx
+│     ├─ textarea.tsx
+│     ├─ toast.tsx
+│     ├─ toaster.tsx
+│     ├─ toggle-group.tsx
+│     ├─ toggle.tsx
+│     ├─ tooltip.tsx
+│     └─ use-toast.ts
+├─ components.json
+├─ config
+│  ├─ dashboard.ts
+│  ├─ docs.ts
+│  ├─ landing.ts
+│  ├─ marketing.ts
+│  ├─ site.ts
+│  └─ subscriptions.ts
+├─ content
+│  ├─ authors
+│  │  └─ shadcn.mdx
+│  ├─ blog
+│  │  ├─ deploying-next-apps.mdx
+│  │  ├─ dynamic-routing-static-regeneration.mdx
+│  │  ├─ preview-mode-headless-cms.mdx
+│  │  └─ server-client-components.mdx
+│  ├─ docs
+│  │  ├─ configuration
+│  │  │  ├─ authentification.mdx
+│  │  │  ├─ components.mdx
+│  │  │  ├─ config-files.mdx
+│  │  │  ├─ database.mdx
+│  │  │  ├─ email.mdx
+│  │  │  ├─ markdown-files.mdx
+│  │  │  └─ subscriptions.mdx
+│  │  ├─ in-progress.mdx
+│  │  ├─ index.mdx
+│  │  └─ installation.mdx
+│  ├─ guides
+│  │  └─ using-next-auth-next-13.mdx
+│  └─ pages
+│     ├─ privacy.mdx
+│     └─ terms.mdx
+├─ contentlayer.config.ts
+├─ emails
+│  └─ magic-link-email.tsx
+├─ env.mjs
+├─ hooks
+│  ├─ use-intersection-observer.ts
+│  ├─ use-local-storage.ts
+│  ├─ use-lock-body.ts
+│  ├─ use-media-query.ts
+│  ├─ use-mounted.ts
+│  ├─ use-scroll.ts
+│  └─ use-signin-modal.ts
+├─ lib
+│  ├─ db.ts
+│  ├─ email.ts
+│  ├─ exceptions.ts
+│  ├─ session.ts
+│  ├─ stripe.ts
+│  ├─ subscription.ts
+│  ├─ toc.ts
+│  ├─ user.ts
+│  ├─ utils.ts
+│  └─ validations
+│     ├─ auth.ts
+│     ├─ og.ts
+│     └─ user.ts
+├─ LICENSE.md
+├─ middleware.ts
+├─ next.config.js
+├─ package-lock.json
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.js
+├─ prettier.config.js
+├─ prisma
+│  ├─ migrations
+│  │  └─ 0_init
+│  │     └─ migration.sql
+│  └─ schema.prisma
+├─ public
+│  ├─ android-chrome-192x192.png
+│  ├─ android-chrome-512x512.png
+│  ├─ apple-touch-icon.png
+│  ├─ favicon-16x16.png
+│  ├─ favicon-32x32.png
+│  ├─ favicon.ico
+│  ├─ images
+│  │  ├─ avatars
+│  │  │  └─ shadcn.png
+│  │  ├─ blog
+│  │  │  ├─ blog-post-1.jpg
+│  │  │  ├─ blog-post-2.jpg
+│  │  │  ├─ blog-post-3.jpg
+│  │  │  └─ blog-post-4.jpg
+│  │  ├─ hero.png
+│  │  └─ work-from-home.jpg
+│  ├─ og.jpg
+│  ├─ site.webmanifest
+│  └─ vercel.svg
+├─ README.md
+├─ routes.ts
+├─ styles
+│  ├─ globals.css
+│  └─ mdx.css
+├─ tailwind.config.ts
+├─ terminal
+├─ tsconfig.json
+└─ types
+   ├─ index.d.ts
+   └─ next-auth.d.ts
+
+```

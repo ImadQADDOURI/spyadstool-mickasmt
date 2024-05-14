@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import useScroll from "@/hooks/use-scroll";
 import { useSigninModal } from "@/hooks/use-signin-modal";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { ModeToggle } from "@/components/layout/mode-toggle";
 
 import { Icons } from "../shared/icons";
 import { MainNav } from "./main-nav";
@@ -58,6 +59,7 @@ export function NavBar({
             </Link>
           ) : null} */}
 
+          <ModeToggle />
           {user ? (
             <UserAccountNav user={user} />
           ) : (

@@ -1,0 +1,15 @@
+{
+  "alias": {
+    "@/*": "*",
+    "contentlayer/generated": ".contentlayer\\generated"
+  },
+  "resolveExtensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx",
+    ".vue",
+    ".scss",
+    ".less"
+  ]
+}
