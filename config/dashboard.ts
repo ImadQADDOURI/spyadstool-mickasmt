@@ -1,7 +1,8 @@
-import { DashboardConfig } from "types"
+import { DashboardConfig } from "types";
 
 export const dashboardConfig: DashboardConfig = {
   mainNav: [
+    /*
     {
       title: "Documentation",
       href: "/docs",
@@ -11,6 +12,11 @@ export const dashboardConfig: DashboardConfig = {
       href: "/support",
       disabled: true,
     },
+    */
+    { title: "Trending", href: "/dashboard/trending" },
+    { title: "Ad Library", href: "/dashboard/ad-library" },
+    { title: "Saved Ads", href: "/dashboard/saved-ads" },
+    { title: "Extension", href: "/dashboard/extension" },
   ],
   sidebarNav: [
     {
@@ -29,4 +35,4 @@ export const dashboardConfig: DashboardConfig = {
       icon: "settings",
     },
   ],
-}
+};
