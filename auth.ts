@@ -1,10 +1,11 @@
-import NextAuth from "next-auth"
-import { PrismaAdapter } from "@auth/prisma-adapter"
-import { prisma } from "@/lib/db"
-import authConfig from "@/auth.config"
-import { getUserById } from "@/lib/user"
+import authConfig from "@/auth.config";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import NextAuth from "next-auth";
 
-export const { 
+import { prisma } from "@/lib/db";
+import { getUserById } from "@/lib/user";
+
+export const {
   handlers: { GET, POST },
   auth,
 } = NextAuth({
@@ -20,7 +21,7 @@ export const {
         if (token.sub) {
           session.user.id = token.sub;
         }
-  
+
         if (token.email) {
           session.user.email = token.email;
         }
@@ -29,7 +30,7 @@ export const {
         session.user.image = token.picture;
       }
 
-      return session
+      return session;
     },
 
     async jwt({ token }) {
@@ -47,5 +48,5 @@ export const {
     },
   },
   ...authConfig,
-  // debug: process.env.NODE_ENV !== "production"
-})
+  debug: process.env.NODE_ENV !== "production",
+});
