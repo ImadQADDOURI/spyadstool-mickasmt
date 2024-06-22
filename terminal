@@ -10,3 +10,8 @@ npx prisma db push
 
 Whenever you make changes to your database that are reflected in the Prisma schema, you need to manually re-generate Prisma Client to update the generated code in the node_modules/.prisma/client directory:
 -->npx prisma generate (see DOCUMENTATION FOR MORE INFO https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/introduction )
+
+---
+
+pnpm dlx shadcn-ui@latest add popover
+pnpm dlx shadcn-ui@latest add command

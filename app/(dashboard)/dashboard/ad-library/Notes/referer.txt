@@ -1,0 +1,2 @@
+search-ads :       https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=icecream&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&search_type=keyword_unordered&media_type=all
+search-typeahead : https://www.facebook.com/ads/library/?active_status=all&ad_type=political_and_issue_ads&country=MA&media_type=all
