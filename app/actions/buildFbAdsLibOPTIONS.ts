@@ -1,6 +1,6 @@
 "use server";
 
-import store_XHR_Request_Options from "@/lib/store_XHR_Request_Options";
+import { prisma } from "@/lib/db";
 
 import { puppeteerCaptureXHRRequests } from "./puppeteerCaptureXHRRequests";
 
@@ -24,7 +24,7 @@ export async function buildFbAdsLibOPTIONS() {
 
     // Prepare the options object
     const options = {
-      method,
+      method: method || "POST",
       headers: {
         ...headers,
         accept: "*/*",
@@ -35,26 +35,52 @@ export async function buildFbAdsLibOPTIONS() {
         "sec-fetch-site": "same-origin",
         referer: "https://www.facebook.com/ads/library/",
       },
-      body: new URLSearchParams(postData),
+      body: postData ? new URLSearchParams(postData).toString() : undefined,
     };
 
+    // Store the options in the database
+    const storedOptions = await prisma.xHRRequestOptions.create({
+      data: {
+        url,
+        method: options.method,
+        headers: options.headers,
+        body: options.body,
+        queryParams: Object.fromEntries(new URL(url).searchParams),
+      },
+    });
+
     console.log(
-      "🚀 ~ file: buildFbAdsLibOPTIONS.ts:buildFbAdsLibOPTIONS ~ options:",
-      //  options,
+      "🚀 ~ file: buildFbAdsLibOPTIONS.ts:buildFbAdsLibOPTIONS ~ options stored in database:",
+      storedOptions.id,
     );
 
-    // Store the options in the singleton store
-    store_XHR_Request_Options.setOptions(options);
-
-    return options;
+    return storedOptions;
   } catch (error) {
+    console.error("Error storing XHR options:", error);
     return {
-      message: " ❌ An error occurred while building the XHR request options ",
+      message:
+        " ❌ An error occurred while building and storing the XHR request options ",
       error: error.message,
     };
   }
 }
 
 export async function getStoredOptions() {
-  return store_XHR_Request_Options.getOptions();
+  // Retrieve the most recent options from the database
+  const latestOptions = await prisma.xHRRequestOptions.findFirst({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  if (!latestOptions) {
+    return null;
+  }
+
+  // Convert the stored data back into the format your application expects
+  return {
+    method: latestOptions.method || "POST",
+    headers: (latestOptions.headers as Record<string, string>) || {},
+    body: latestOptions.body || "",
+  };
 }

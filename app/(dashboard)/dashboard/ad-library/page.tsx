@@ -46,7 +46,7 @@ export default function Home() {
       try {
         const options = await getStoredOptions();
         console.log(
-          "🚀 ~ file: page.tsx:display_Store_XHR_Request_Options ~ display_Store_XHR_Request_Options:",
+          "🚀 ~ file: page.tsx:buildFbAdsLibOPTIONS ~ options: getStoredOptions ",
           options,
         );
       } catch (error) {

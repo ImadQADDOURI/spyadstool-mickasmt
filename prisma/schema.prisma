@@ -72,3 +72,17 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map(name: "verification_tokens")
 }
+
+model XHRRequestOptions {
+  id             String   @id @default(cuid())
+  url            String?
+  method         String?
+  headers        Json?
+  body           String?
+  queryParams    Json?
+  responseData   Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map(name: "xhr_request_options")
+}

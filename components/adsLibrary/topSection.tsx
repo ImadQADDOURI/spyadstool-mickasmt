@@ -9,7 +9,7 @@ export const TopSection = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults, setSearchResults] = useState<any>(null);
 
   const handleSelectCountry = (value: string) => {
     setSelectedCountry(value);
@@ -20,13 +20,26 @@ export const TopSection = () => {
   const handleSearch = (keyword: string) => {
     setSearchQuery(keyword);
   };
+
   const handleSearchAds = async () => {
-    const results = await searchAds({
-      countries: [selectedCountry],
-      ad_type: selectedCategory,
-      q: searchQuery,
-    });
-    setSearchResults(results.results);
+    try {
+      const results = await searchAds({
+        countries: [selectedCountry],
+        ad_type: selectedCategory,
+        q: searchQuery,
+      });
+
+      console.log(
+        "🚀 ~ file: topSection.tsx:handleSearchAds ~ results:",
+        results,
+      );
+
+      // Set the entire results object
+      setSearchResults(results);
+    } catch (error) {
+      console.error("🚀 ~ Error searching ads:", error);
+      setSearchResults(null);
+    }
   };
 
   return (
@@ -51,14 +64,11 @@ export const TopSection = () => {
           Search Ads
         </button>
       </div>
+
       <div>
         <h2>Search Results:</h2>
-        {searchResults.length > 0 ? (
-          <ul>
-            {searchResults.map((result) => (
-              <li key={result.id}>{result.name}</li>
-            ))}
-          </ul>
+        {searchResults ? (
+          <pre>{JSON.stringify(searchResults, null, 2)}</pre>
         ) : (
           <p>No results found.</p>
         )}

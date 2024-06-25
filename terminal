@@ -15,3 +15,193 @@ Whenever you make changes to your database that are reflected in the Prisma sche
 
 pnpm dlx shadcn-ui@latest add popover
 pnpm dlx shadcn-ui@latest add command
+
+---
+
+I apologize for the confusion. It seems that the `next clean` command is not recognized or not available in your current Next.js version. Let's try an alternative approach to clear the Next.js cache:
+
+1. Manually remove the `.next` directory:
+
+   ```
+   rm -rf .next
+   ```
+
+   If you're using Windows Command Prompt, use:
+
+   ```
+   rmdir /s /q .next
+   ```
+
+   Or in PowerShell:
+
+   ```
+   Remove-Item -Recurse -Force .next
+   ```
+
+2. Also, let's remove the `node_modules` directory and the lock file:
+
+   ```
+   rm -rf node_modules pnpm-lock.yaml
+   ```
+
+   On Windows Command Prompt:
+
+   ```
+   rmdir /s /q node_modules
+   del pnpm-lock.yaml
+   ```
+
+   Or in PowerShell:
+
+   ```
+   Remove-Item -Recurse -Force node_modules
+   Remove-Item pnpm-lock.yaml
+   ```
+
+3. Reinstall the dependencies:
+
+   ```
+   pnpm install
+   ```
+
+4. Regenerate the Prisma client:
+
+   ```
+   pnpm prisma generate
+   ```
+
+5. Now, try building your project again:
+   ```
+   pnpm run build
+   ```
+
+If you're still encountering issues, please share the new error message. Also, could you confirm the exact version of Next.js you're using? You can find this in your `package.json` file under the `dependencies` or `devDependencies` section.
+
+If the problem persists, we might need to consider upgrading or downgrading your Next.js version to ensure compatibility with all your dependencies. Let me know the results, and we can proceed from there.
+
+---
+
+---
+
+ERROR:
+ ERR_PNPM_EPERM  EPERM: operation not permitted, rename 'D:\SAAS_SPY_ADS_TOOL\spyadstool-mickasmt\node_modules\.pnpm\date-fns@2.30.0\node_modules\date-fns_tmp_45472' -> 'D:\SAAS_SPY_ADS_TOOL\spyadstool-mickasmt\node_modules\.pnpm\date-fns@2.30.0\node_modules\date-fns'
+
+Claude-->
+I apologize for the inconvenience. The error you're experiencing is likely due to file system permissions or a process holding onto a file. Here are some steps to try and resolve this issue:
+
+1. Close any applications that might be using files in your project directory, especially code editors or terminals.
+
+2. If you're using Windows, try running your command prompt or PowerShell as an administrator.
+
+3. If the error persists, try clearing the pnpm store and cache:
+
+   ```
+   pnpm store prune
+   pnpm cache clean --all
+   ```
+
+4. If that doesn't work, you can try to force the installation:
+
+   ```
+   pnpm install --force
+   ```
+
+5. If you're still having issues, you could try using npm instead of pnpm for this installation:
+
+   ```
+   npm install
+   ```
+
+6. As a last resort, you could try deleting the `node_modules` folder manually and then running the install command again:
+
+   ```
+   rm -rf node_modules
+   pnpm install
+   ```
+
+   On Windows Command Prompt:
+
+   ```
+   rmdir /s /q node_modules
+   pnpm install
+   ```
+
+   Or in PowerShell:
+
+   ```
+   Remove-Item -Recurse -Force node_modules
+   pnpm install
+   ```
+
+If none of these solutions work, it might be worth checking your system's antivirus or security software, as sometimes these can interfere with npm/pnpm operations.
+
+After successfully installing the dependencies, don't forget to regenerate the Prisma client:
+
+```
+pnpm prisma generate
+```
+
+Then try building your project again:
+
+```
+pnpm run build
+```
+
+If you're still encountering issues, please provide the new error message or any other relevant information. We may need to look into your project's specific setup or consider alternative package management solutions.
+
+---
+
+-->ERROR
+pnpm run build
+
+> saas-starter@0.2.0 build D:\SAAS_SPY_ADS_TOOL\spyadstool-mickasmt
+> next build
+
+▲ Next.js 14.2.4
+
+- Environments: .env
+
+Creating an optimized production build ...
+Warning: Contentlayer might not work as expected on Windows
+Generated 19 documents in .contentlayer
+✓ Compiled successfully
+Linting and checking validity of types ... ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.
+Linting and checking validity of types ...Failed to compile.
+
+./auth.ts:12:3
+Type error: Type 'import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/adapters").Adapter' is not assignable to type 'import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/adapters").Adapter'.
+Types of property 'getAuthenticator' are incompatible.
+Type '((credentialID: string) => import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/types").Awaitable<import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/adapters").Adapt...' is not assignable to type '((credentialID: string) => import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/types").Awaitable<import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/adapters").Adapt...'.
+Type '(credentialID: string) => import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/types").Awaitable<import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/adapters").Adapte...' is not assignable to type '(credentialID: string) => import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/types").Awaitable<import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/adapters").Adapte...'.
+Type 'import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/types").Awaitable<import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/adapters").AdapterAuthenticator | null>' is not assignable to type 'import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/types").Awaitable<import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/adapters").AdapterAuthenticator | null>'.
+Type 'AdapterAuthenticator' is not assignable to type 'Awaitable<AdapterAuthenticator | null>'.
+Type 'import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.34.1_nodemailer@6.9.14/node_modules/@auth/core/adapters").AdapterAuthenticator' is not assignable to type 'import("D:/SAAS_SPY_ADS_TOOL/spyadstool-mickasmt/node_modules/.pnpm/@auth+core@0.27.0_nodemailer@6.9.14/node_modules/@auth/core/adapters").AdapterAuthenticator'.
+Types of property 'transports' are incompatible.
+Type 'string | null | undefined' is not assignable to type 'string | undefined'.
+Type 'null' is not assignable to type 'string | undefined'.
+
+10 | auth,
+11 | } = NextAuth({
+
+> 12 | adapter: PrismaAdapter(prisma),
+
+     |   ^
+
+13 | session: { strategy: "jwt" },
+14 | pages: {
+15 | signIn: "/login",
+ ELIFECYCLE  Command failed with exit code 1.
+
+-->Solution is to install version 2.0.0 $pnpm add @auth/prisma-adapter@2.0.0
+
+---
+
+installation steps :
+--> pnpm store prune
+--> Remove-Item -Recurse -Force .next
+--> Remove-Item -Recurse -Force node_modules
+--> Remove-Item pnpm-lock.yaml
+--> pnpm install
+--> pnpm add @auth/prisma-adapter@2.0.0
+--> npx prisma db push
+--> pnpm run build
