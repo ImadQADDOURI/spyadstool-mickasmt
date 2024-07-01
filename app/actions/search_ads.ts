@@ -14,9 +14,11 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     // Get the request options
     const options = await getStoredOptions();
 
+    //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ url:", url);
     //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ options:", options);
 
-    //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ url:", url);
+    console.log("🚀🚀🚀🚀 ~ XHR url & options ~ 🚀🚀🚀🚀");
+    console.log(url, "\n", options);
 
     // Fetch the data from the Facebook Ads Library
     const response = await fetch(url, options || undefined);

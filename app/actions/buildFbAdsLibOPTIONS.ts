@@ -34,6 +34,10 @@ export async function buildFbAdsLibOPTIONS() {
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         referer: "https://www.facebook.com/ads/library/",
+        "sec-ch-prefers-color-scheme": "light",
+        "sec-ch-ua-model": "",
+        "sec-ch-ua-platform-version": "15.0.0",
+        //"sec-ch-ua-full-version-list": "Not/A)Brand";v="8.0.0.0", "Chromium";v="126.0.6478.116", "Google Chrome";v="126.0.6478.116"
       },
       body: postData ? new URLSearchParams(postData).toString() : undefined,
     };

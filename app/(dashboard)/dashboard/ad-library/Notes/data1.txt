@@ -1,0 +1,365 @@
+{
+    "__ar": 1,
+    "payload": {
+        "isResultComplete": false,
+        "results": [
+            [
+                {
+                    "adid": "0",
+                    "adArchiveID": "7937419362984677",
+                    "archiveTypes": [],
+                    "categories": [
+                        0
+                    ],
+                    "containsDigitallyCreatedMedia": false,
+                    "containsSensitiveContent": false,
+                    "collationCount": 1,
+                    "collationID": 440859534178771,
+                    "currency": "",
+                    "endDate": 1719730800,
+                    "entityType": "person_profile",
+                    "fevInfo": null,
+                    "finServAdData": {
+                        "is_deemed_finserv": false,
+                        "is_limited_delivery": false
+                    },
+                    "gatedType": "eligible",
+                    "hasUserReported": false,
+                    "hiddenSafetyData": false,
+                    "hideDataStatus": "NONE",
+                    "impressionsWithIndex": {
+                        "impressionsText": null,
+                        "impressionsIndex": -1
+                    },
+                    "isAAAEligible": false,
+                    "isAdAccountActioned": false,
+                    "isActive": true,
+                    "isProfilePage": false,
+                    "pageID": "108614280833032",
+                    "pageInfo": null,
+                    "pageIsDeleted": false,
+                    "pageName": "Spicy Baboon",
+                    "politicalCountries": [],
+                    "reachEstimate": null,
+                    "reportCount": null,
+                    "snapshot": {
+                        "ad_creative_id": "120210571221640277",
+                        "cards": [],
+                        "body_translations": {},
+                        "byline": null,
+                        "caption": "www.spicybaboon.com.au",
+                        "cta_text": "Shop now",
+                        "dynamic_item_flags": {},
+                        "dynamic_versions": null,
+                        "edited_snapshots": [],
+                        "effective_authorization_category": "NONE",
+                        "event": [],
+                        "extra_images": [],
+                        "extra_links": [],
+                        "extra_texts": [],
+                        "extra_videos": [],
+                        "instagram_shopping_products": [],
+                        "display_format": "video",
+                        "title": "🥳The Ultimate Prank Birthday Card!🎵🎉",
+                        "link_description": "Rick Roll Your Mates!",
+                        "link_url": "https://www.spicybaboon.com.au/collections/birthday-cards/",
+                        "page_welcome_message": null,
+                        "images": [],
+                        "videos": [
+                            {
+                                "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/448093008_7937419446318002_34196997319795216_n.?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=19aj9-Yl6ysQ7kNvgFyBTbd&_nc_ht=video.ffez1-2.fna&oh=00_AYAWVJn_lB3tNTcIE8BIgdQKYWI1V9OzDNpbDWjxek-U8g&oe=66886700",
+                                "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/288876411_434039954953276_6675834571056410512_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HSZSjiFTKO4Q7kNvgFnXCfr&_nc_ht=video.ffez2-1.fna&oh=00_AYDQG5I_p0L7YVx60Ts1-acZldKi2xBQPkvO9wvPRtBOIw&oe=668877C3",
+                                "watermarked_video_sd_url": "",
+                                "watermarked_video_hd_url": "",
+                                "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/448268454_991769669007414_7638238808187749100_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=y4D3vaP6zdEQ7kNvgGIe9uy&_nc_ht=scontent.ffez2-2.fna&oh=00_AYCVxfr5Dkb38NKw1B5hTjxXHCefBIPD0Msi6BcBAr3kew&oe=66886AF7"
+                            }
+                        ],
+                        "creation_time": 1718162225,
+                        "page_id": 108614280833032,
+                        "page_name": "Spicy Baboon",
+                        "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/448211207_1186622245701111_4432370589207504000_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9LW7lzcfsIQQ7kNvgEIGtLa&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDyuG1n7-zYeW7DW3JUc3J9NvcMxAGCa3CyDalrQdVm1Q&oe=66889203",
+                        "page_categories": {
+                            "200600219953504": "Shopping"
+                        },
+                        "page_entity_type": "person_profile",
+                        "page_is_profile_page": false,
+                        "instagram_actor_name": "Spicy Baboon",
+                        "instagram_profile_pic_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/448027802_1001677470886833_5739073189518479645_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1BkkJ2iyw8wQ7kNvgH_yUiC&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDsNFtNu5L97oq9xyEMsnBQTXXfB9ntMMyP2x8p4el5rA&oe=6688828C",
+                        "instagram_url": "",
+                        "instagram_handle": "",
+                        "is_reshared": false,
+                        "version": 3,
+                        "body": {
+                            "context": {},
+                            "markup": {
+                                "__html": "🥳🎵Time to Rick Roll your mates with this ultimate sound + glitter prank card!🎉<br /> <br /> The Rick Astley classic, &quot;Never Gonna Give You Up&quot; loops non-stop, open or closed until the battery dies (3+ Hours!). Glitter inside if they rip it apart!🎉<br /> <br /> All cards stocked in Australia for super fast delivery!🦘💨"
+                            },
+                            "callerHash": "2a24cfe5f720438c57a99051c1ecbc41"
+                        },
+                        "brazil_tax_id": null,
+                        "branded_content": null,
+                        "current_page_name": "Spicy Baboon",
+                        "disclaimer_label": null,
+                        "page_like_count": 13793,
+                        "page_profile_uri": "https://facebook.com/SpicyBaboon",
+                        "page_is_deleted": false,
+                        "root_reshared_post": null,
+                        "cta_type": "SHOP_NOW",
+                        "additional_info": null,
+                        "ec_certificates": null,
+                        "country_iso_code": null,
+                        "instagram_branded_content": null
+                    },
+                    "spend": null,
+                    "startDate": 1718089200,
+                    "stateMediaRunLabel": null,
+                    "publisherPlatform": [
+                        "facebook",
+                        "instagram",
+                        "messenger"
+                    ],
+                    "menuItems": []
+                }
+            ],          
+            [
+                {
+                    "adid": "0",
+                    "adArchiveID": "614883647466513",
+                    "archiveTypes": [],
+                    "categories": [
+                        0
+                    ],
+                    "containsDigitallyCreatedMedia": false,
+                    "containsSensitiveContent": false,
+                    "collationCount": 3,
+                    "collationID": 1455582285290509,
+                    "currency": "",
+                    "endDate": 1695884400,
+                    "entityType": "person_profile",
+                    "fevInfo": null,
+                    "finServAdData": {
+                        "is_deemed_finserv": false,
+                        "is_limited_delivery": false
+                    },
+                    "gatedType": "eligible",
+                    "hasUserReported": false,
+                    "hiddenSafetyData": false,
+                    "hideDataStatus": "NONE",
+                    "impressionsWithIndex": {
+                        "impressionsText": null,
+                        "impressionsIndex": -1
+                    },
+                    "isAAAEligible": true,
+                    "isAdAccountActioned": false,
+                    "isActive": false,
+                    "isProfilePage": false,
+                    "pageID": "636476589892441",
+                    "pageInfo": null,
+                    "pageIsDeleted": false,
+                    "pageName": "Wild Baboon",
+                    "politicalCountries": [],
+                    "reachEstimate": null,
+                    "reportCount": null,
+                    "snapshot": {
+                        "ad_creative_id": "23858966424170468",
+                        "cards": [
+                            {
+                                "body": "𝘞𝘪𝘭𝘭𝘴𝘵 𝘥𝘶 𝘸𝘪𝘴𝘴𝘦𝘯 𝘷𝘰𝘯 𝘸𝘦𝘭𝘤𝘩𝘦𝘳 𝘚𝘬𝘪𝘯𝘤𝘢𝘳𝘦 𝘙𝘰𝘶𝘵𝘪𝘯𝘦 9/10 𝘶𝘯𝘴𝘦𝘳𝘦𝘳 𝘒𝘶𝘯𝘥𝘐𝘯𝘯𝘦𝘯 𝘴𝘢𝘨𝘦𝘯, 𝘴𝘪𝘦 𝘩ä𝘵𝘵𝘦𝘯 𝘨𝘦𝘳𝘯𝘦 𝘧𝘳ü𝘩𝘦𝘳 𝘥𝘢𝘷𝘰𝘯 𝘦𝘳𝘧𝘢𝘩𝘳𝘦𝘯? \n\n𝘌𝘧𝘧𝘦𝘬𝘵𝘪𝘷𝘦 𝘚𝘬𝘪𝘯𝘤𝘢𝘳𝘦 𝘒𝘰𝘮𝘣𝘪𝘯𝘢𝘵𝘪𝘰𝘯 𝘢𝘶𝘴 𝘈𝘭𝘰𝘦 𝘝𝘦𝘳𝘢 𝘶𝘯𝘥 𝘒𝘢𝘬𝘵𝘶𝘴𝘧𝘦𝘪𝘨𝘦 𝘪𝘮 𝘶𝘯𝘴𝘤𝘩𝘭𝘢𝘨𝘣𝘢𝘳𝘦𝘯 𝘈𝘯𝘨𝘦𝘣𝘰𝘵. 🌵",
+                                "caption": null,
+                                "cta_text": "Learn More",
+                                "cta_type": "LEARN_MORE",
+                                "title": "HEUTE: Spare 15€ auf das Beauty Set! 🍃",
+                                "link_description": null,
+                                "link_url": "https://wildbaboon.de/products/beauty-set-mit-aloe-vera-und-kaktusfeigenkernol",
+                                "original_image_url": null,
+                                "resized_image_url": null,
+                                "watermarked_resized_image_url": null,
+                                "image_crops": null,
+                                "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/10000000_614883724133172_2088315617475445248_n.?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_5mMQT9gz1YQ7kNvgEddefw&_nc_ht=video.ffez1-2.fna&oh=00_AYBizLSpfgWmowzSy-r3-fQiioO7hWCEfhCl2MJOuXka7Q&oe=66886880",
+                                "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/377486554_238207242552805_3614232652007185725_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KimsFSSIrXAQ7kNvgHOuJ9L&_nc_ht=video.ffez1-2.fna&oh=00_AYCt1AAszP4SnFPD8ggz-Cz5qdyp1CmCMt9Yv9k3G0d8WA&oe=66886D7F",
+                                "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/379941937_1350506948882083_2809790869003528280_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3K4J82B4Ib4Q7kNvgE4u5lP&_nc_ht=scontent.ffez2-1.fna&oh=00_AYA3MQysz0EeeXYio7-7xXJDLAkiA6s60ImWfMpOLABDuA&oe=668870DE",
+                                "watermarked_video_hd_url": "",
+                                "watermarked_video_sd_url": ""
+                            },
+                            {
+                                "body": "𝘞𝘪𝘭𝘭𝘴𝘵 𝘥𝘶 𝘸𝘪𝘴𝘴𝘦𝘯 𝘷𝘰𝘯 𝘸𝘦𝘭𝘤𝘩𝘦𝘳 𝘚𝘬𝘪𝘯𝘤𝘢𝘳𝘦 𝘙𝘰𝘶𝘵𝘪𝘯𝘦 9/10 𝘶𝘯𝘴𝘦𝘳𝘦𝘳 𝘒𝘶𝘯𝘥𝘐𝘯𝘯𝘦𝘯 𝘴𝘢𝘨𝘦𝘯, 𝘴𝘪𝘦 𝘩ä𝘵𝘵𝘦𝘯 𝘨𝘦𝘳𝘯𝘦 𝘧𝘳ü𝘩𝘦𝘳 𝘥𝘢𝘷𝘰𝘯 𝘦𝘳𝘧𝘢𝘩𝘳𝘦𝘯? \n\n𝘌𝘧𝘧𝘦𝘬𝘵𝘪𝘷𝘦 𝘚𝘬𝘪𝘯𝘤𝘢𝘳𝘦 𝘒𝘰𝘮𝘣𝘪𝘯𝘢𝘵𝘪𝘰𝘯 𝘢𝘶𝘴 𝘈𝘭𝘰𝘦 𝘝𝘦𝘳𝘢 𝘶𝘯𝘥 𝘒𝘢𝘬𝘵𝘶𝘴𝘧𝘦𝘪𝘨𝘦 𝘪𝘮 𝘶𝘯𝘴𝘤𝘩𝘭𝘢𝘨𝘣𝘢𝘳𝘦𝘯 𝘈𝘯𝘨𝘦𝘣𝘰𝘵. 🌵",
+                                "caption": null,
+                                "cta_text": "Learn More",
+                                "cta_type": "LEARN_MORE",
+                                "title": "HEUTE: Spare 15€ auf das Beauty Set! 🍃",
+                                "link_description": null,
+                                "link_url": "https://wildbaboon.de/products/beauty-set-mit-aloe-vera-und-kaktusfeigenkernol",
+                                "original_image_url": null,
+                                "resized_image_url": null,
+                                "watermarked_resized_image_url": null,
+                                "image_crops": null,
+                                "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/10000000_614883724133172_2088315617475445248_n.?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_5mMQT9gz1YQ7kNvgEddefw&_nc_ht=video.ffez1-2.fna&oh=00_AYBizLSpfgWmowzSy-r3-fQiioO7hWCEfhCl2MJOuXka7Q&oe=66886880",
+                                "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/377486554_238207242552805_3614232652007185725_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KimsFSSIrXAQ7kNvgHOuJ9L&_nc_ht=video.ffez1-2.fna&oh=00_AYCt1AAszP4SnFPD8ggz-Cz5qdyp1CmCMt9Yv9k3G0d8WA&oe=66886D7F",
+                                "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/379941937_1350506948882083_2809790869003528280_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3K4J82B4Ib4Q7kNvgE4u5lP&_nc_ht=scontent.ffez2-1.fna&oh=00_AYA3MQysz0EeeXYio7-7xXJDLAkiA6s60ImWfMpOLABDuA&oe=668870DE",
+                                "watermarked_video_hd_url": "",
+                                "watermarked_video_sd_url": ""
+                            },
+                            {
+                                "body": "𝘞𝘪𝘭𝘭𝘴𝘵 𝘥𝘶 𝘸𝘪𝘴𝘴𝘦𝘯 𝘷𝘰𝘯 𝘸𝘦𝘭𝘤𝘩𝘦𝘳 𝘚𝘬𝘪𝘯𝘤𝘢𝘳𝘦 𝘙𝘰𝘶𝘵𝘪𝘯𝘦 9/10 𝘶𝘯𝘴𝘦𝘳𝘦𝘳 𝘒𝘶𝘯𝘥𝘐𝘯𝘯𝘦𝘯 𝘴𝘢𝘨𝘦𝘯, 𝘴𝘪𝘦 𝘩ä𝘵𝘵𝘦𝘯 𝘨𝘦𝘳𝘯𝘦 𝘧𝘳ü𝘩𝘦𝘳 𝘥𝘢𝘷𝘰𝘯 𝘦𝘳𝘧𝘢𝘩𝘳𝘦𝘯? \n\n𝘌𝘧𝘧𝘦𝘬𝘵𝘪𝘷𝘦 𝘚𝘬𝘪𝘯𝘤𝘢𝘳𝘦 𝘒𝘰𝘮𝘣𝘪𝘯𝘢𝘵𝘪𝘰𝘯 𝘢𝘶𝘴 𝘈𝘭𝘰𝘦 𝘝𝘦𝘳𝘢 𝘶𝘯𝘥 𝘒𝘢𝘬𝘵𝘶𝘴𝘧𝘦𝘪𝘨𝘦 𝘪𝘮 𝘶𝘯𝘴𝘤𝘩𝘭𝘢𝘨𝘣𝘢𝘳𝘦𝘯 𝘈𝘯𝘨𝘦𝘣𝘰𝘵. 🌵",
+                                "caption": null,
+                                "cta_text": "Learn More",
+                                "cta_type": "LEARN_MORE",
+                                "title": "HEUTE: Spare 15€ auf das Beauty Set! 🍃",
+                                "link_description": null,
+                                "link_url": "https://wildbaboon.de/products/beauty-set-mit-aloe-vera-und-kaktusfeigenkernol",
+                                "original_image_url": null,
+                                "resized_image_url": null,
+                                "watermarked_resized_image_url": null,
+                                "image_crops": null,
+                                "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/10000000_614883740799837_7721993813423482367_n.?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Z9cUHWVcQuQQ7kNvgFaXb1_&_nc_ht=video.ffez2-2.fna&oh=00_AYCh7-QXdb65zUyJir6EkksMqSzcXlPPRKDMh9hKOcIczA&oe=66886F69",
+                                "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/377486554_238207242552805_3614232652007185725_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KimsFSSIrXAQ7kNvgHOuJ9L&_nc_ht=video.ffez1-2.fna&oh=00_AYCt1AAszP4SnFPD8ggz-Cz5qdyp1CmCMt9Yv9k3G0d8WA&oe=66886D7F",
+                                "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/381661048_1003411224229212_5076879643373576707_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aIL2sbrR4TcQ7kNvgHSt9Go&_nc_ht=scontent.ffez1-1.fna&oh=00_AYA2006Rblps04iwke9PFr5Qx0JtBHzGwXGyQ76B1AUANQ&oe=66887C2E",
+                                "watermarked_video_hd_url": "",
+                                "watermarked_video_sd_url": ""
+                            }
+                        ],
+                        "body_translations": {},
+                        "byline": null,
+                        "caption": "wildbaboon.de",
+                        "cta_text": "Learn more",
+                        "dynamic_item_flags": {},
+                        "dynamic_versions": null,
+                        "edited_snapshots": [],
+                        "effective_authorization_category": "NONE",
+                        "event": [],
+                        "extra_images": [],
+                        "extra_links": [],
+                        "extra_texts": [],
+                        "extra_videos": [],
+                        "instagram_shopping_products": [],
+                        "display_format": "dco",
+                        "title": null,
+                        "link_description": null,
+                        "link_url": "https://wildbaboon.de/products/beauty-set-mit-aloe-vera-und-kaktusfeigenkernol",
+                        "page_welcome_message": null,
+                        "images": [],
+                        "videos": [],
+                        "creation_time": 1695295654,
+                        "page_id": 636476589892441,
+                        "page_name": "Wild Baboon",
+                        "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/380275460_2256785044511156_1131657824820301964_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MOJ8e29VZuwQ7kNvgEZcWFF&_nc_ht=scontent.ffez1-1.fna&oh=00_AYBbIBYbJ-SHqLQCwCqJK3kZGEZ_LPWKEeEqC3BkChR99Q&oe=66886AAC",
+                        "page_categories": {
+                            "2214": "Health/beauty",
+                            "2262": "Vitamins/supplements",
+                            "139225689474222": "Health & Beauty"
+                        },
+                        "page_entity_type": "person_profile",
+                        "page_is_profile_page": false,
+                        "instagram_actor_name": "Wild Baboon - Bio Aloe Vera Produkte",
+                        "instagram_profile_pic_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/381194866_1040578937077679_1149818381632894188_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8XrTZe4YmMoQ7kNvgFnOqJg&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAmCAkyDTLb9FnhofW3neopUxkr6YjxF6Dhy4_B1r9SNQ&oe=66889548",
+                        "instagram_url": "",
+                        "instagram_handle": "",
+                        "is_reshared": false,
+                        "version": 3,
+                        "body": {
+                            "context": {},
+                            "markup": {
+                                "__html": "&#123;&#123;product.brand&#125;&#125;"
+                            },
+                            "callerHash": "2a24cfe5f720438c57a99051c1ecbc41"
+                        },
+                        "brazil_tax_id": null,
+                        "branded_content": null,
+                        "current_page_name": "Wild Baboon",
+                        "disclaimer_label": null,
+                        "page_like_count": 867,
+                        "page_profile_uri": "https://facebook.com/wildbaboonnatural",
+                        "page_is_deleted": false,
+                        "root_reshared_post": null,
+                        "cta_type": "LEARN_MORE",
+                        "additional_info": null,
+                        "ec_certificates": null,
+                        "country_iso_code": null,
+                        "instagram_branded_content": null
+                    },
+                    "spend": null,
+                    "startDate": 1695279600,
+                    "stateMediaRunLabel": null,
+                    "publisherPlatform": [
+                        "instagram"
+                    ],
+                    "menuItems": []
+                }
+            ],
+           
+            [
+                {
+                    "adid": "0",
+                    "adArchiveID": "1478948742296497",
+                    "archiveTypes": [
+                        1
+                    ],
+                    "categories": [
+                        1
+                    ],
+                    "containsDigitallyCreatedMedia": false,
+                    "containsSensitiveContent": false,
+                    "collationCount": 2,
+                    "collationID": 2825892241067909,
+                    "currency": "AUD",
+                    "endDate": 1596178800,
+                    "entityType": "person_profile",
+                    "fevInfo": null,
+                    "finServAdData": {
+                        "is_deemed_finserv": false,
+                        "is_limited_delivery": false
+                    },
+                    "gatedType": "logged_out",
+                    "hasUserReported": false,
+                    "hiddenSafetyData": false,
+                    "hideDataStatus": "NONE",
+                    "impressionsWithIndex": {
+                        "impressionsText": "4K-5K",
+                        "impressionsIndex": 4
+                    },
+                    "isAAAEligible": false,
+                    "isAdAccountActioned": false,
+                    "isActive": false,
+                    "isProfilePage": false,
+                    "pageID": "108614280833032",
+                    "pageInfo": null,
+                    "pageIsDeleted": false,
+                    "pageName": "Spicy Baboon",
+                    "politicalCountries": [
+                        "AU"
+                    ],
+                    "reachEstimate": "10K-50K",
+                    "reportCount": null,
+                    "snapshot": {
+                        "byline": null,
+                        "page_id": 108614280833032,
+                        "page_name": "Spicy Baboon",
+                        "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t1.6435-9/95322230_115383890156071_5802726349923680256_n.png?stp=dst-png_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1FkVNzDCtOcQ7kNvgFl1AsD&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDjkoAUcgT9tSO9jqiU9frHzkYMNwNGEKCB_z5nBhK1ag&oe=66AA1EB9",
+                        "page_profile_uri": "https://facebook.com/SpicyBaboon",
+                        "page_is_deleted": false,
+                        "page_entity_type": "person_profile",
+                        "page_is_profile_page": false,
+                        "additional_info": null,
+                        "country_iso_code": null
+                    },
+                    "spend": "<AU$100",
+                    "startDate": 1594710000,
+                    "stateMediaRunLabel": null,
+                    "publisherPlatform": [
+                        "facebook",
+                        "instagram",
+                        "audience_network",
+                        "messenger"
+                    ],
+                    "menuItems": []
+                }
+            ]
+        ],
+        "pageResults": [],
+        "forwardCursor": "AQHR3ihVRgehRsf2tD6tcJX_WVWSu30hNTATegf66tfiM-QPh2WAelJbp0NGWU0J4OMw",
+        "backwardCursor": "",
+        "totalCount": 2588,
+        "collationToken": "587f8fc5-f65c-4e8d-83e6-1d06b75e9d76"
+    },
+    "lid": "7386656155704908430"
+}

@@ -1,9 +1,7 @@
 // @/app/actions/buildFbAdsLibUrl.ts
 import { FilterParams } from "@/types/filterParams";
 
-export  async function buildFbAdsLibUrl(
-  filters: FilterParams,
-): Promise<string> {
+export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
   try {
     const baseUrl = "https://www.facebook.com/ads/library/async/search_ads?";
 
