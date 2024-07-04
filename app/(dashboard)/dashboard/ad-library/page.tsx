@@ -3,7 +3,7 @@
 
 import { useState, useTransition } from "react";
 
-import { TopSection } from "@/components/adsLibrary/topSection";
+import { AdsLibrary } from "@/components/adsLibrary/AdsLibrary";
 import {
   buildFbAdsLibOPTIONS,
   getStoredOptions,
@@ -91,7 +91,7 @@ export default function Home() {
         {isPending ? "Processing..." : "buildFbAdsLibUrl"}
       </button>
 
-      <TopSection />
+      <AdsLibrary />
     </div>
   );
 }
