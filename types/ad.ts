@@ -1,26 +1,72 @@
 // types/ad.ts
 
 export interface Ad {
-  adArchiveID: string;
-  collationCount: number;
-  startDate: number;
-  endDate: number;
-  pageName: string;
-  publisherPlatform: string[];
-  isActive: boolean;
-  snapshot?: {
-    // Define the structure of snapshot based on your data
+  adid?: string;
+  adArchiveID?: string;
+  collationCount?: number;
+  collationID?: number;
+  currency?: string;
+  startDate?: number;
+  endDate?: number;
+  pageName?: string;
+  pageID?: string;
+  publisherPlatform?: string[];
+  isActive?: boolean;
+  snapshot: {
+    ad_creative_id: string;
     body?: {
-      markup: {
-        __html: string;
+      markup?: {
+        __html?: string;
       };
     };
-    images?: Array<{ resized_image_url: string }>;
-    videos?: Array<{ video_preview_image_url: string }>;
-    cards?: Array<{ title: string; resized_image_url: string }>;
+    images?: Array<{
+      title?: string;
+      body?: string;
+
+      original_image_url?: string;
+      resized_image_url?: string;
+    }>;
+    videos?: Array<{
+      title?: string;
+      body?: string;
+
+      video_hd_url?: string;
+      video_sd_url?: string;
+      video_preview_image_url?: string;
+    }>;
+    cards?: Array<{
+      title?: string;
+      body?: string;
+      link_url?: string;
+      caption?: string;
+      cta_text?: string;
+      cta_type?: string;
+      original_image_url?: string;
+      resized_image_url?: string;
+    }>;
     page_profile_picture_url?: string;
+    link_url?: string;
+    cta_text?: string;
+    cta_type?: string;
+    title?: string;
+    caption?: string;
   };
-  // Add other fields as needed
+  categories: number[];
+  impressionsWithIndex?: {
+    impressionsText?: string | null;
+    impressionsIndex?: number;
+  };
+  spend?: {
+    lower_bound?: string;
+    upper_bound?: string;
+  };
+  reachEstimate?: {
+    lower_bound?: string;
+    upper_bound?: string;
+  };
+  entityType?: string;
+  gatedType?: string;
+  hideDataStatus?: string;
 }
 
 export interface AdsData {

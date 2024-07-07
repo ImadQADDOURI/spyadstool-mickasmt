@@ -70,6 +70,7 @@ export default function Home() {
     <div>
       <h1>Puppeteer Capture XHR Requests</h1>
       <button
+        className="mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
         onClick={function_puppeteerCaptureXHRRequests}
         disabled={isPending}
       >
@@ -77,17 +78,29 @@ export default function Home() {
       </button>
 
       <h1>Build buildFbAdsLibOPTIONS</h1>
-      <button onClick={function_buildFbAdsLibOPTIONS} disabled={isPending}>
+      <button
+        className="mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+        onClick={function_buildFbAdsLibOPTIONS}
+        disabled={isPending}
+      >
         {isPending ? "Processing..." : "buildFbAdsLibOPTIONS"}
       </button>
 
       <h1>display_Store_XHR_Request_Options</h1>
-      <button onClick={display_Store_XHR_Request_Options} disabled={isPending}>
+      <button
+        className="mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+        onClick={display_Store_XHR_Request_Options}
+        disabled={isPending}
+      >
         {isPending ? "Processing..." : "display_Store_XHR_Request_Options"}
       </button>
 
       <h1>buildFbAdsLibUrl</h1>
-      <button onClick={function_buildFbAdsLibURL} disabled={isPending}>
+      <button
+        className="mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+        onClick={function_buildFbAdsLibURL}
+        disabled={isPending}
+      >
         {isPending ? "Processing..." : "buildFbAdsLibUrl"}
       </button>
 
