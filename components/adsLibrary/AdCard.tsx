@@ -1,15 +1,16 @@
 // components/adsLibrary/AdCard.tsx
-
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   ExternalLink,
   Facebook,
   Globe,
+  Heart,
   Info,
   Instagram,
   MessageCircle,
   Play,
+  ThumbsUp,
 } from "lucide-react";
 
 import { Ad } from "@/types/ad";
@@ -23,6 +24,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
+import ExpandableText from "./expandableText";
+import PageNameWithPopover from "./PageNameWithPopover";
 
 interface AdCardProps {
   ad: Ad;
@@ -47,6 +50,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
       year: "numeric",
     });
   };
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   const renderMedia = () => {
     if (!snapshot) return null;
@@ -75,19 +79,40 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
                   {"video_preview_image_url" in item &&
                     item.video_preview_image_url && (
                       <>
-                        <Image
-                          src={item.video_preview_image_url}
-                          alt={`Video preview ${index + 1}`}
-                          layout="fill"
-                          objectFit="cover"
-                        />
-                        <Play className="absolute inset-0 m-auto h-12 w-12 text-white opacity-75" />
+                        {playingVideo === index ? (
+                          <video
+                            src={item.video_sd_url}
+                            controls
+                            autoPlay
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <>
+                            <Image
+                              src={item.video_preview_image_url}
+                              alt={`Video preview ${index + 1}`}
+                              layout="fill"
+                              objectFit="cover"
+                            />
+                            <Play
+                              className="absolute inset-0 m-auto h-12 w-12 cursor-pointer text-white opacity-80 hover:opacity-100"
+                              onClick={() => setPlayingVideo(index)}
+                            />
+                          </>
+                        )}
                       </>
                     )}
                   {"title" in item && (
                     <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white">
-                      <p className="text-sm font-bold">{item.title}</p>
-                      <p className="text-xs">{item.body}</p>
+                      <p className="text-xs font-bold">{item.title}</p>
+                      <p className="text-xs">
+                        {item.body && (
+                          <ExpandableText
+                            text={item.body || ""}
+                            maxLength={15}
+                          />
+                        )}
+                      </p>
                     </div>
                   )}
                 </div>
@@ -115,21 +140,33 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
     };
 
     return publisherPlatform?.map((platform) => (
-      <span key={platform} className="mr-1" title={platform}>
-        {icons[platform.toLowerCase()] || <Globe className="h-4 w-4" />}
+      <span key={platform} className="mr-1 cursor-pointer" title={platform}>
+        {icons[platform.toLowerCase()] || <></>}
       </span>
     ));
+  };
+  const renderDate = () => {
+    if (endDate && startDate && endDate <= startDate) {
+      return `Started on ${formatDate(startDate)}`;
+    }
+    return `${formatDate(startDate)} - ${formatDate(endDate)}`;
   };
 
   return (
     <Card className="w-full max-w-md">
       <CardContent className="p-4">
-        <div className="mb-2 flex items-center justify-between text-xs text-gray-500">
+        <div className="mb-2 flex  justify-between text-xs text-gray-500">
           <div>Library ID: {adArchiveID || "N/A"}</div>
-          <Button variant="ghost" size="sm">
-            <ExternalLink className="h-4 w-4" />
-          </Button>
+          <div className="m-0 flex flex-row">
+            <Button variant="ghost" size="sm">
+              <ExternalLink className="h-4 w-4" />
+            </Button>
+            <Button variant="ghost" size="sm" className="hover:text-red-500">
+              <Heart className="h-4 w-4 " />
+            </Button>
+          </div>
         </div>
+
         <div className="mb-2 flex items-center text-xs text-gray-500">
           <span
             className={`mr-2 inline-flex items-center rounded-full px-2 py-1 font-semibold ${isActive ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
@@ -137,21 +174,24 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
             {isActive ? "Active" : "Inactive"}
           </span>
         </div>
+
         <div className="mb-2 flex items-center text-xs text-gray-500">
-          <span>
-            {formatDate(startDate)} - {formatDate(endDate)}
-          </span>
+          <span>{renderDate()}</span>
         </div>
+
         <div className="mb-2 flex items-center text-xs text-gray-500">
           <span className="mr-2">Platforms</span>
           {renderPlatformIcons()}
         </div>
+
         <div className="mb-2 flex items-center text-xs text-gray-500">
           <span className="mr-2">ADs</span>
           <span className="mr-2 text-lg font-bold text-red-600">
             {ad.collationCount || 0}
           </span>
-          <Info className="h-4 w-4" />
+          <span title="ads use this creative and text">
+            <Info className="h-4 w-4 cursor-pointer" />
+          </span>
         </div>
 
         <Button variant="secondary" size="sm" className="mb-4 w-full">
@@ -170,21 +210,24 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
           )}
 
           <div>
-            <h3 className="font-bold">{pageName || "Unknown Page"}</h3>
-            <p className="text-xs text-gray-500">Sponsored</p>
+            {/* <h3 className="font-bold">{pageName || "Unknown Page"}</h3>
+            <p className="text-xs text-gray-500">Sponsored</p> */}
+            <PageNameWithPopover snapshot={ad.snapshot} />
           </div>
         </div>
 
         {renderMedia()}
 
-        {snapshot?.body?.markup && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: snapshot.body.markup.__html || "",
-            }}
-            className="mb-4 text-sm"
-          />
-        )}
+        {snapshot?.body?.markup &&
+          snapshot?.body?.markup.__html !==
+            "&#123;&#123;product.brand&#125;&#125;" && (
+            <div className="my-4 text-xs">
+              <ExpandableText
+                text={snapshot.body.markup.__html || ""}
+                maxLength={50}
+              />
+            </div>
+          )}
       </CardContent>
       <CardFooter>
         {snapshot?.link_url && (

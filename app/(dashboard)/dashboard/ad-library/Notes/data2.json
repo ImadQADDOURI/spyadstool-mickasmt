@@ -1,0 +1,406 @@
+// ad with images[...]
+[
+    {
+        "adid": "0",
+        "adArchiveID": "989160952658463",
+        "archiveTypes": [],
+        "categories": [
+            0
+        ],
+        "containsDigitallyCreatedMedia": false,
+        "containsSensitiveContent": false,
+        "collationCount": 1,
+        "collationID": 447524747897170,
+        "currency": "",
+        "endDate": 1717657200,
+        "entityType": "person_profile",
+        "fevInfo": null,
+        "finServAdData": {
+            "is_deemed_finserv": false,
+            "is_limited_delivery": false
+        },
+        "gatedType": "eligible",
+        "hasUserReported": false,
+        "hiddenSafetyData": false,
+        "hideDataStatus": "NONE",
+        "impressionsWithIndex": {
+            "impressionsText": null,
+            "impressionsIndex": -1
+        },
+        "isAAAEligible": true,
+        "isAdAccountActioned": false,
+        "isActive": false,
+        "isProfilePage": false,
+        "pageID": "330564466800499",
+        "pageInfo": null,
+        "pageIsDeleted": false,
+        "pageName": "Real News",
+        "politicalCountries": [],
+        "reachEstimate": null,
+        "reportCount": null,
+        "snapshot": {
+            "ad_creative_id": "120210158332380028",
+            "cards": [],
+            "body_translations": {},
+            "byline": null,
+            "caption": "t.me",
+            "cta_text": "Learn more",
+            "dynamic_item_flags": {},
+            "dynamic_versions": null,
+            "edited_snapshots": [],
+            "effective_authorization_category": "NONE",
+            "event": [],
+            "extra_images": [],
+            "extra_links": [],
+            "extra_texts": [],
+            "extra_videos": [],
+            "instagram_shopping_products": [],
+            "display_format": "image",
+            "title": "TAP TO EARN!",
+            "link_description": null,
+            "link_url": "https://t.me/TheBaboon_Bot/start?startapp=_1384267737",
+            "page_welcome_message": null,
+            "images": [
+                {
+                    "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/447772286_1866735957136549_4489554617415067023_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=w_gUapDPsm4Q7kNvgFpQGBt&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAA3y8ZrV0w0YZZtCbFyW2RtXfFX0HL42jEpBt_GeOF7Q&oe=668824E4",
+                    "resized_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/447411097_1240559143990093_764952268668271078_n.jpg?stp=dst-jpg_s600x600&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cQGTsJ9e88wQ7kNvgF2UAcL&_nc_ht=scontent.ffez1-1.fna&oh=00_AYDPouJI0YDlUOojPuq5hzsIT7e-Sf1NiBsKsmvIKHCF-Q&oe=66883205",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": {}
+                }
+            ],
+            "videos": [],
+            "creation_time": 1717602529,
+            "page_id": 330564466800499,
+            "page_name": "Real News",
+            "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/447886202_978461990629550_7753175484449112456_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WZa2qrVpzwIQ7kNvgG8468J&_nc_ht=scontent.ffez1-1.fna&oh=00_AYDKfl6s5y15fiTftl9ow0UP-PGMdWHF1CNONdBOf2mvZg&oe=668812DA",
+            "page_categories": {
+                "1307": "Magazine"
+            },
+            "page_entity_type": "person_profile",
+            "page_is_profile_page": false,
+            "instagram_actor_name": "Real News",
+            "instagram_profile_pic_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/447395116_1858735531293530_8265023313189222773_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UTvkNCGVTzMQ7kNvgFMkE8x&_nc_ht=scontent.ffez1-1.fna&oh=00_AYAE0ekKAxHfbA9gf9GAL3vol_lejgRObNi1KEPBQWI_uQ&oe=668812D1",
+            "instagram_url": "",
+            "instagram_handle": "",
+            "is_reshared": false,
+            "version": 3,
+            "body": {
+                "context": {},
+                "markup": {
+                    "__html": "The Baboon project is similar to Notcoin and has already started a giveaway of prizes up to 2000 USDT and 1 million BOON tokens for completing tasks."
+                },
+                "callerHash": "a730512ab9606c2e1046f34962c87384"
+            },
+            "brazil_tax_id": null,
+            "branded_content": null,
+            "current_page_name": "Real News",
+            "disclaimer_label": null,
+            "page_like_count": 21,
+            "page_profile_uri": "https://facebook.com/61559715658329",
+            "page_is_deleted": false,
+            "root_reshared_post": null,
+            "cta_type": "LEARN_MORE",
+            "additional_info": null,
+            "ec_certificates": null,
+            "country_iso_code": null,
+            "instagram_branded_content": null
+        },
+        "spend": null,
+        "startDate": 1717570800,
+        "stateMediaRunLabel": null,
+        "publisherPlatform": [
+            "facebook",
+            "instagram",
+            "audience_network",
+            "messenger"
+        ],
+        "menuItems": []
+    }
+]
+
+//ad with cards[...]
+[
+    {
+        "adid": "0",
+        "adArchiveID": "1619905358864794",
+        "archiveTypes": [],
+        "categories": [
+            0
+        ],
+        "containsDigitallyCreatedMedia": false,
+        "containsSensitiveContent": false,
+        "collationCount": 1,
+        "collationID": 777533831210907,
+        "currency": "",
+        "endDate": 1719730800,
+        "entityType": "person_profile",
+        "fevInfo": null,
+        "finServAdData": {
+            "is_deemed_finserv": false,
+            "is_limited_delivery": false
+        },
+        "gatedType": "eligible",
+        "hasUserReported": false,
+        "hiddenSafetyData": false,
+        "hideDataStatus": "NONE",
+        "impressionsWithIndex": {
+            "impressionsText": null,
+            "impressionsIndex": -1
+        },
+        "isAAAEligible": true,
+        "isAdAccountActioned": false,
+        "isActive": true,
+        "isProfilePage": false,
+        "pageID": "1324425294239338",
+        "pageInfo": null,
+        "pageIsDeleted": false,
+        "pageName": "Alex Mehr, Ph.D.",
+        "politicalCountries": [],
+        "reachEstimate": null,
+        "reportCount": null,
+        "snapshot": {
+            "ad_creative_id": "120211212565410023",
+            "cards": [
+                {
+                    "body": "Our AI Marketing Software created this Ad specifically to stop you from scrolling...\n\nUse our AI Marketing Software to dominate your marketing campaigns.\n\nhttps://deal.ai/ai-marketing-agency",
+                    "caption": "deal.ai",
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "SEE HOW IT WORKS",
+                    "link_description": null,
+                    "link_url": "https://deal.ai/ai-marketing-agency",
+                    "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/448628597_993088035758297_3066219106198043400_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=JXGIrXpLH7EQ7kNvgEaNEDU&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCKay8wIMMFkW_7NNP16U2WOuNo9oez1ko3eQdEX8HX2w&oe=66881E6A",
+                    "resized_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/448560521_921250659811245_1305809171776381567_n.jpg?stp=dst-jpg_s600x600&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5YJ5ZaJ_NhQQ7kNvgHQ-KkA&_nc_ht=scontent.ffez1-1.fna&oh=00_AYDVvIFqm989ENPR095X5afgaTjYj4eF1E8-7jHCL0F0eQ&oe=66880E5E",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                },
+                {
+                    "body": "Our AI Marketing Software created this Ad specifically to stop you from scrolling...\n\nUse our AI Marketing Software to dominate your marketing campaigns.\n\nhttps://deal.ai/ai-marketing-agency",
+                    "caption": "deal.ai",
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "SEE HOW IT WORKS",
+                    "link_description": null,
+                    "link_url": "https://deal.ai/ai-marketing-agency",
+                    "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/448726014_1386313988726533_718631946816118964_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=eZ5EhSJaoTYQ7kNvgGK7um1&_nc_ht=scontent.ffez1-1.fna&oh=00_AYBoIzTbE-wP37m8GQcI49tOVgAXqoCtsMKVfTXc2jGhpw&oe=6688245A",
+                    "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/448623079_1514252409442740_5935565444165842300_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=585Zn58nj1QQ7kNvgHMD6OF&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAPkk33BrfeI2phyVOwP40TQm1saenbMiaYlkoLOeINww&oe=66880A9C",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                },
+                {
+                    "body": "Our AI Marketing Software created this Ad specifically to stop you from scrolling...\n\nUse our AI Marketing Software to dominate your marketing campaigns.\n\nhttps://deal.ai/ai-marketing-agency",
+                    "caption": "deal.ai",
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "SEE HOW IT WORKS",
+                    "link_description": null,
+                    "link_url": "https://deal.ai/ai-marketing-agency",
+                    "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/448768848_750577853821335_7838451961665125269_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Ntmzq4of-YEQ7kNvgGfZyDJ&_nc_ht=scontent.ffez2-1.fna&oh=00_AYB2ufSKz2EWoHlHL9WKjoCLQfZ80L_qJ5HA2ZZLmHOc9g&oe=6688347C",
+                    "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/448677233_966932408447483_585640330481535320_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=J3w5y8oPcboQ7kNvgGTe-uW&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAl3hkaydYYf8tFtn6TNWdYb0NaEZlITyKgLHetZ9JR_g&oe=66883E4D",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                }
+            ],
+            "body_translations": {},
+            "byline": null,
+            "caption": "deal.ai",
+            "cta_text": "Learn more",
+            "dynamic_item_flags": {},
+            "dynamic_versions": null,
+            "edited_snapshots": [],
+            "effective_authorization_category": "NONE",
+            "event": [],
+            "extra_images": [],
+            "extra_links": [],
+            "extra_texts": [],
+            "extra_videos": [],
+            "instagram_shopping_products": [],
+            "display_format": "dco",
+            "title": "{{product.name}}",
+            "link_description": "{{product.description}}",
+            "link_url": "https://deal.ai/ai-marketing-agency",
+            "page_welcome_message": null,
+            "images": [],
+            "videos": [],
+            "creation_time": 1718916886,
+            "page_id": 1324425294239338,
+            "page_name": "Alex Mehr, Ph.D.",
+            "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/448628481_979238183837536_8672936207874847377_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2FS93qyIpX8Q7kNvgGxk7HY&_nc_ht=scontent.ffez2-2.fna&oh=00_AYA0j82EiqAMDS00-d5Mmnai0lfMxXW8irI1LsUIz4ij0Q&oe=66881D03",
+            "page_categories": {
+                "1602": "Public figure"
+            },
+            "page_entity_type": "person_profile",
+            "page_is_profile_page": false,
+            "instagram_actor_name": "Alex Mehr, Ph.D.",
+            "instagram_profile_pic_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/448723102_1012930947019183_6108230845691120695_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yvk_UhZMj1oQ7kNvgHsbYts&_nc_ht=scontent.ffez1-2.fna&oh=00_AYAOYrA2C4QP5_HHcllmZFf5xHX_sZdum0z-_ORJzm7daw&oe=66880BC5",
+            "instagram_url": "",
+            "instagram_handle": "",
+            "is_reshared": false,
+            "version": 3,
+            "body": {
+                "context": {},
+                "markup": {
+                    "__html": "&#123;&#123;product.brand&#125;&#125;"
+                },
+                "callerHash": "a730512ab9606c2e1046f34962c87384"
+            },
+            "brazil_tax_id": null,
+            "branded_content": null,
+            "current_page_name": "Alex Mehr, Ph.D.",
+            "disclaimer_label": null,
+            "page_like_count": 322174,
+            "page_profile_uri": "https://facebook.com/realDrMehr",
+            "page_is_deleted": false,
+            "root_reshared_post": null,
+            "cta_type": "LEARN_MORE",
+            "additional_info": null,
+            "ec_certificates": null,
+            "country_iso_code": null,
+            "instagram_branded_content": null
+        },
+        "spend": null,
+        "startDate": 1718866800,
+        "stateMediaRunLabel": null,
+        "publisherPlatform": [
+            "facebook",
+            "instagram",
+            "audience_network",
+            "messenger"
+        ],
+        "menuItems": []
+    }
+]
+
+//ad with videos[...]
+[
+    {
+        "adid": "0",
+        "adArchiveID": "690242279942825",
+        "archiveTypes": [],
+        "categories": [
+            0
+        ],
+        "containsDigitallyCreatedMedia": false,
+        "containsSensitiveContent": false,
+        "collationCount": 1,
+        "collationID": 933423084908702,
+        "currency": "",
+        "endDate": 1706515200,
+        "entityType": "person_profile",
+        "fevInfo": null,
+        "finServAdData": {
+            "is_deemed_finserv": false,
+            "is_limited_delivery": false
+        },
+        "gatedType": "eligible",
+        "hasUserReported": false,
+        "hiddenSafetyData": false,
+        "hideDataStatus": "NONE",
+        "impressionsWithIndex": {
+            "impressionsText": null,
+            "impressionsIndex": -1
+        },
+        "isAAAEligible": true,
+        "isAdAccountActioned": false,
+        "isActive": false,
+        "isProfilePage": false,
+        "pageID": "209124659581416",
+        "pageInfo": null,
+        "pageIsDeleted": false,
+        "pageName": "Wade Holland Media",
+        "politicalCountries": [],
+        "reachEstimate": null,
+        "reportCount": null,
+        "snapshot": {
+            "ad_creative_id": 6537108830429,
+            "cards": [],
+            "body_translations": {},
+            "byline": null,
+            "caption": null,
+            "cta_text": null,
+            "dynamic_item_flags": {},
+            "dynamic_versions": null,
+            "edited_snapshots": [],
+            "effective_authorization_category": "NONE",
+            "event": [],
+            "extra_images": [],
+            "extra_links": [],
+            "extra_texts": [],
+            "extra_videos": [],
+            "instagram_shopping_products": [],
+            "display_format": "video",
+            "title": null,
+            "link_description": null,
+            "link_url": null,
+            "page_welcome_message": null,
+            "images": [],
+            "videos": [
+                {
+                    "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/10000000_690242306609489_757915290624414114_n.?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Bi99qvHgxyAQ7kNvgEJxZvA&_nc_ht=video.ffez1-1.fna&oh=00_AYB95EO76JFZnixBEGUzT7G-0ZlAYhnBZy-qW17eCL7taw&oe=668823D8",
+                    "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/421600028_782943100545929_8285910728325324346_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=SQoElZi9o2cQ7kNvgHv7x2m&_nc_ht=video.ffez1-1.fna&oh=00_AYBKKOBN1XQj8c2GdzfIB5JraSozp5kOL7xeMW9fqpTe5Q&oe=66883101",
+                    "watermarked_video_sd_url": "",
+                    "watermarked_video_hd_url": "",
+                    "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/423581937_1434555950770259_8389052190025963664_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cPOwXS7CTGUQ7kNvgG8EUN3&_nc_ht=scontent.ffez1-2.fna&oh=00_AYBrYmAn0I4L2WQOXRs7kkckxjcXkQJqK8pQiQUSDQJdlQ&oe=668809D8"
+                }
+            ],
+            "creation_time": 1706399969,
+            "page_id": 209124659581416,
+            "page_name": "Wade Holland Media",
+            "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/423537691_295129003181682_5567725009705141227_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=XgevO0KhyXcQ7kNvgHV7Tow&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDGtA0emIayndoTPbPLQ0b7yvXUZx5R1SOcb_71rYRCaA&oe=6688341D",
+            "page_categories": {
+                "1600": "Athlete",
+                "2347428775505624": "Digital Creator"
+            },
+            "page_entity_type": "person_profile",
+            "page_is_profile_page": false,
+            "instagram_actor_name": "Wade Holland",
+            "instagram_profile_pic_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/423480778_7491170624228735_3263685827723234887_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fU-EbPSVONMQ7kNvgGxVIKH&_nc_ht=scontent.ffez2-2.fna&oh=00_AYC22Oa9gUMWp5jZaEf_Q7zM-5mNWshjO-GEhu1Sb-A_2Q&oe=668836D3",
+            "instagram_url": "",
+            "instagram_handle": "",
+            "is_reshared": false,
+            "version": 3,
+            "body": {
+                "context": {},
+                "markup": {
+                    "__html": "Free flowing expression is always incredibly inspiring to me. The lost amusement park, &#064;lunaluna, was created out of complete unbridled creativity and play from the most prominent artists of the 20th century. Lost for over 30 years, it’s now being displayed in Los Angeles for the first time since 1987 thanks to &#064;champagnepapi 🎡 🎠 Massive inspo from this experience. A must see if you get the chance ✨🎨"
+                },
+                "callerHash": "a730512ab9606c2e1046f34962c87384"
+            },
+            "brazil_tax_id": null,
+            "branded_content": null,
+            "current_page_name": "Wade Holland Media",
+            "disclaimer_label": null,
+            "page_like_count": 568,
+            "page_profile_uri": "https://facebook.com/WadeHollandMedia",
+            "page_is_deleted": false,
+            "root_reshared_post": null,
+            "cta_type": null,
+            "additional_info": null,
+            "ec_certificates": null,
+            "country_iso_code": null,
+            "instagram_branded_content": null
+        },
+        "spend": null,
+        "startDate": 1706342400,
+        "stateMediaRunLabel": null,
+        "publisherPlatform": [
+            "instagram"
+        ],
+        "menuItems": []
+    }
+]

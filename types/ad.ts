@@ -50,6 +50,7 @@ export interface Ad {
     cta_type?: string;
     title?: string;
     caption?: string;
+    page_like_count?: number;
   };
   categories: number[];
   impressionsWithIndex?: {

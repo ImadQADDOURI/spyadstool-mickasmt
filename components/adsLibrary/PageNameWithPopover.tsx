@@ -1,0 +1,120 @@
+import React, { useState } from "react";
+import Image from "next/image";
+import { Globe, ThumbsUp } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+interface PageNameWithPopoverProps {
+  snapshot: {
+    page_name?: string;
+    page_categories?: { [key: string]: string };
+    page_like_count?: number;
+    link_url?: string;
+    page_profile_uri?: string;
+    page_profile_picture_url?: string;
+  };
+}
+
+const PageNameWithPopover: React.FC<PageNameWithPopoverProps> = ({
+  snapshot,
+}) => {
+  const {
+    page_name,
+    page_categories,
+    page_like_count,
+    link_url,
+    page_profile_uri,
+    page_profile_picture_url,
+  } = snapshot;
+
+  const categories = page_categories
+    ? Object.values(page_categories).join(", ")
+    : "";
+  const domain = link_url ? new URL(link_url).hostname : "";
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <Popover open={isOpen}>
+        <PopoverTrigger asChild>
+          <span className="cursor-pointer font-bold hover:underline">
+            {page_name || "Unknown Page"}
+          </span>
+        </PopoverTrigger>
+        <PopoverContent className="w-80" sideOffset={5}>
+          <div className="flex items-center space-x-4">
+            {page_profile_picture_url && (
+              <Image
+                src={page_profile_picture_url}
+                alt={page_name || "Page profile"}
+                width={60}
+                height={60}
+                className="rounded-full"
+              />
+            )}
+            <div>
+              <h3 className="text-lg font-bold">{page_name}</h3>
+              {categories && (
+                <p className="text-sm text-gray-500">{categories}</p>
+              )}
+              {page_like_count !== undefined && (
+                <p className="flex items-center text-sm">
+                  <ThumbsUp className="mr-1 h-4 w-4" />
+                  {page_like_count.toLocaleString()} likes
+                </p>
+              )}
+              {domain && (
+                <p className="flex items-center text-sm">
+                  <Globe className="mr-1 h-4 w-4" />
+                  <a
+                    href={link_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    {domain}
+                  </a>
+                </p>
+              )}
+            </div>
+          </div>
+          <div className="mt-4 flex space-x-2">
+            {page_profile_uri && (
+              <>
+                <Button size="sm">
+                  <a
+                    href={page_profile_uri}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Go to Page
+                  </a>
+                </Button>
+                <Button size="sm" variant="outline">
+                  <a
+                    href={`${page_profile_uri}/ads`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Ads
+                  </a>
+                </Button>
+              </>
+            )}
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
+  );
+};
+
+export default PageNameWithPopover;
