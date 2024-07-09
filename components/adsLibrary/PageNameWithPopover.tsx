@@ -87,27 +87,31 @@ const PageNameWithPopover: React.FC<PageNameWithPopoverProps> = ({
               )}
             </div>
           </div>
-          <div className="mt-4 flex space-x-2">
+          <div className="mt-4 flex justify-center space-x-2">
             {page_profile_uri && (
               <>
-                <Button size="sm">
-                  <a
-                    href={page_profile_uri}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Go to Page
-                  </a>
-                </Button>
-                <Button size="sm" variant="outline">
-                  <a
-                    href={`${page_profile_uri}/ads`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Ads
-                  </a>
-                </Button>
+                <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
+                  <span className="relative rounded-md bg-white px-5 py-1 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
+                    <a
+                      href={page_profile_uri}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Go to Page
+                    </a>
+                  </span>
+                </button>
+                <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 dark:focus:ring-lime-800">
+                  <span className="relative rounded-md bg-white px-5 py-1 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
+                    <a
+                      href={`${page_profile_uri}/ads`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Ads
+                    </a>
+                  </span>
+                </button>
               </>
             )}
           </div>
