@@ -22,14 +22,14 @@ export interface Ad {
     images?: Array<{
       title?: string;
       body?: string;
-
+      cta_text?: string;
       original_image_url?: string;
       resized_image_url?: string;
     }>;
     videos?: Array<{
       title?: string;
       body?: string;
-
+      cta_text?: string;
       video_hd_url?: string;
       video_sd_url?: string;
       video_preview_image_url?: string;

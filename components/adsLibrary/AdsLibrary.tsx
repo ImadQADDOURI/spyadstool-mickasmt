@@ -140,6 +140,18 @@ export const AdsLibrary = () => {
           {isLoading ? "Searching..." : "Search Ads"}
         </Button>
       </div>
+
+      {searchResults && searchResults.ads.length > 0 && (
+        <div className="mb-4">
+          <span className="m-2 text-lg font-bold ">
+            {searchResults?.totalCount > 50000
+              ? ">50,000 "
+              : searchResults.totalCount || 0}
+            <> Ads Found</>
+          </span>
+        </div>
+      )}
+
       {searchResults && searchResults.ads.length > 0 ? (
         <>
           <AdsList ads={searchResults.ads} />

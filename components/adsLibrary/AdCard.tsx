@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { Ad } from "@/types/ad";
+import AudienceNetworkIcon from "@/components/shared/AudienceNetworkIcon";
 
 import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter } from "../ui/card";
@@ -102,19 +103,35 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
                         )}
                       </>
                     )}
-                  {"title" in item && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white">
-                      <p className="text-xs font-bold">{item.title}</p>
-                      <p className="text-xs">
-                        {item.body && (
-                          <ExpandableText
-                            text={item.body || ""}
-                            maxLength={15}
-                          />
-                        )}
-                      </p>
-                    </div>
-                  )}
+
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white">
+                    {"title" in item && (
+                      <>
+                        <p className="text-xs font-bold">{item.title}</p>
+                        <p className="text-xs">
+                          {item.body && (
+                            <ExpandableText
+                              text={item.body || ""}
+                              maxLength={15}
+                            />
+                          )}
+                        </p>
+                      </>
+                    )}
+                    <>
+                      {"link_url" in item && item.link_url && (
+                        <Button size="sm" className="mt-2 w-full">
+                          <a
+                            href={item.link_url + ""}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {item.cta_text || "Learn More"}
+                          </a>
+                        </Button>
+                      )}
+                    </>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
@@ -133,10 +150,10 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
 
   const renderPlatformIcons = () => {
     const icons: { [key: string]: React.ReactNode } = {
-      facebook: <Facebook className="h-4 w-4" />,
-      instagram: <Instagram className="h-4 w-4" />,
-      messenger: <MessageCircle className="h-4 w-4" />,
-      audience_network: <Globe className="h-4 w-4" />,
+      facebook: <Facebook className="h-4 w-4" color="#0866FF" />,
+      instagram: <Instagram className="h-4 w-4" color="#D915DA" />,
+      messenger: <MessageCircle className="h-4 w-4" color="#0084FF" />,
+      audience_network: <AudienceNetworkIcon className="h-4 w-4" />,
     };
 
     return publisherPlatform?.map((platform) => (
@@ -210,8 +227,6 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
           )}
 
           <div>
-            {/* <h3 className="font-bold">{pageName || "Unknown Page"}</h3>
-            <p className="text-xs text-gray-500">Sponsored</p> */}
             <PageNameWithPopover snapshot={ad.snapshot} />
           </div>
         </div>
