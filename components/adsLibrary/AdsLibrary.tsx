@@ -1,13 +1,11 @@
 // components/adsLibrary/AdsLibrary.tsx
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Plus } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { AdsList } from "@/components/adsLibrary/AdsList";
-import Category from "@/components/adsLibrary/category";
-import Country from "@/components/adsLibrary/country";
-import SearchByKeyword from "@/components/adsLibrary/searchByKeyword";
+import SearchFilters from "@/components/adsLibrary/SearchFilters";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
@@ -19,18 +17,12 @@ export const AdsLibrary = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [initialTotalCount, setInitialTotalCount] = useState<number | null>(
+    null,
+  );
 
-  const handleSelectCountry = (value: string) => {
-    setSelectedCountry(value);
-  };
-  const handleSelectCategory = (value: string) => {
-    setSelectedCategory(value);
-  };
-  const handleSearch = (keyword: string) => {
-    setSearchQuery(keyword);
-  };
-
-  const extractAdsFromResults = (results: any[]): Ad[] => {
+  const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
     return results.flatMap((monthGroup) =>
       monthGroup
         .filter((ad: any) => ad.collationCount !== undefined)
@@ -56,99 +48,100 @@ export const AdsLibrary = () => {
           hideDataStatus: ad.hideDataStatus,
         })),
     );
-  };
+  }, []);
 
-  const handleSearchAds = async (useExistingParams = false) => {
-    setIsLoading(true);
-    try {
-      const searchParams = {
-        countries: [selectedCountry],
-        ad_type: selectedCategory,
-        q: searchQuery,
-        forward_cursor:
-          useExistingParams && searchResults ? searchResults.forwardCursor : "",
-        backward_cursor:
-          useExistingParams && searchResults
-            ? searchResults.backwardCursor
-            : "",
-        collation_token:
-          useExistingParams && searchResults
-            ? searchResults.collationToken
-            : "",
-      };
+  const handleSearchAds = useCallback(
+    async (useExistingParams = false) => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const searchParams = {
+          countries: [selectedCountry],
+          ad_type: selectedCategory,
+          q: searchQuery,
+          forward_cursor:
+            useExistingParams && searchResults
+              ? searchResults.forwardCursor
+              : "",
+          backward_cursor:
+            useExistingParams && searchResults
+              ? searchResults.backwardCursor
+              : "",
+          collation_token:
+            useExistingParams && searchResults
+              ? searchResults.collationToken
+              : "",
+        };
 
-      const Results = await searchAds(searchParams);
+        const Results = await searchAds(searchParams);
 
-      const extractedAds = extractAdsFromResults(Results.payload.results);
+        const extractedAds = extractAdsFromResults(Results.payload.results);
 
-      const adsData: AdsData = {
-        isResultComplete: Results.payload.isResultComplete,
-        forwardCursor: Results.payload.forwardCursor,
-        backwardCursor: Results.payload.backwardCursor,
-        totalCount: Results.payload.totalCount,
-        collationToken: Results.payload.collationToken,
-        ads: extractedAds,
-      };
+        const adsData: AdsData = {
+          isResultComplete: Results.payload.isResultComplete,
+          forwardCursor: Results.payload.forwardCursor,
+          backwardCursor: Results.payload.backwardCursor,
+          totalCount: Results.payload.totalCount,
+          collationToken: Results.payload.collationToken,
+          ads: extractedAds,
+        };
 
-      if (useExistingParams && searchResults) {
-        setSearchResults((prevResults) => ({
-          ...adsData,
-          ads: [...prevResults!.ads, ...adsData.ads],
-        }));
-      } else {
-        setSearchResults(adsData);
+        if (useExistingParams && searchResults) {
+          setSearchResults((prevResults) => ({
+            ...adsData,
+            ads: [...prevResults!.ads, ...adsData.ads],
+          }));
+        } else {
+          setSearchResults(adsData);
+
+          // Set the initial total count only on the first search
+          if (initialTotalCount === null) {
+            setInitialTotalCount(adsData.totalCount);
+          }
+        }
+      } catch (error) {
+        console.error("Error searching ads:", error);
+        setError(
+          "An error occurred while searching for ads. Please try again.",
+        );
+        setSearchResults(null);
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error("Error searching ads:", error);
-      setSearchResults(null);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    },
+    [
+      selectedCountry,
+      selectedCategory,
+      searchQuery,
+      searchResults,
+      extractAdsFromResults,
+    ],
+  );
 
-  const handleLoadMore = () => {
+  const handleLoadMore = useCallback(() => {
     if (searchResults && !searchResults.isResultComplete) {
       handleSearchAds(true);
     }
-  };
+  }, [searchResults, handleSearchAds]);
 
   return (
-    <div className="p-4">
-      <div className="mb-4">
-        <h1 className="mb-2 text-2xl font-bold">
-          Selected Country: {selectedCountry}
-        </h1>
-        <Country onSelectCountry={handleSelectCountry} />
-      </div>
-      <div className="mb-4">
-        <h1 className="mb-2 text-2xl font-bold">
-          Selected Category: {selectedCategory}
-        </h1>
-        <Category onSelectCategory={handleSelectCategory} />
-      </div>
-      <div className="mb-4">
-        <h1 className="mb-2 text-2xl font-bold">Search Query: {searchQuery}</h1>
-        <SearchByKeyword onSearch={handleSearch} />
-      </div>
+    <div className="space-y-6 p-4">
+      <SearchFilters
+        selectedCountry={selectedCountry}
+        selectedCategory={selectedCategory}
+        searchQuery={searchQuery}
+        isLoading={isLoading}
+        onSelectCountry={setSelectedCountry}
+        onSelectCategory={setSelectedCategory}
+        onSearch={setSearchQuery}
+        onSearchClick={() => handleSearchAds()}
+      />
 
-      <div className="mb-4">
-        <Button
-          onClick={() => handleSearchAds()}
-          className="mr-2"
-          disabled={isLoading}
-        >
-          {isLoading ? "Searching..." : "Search Ads"}
-        </Button>
-      </div>
+      {error && <div className="font-semibold text-red-500">{error}</div>}
 
-      {searchResults && searchResults.ads.length > 0 && (
-        <div className="mb-4">
-          <span className="m-2 text-lg font-bold ">
-            {searchResults?.totalCount > 50000
-              ? ">50,000 "
-              : searchResults.totalCount || 0}
-            <> Ads Found</>
-          </span>
+      {initialTotalCount !== null && (
+        <div className="text-lg font-bold">
+          {initialTotalCount > 50000 ? ">50,000" : initialTotalCount} Ads Found
         </div>
       )}
 
@@ -165,7 +158,9 @@ export const AdsLibrary = () => {
           )}
         </>
       ) : (
-        <p>No ads found. Try adjusting your search criteria.</p>
+        searchResults && (
+          <p>No ads found. Try adjusting your search criteria.</p>
+        )
       )}
     </div>
   );

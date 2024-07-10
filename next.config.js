@@ -7,13 +7,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      "scontent.ffez1-1.fna.fbcdn.net",
-      "scontent.ffez1-2.fna.fbcdn.net",
-      "scontent.ffez2-1.fna.fbcdn.net",
-      "scontent.ffez2-2.fna.fbcdn.net",
-      "scontent.cdninstagram.com",
-    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -26,6 +19,16 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "randomuser.me",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent.*.fna.fbcdn.net",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "scontent.cdninstagram.com",
+        pathname: "/**",
       },
     ],
   },
