@@ -146,8 +146,8 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
           </CarouselContent>
           {mediaItems.length > 1 && (
             <>
-              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
+              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 p-0" />
+              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 p-0" />
             </>
           )}
         </Carousel>

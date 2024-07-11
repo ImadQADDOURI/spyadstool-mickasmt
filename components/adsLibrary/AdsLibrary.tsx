@@ -1,7 +1,7 @@
 // components/adsLibrary/AdsLibrary.tsx
 
 import React, { useCallback, useState } from "react";
-import { Plus } from "lucide-react";
+import { ArrowDown, ArrowUp, Plus } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { AdsList } from "@/components/adsLibrary/AdsList";
@@ -18,9 +18,7 @@ export const AdsLibrary = () => {
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [initialTotalCount, setInitialTotalCount] = useState<number | null>(
-    null,
-  );
+  const [totalCount, setTotalCount] = useState<number | null>(null);
 
   const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
     return results.flatMap((monthGroup) =>
@@ -94,10 +92,8 @@ export const AdsLibrary = () => {
         } else {
           setSearchResults(adsData);
 
-          // Set the initial total count only on the first search
-          if (initialTotalCount === null) {
-            setInitialTotalCount(adsData.totalCount);
-          }
+          // Update total count only for new searches
+          setTotalCount(adsData.totalCount);
         }
       } catch (error) {
         console.error("Error searching ads:", error);
@@ -124,8 +120,15 @@ export const AdsLibrary = () => {
     }
   }, [searchResults, handleSearchAds]);
 
+  const scrollTo = useCallback((position: "top" | "bottom") => {
+    window.scrollTo({
+      top: position === "top" ? 0 : document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
-    <div className="space-y-6 p-4">
+    <div className="relative min-h-screen space-y-6 p-4">
       <SearchFilters
         selectedCountry={selectedCountry}
         selectedCategory={selectedCategory}
@@ -139,9 +142,9 @@ export const AdsLibrary = () => {
 
       {error && <div className="font-semibold text-red-500">{error}</div>}
 
-      {initialTotalCount !== null && (
+      {totalCount !== null && (
         <div className="text-lg font-bold">
-          {initialTotalCount > 50000 ? ">50,000" : initialTotalCount} Ads Found
+          {totalCount > 50000 ? ">50,000" : totalCount} Ads Found
         </div>
       )}
 
@@ -162,6 +165,27 @@ export const AdsLibrary = () => {
           <p>No ads found. Try adjusting your search criteria.</p>
         )
       )}
+
+      <div className="fixed bottom-16 right-2 flex flex-col space-y-1">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => scrollTo("top")}
+          className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="h-4 w-4" />
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => scrollTo("bottom")}
+          className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+          aria-label="Scroll to bottom"
+        >
+          <ArrowDown className="h-4 w-4" />
+        </Button>
+      </div>
     </div>
   );
 };
