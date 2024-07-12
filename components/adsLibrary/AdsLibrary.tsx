@@ -14,6 +14,7 @@ import { Card } from "../ui/card";
 export const AdsLibrary = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>(["ALL"]);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -138,6 +139,8 @@ export const AdsLibrary = () => {
         onSelectCategory={setSelectedCategory}
         onSearch={setSearchQuery}
         onSearchClick={() => handleSearchAds()}
+        selectedLanguages={selectedLanguages}
+        onSelectLanguages={setSelectedLanguages}
       />
 
       {error && <div className="font-semibold text-red-500">{error}</div>}

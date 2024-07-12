@@ -5,6 +5,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import Category from "./category";
 import Country from "./country";
+import Language from "./language";
 import SearchByKeyword from "./searchByKeyword";
 
 interface SearchFiltersProps {
@@ -16,6 +17,8 @@ interface SearchFiltersProps {
   onSelectCategory: (value: string) => void;
   onSearch: (keyword: string) => void;
   onSearchClick: () => void;
+  selectedLanguages: string[];
+  onSelectLanguages: (values: string[]) => void;
 }
 
 export const SearchFilters: React.FC<SearchFiltersProps> = ({
@@ -27,6 +30,8 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
   onSelectCategory,
   onSearch,
   onSearchClick,
+  selectedLanguages,
+  onSelectLanguages,
 }) => {
   return (
     <div className="space-y-4 md:space-y-6">
@@ -41,6 +46,12 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           Selected Category: {selectedCategory}
         </h2>
         <Category onSelectCategory={onSelectCategory} />
+      </div>
+      <div>
+        <h2 className="mb-2 text-xl font-semibold">
+          Selected Languages: {selectedLanguages.join(", ")}
+        </h2>
+        <Language onSelectLanguages={onSelectLanguages} />
       </div>
       <div>
         <h2 className="mb-2 text-xl font-semibold">
