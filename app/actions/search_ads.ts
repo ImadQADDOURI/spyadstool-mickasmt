@@ -18,8 +18,8 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ url:", url);
     //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ options:", options);
 
-    console.log("🚀🚀🚀🚀 ~ XHR url & options ~ 🚀🚀🚀🚀");
-    console.log(url, "\n", options);
+    // console.log("🚀🚀🚀🚀 ~ XHR url & options ~ 🚀🚀🚀🚀");
+    // console.log(url, "\n", options);
 
     // Fetch the data from the Facebook Ads Library
     const response = await fetch(url, options || undefined);
@@ -39,8 +39,12 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     //   cleanedText,
     // );
 
-    console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
+    //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
 
+    console.log(
+      "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ ADs Found :",
+      data.payload.totalCount,
+    );
     return data;
   } catch (error) {
     console.error("🚀🚀🚀🚀Error fetching data:", error.message);

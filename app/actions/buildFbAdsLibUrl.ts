@@ -53,6 +53,8 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
       });
     }
 
+    console.log("🚀🚀🚀🚀 ~ buildFbAdsLibUrl ~ params:", params);
+
     const queryString = new URLSearchParams(params as any).toString();
     return baseUrl + queryString;
   } catch (error) {

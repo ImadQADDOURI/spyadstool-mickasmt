@@ -6,19 +6,31 @@ import { Button } from "../ui/button";
 import Category from "./category";
 import Country from "./country";
 import Language from "./language";
+import Platform from "./platform";
 import SearchByKeyword from "./searchByKeyword";
+import Status from "./status";
 
 interface SearchFiltersProps {
   selectedCountry: string;
-  selectedCategory: string;
-  searchQuery: string;
-  isLoading: boolean;
   onSelectCountry: (value: string) => void;
+
+  selectedCategory: string;
   onSelectCategory: (value: string) => void;
+
+  searchQuery: string;
   onSearch: (keyword: string) => void;
+
+  isLoading: boolean;
   onSearchClick: () => void;
+
   selectedLanguages: string[];
   onSelectLanguages: (values: string[]) => void;
+
+  selectedPlatforms: string[];
+  onSelectPlatforms: (platforms: string[]) => void;
+
+  selectedStatus: string;
+  onSelectStatus: (status: string) => void;
 }
 
 export const SearchFilters: React.FC<SearchFiltersProps> = ({
@@ -32,6 +44,10 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
   onSearchClick,
   selectedLanguages,
   onSelectLanguages,
+  selectedPlatforms,
+  onSelectPlatforms,
+  selectedStatus,
+  onSelectStatus,
 }) => {
   return (
     <div className="space-y-4 md:space-y-6">
@@ -53,6 +69,20 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
         </h2>
         <Language onSelectLanguages={onSelectLanguages} />
       </div>
+      <div>
+        <h2 className="mb-2 text-xl font-semibold">
+          Selected Platforms: {selectedPlatforms.join(", ")}
+        </h2>
+        <Platform onSelectPlatforms={onSelectPlatforms} />
+      </div>
+      <div>
+        <h2 className="mb-2 text-xl font-semibold">
+          Ad Status:{" "}
+          {selectedStatus === "all" ? "Active and Inactive" : selectedStatus}
+        </h2>
+        <Status onSelectStatus={onSelectStatus} />
+      </div>
+
       <div>
         <h2 className="mb-2 text-xl font-semibold">
           Search Query: {searchQuery}

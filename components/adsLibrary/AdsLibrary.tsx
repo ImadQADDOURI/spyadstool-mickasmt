@@ -4,6 +4,7 @@ import React, { useCallback, useState } from "react";
 import { ArrowDown, ArrowUp, Plus } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
+import { FilterParams } from "@/types/filterParams";
 import { AdsList } from "@/components/adsLibrary/AdsList";
 import SearchFilters from "@/components/adsLibrary/SearchFilters";
 import { searchAds } from "@/app/actions/search_ads";
@@ -14,7 +15,10 @@ import { Card } from "../ui/card";
 export const AdsLibrary = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedLanguages, setSelectedLanguages] = useState<string[]>(["ALL"]);
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+  const [selectedPlatforms, setSelectedPlatforms] = useState<string[]>([]);
+  const [selectedStatus, setSelectedStatus] = useState("");
+
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +58,7 @@ export const AdsLibrary = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const searchParams = {
+        const searchParams: FilterParams = {
           countries: [selectedCountry],
           ad_type: selectedCategory,
           q: searchQuery,
@@ -70,6 +74,9 @@ export const AdsLibrary = () => {
             useExistingParams && searchResults
               ? searchResults.collationToken
               : "",
+          content_languages: selectedLanguages,
+          publisher_platforms: selectedPlatforms,
+          active_status: selectedStatus,
         };
 
         const Results = await searchAds(searchParams);
@@ -107,6 +114,9 @@ export const AdsLibrary = () => {
       }
     },
     [
+      selectedLanguages,
+      selectedPlatforms,
+      selectedStatus,
       selectedCountry,
       selectedCategory,
       searchQuery,
@@ -141,6 +151,10 @@ export const AdsLibrary = () => {
         onSearchClick={() => handleSearchAds()}
         selectedLanguages={selectedLanguages}
         onSelectLanguages={setSelectedLanguages}
+        selectedPlatforms={selectedPlatforms}
+        onSelectPlatforms={setSelectedPlatforms}
+        selectedStatus={selectedStatus}
+        onSelectStatus={setSelectedStatus}
       />
 
       {error && <div className="font-semibold text-red-500">{error}</div>}
