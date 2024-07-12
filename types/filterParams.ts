@@ -13,7 +13,7 @@ export type FilterParams = {
   content_languages?: string[];
   page_ids?: string[];
   publisher_platforms?: string[];
-  media_type?: string;
+  media_type?: string | null;
   active_status?: string;
   start_date_min?: string;
   start_date_max?: string;

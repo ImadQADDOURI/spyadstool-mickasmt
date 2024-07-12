@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import Category from "./category";
 import Country from "./country";
 import Language from "./language";
+import Media from "./media";
 import Platform from "./platform";
 import SearchByKeyword from "./searchByKeyword";
 import Status from "./status";
@@ -31,6 +32,9 @@ interface SearchFiltersProps {
 
   selectedStatus: string;
   onSelectStatus: (status: string) => void;
+
+  selectedMedia: string | null;
+  onSelectMedia: (media: string | null) => void;
 }
 
 export const SearchFilters: React.FC<SearchFiltersProps> = ({
@@ -48,6 +52,8 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
   onSelectPlatforms,
   selectedStatus,
   onSelectStatus,
+  selectedMedia,
+  onSelectMedia,
 }) => {
   return (
     <div className="space-y-4 md:space-y-6">
@@ -81,6 +87,12 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           {selectedStatus === "all" ? "Active and Inactive" : selectedStatus}
         </h2>
         <Status onSelectStatus={onSelectStatus} />
+      </div>
+      <div>
+        <h2 className="mb-2 text-xl font-semibold">
+          Media Type: {selectedMedia === "" ? "All media types" : selectedMedia}
+        </h2>
+        <Media onSelectMedia={onSelectMedia} />
       </div>
 
       <div>

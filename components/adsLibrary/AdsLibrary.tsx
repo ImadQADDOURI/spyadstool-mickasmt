@@ -18,6 +18,7 @@ export const AdsLibrary = () => {
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [selectedPlatforms, setSelectedPlatforms] = useState<string[]>([]);
   const [selectedStatus, setSelectedStatus] = useState("");
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
@@ -77,6 +78,7 @@ export const AdsLibrary = () => {
           content_languages: selectedLanguages,
           publisher_platforms: selectedPlatforms,
           active_status: selectedStatus,
+          media_type: selectedMedia,
         };
 
         const Results = await searchAds(searchParams);
@@ -114,6 +116,7 @@ export const AdsLibrary = () => {
       }
     },
     [
+      selectedMedia,
       selectedLanguages,
       selectedPlatforms,
       selectedStatus,
@@ -155,6 +158,8 @@ export const AdsLibrary = () => {
         onSelectPlatforms={setSelectedPlatforms}
         selectedStatus={selectedStatus}
         onSelectStatus={setSelectedStatus}
+        selectedMedia={selectedMedia}
+        onSelectMedia={setSelectedMedia}
       />
 
       {error && <div className="font-semibold text-red-500">{error}</div>}
