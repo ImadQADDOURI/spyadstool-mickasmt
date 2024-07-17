@@ -170,10 +170,30 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
       </span>
     ));
   };
+  // const renderDate = () => {
+  //   if (endDate && startDate && endDate <= startDate) {
+  //     return `Started on ${formatDate(startDate)}`;
+  //   }
+  //   return `${formatDate(startDate)} - ${formatDate(endDate)}`;
+  // };
+
   const renderDate = () => {
-    if (endDate && startDate && endDate <= startDate) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+
+    const startDateObj = startDate ? new Date(startDate * 1000) : null;
+    const endDateObj = endDate ? new Date(endDate * 1000) : null;
+
+    if (!startDateObj || !endDateObj) {
+      return "N/A";
+    }
+
+    if (endDateObj < startDateObj || endDateObj >= yesterday) {
       return `Started on ${formatDate(startDate)}`;
     }
+
     return `${formatDate(startDate)} - ${formatDate(endDate)}`;
   };
 

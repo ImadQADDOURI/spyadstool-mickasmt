@@ -15,8 +15,8 @@ export type FilterParams = {
   publisher_platforms?: string[];
   media_type?: string | null;
   active_status?: string;
-  start_date_min?: string;
-  start_date_max?: string;
+  start_date_min?: string | null;
+  start_date_max?: string | null;
 
   //sorting
   sort_direction?: string;

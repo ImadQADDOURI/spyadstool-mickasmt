@@ -5,10 +5,12 @@ import React from "react";
 import { Button } from "../ui/button";
 import Category from "./category";
 import Country from "./country";
+import EndDate from "./endDate";
 import Language from "./language";
 import Media from "./media";
 import Platform from "./platform";
 import SearchByKeyword from "./searchByKeyword";
+import StartDate from "./startDate";
 import Status from "./status";
 
 interface SearchFiltersProps {
@@ -35,6 +37,12 @@ interface SearchFiltersProps {
 
   selectedMedia: string | null;
   onSelectMedia: (media: string | null) => void;
+
+  startDate: string | null;
+  onSelectStartDate: (date: string | null) => void;
+
+  endDate: string | null;
+  onSelectEndDate: (date: string | null) => void;
 }
 
 export const SearchFilters: React.FC<SearchFiltersProps> = ({
@@ -54,6 +62,11 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
   onSelectStatus,
   selectedMedia,
   onSelectMedia,
+
+  startDate,
+  onSelectStartDate,
+  endDate,
+  onSelectEndDate,
 }) => {
   return (
     <div className="space-y-4 md:space-y-6">
@@ -93,6 +106,22 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           Media Type: {selectedMedia === "" ? "All media types" : selectedMedia}
         </h2>
         <Media onSelectMedia={onSelectMedia} />
+      </div>
+
+      <div>
+        <h2 className="mb-2 text-xl font-semibold">
+          Start Date: {startDate || "Not selected"}
+        </h2>
+        <StartDate
+          onSelectStartDate={onSelectStartDate}
+          start_date_min={startDate}
+        />
+      </div>
+      <div>
+        <h2 className="mb-2 text-xl font-semibold">
+          End Date: {endDate || 'Not selected'}
+        </h2>
+        <EndDate onSelectEndDate={onSelectEndDate} start_date_max={endDate} />
       </div>
 
       <div>
