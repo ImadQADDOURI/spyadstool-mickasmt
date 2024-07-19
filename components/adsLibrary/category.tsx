@@ -14,33 +14,55 @@ import {
 } from "@/components/ui/select";
 
 type CategoryProps = {
-  onSelectCategory: (value: string) => void;
+  onSelectCategory: (value: string | null) => void;
+  clear?: boolean;
 };
 
-export const Category: React.FC<CategoryProps> = ({ onSelectCategory }) => {
-  const [value, setValue] = React.useState("");
+const categories = [
+  { value: "all", label: "All Categories" },
+  { value: "political_and_issue_ads", label: "Political and Issue Ads" },
+];
 
-  const handleSelect = (currentValue: string) => {
-    setValue(currentValue);
-    onSelectCategory(currentValue);
-  };
+export const Category: React.FC<CategoryProps> = React.memo(
+  ({ onSelectCategory, clear = false }) => {
+    const [value, setValue] = React.useState<string | null>(null);
 
-  return (
-    <Select value={value} onValueChange={handleSelect}>
-      <SelectTrigger className="w-[200px]">
-        <SelectValue placeholder="Select a category" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Ad Types</SelectLabel>
-          <SelectItem value="all">All</SelectItem>
-          <SelectItem value="political_and_issue_ads">
-            Political and Issue Ads
-          </SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
-  );
-};
+    React.useEffect(() => {
+      if (clear) {
+        setValue(null);
+        onSelectCategory(null);
+      }
+    }, [clear, onSelectCategory]);
+
+    const handleSelect = React.useCallback(
+      (currentValue: string) => {
+        const newValue = currentValue === value ? null : currentValue;
+        setValue(newValue);
+        onSelectCategory(newValue);
+      },
+      [value, onSelectCategory],
+    );
+
+    return (
+      <Select value={value || undefined} onValueChange={handleSelect}>
+        <SelectTrigger className="w-full">
+          <SelectValue placeholder="All categories" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectLabel>Ad Types</SelectLabel>
+            {categories.map((category) => (
+              <SelectItem key={category.value} value={category.value}>
+                {category.label}
+              </SelectItem>
+            ))}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+    );
+  },
+);
+
+Category.displayName = "Category";
 
 export default Category;

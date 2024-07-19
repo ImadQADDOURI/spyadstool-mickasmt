@@ -27,10 +27,12 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
       });
     }
 
-    if (filters.countries) {
+    if (filters.countries && filters.countries[0] !== "") {
       filters.countries.forEach((country, index) => {
         params[`countries[${index}]`] = country;
       });
+    } else {
+      params["countries[0]"] = "ALL";
     }
 
     if (filters.publisher_platforms) {

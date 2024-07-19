@@ -20,24 +20,37 @@ import {
 } from "@/components/ui/popover";
 
 const statuses = [
-  { value: "all", label: "Active and Inactive" },
   { value: "active", label: "Active" },
   { value: "inactive", label: "Inactive" },
 ];
 
 type StatusProps = {
-  onSelectStatus: (value: string) => void;
+  onSelectStatus: (value: string | null) => void;
+  clear?: boolean;
 };
 
-export const Status: React.FC<StatusProps> = ({ onSelectStatus }) => {
+export const Status: React.FC<StatusProps> = ({
+  onSelectStatus,
+  clear = false,
+}) => {
   const [open, setOpen] = React.useState(false);
-  const [selectedStatus, setSelectedStatus] = React.useState("all");
+  const [selectedStatus, setSelectedStatus] = React.useState<string | null>(
+    null,
+  );
+
+  // Clear selected Status if clear is true
+  React.useEffect(() => {
+    if (clear) {
+      setSelectedStatus(null);
+      onSelectStatus(null);
+    }
+  }, [clear, onSelectStatus]);
 
   const handleSelect = (statusValue: string) => {
     if (selectedStatus === statusValue) {
-      // Deselect: revert to "all"
-      setSelectedStatus("all");
-      onSelectStatus("all");
+      // Deselect: set to null
+      setSelectedStatus(null);
+      onSelectStatus(null);
     } else {
       setSelectedStatus(statusValue);
       onSelectStatus(statusValue);
@@ -54,7 +67,9 @@ export const Status: React.FC<StatusProps> = ({ onSelectStatus }) => {
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {statuses.find((status) => status.value === selectedStatus)?.label}
+          {selectedStatus
+            ? statuses.find((status) => status.value === selectedStatus)?.label
+            : "Active and Inactive"}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>

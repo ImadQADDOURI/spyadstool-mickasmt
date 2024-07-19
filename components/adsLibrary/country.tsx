@@ -22,12 +22,31 @@ import {
 } from "@/components/ui/popover";
 
 type CountryProps = {
-  onSelectCountry: (value: string) => void;
+  onSelectCountry: (value: string | null) => void;
+  clear?: boolean;
 };
 
-export const Country: React.FC<CountryProps> = ({ onSelectCountry }) => {
+export const Country: React.FC<CountryProps> = ({
+  onSelectCountry,
+  clear = false,
+}) => {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState<string | null>(null);
+
+  // Clear selected country if clear is true
+  React.useEffect(() => {
+    if (clear) {
+      setValue(null);
+      onSelectCountry(null);
+    }
+  }, [clear, onSelectCountry]);
+
+  const handleSelect = (currentValue: string) => {
+    const newValue = currentValue === value ? null : currentValue;
+    setValue(newValue);
+    onSelectCountry(newValue);
+    setOpen(false);
+  };
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -36,12 +55,12 @@ export const Country: React.FC<CountryProps> = ({ onSelectCountry }) => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-full justify-between"
         >
           {value
             ? countryCodesAlpha2.find((country) => country.value === value)
                 ?.label
-            : "Select country..."}
+            : "All Countries"}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -55,11 +74,7 @@ export const Country: React.FC<CountryProps> = ({ onSelectCountry }) => {
                 <CommandItem
                   key={country.value}
                   value={country.value}
-                  onSelect={(currentValue) => {
-                    setValue(currentValue === value ? "" : currentValue);
-                    onSelectCountry(currentValue === value ? "" : currentValue);
-                    setOpen(false);
-                  }}
+                  onSelect={handleSelect}
                 >
                   <Check
                     className={cn(

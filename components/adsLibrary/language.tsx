@@ -23,30 +23,45 @@ import {
 } from "@/components/ui/popover";
 
 type LanguageProps = {
-  onSelectLanguages: (value: string[]) => void;
+  onSelectLanguages: (value: string[] | null) => void;
+  clear?: boolean;
 };
 
-export const Language: React.FC<LanguageProps> = ({ onSelectLanguages }) => {
+export const Language: React.FC<LanguageProps> = ({
+  onSelectLanguages,
+  clear = false,
+}) => {
   const [open, setOpen] = React.useState(false);
-  const [selectedLanguages, setSelectedLanguages] = React.useState<string[]>(
-    [],
-  );
+  const [selectedLanguages, setSelectedLanguages] = React.useState<
+    string[] | null
+  >(null);
+
+  // Clear selected languages if clear is true
+  React.useEffect(() => {
+    if (clear) {
+      setSelectedLanguages(null);
+      onSelectLanguages(null);
+    }
+  }, [clear, onSelectLanguages]);
 
   const handleSelect = (languageCode: string) => {
     setSelectedLanguages((prev) => {
-      const newSelection = prev.includes(languageCode)
-        ? prev.filter((code) => code !== languageCode)
-        : [...prev, languageCode];
-      onSelectLanguages(newSelection.length ? newSelection : []);
-      return newSelection;
+      const newSelection = prev
+        ? prev.includes(languageCode)
+          ? prev.filter((code) => code !== languageCode)
+          : [...prev, languageCode]
+        : [languageCode];
+      onSelectLanguages(newSelection.length ? newSelection : null);
+      return newSelection.length ? newSelection : null;
     });
   };
 
   const handleRemove = (languageCode: string) => {
     setSelectedLanguages((prev) => {
+      if (!prev) return null;
       const newSelection = prev.filter((code) => code !== languageCode);
-      onSelectLanguages(newSelection.length ? newSelection : []);
-      return newSelection;
+      onSelectLanguages(newSelection.length ? newSelection : null);
+      return newSelection.length ? newSelection : null;
     });
   };
 
@@ -59,11 +74,11 @@ export const Language: React.FC<LanguageProps> = ({ onSelectLanguages }) => {
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {selectedLanguages.length ? (
+          {selectedLanguages && selectedLanguages.length > 0 ? (
             <div className="flex flex-wrap gap-1">
               {selectedLanguages.map((code) => (
                 <Badge key={code} variant="secondary" className="mr-1">
-                  {languages.find((lang) => lang.code === code)?.name}
+                  {languages.find((lang) => lang.code === code)?.code}
                   <button
                     className="ml-1 rounded-full outline-none ring-offset-background focus:ring-2 focus:ring-ring focus:ring-offset-2"
                     onKeyDown={(e) => {
@@ -103,7 +118,7 @@ export const Language: React.FC<LanguageProps> = ({ onSelectLanguages }) => {
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      selectedLanguages.includes(language.code)
+                      selectedLanguages?.includes(language.code)
                         ? "opacity-100"
                         : "opacity-0",
                     )}

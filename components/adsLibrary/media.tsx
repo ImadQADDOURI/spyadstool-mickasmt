@@ -20,7 +20,6 @@ import {
 } from "@/components/ui/popover";
 
 const mediaTypes = [
-  { value: null, label: "All media types" },
   { value: "image", label: "Images" },
   { value: "meme", label: "Memes" },
   { value: "image_and_meme", label: "Images and memes" },
@@ -30,15 +29,27 @@ const mediaTypes = [
 
 type MediaProps = {
   onSelectMedia: (value: string | null) => void;
+  clear?: boolean;
 };
 
-export const Media: React.FC<MediaProps> = ({ onSelectMedia }) => {
+export const Media: React.FC<MediaProps> = ({
+  onSelectMedia,
+  clear = false,
+}) => {
   const [open, setOpen] = React.useState(false);
   const [selectedMedia, setSelectedMedia] = React.useState<string | null>(null);
 
-  const handleSelect = (mediaValue: string | null) => {
+  // Clear selected Media if clear is true
+  React.useEffect(() => {
+    if (clear) {
+      setSelectedMedia(null);
+      onSelectMedia(null);
+    }
+  }, [clear, onSelectMedia]);
+
+  const handleSelect = (mediaValue: string) => {
     if (selectedMedia === mediaValue) {
-      // Deselect: revert to null (All media types)
+      // Deselect: set to null
       setSelectedMedia(null);
       onSelectMedia(null);
     } else {
@@ -57,8 +68,9 @@ export const Media: React.FC<MediaProps> = ({ onSelectMedia }) => {
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {mediaTypes.find((media) => media.value === selectedMedia)?.label ||
-            "All media types"}
+          {selectedMedia
+            ? mediaTypes.find((media) => media.value === selectedMedia)?.label
+            : "All Media Types"}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -69,8 +81,8 @@ export const Media: React.FC<MediaProps> = ({ onSelectMedia }) => {
             <CommandGroup>
               {mediaTypes.map((media) => (
                 <CommandItem
-                  key={media.label}
-                  value={media.label}
+                  key={media.value}
+                  value={media.value}
                   onSelect={() => handleSelect(media.value)}
                 >
                   <Check

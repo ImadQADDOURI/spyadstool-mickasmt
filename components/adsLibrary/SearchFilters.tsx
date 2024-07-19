@@ -70,74 +70,78 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
 }) => {
   return (
     <div className="space-y-4 md:space-y-6">
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Selected Country: {selectedCountry}
-        </h2>
-        <Country onSelectCountry={onSelectCountry} />
-      </div>
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Selected Category: {selectedCategory}
-        </h2>
-        <Category onSelectCategory={onSelectCategory} />
-      </div>
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Selected Languages: {selectedLanguages.join(", ")}
-        </h2>
-        <Language onSelectLanguages={onSelectLanguages} />
-      </div>
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Selected Platforms: {selectedPlatforms.join(", ")}
-        </h2>
-        <Platform onSelectPlatforms={onSelectPlatforms} />
-      </div>
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Ad Status:{" "}
-          {selectedStatus === "all" ? "Active and Inactive" : selectedStatus}
-        </h2>
-        <Status onSelectStatus={onSelectStatus} />
-      </div>
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Media Type: {selectedMedia === "" ? "All media types" : selectedMedia}
-        </h2>
-        <Media onSelectMedia={onSelectMedia} />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-8">
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Country
+          </h2>
+          <Country onSelectCountry={onSelectCountry} />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Category
+          </h2>
+          <Category onSelectCategory={onSelectCategory} />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Languages
+          </h2>
+          <Language onSelectLanguages={onSelectLanguages} />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Platforms
+          </h2>
+          <Platform onSelectPlatforms={onSelectPlatforms} />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Status
+          </h2>
+          <Status onSelectStatus={onSelectStatus} />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Media
+          </h2>
+          <Media onSelectMedia={onSelectMedia} />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Start Date
+          </h2>
+          <StartDate
+            onSelectStartDate={onSelectStartDate}
+            start_date_min={startDate}
+          />
+        </div>
+        <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            End Date
+          </h2>
+          <EndDate onSelectEndDate={onSelectEndDate} start_date_max={endDate} />
+        </div>
       </div>
 
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Start Date: {startDate || "Not selected"}
-        </h2>
-        <StartDate
-          onSelectStartDate={onSelectStartDate}
-          start_date_min={startDate}
-        />
-      </div>
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          End Date: {endDate || 'Not selected'}
-        </h2>
-        <EndDate onSelectEndDate={onSelectEndDate} start_date_max={endDate} />
-      </div>
+      <div className="my-4 border-t border-gray-200 dark:border-gray-700"></div>
 
-      <div>
-        <h2 className="mb-2 text-xl font-semibold">
-          Search Query: {searchQuery}
-        </h2>
-        <SearchByKeyword onSearch={onSearch} />
-      </div>
-      <div>
-        <Button
-          onClick={onSearchClick}
-          className="w-full md:w-auto"
-          disabled={isLoading}
-        >
-          {isLoading ? "Searching..." : "Search Ads"}
-        </Button>
+      <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="flex-grow">
+          <h2 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+            Search Query
+          </h2>
+          <SearchByKeyword onSearch={onSearch} />
+        </div>
+        <div className="flex items-end">
+          <Button
+            onClick={onSearchClick}
+            className="w-full sm:w-auto"
+            disabled={isLoading}
+          >
+            {isLoading ? "Searching..." : "Search Ads"}
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -28,30 +28,45 @@ const platforms = [
 ];
 
 type PlatformProps = {
-  onSelectPlatforms: (value: string[]) => void;
+  onSelectPlatforms: (value: string[] | null) => void;
+  clear?: boolean;
 };
 
-export const Platform: React.FC<PlatformProps> = ({ onSelectPlatforms }) => {
+export const Platform: React.FC<PlatformProps> = ({
+  onSelectPlatforms,
+  clear = false,
+}) => {
   const [open, setOpen] = React.useState(false);
-  const [selectedPlatforms, setSelectedPlatforms] = React.useState<string[]>(
-    [],
-  );
+  const [selectedPlatforms, setSelectedPlatforms] = React.useState<
+    string[] | null
+  >(null);
+
+  // Clear selected Platforms if clear is true
+  React.useEffect(() => {
+    if (clear) {
+      setSelectedPlatforms(null);
+      onSelectPlatforms(null);
+    }
+  }, [clear, onSelectPlatforms]);
 
   const handleSelect = (platformValue: string) => {
     setSelectedPlatforms((prev) => {
-      const newSelection = prev.includes(platformValue)
-        ? prev.filter((value) => value !== platformValue)
-        : [...prev, platformValue];
-      onSelectPlatforms(newSelection.length ? newSelection : []);
-      return newSelection;
+      const newSelection = prev
+        ? prev.includes(platformValue)
+          ? prev.filter((value) => value !== platformValue)
+          : [...prev, platformValue]
+        : [platformValue];
+      onSelectPlatforms(newSelection.length ? newSelection : null);
+      return newSelection.length ? newSelection : null;
     });
   };
 
   const handleRemove = (platformValue: string) => {
     setSelectedPlatforms((prev) => {
+      if (!prev) return null;
       const newSelection = prev.filter((value) => value !== platformValue);
-      onSelectPlatforms(newSelection.length ? newSelection : []);
-      return newSelection;
+      onSelectPlatforms(newSelection.length ? newSelection : null);
+      return newSelection.length ? newSelection : null;
     });
   };
 
@@ -64,7 +79,7 @@ export const Platform: React.FC<PlatformProps> = ({ onSelectPlatforms }) => {
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {selectedPlatforms.length ? (
+          {selectedPlatforms && selectedPlatforms.length > 0 ? (
             <div className="flex flex-wrap gap-1">
               {selectedPlatforms.map((value) => (
                 <Badge key={value} variant="secondary" className="mr-1">
@@ -110,7 +125,7 @@ export const Platform: React.FC<PlatformProps> = ({ onSelectPlatforms }) => {
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      selectedPlatforms.includes(platform.value)
+                      selectedPlatforms?.includes(platform.value)
                         ? "opacity-100"
                         : "opacity-0",
                     )}
