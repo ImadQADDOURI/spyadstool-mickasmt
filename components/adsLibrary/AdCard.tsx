@@ -25,6 +25,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
+import { AdDetails } from "./AdDetails";
 import ExpandableText from "./expandableText";
 import PageNameWithPopover from "./PageNameWithPopover";
 
@@ -42,6 +43,8 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
     isActive,
     snapshot,
   } = ad;
+
+  const [showAdDetails, setShowAdDetails] = useState(false);
 
   const formatDate = (timestamp: number | undefined) => {
     if (!timestamp) return "N/A";
@@ -239,7 +242,10 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
           </span>
         </div>
 
-        <button className="group relative mb-2 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800">
+        <button
+          className="group relative mb-2 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800"
+          onClick={() => setShowAdDetails(true)}
+        >
           <span className="relative w-full rounded-md bg-white px-5 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
             See ad details
           </span>
@@ -290,6 +296,9 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
           </button>
         )}
       </CardFooter>
+      {showAdDetails && (
+        <AdDetails ad={ad} onClose={() => setShowAdDetails(false)} />
+      )}
     </Card>
   );
 };

@@ -1,0 +1,827 @@
+i am building an app using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing.
+
+
+now i want to create a card component.tsx to display the ads data that i passe the ad data and it display it, later i will map through all the ads and display each one using this component
+
+example of the ads data i am working with :
+
+the card i want will look something like that one in the image:
+
+and components\adsLibrary\topSection.tsx
+
+the data i want in each add
+{adArchiveID,startDate,endDate,entityType,isActive,pageName,publisherPlatform[],snapshot{cards[] or videos[] or images[] (display in a carrousel)},....}
+add all the fields to types/ad.ts or passe the data directly then filter it inside the adCard components because even if i don't display some data i need them in the backgroud to do more tasks (like collationID)
+
+------------------------------------------------------------------------------------------------------------------------
+i need some modification to ad card:
+
+arrows in carrousel are not well positioned, they are over taking place, shall be inside the card
+make the text smaller
+videos should have a video play icon over it, to play the video
+for platforms use icons not text and when hover over the platform name appear {Facebook, insta, messenger, audience network }
+add active/inactive icons next to Status (use lucide react icons)
+incase enddate is less than startdate make it like that "Started on {startdate}"
+add to the card a button for See ad details
+add to the card a three dots button in the top right for more options(i  will work on that later to add some ai tools like generate my ad copy from the ad info ...)
+
+
+and in case of an ad with cards[], each card has its own data and text so take that in consideration , 
+and add to the card the button to the website of the ad (in case of multiple ards each card should have it's own button)
+
+
+modify adslibrary.tsx
+remove button load more and change it with a card with the button + in the end of the displayed ads that when i click it loads more ads while the value of isResultComplet = false else it doesn't appear 
+if an ad has no collationCount, don't display the ad at all
+
+
+and  update types/ad.ts so that interface Ad have all the possible fields, i need a solution to missing fields in my types Ad interface and the extracted ads, i want the Ad to include all the possible fields so no further missing data will be encountered
+
+ here is an example of an ad with cards[..]:
+[
+    {
+        "adid": "0",
+        "adArchiveID": "820321146235490",
+        "archiveTypes": [],
+        "categories": [
+            0
+        ],
+        "containsDigitallyCreatedMedia": false,
+        "containsSensitiveContent": false,
+        "collationCount": 1,
+        "collationID": 346852001136698,
+        "currency": "",
+        "endDate": 1697785200,
+        "entityType": "person_profile",
+        "fevInfo": null,
+        "finServAdData": {
+            "is_deemed_finserv": false,
+            "is_limited_delivery": false
+        },
+        "gatedType": "eligible",
+        "hasUserReported": false,
+        "hiddenSafetyData": false,
+        "hideDataStatus": "NONE",
+        "impressionsWithIndex": {
+            "impressionsText": null,
+            "impressionsIndex": -1
+        },
+        "isAAAEligible": true,
+        "isAdAccountActioned": false,
+        "isActive": false,
+        "isProfilePage": false,
+        "pageID": "107092189048520",
+        "pageInfo": null,
+        "pageIsDeleted": false,
+        "pageName": "The Trendsetter",
+        "politicalCountries": [],
+        "reachEstimate": null,
+        "reportCount": null,
+        "snapshot": {
+            "ad_creative_id": "23861396658020720",
+            "cards": [
+                {
+                    "body": "These Are 30+ Hilarious Face Palm Moments That Were Too Hilarious To Be Mad At",
+                    "caption": null,
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "Images Of The Funniest And Dumbest Facepalm Posts Of All Time",
+                    "link_description": " ",
+                    "link_url": "https://sneakertoast.com/...",
+                    "original_image_url": "https://sconte...",
+                    "resized_image_url": "https://scontent...",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                },
+                {
+                    "body": "Here's A List Of 33+ Facepalm Moments That Further Lower Our Standards For Humanity",
+                    "caption": null,
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "Hilarious Face Palm Moments That Were Too Hilarious To Be Mad At",
+                    "link_description": "33+ Facepalm Moments That Further Lower Our Standards For Humanity",
+                    "link_url": "https://sneakertoast.com/trending...",
+                    "original_image_url": "https://scontent.ffez1-...",
+                    "resized_image_url": "https://scontent.ffez2-...",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                },
+                {
+                    "body": "These are 33 Types of Odd Friendships You’re Probably Part Of",
+                    "caption": null,
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "34 Shaking With Rage At The Audacity Of These 16 Rude, Fake, Entitled Friends",
+                    "link_description": "25+ Images Of The Funniest And Dumbest Facepalm Posts Of All Time",
+                    "link_url": "https://sneakertoast.com/tre...",
+                    "original_image_url": "https://scont...",
+                    "resized_image_url": "https://scontent....",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                },
+                {
+                    "body": "Hilarious Face Palm Moments That Were Too Hilarious To Be Mad At",
+                    "caption": null,
+                    "cta_text": "Learn More",
+                    "cta_type": "LEARN_MORE",
+                    "title": "These Are 30+ Hilarious Face Palm Moments That Were Too Hilarious To Be Mad At",
+                    "link_description": "Shaking With Rage At The Audacity Of These 16 Rude, Fake, Entitled Friends",
+                    "link_url": "https://sneakertoast.com/trending...",
+                    "original_image_url": "https://scontent.ffez2-1.f...",
+                    "resized_image_url": "https://scontent.ffez1-1.fna.fbc...",
+                    "watermarked_resized_image_url": "",
+                    "image_crops": null,
+                    "video_hd_url": null,
+                    "video_sd_url": null,
+                    "video_preview_image_url": null,
+                    "watermarked_video_hd_url": null,
+                    "watermarked_video_sd_url": null
+                }
+            ],
+            "body_translations": {},
+            "byline": null,
+            "caption": "sneakertoast.com",
+            "cta_text": "Learn more",
+            "dynamic_item_flags": {},
+            "dynamic_versions": null,
+            "edited_snapshots": [],
+            "effective_authorization_category": "NONE",
+            "event": [],
+            "extra_images": [],
+            "extra_links": [],
+            "extra_texts": [],
+            "extra_videos": [],
+            "instagram_shopping_products": [],
+            "display_format": "dco",
+            "title": "{{product.name}}",
+            "link_description": "{{product.description}}",
+            "link_url": "https://sneakertoast.com/...",
+            "page_welcome_message": null,
+            "images": [],
+            "videos": [],
+            "creation_time": 1696851305,
+            "page_id": 107092189048520,
+            "page_name": "The Trendsetter",
+            "page_profile_picture_url": "https://scontent.ffez1-2.fna...",
+            "page_categories": {
+                "1307": "Magazine"
+            },
+            "page_entity_type": "person_profile",
+            "page_is_profile_page": false,
+            "instagram_actor_name": "",
+            "instagram_profile_pic_url": "",
+            "instagram_url": "",
+            "instagram_handle": "",
+            "is_reshared": false,
+            "version": 3,
+            "body": {
+                "context": {},
+                "markup": {
+                    "__html": "&#123;&#123;product.brand&#125;&#125;"
+                },
+                "callerHash": null
+            },
+            "brazil_tax_id": null,
+            "branded_content": null,
+            "current_page_name": "The Trendsetter",
+            "disclaimer_label": null,
+            "page_like_count": 28,
+            "page_profile_uri": "https://facebook.com/100092446839295",
+            "page_is_deleted": false,
+            "root_reshared_post": null,
+            "cta_type": "LEARN_MORE",
+            "additional_info": null,
+            "ec_certificates": null,
+            "country_iso_code": null,
+            "instagram_branded_content": null
+        },
+        "spend": null,
+        "startDate": 1696834800,
+        "stateMediaRunLabel": null,
+        "publisherPlatform": [
+            "facebook",
+            "instagram",
+            "audience_network",
+            "messenger"
+        ],
+        "menuItems": []
+    }
+]
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+i need some modification :
+
+date in case (endDate < startDate) show "Started on {startDate}"
+in case of an ad with cards[], each card in cards has it's own link_url, so an ad with card should have a button for each card
+instead of .slice(0, n ) + "..." use a show more icon in the end of long texts to see the whole text
+make the videos playable with the play video icon onclick whange the style a little bit the play is not clear
+add a button to adCard with heart icon to save the add 
+
+and when i hover over page name a popover displays like the one in the image
+
+
+automatique popover no need to click
+page_name // page name
+page_categories // subtitle with different values {1602: "Public figure",2705:"Entertainment website",...}
+link_url // waebsite link extract and display only the domain
+page_like_count // page likes
+page_profile_uri //link for button go to page
+// button View Ads 
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+i need some modifications to AdCard component :
+
+if ads collationcount >50000 display >50,000
+use public\Audience-Network-by-Facebook-logo-vector-03.svg for icon to rederPlatform for audience Network
+in case of an ad with cards[] each card has its own button link, so add a button to each card and use the link snapshot.cards[].link_url and remove the general button in the card footer for ads with cards[], plus place the text that is currently over the cards to the butom of the media with the button 
+
+error hundling , best practises coding 
+
+
+??!!! categories not the same as in meta (meta use a XHR /graphql to get the page data and categories ) in my app im using the data from the ads to get the page data
+
+
+
+
+in cards i have two buttons, and the text is overlapping the media, i want it to be under it not over it, modify the styling 
+reconfigure the cardFooter styling, simple with some cool effects
+------------------------------------------------------------------------------------------------------------------------
+search and filters  for Ads Library component
+
+
+
+nope not working correctly, and the load more is giving incoherent results it's loosing the right configuration
+we need to separate what's possible in a separate component let's separate only the filters in a SearchFilters.tsx , let's keep the search logic (the search and load more) in the main AdsLibrary component to maintain state consistency and simplify data flow.
+plus i want the search and the filters to be in a style of a collapsible side bar so when i scroll down it collabse to  top showing only an arrow, when i click on the arrow it slides down overlaping the display results
+
+responsive design, error hundling, good practises coding
+
+
+
+
+-------------------------------------------------------
+half circle with button
+
+Button Styling:
+
+Apply a gradient background that transitions from blue to purple.
+Use white text for better contrast.
+Add a subtle shadow that increases on hover.
+Include a small badge showing the number of active filters.
+use icon Sliders which is more indicative of filters.
+
+
+when click on the search button go to top of the page
+
+
+add two buttons one to scroll to the top of page  (position top right) , and the other to the bottom  (position bottom right) , 
+
+------------------------------------------------------------------------------------------------------------------------
+
+ad status
+ decalage /all /active /inactive
+
+
+now i need i component media.tsx
+
+to select media_type one choice from [
+All media types(default),value null (dont return anything if all is selected)
+Images,value 'image'
+Memes ,value 'meme'
+Images and memes, value 'image_and_meme'
+Videos, value 'video'
+No image or video, value 'none'
+]
+------------------------------------------------------------------------------------------------------------------------
+I need a startDate.tsx component to select a start date with the following specifications:
+
+Props:
+start_date_min?: string | null;
+
+Requirements:
+The start date cannot be before 2018-05-07.
+
+allow for both date selection and manual input.
+
+Default state should be "All time" (return null).
+add a x icon to deselected inside the bar.
+Feel free to suggest any improvements or modifications to ensure everything works well. The code should be simple and robust.
+
+
+
+
+verify that don't allow a selection where invers of start date < end date
+
+and for the buttons apply and reset , apply remove it , anf reset try to integrate inside the bar selector, plus they are causing a problem Unhandled Runtime Error TypeError: onSelectDateRange is not a function
+
+styling also is bad looking 
+
+
+
+
+
+
+I need a dateRange.tsx component to select a start date and an end date with the following specifications:
+
+Props:
+start_date_min?: string | null;
+start_date_max?: string | null;
+Requirements:
+The start date cannot be before 2018-05-07.
+The end date cannot be later than the current date.
+Use two Input with the possibility that Allow the user to type in the date
+Default values should be:
+start_date_min: 2018-05-07
+start_date_max: current date
+
+Default state should be "All time" (return null). If a date is selected and then clicked again, it should be deselected.
+Feel free to suggest any improvements or modifications to ensure everything works well. The code should be simple and robust.
+
+here is an inspiration
+<Input
+          id="end-date"
+          type="date"
+          value={endDate ? format(endDate, "yyyy-MM-dd") : ""}
+          onChange={(e) => {
+            const date = e.target.value
+              ? parse(e.target.value, "yyyy-MM-dd", new Date())
+              : undefined;
+            handleEndDateChange(date);
+          }}
+          min={startDate ? format(startDate, "yyyy-MM-dd") : "2018-05-07"}
+          max={format(maxSelectableDate, "yyyy-MM-dd")}
+          className="mt-2"
+        />
+
+and take in concideration this errors :
+
+Argument of type 'Date | undefined' is not assignable to parameter of type 'Date | null'.
+ Type 'undefined' is not assignable to type 'Date | null'.ts(2345)
+
+Type 'Date | null' is not assignable to type 'Matcher | Matcher[] | undefined'.
+  Type 'null' is not assignable to type 'Matcher | Matcher[] | undefined'.ts(2322)
+
+Type '(date: Date | null) => void' is not assignable to type 'SelectSingleEventHandler'.
+  Types of parameters 'date' and 'day' are incompatible.
+    Type 'Date | undefined' is not assignable to type 'Date | null'.
+      Type 'undefined' is not assignable to type 'Date | null'.ts(2322)
+
+------------------------------------------------------------------------------------------------------------------------
+ Country, Category, Languages,  Platforms,  Status,  Media,  Start Date,  End Date,  Query plus the search button
+
+
+i want to modify the styling of this filters : 
+
+Country, Category, Languages,  Platforms,  Status,  Media,  Start Date,  End Date,  Query plus the search button
+
+i want to display all of them in one line exept for the Query and the search button they shall be in a separate line 
+
+
+
+
+
+i want the filters(all exept for search query and search button) to be inside a  panel that slide in from the left side when i click on a button 'filters', the slide panel should overlay the page content
+and add to the sliding panel two buttons
+
+------------------------------------------------------------------------------------------------------------------------
+// components/adsLibrary/AdsLibrary.tsx
+
+import React, { useCallback, useEffect, useState } from "react";
+import { ArrowDown, ArrowUp, Plus } from "lucide-react";
+
+import { Ad, AdsData } from "@/types/ad";
+import { FilterParams } from "@/types/filterParams";
+import { AdsList } from "@/components/adsLibrary/AdsList";
+import { searchAds } from "@/app/actions/search_ads";
+
+import { Button } from "../ui/button";
+import { Card } from "../ui/card";
+import Category from "./category";
+import Country from "./country";
+import EndDate from "./endDate";
+import Language from "./language";
+import Media from "./media";
+import Platform from "./platform";
+import SearchByKeyword from "./searchByKeyword";
+import StartDate from "./startDate";
+import Status from "./status";
+
+export const AdsLibrary = () => {
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+  const [selectedPlatforms, setSelectedPlatforms] = useState<string[]>([]);
+  const [selectedStatus, setSelectedStatus] = useState("");
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
+  const [startDate, setStartDate] = useState<string | null>(null);
+  const [endDate, setEndDate] = useState<string | null>(null);
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<AdsData | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [totalCount, setTotalCount] = useState<number | null>(null);
+
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const [appliedFiltersCount, setAppliedFiltersCount] = useState(0);
+  const countAppliedFilters = useCallback(() => {
+    let count = 0;
+    if (selectedCountry) count++;
+    if (selectedCategory) count++;
+    if (selectedLanguages.length > 0) count++;
+    if (selectedPlatforms.length > 0) count++;
+    if (selectedStatus) count++;
+    if (selectedMedia) count++;
+    if (startDate) count++;
+    if (endDate) count++;
+    setAppliedFiltersCount(count);
+  }, [
+    selectedCountry,
+    selectedCategory,
+    selectedLanguages,
+    selectedPlatforms,
+    selectedStatus,
+    selectedMedia,
+    startDate,
+    endDate,
+  ]);
+  const clearAllFilters = () => {
+    setSelectedCountry("");
+    setSelectedCategory("");
+    setSelectedLanguages([]);
+    setSelectedPlatforms([]);
+    setSelectedStatus("");
+    setSelectedMedia(null);
+    setStartDate(null);
+    setEndDate(null);
+  };
+
+  const applyFilters = () => {
+    handleSearchAds();
+    setIsPanelOpen(false);
+  };
+  useEffect(() => {
+    countAppliedFilters();
+  }, [countAppliedFilters]);
+
+  const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
+    return results.flatMap((monthGroup) =>
+      monthGroup
+        .filter((ad: any) => ad.collationCount !== undefined)
+        .map((ad: any) => ({
+          adid: ad.adid,
+          adArchiveID: ad.adArchiveID,
+          collationCount: ad.collationCount,
+          collationID: ad.collationID,
+          currency: ad.currency,
+          startDate: ad.startDate,
+          endDate: ad.endDate,
+          pageName: ad.pageName,
+          pageID: ad.pageID,
+          publisherPlatform: ad.publisherPlatform,
+          isActive: ad.isActive,
+          snapshot: ad.snapshot,
+          categories: ad.categories,
+          impressionsWithIndex: ad.impressionsWithIndex,
+          spend: ad.spend,
+          reachEstimate: ad.reachEstimate,
+          entityType: ad.entityType,
+          gatedType: ad.gatedType,
+          hideDataStatus: ad.hideDataStatus,
+        })),
+    );
+  }, []);
+
+  const handleSearchAds = useCallback(
+    async (useExistingParams = false) => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const searchParams: FilterParams = {
+          countries: [selectedCountry],
+          ad_type: selectedCategory,
+          q: searchQuery,
+          forward_cursor:
+            useExistingParams && searchResults
+              ? searchResults.forwardCursor
+              : "",
+          backward_cursor:
+            useExistingParams && searchResults
+              ? searchResults.backwardCursor
+              : "",
+          collation_token:
+            useExistingParams && searchResults
+              ? searchResults.collationToken
+              : "",
+          content_languages: selectedLanguages,
+          publisher_platforms: selectedPlatforms,
+          active_status: selectedStatus,
+          media_type: selectedMedia,
+          start_date_min: startDate,
+          start_date_max: endDate,
+        };
+
+        const Results = await searchAds(searchParams);
+
+        const extractedAds = extractAdsFromResults(Results.payload.results);
+
+        const adsData: AdsData = {
+          isResultComplete: Results.payload.isResultComplete,
+          forwardCursor: Results.payload.forwardCursor,
+          backwardCursor: Results.payload.backwardCursor,
+          totalCount: Results.payload.totalCount,
+          collationToken: Results.payload.collationToken,
+          ads: extractedAds,
+        };
+
+        if (useExistingParams && searchResults) {
+          setSearchResults((prevResults) => ({
+            ...adsData,
+            ads: [...prevResults!.ads, ...adsData.ads],
+          }));
+        } else {
+          setSearchResults(adsData);
+
+          // Update total count only for new searches
+          setTotalCount(adsData.totalCount);
+        }
+      } catch (error) {
+        console.error("Error searching ads:", error);
+        setError(
+          "An error occurred while searching for ads. Please try again.",
+        );
+        setSearchResults(null);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [
+      endDate,
+      startDate,
+      selectedMedia,
+      selectedLanguages,
+      selectedPlatforms,
+      selectedStatus,
+      selectedCountry,
+      selectedCategory,
+      searchQuery,
+      searchResults,
+      extractAdsFromResults,
+    ],
+  );
+
+  const handleLoadMore = useCallback(() => {
+    if (searchResults && !searchResults.isResultComplete) {
+      handleSearchAds(true);
+    }
+  }, [searchResults, handleSearchAds]);
+
+  const scrollTo = useCallback((position: "top" | "bottom") => {
+    window.scrollTo({
+      top: position === "top" ? 0 : document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  }, []);
+
+  return (
+    <div className="relative min-h-screen space-y-6 p-4">
+      <div className="space-y-4 md:space-y-6">
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Selected Country: {selectedCountry}
+          </h2>
+          <Country onSelectCountry={setSelectedCountry} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Selected Category: {selectedCategory}
+          </h2>
+          <Category onSelectCategory={setSelectedCategory} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Selected Languages: {selectedLanguages.join(", ")}
+          </h2>
+          <Language onSelectLanguages={setSelectedLanguages} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Selected Platforms: {selectedPlatforms.join(", ")}
+          </h2>
+          <Platform onSelectPlatforms={setSelectedPlatforms} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Ad Status:{" "}
+            {selectedStatus === "all" ? "Active and Inactive" : selectedStatus}
+          </h2>
+          <Status onSelectStatus={setSelectedStatus} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Media Type:{" "}
+            {selectedMedia === "" ? "All media types" : selectedMedia}
+          </h2>
+          <Media onSelectMedia={setSelectedMedia} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Start Date: {startDate || "Not selected"}
+          </h2>
+          <StartDate
+            onSelectStartDate={setStartDate}
+            start_date_min={startDate}
+          />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            End Date: {endDate || "Not selected"}
+          </h2>
+          <EndDate onSelectEndDate={setEndDate} start_date_max={endDate} />
+        </div>
+        <div>
+          <h2 className="mb-2 text-xl font-semibold">
+            Search Query: {searchQuery}
+          </h2>
+          <SearchByKeyword onSearch={setSearchQuery} />
+        </div>
+        <div>
+          <Button
+            onClick={() => handleSearchAds()}
+            className="w-full md:w-auto"
+            disabled={isLoading}
+          >
+            {isLoading ? "Searching..." : "Search Ads"}
+          </Button>
+        </div>
+      </div>
+
+      {error && <div className="font-semibold text-red-500">{error}</div>}
+
+      {totalCount !== null && (
+        <div className="text-lg font-bold">
+          {totalCount > 50000 ? ">50,000" : totalCount} Ads Found
+        </div>
+      )}
+
+      {searchResults && searchResults.ads.length > 0 ? (
+        <>
+          <AdsList ads={searchResults.ads} />
+          {!searchResults.isResultComplete && (
+            <Card className="mt-4 flex items-center justify-center p-4">
+              <Button onClick={handleLoadMore} disabled={isLoading}>
+                <Plus className="mr-2 h-4 w-4" />
+                {isLoading ? "Loading..." : "Load More Ads"}
+              </Button>
+            </Card>
+          )}
+        </>
+      ) : (
+        searchResults && (
+          <p>No ads found. Try adjusting your search criteria.</p>
+        )
+      )}
+
+      <div className="fixed bottom-16 right-2 flex flex-col space-y-1">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => scrollTo("top")}
+          className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="h-4 w-4" />
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => scrollTo("bottom")}
+          className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+          aria-label="Scroll to bottom"
+        >
+          <ArrowDown className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default AdsLibrary;
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+import { X } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+
+
+ const clearDate = () => {
+    setSelectedDate(null);
+    onSelectEndDate(null);
+  };
+
+
+
+{selectedDate && (
+        <Button
+          onClick={clearDate}
+          variant="ghost"
+          size="sm"
+          className="absolute right-1 top-1/2 -translate-y-1/2 p-1"
+          aria-label="Clear date"
+        >
+          <X className="h-4 w-4" />
+        </Button>
+      )}
+
+------------------------------------------------------------------------------------------------------------------------
+start date < end date, start date < min date, end date
+still have X ads found
+
+
+
+i need a condition in adslibrary so that start date cant be bigger than end date , and end date can't be less than start date
+and another thing in the Load More Ads section i want another state to track Count: Results.payload.totalCount that updates after each search and get how much is still can be searched, so the users can see how much is still there in the db, do you understand what i want ?
+the results returned each time give me a new value in Results.payload.totalCount that has the number of results that's still there valide to search more 
+so i want to see how much is still there after each search in the load more section
+------------------------------------------------------------------------------------------------------------------------
+
+AdDetails.tsx
+
+i need a new component AdDetails.tsx that i passe an argument ad.collationID and it do some backgroud tasks and it displays the results overlaying the page
+i want the section 'See ad details' in AdCard.tsx to be a button that on click it displays the new component,
+ overlaying the page content taking all the page size (let some spacing from the top buttom left and right like a 10 or 20),
+ while the new component is loaading or dowing the backround tasks it displays a loading circle
+ it hase a X button to close
+ the initial page content will be darkned 
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+adArchiveID: "406908169029167" --> collationID: 1021110809376747
+
+now let's start creating the parts of AdDetails
+firt let's implement a function 'handle See Ad Details' that lunches automaticaly
+this function call { searchAds } from "@/app/actions/search_ads" with:
+FilterParams.baseUrl= https://www.facebook.com/ads/library/async/collation? 
+FilterParams.collation_group_id= collationID passed as argument to the component AdDetails.tsx
+and if the results has a forward_cursor save it for loading more to lunch the next search with the new FilterParams
+
+then use extractAdsFromResults function from components/adsLibrary/AdsLibrary.tsx to extract the ad data
+   
+
+use the handleSearchAds  function as inspiration from components/adsLibrary/AdsLibrary.tsx
+
+
+very importent Notes:
+
+the function 'handle See Ad Details' is called only if ad.collationCount >= 1 else it will show the ad data on the ad who lunched the AdDetails.tsx with <AdCard key={ad.adArchiveID} ad={ad} />
+while isResultComplete = false the user can load more Ads
+
+------------------------------------------------------------------------------------------------------------------------
+can you add also a button to display Ad Details in a new tab page, in case the user want to gard the data and not lose it when he exit
+is that doable?
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------

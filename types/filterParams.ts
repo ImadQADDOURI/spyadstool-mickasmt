@@ -1,5 +1,8 @@
 // @/types/filterParams.ts
 export type FilterParams = {
+  //URL
+  baseUrl?: string;
+
   //session
   v?: string | null;
   session_id?: string | null;
@@ -28,4 +31,7 @@ export type FilterParams = {
   forward_cursor?: string | null;
   backward_cursor?: string | null;
   collation_token?: string | null;
+
+  //Ad Details
+  collation_group_id?: number;
 };

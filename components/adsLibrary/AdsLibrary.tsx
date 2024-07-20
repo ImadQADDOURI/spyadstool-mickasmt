@@ -321,7 +321,7 @@ export const AdsLibrary = () => {
 
         {totalCount !== null && (
           <div className="text-lg font-bold">
-            {totalCount > 50000 ? ">50,000" : totalCount} Ads Found
+            {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
           </div>
         )}
 

@@ -3,31 +3,54 @@ import { FilterParams } from "@/types/filterParams";
 
 export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
   try {
-    const baseUrl = "https://www.facebook.com/ads/library/async/search_ads?";
+    const baseUrl =
+      filters.baseUrl ||
+      "https://www.facebook.com/ads/library/async/search_ads?";
+    const params: { [key: string]: string | number } = {};
 
-    const params: { [key: string]: string | number } = {
-      q: filters.q || "",
-      v: filters.v || "",
-      session_id: filters.session_id || "",
-      count: filters.count ?? 30,
-      active_status: filters.active_status || "all",
-      ad_type: filters.ad_type || "all",
-      media_type: filters.media_type || "all",
-      "sort_data[direction]": filters.sort_direction || "desc",
-      "sort_data[mode]": filters.sort_mode || "relevancy_monthly_grouped",
-      search_type: filters.search_type || "keyword_unordered",
-      forward_cursor: filters.forward_cursor || "",
-      backward_cursor: filters.backward_cursor || "",
-      collation_token: filters.collation_token || "",
+    // Helper function to add a parameter if it exists
+    const addParam = (
+      key: string,
+      value: string | number | undefined | null,
+    ) => {
+      if (value !== undefined && value !== null && value !== "") {
+        params[key] = value;
+      }
     };
 
-    if (filters.page_ids) {
+    // collation_group_id
+    if (filters.collation_group_id)
+      params["collation_group_id"] = filters.collation_group_id;
+
+    // Add required fields with default values if not provided
+    params["ad_type"] = filters.ad_type || "all";
+    params["active_status"] = filters.active_status || "all";
+    params["media_type"] = filters.media_type || "all";
+    params["count"] = filters.count || 30;
+
+    // Add optional parameters
+    addParam("q", filters.q);
+    addParam("v", filters.v);
+    addParam("session_id", filters.session_id);
+    addParam("sort_data[direction]", filters.sort_direction); //"desc"
+    addParam("sort_data[mode]", filters.sort_mode); // "relevancy_monthly_grouped"
+    addParam("search_type", filters.search_type); //"keyword_unordered"
+    addParam("forward_cursor", filters.forward_cursor);
+    addParam("backward_cursor", filters.backward_cursor);
+    addParam("collation_token", filters.collation_token);
+
+    // Handle date ranges
+    addParam("start_date[min]", filters.start_date_min);
+    addParam("start_date[max]", filters.start_date_max);
+
+    // Handle arrays
+    if (filters.page_ids && filters.page_ids.length > 0) {
       filters.page_ids.forEach((id, index) => {
         params[`page_ids[${index}]`] = id;
       });
     }
 
-    if (filters.countries && filters.countries[0] !== "") {
+    if (filters.countries && filters.countries.length > 0) {
       filters.countries.forEach((country, index) => {
         params[`countries[${index}]`] = country;
       });
@@ -35,52 +58,31 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
       params["countries[0]"] = "ALL";
     }
 
-    if (filters.publisher_platforms) {
+    if (filters.publisher_platforms && filters.publisher_platforms.length > 0) {
       filters.publisher_platforms.forEach((platform, index) => {
         params[`publisher_platforms[${index}]`] = platform;
       });
     }
 
-    if (filters.start_date_min) {
-      params["start_date[min]"] = filters.start_date_min;
-    }
-
-    if (filters.start_date_max) {
-      params["start_date[max]"] = filters.start_date_max;
-    }
-
-    if (filters.content_languages) {
+    if (filters.content_languages && filters.content_languages.length > 0) {
       filters.content_languages.forEach((lang, index) => {
         params[`content_languages[${index}]`] = lang;
       });
     }
 
+    console.log("🚀🚀🚀🚀 ~ buildFbAdsLibUrl ~ baseUrl:", baseUrl);
+
     console.log("🚀🚀🚀🚀 ~ buildFbAdsLibUrl ~ params:", params);
 
     const queryString = new URLSearchParams(params as any).toString();
-    return baseUrl + queryString;
+
+    const urlWithParams = baseUrl + queryString;
+
+    // console.log("🚀🚀🚀🚀 ~ buildFbAdsLibUrl ~ urlWithParams:", urlWithParams);
+
+    return urlWithParams;
   } catch (error) {
     console.error("❌ Error occurred while building the URL:", error);
     throw new Error("Failed to build the Facebook Ads Library URL");
   }
 }
-
-// Example usage
-// const urlf = buildFbAdsLibUrl({
-//   page_ids: ["103417645379531", "237627616089809"],
-//   q: "dog",
-//   count: 30,
-//   active_status: "all",
-//   ad_type: "all",
-//   countries: ["ALL"],
-//   publisher_platforms: ["facebook", "instagram"],
-//   start_date_min: "2020-05-07",
-//   start_date_max: "2024-05-08",
-//   media_type: "all",
-//   content_languages: ["en", "ar", "es"],
-//   sort_direction: "desc",
-//   sort_mode: "relevancy_monthly_grouped",
-//   search_type: "keyword_unordered",
-// });
-
-// console.log(urlf);
