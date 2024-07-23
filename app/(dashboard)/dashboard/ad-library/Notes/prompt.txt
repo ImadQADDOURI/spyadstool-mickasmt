@@ -803,6 +803,20 @@ the function 'handle See Ad Details' is called only if ad.collationCount >= 1 el
 while isResultComplete = false the user can load more Ads
 
 ------------------------------------------------------------------------------------------------------------------------
+ so that it takes the whole ad as argument then extract the values from it so that in adCard i passe the {ad} then in PageNameWithPopover it extracts the necessary fields, so the code will be more flexible 
+
+
+i want to modify components\adsLibrary\PageNameWithPopover.tsx
+
+the button 'View Ads' open a new page that displays the results of a fetch i run on the load (like in components\adsLibrary\AdDetails.tsx) ;
+the searchParams in this request are:{baseUrl:'https://www.facebook.com/ads/library/async/search_ads?',view_all_page_id: extract it from snapshot.page_id,search_type:page} 
+use AdsLibrary.tsx as guide
+and for the display in top of page page informations then the ads under it they load automaticaly in scrolldown like in AdDetails but there is some differencees like payload.isResultComplete instead of isComplete and before using the ads yoy should extract them with 
+  
+  use <Link href={/dashboard/ad-library?pageId=${page_id}} from next/link
+and Updates the existing ads library page to render either the PageAds component or the main ads library content depending on whether a pageId is provided.
+simple clear code, with strong logic errors well handled 
+------------------------------------------------------------------------------------------------------------------------
 can you add also a button to display Ad Details in a new tab page, in case the user want to gard the data and not lose it when he exit
 is that doable?
 

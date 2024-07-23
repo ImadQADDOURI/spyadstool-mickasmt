@@ -34,4 +34,7 @@ export type FilterParams = {
 
   //Ad Details
   collation_group_id?: number;
+
+  //Page ADs
+  view_all_page_id?: string | null;
 };

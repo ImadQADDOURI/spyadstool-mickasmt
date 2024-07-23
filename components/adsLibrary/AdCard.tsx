@@ -232,15 +232,17 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
           {renderPlatformIcons()}
         </div>
 
-        <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
-          <span className="mr-2">ADs</span>
-          <span className="mr-2 text-lg font-bold text-red-600">
-            {ad.collationCount || 0}
-          </span>
-          <span title="ads use this creative and text">
-            <Info className="h-4 w-4 cursor-pointer" />
-          </span>
-        </div>
+        {ad.collationCount && ad.collationCount > 0 && (
+          <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+            <span className="mr-2">ADs</span>
+            <span className="mr-2 text-lg font-bold text-red-600">
+              {ad.collationCount || 0}
+            </span>
+            <span title="ads use this creative and text">
+              <Info className="h-4 w-4 cursor-pointer" />
+            </span>
+          </div>
+        )}
 
         <button
           className="group relative mb-2 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800"

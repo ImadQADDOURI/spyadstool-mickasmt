@@ -38,6 +38,7 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     addParam("forward_cursor", filters.forward_cursor);
     addParam("backward_cursor", filters.backward_cursor);
     addParam("collation_token", filters.collation_token);
+    addParam("view_all_page_id", filters.view_all_page_id);
 
     // Handle date ranges
     addParam("start_date[min]", filters.start_date_min);

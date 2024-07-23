@@ -1,12 +1,18 @@
-// /app/page.tsx
-"use client";
+// /app/dashboard/ad-library/page.tsx
+import { Suspense } from "react";
 
-import { AdsLibrary } from "@/components/adsLibrary/AdsLibrary";
+import AdsLibraryWrapper from "@/components/adsLibrary/AdsLibraryWrapper";
 
-export default function Home() {
+export default function AdLibraryPage({
+  searchParams,
+}: {
+  searchParams: { pageId?: string };
+}) {
+  const pageId = searchParams.pageId;
+
   return (
-    <div>
-      <AdsLibrary />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <AdsLibraryWrapper initialPageId={pageId} />
+    </Suspense>
   );
 }

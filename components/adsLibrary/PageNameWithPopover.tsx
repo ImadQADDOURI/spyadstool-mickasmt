@@ -1,5 +1,8 @@
+// components\adsLibrary\PageNameWithPopover.tsx
+
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Globe, ThumbsUp } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -17,6 +20,7 @@ interface PageNameWithPopoverProps {
     link_url?: string;
     page_profile_uri?: string;
     page_profile_picture_url?: string;
+    page_id?: string;
   };
 }
 
@@ -30,6 +34,7 @@ const PageNameWithPopover: React.FC<PageNameWithPopoverProps> = ({
     link_url,
     page_profile_uri,
     page_profile_picture_url,
+    page_id,
   } = snapshot;
 
   const categories = page_categories
@@ -101,17 +106,13 @@ const PageNameWithPopover: React.FC<PageNameWithPopoverProps> = ({
                     </a>
                   </span>
                 </button>
-                <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 dark:focus:ring-lime-800">
-                  <span className="relative rounded-md bg-white px-5 py-1 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
-                    <a
-                      href={`${page_profile_uri}/ads`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                <Link href={`/dashboard/ad-library?pageId=${page_id}`}>
+                  <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 dark:focus:ring-lime-800">
+                    <span className="relative rounded-md bg-white px-5 py-1 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
                       View Ads
-                    </a>
-                  </span>
-                </button>
+                    </span>
+                  </button>
+                </Link>
               </>
             )}
           </div>
