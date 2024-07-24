@@ -3,12 +3,16 @@ import { Suspense } from "react";
 
 import AdsLibraryWrapper from "@/components/adsLibrary/AdsLibraryWrapper";
 
+interface SearchParams {
+  pageId?: string;
+}
+
 export default function AdLibraryPage({
   searchParams,
 }: {
-  searchParams: { pageId?: string };
+  searchParams?: SearchParams;
 }) {
-  const pageId = searchParams.pageId;
+  const pageId = searchParams?.pageId;
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

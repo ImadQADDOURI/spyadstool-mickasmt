@@ -1,4 +1,4 @@
-// /app/dashboard/ad-library/AdsLibraryWrapper.tsx
+// @/components/adsLibrary/AdsLibraryWrapper
 "use client";
 
 import { useState, useEffect } from "react";
@@ -15,5 +15,9 @@ export default function AdsLibraryWrapper({ initialPageId }: { initialPageId?: s
     setPageId(currentPageId ?? undefined);
   }, [searchParams]);
 
-  return pageId ? <PageAds pageId={pageId} /> : <AdsLibrary />;
+  if (!pageId) {
+    return <AdsLibrary />;
+  }
+
+  return <PageAds pageId={pageId} />;
 }
