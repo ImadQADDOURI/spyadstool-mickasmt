@@ -20,11 +20,6 @@ interface PageAdsProps {
 }
 
 export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
-  // check if pageId is provided
-  if (!pageId) {
-    return <div>No page ID provided</div>;
-  }
-
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -64,7 +59,7 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
 
   const handleSearchAds = useCallback(
     async (useExistingParams = false, query = "") => {
-      if (isLoading) return;
+      if (!pageId || isLoading) return;
       setIsLoading(true);
       setError(null);
       try {
@@ -133,15 +128,15 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
         setIsLoading(false);
       }
     },
-    [pageId, searchResults, extractAdsFromResults, pageInfo],
+    [pageId, searchResults, isLoading, extractAdsFromResults, pageInfo],
   );
 
   useEffect(() => {
-    if (!initialSearchDone.current) {
+    if (!initialSearchDone.current && pageId) {
       handleSearchAds();
       initialSearchDone.current = true;
     }
-  }, [handleSearchAds]);
+  }, [handleSearchAds, pageId]);
 
   const handleLoadMore = useCallback(() => {
     if (searchResults && !searchResults.isResultComplete && !isLoading) {
@@ -167,6 +162,10 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
     setSearchResults(null);
     handleSearchAds(false, "");
   };
+
+  if (!pageId) {
+    return <div>No page ID provided</div>;
+  }
 
   return (
     <div className="relative min-h-screen p-4">
@@ -209,7 +208,7 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
               placeholder="Search ads..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border-none bg-white bg-opacity-20 pr-20  text-white placeholder-white placeholder-opacity-75"
+              className="w-full border-none bg-white bg-opacity-20 pr-20 text-white placeholder-white placeholder-opacity-75"
             />
             {searchQuery && (
               <Button
