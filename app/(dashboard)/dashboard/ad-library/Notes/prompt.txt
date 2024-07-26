@@ -1,5 +1,80 @@
 i am building an app using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing.
 
+Here's a description of the overall CSS styling for the AdsLibrary component, which you can use as a reference when building other components to maintain coherence:
+
+Color Scheme:
+
+Primary gradient: Purple (600) to Pink (500)
+Background: Light gray (100) for light mode, Dark gray (900) for dark mode
+Text: Dark gray for light mode, Light gray for dark mode
+Accents: Purple and Pink shades
+
+
+Typography:
+
+Font: System font stack (inherited from Tailwind CSS)
+Headings: Bold, often using gradient text
+Body text: Regular weight, responsive sizes
+
+
+Layout:
+
+Responsive design using Flexbox and Grid
+Generous spacing between elements (margin and padding)
+Rounded corners (often fully rounded for buttons and inputs)
+
+
+Components:
+
+Buttons: Gradient backgrounds, hover effects, fully rounded
+Inputs: Transparent backgrounds, border outlines, fully rounded
+Cards: White background in light mode, dark gray in dark mode, subtle shadows
+Modals/Panels: Slide-in animations, light backgrounds with subtle shadows
+
+
+Effects:
+
+Hover: Scale or translate transforms, change in shadow intensity
+Focus: Ring outlines for accessibility
+Loading: Spinning animations, pulse effects
+
+
+Iconography:
+
+Lucide React icons, consistently sized
+Icons often paired with text in buttons
+
+
+Accessibility:
+
+High contrast ratios between text and backgrounds
+Clear focus states
+Aria labels and roles for interactive elements
+
+
+Dark Mode:
+
+Inverted color scheme with darker backgrounds and lighter text
+Maintained readability and contrast in both modes
+
+
+Animations:
+
+Smooth transitions for hover and focus states
+Slide-in/out for panels
+Subtle scaling effects for interactive elements
+
+
+Custom Elements:
+
+Gradient text for headings
+Custom scrollbars (if implemented)
+Subtle background patterns for large areas
+
+
+
+When building new components, aim to use this color scheme, maintain consistent spacing and rounded corners, and implement similar hover and focus effects. Use gradients for important buttons or headings, and ensure all interactive elements have appropriate hover and focus states. Keep accessibility in mind by providing sufficient contrast and clear focus indicators.
+-------------------------------------------------------------------------------------------------------------------------
 
 now i want to create a card component.tsx to display the ads data that i passe the ad data and it display it, later i will map through all the ads and display each one using this component
 

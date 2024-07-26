@@ -26,6 +26,7 @@ import Language from "./language";
 import LoadingTrigger from "./LoadingTrigger";
 import Media from "./media";
 import Platform from "./platform";
+import { ScrollButtons } from "./ScrollButtons";
 import SearchByKeyword from "./searchByKeyword";
 import StartDate from "./startDate";
 import Status from "./status";
@@ -239,13 +240,6 @@ export const AdsLibrary = () => {
     }
   }, [searchResults, handleSearchAds, isLoading]);
 
-  const scrollTo = useCallback((position: "top" | "bottom") => {
-    window.scrollTo({
-      top: position === "top" ? 0 : document.body.scrollHeight,
-      behavior: "smooth",
-    });
-  }, []);
-
   // Enter search
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
@@ -264,72 +258,78 @@ export const AdsLibrary = () => {
 
   return (
     <div className=" min-h-screen bg-gray-100  dark:bg-gray-900">
-      <>
-        {/* Sliding Panel */}
-        <div
-          className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-background shadow-lg transition-transform duration-300 ease-in-out ${isPanelOpen ? "translate-x-0" : "-translate-x-full"}`}
-        >
-          <div className="h-full overflow-y-auto p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold">Filters</h2>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsPanelOpen(false)}
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            </div>
+      {/* Title */}
+      <h1 className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-4 text-center text-3xl font-bold text-white">
+        Ads Library
+      </h1>
 
-            {/* Filter components */}
-            <div className="space-y-4">
-              <Country
-                onSelectCountry={setSelectedCountry}
-                clear={clearFilters}
-              />
-              <Category
-                onSelectCategory={setSelectedCategory}
-                clear={clearFilters}
-              />
-              <Language
-                onSelectLanguages={setSelectedLanguages}
-                clear={clearFilters}
-              />
-              <Platform
-                onSelectPlatforms={setSelectedPlatforms}
-                clear={clearFilters}
-              />
-              <Status onSelectStatus={setSelectedStatus} clear={clearFilters} />
-              <Media onSelectMedia={setSelectedMedia} clear={clearFilters} />
-              <StartDate
-                onSelectStartDate={handleStartDateChange}
-                start_date_min={startDate}
-                maxDate={endDate || undefined}
-                clear={clearFilters}
-              />
-              <EndDate
-                onSelectEndDate={handleEndDateChange}
-                start_date_max={endDate}
-                minDate={startDate || undefined}
-                clear={clearFilters}
-              />
-            </div>
-
-            <div className="mt-4 space-y-2">
-              <Button
-                onClick={clearAllFilters}
-                variant="outline"
-                className="w-full"
-              >
-                Clear All
-              </Button>
-              <Button onClick={applyFilters} className="w-full">
-                Apply
-              </Button>
-            </div>
-          </div>
+      {/* Sliding Panel */}
+      <div
+        className={`fixed inset-y-0 left-0 z-50 w-80 transform overflow-y-auto bg-white p-6 shadow-lg transition-transform duration-300 ease-in-out dark:bg-gray-800 ${
+          isPanelOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-2xl font-bold text-transparent">
+            Filters
+          </h2>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsPanelOpen(false)}
+            className="rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            <X className="h-5 w-5" />
+          </Button>
         </div>
-      </>
+
+        {/* Filter components */}
+        <div className="space-y-6">
+          <Country onSelectCountry={setSelectedCountry} clear={clearFilters} />
+          <Category
+            onSelectCategory={setSelectedCategory}
+            clear={clearFilters}
+          />
+          <Language
+            onSelectLanguages={setSelectedLanguages}
+            clear={clearFilters}
+          />
+          <Platform
+            onSelectPlatforms={setSelectedPlatforms}
+            clear={clearFilters}
+          />
+          <Status onSelectStatus={setSelectedStatus} clear={clearFilters} />
+          <Media onSelectMedia={setSelectedMedia} clear={clearFilters} />
+          <StartDate
+            onSelectStartDate={handleStartDateChange}
+            start_date_min={startDate}
+            maxDate={endDate || undefined}
+            clear={clearFilters}
+          />
+          <EndDate
+            onSelectEndDate={handleEndDateChange}
+            start_date_max={endDate}
+            minDate={startDate || undefined}
+            clear={clearFilters}
+          />
+        </div>
+
+        <div className="mt-8 space-y-4">
+          <Button
+            onClick={clearAllFilters}
+            variant="outline"
+            className="w-full rounded-full border-2 border-gray-300 bg-transparent px-6 py-2 text-gray-700 transition-all hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+          >
+            Clear All
+          </Button>
+          <Button
+            onClick={applyFilters}
+            className="w-full rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+          >
+            Apply Filters
+          </Button>
+        </div>
+      </div>
 
       {/* Search Section */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-6 shadow-lg">
@@ -400,7 +400,7 @@ export const AdsLibrary = () => {
         {totalCount !== null && (
           <div className="mb-6 text-center">
             <span
-              className="inline-block rounded-full bg-purple-100 px-4 py-2 text-lg font-bold text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+              className="inline-block rounded-full bg-purple-100 px-6 py-3 text-lg font-bold text-purple-800 shadow-md dark:bg-purple-900 dark:text-purple-200"
               aria-live="polite"
             >
               {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
@@ -410,8 +410,13 @@ export const AdsLibrary = () => {
 
         {/* Loading indicator */}
         {isLoading && (
-          <div className="flex justify-center py-8" aria-live="polite">
-            <Loader2 className="h-12 w-12 animate-spin text-purple-600 dark:text-purple-400" />
+          <div className="flex justify-center py-12" aria-live="polite">
+            <div className="relative h-20 w-20">
+              <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
+              <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
+                <Loader2 className="h-10 w-10 animate-spin text-white" />
+              </div>
+            </div>
           </div>
         )}
 
@@ -436,7 +441,7 @@ export const AdsLibrary = () => {
                 ) : (
                   <Button
                     onClick={handleLoadMore}
-                    className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white shadow-md transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                    className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-white shadow-md transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
                   >
                     Load More
                   </Button>
@@ -464,26 +469,7 @@ export const AdsLibrary = () => {
         )}
 
         {/* Scroll buttons */}
-        <div className="fixed bottom-16 right-2 flex flex-col space-y-1">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => scrollTo("top")}
-            className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp className="h-5 w-5" />
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => scrollTo("bottom")}
-            className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
-            aria-label="Scroll to bottom"
-          >
-            <ArrowDown className="h-5 w-5" />
-          </Button>
-        </div>
+        <ScrollButtons />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowDown, ArrowUp, Search, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Loader2, Search, X } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
@@ -14,6 +14,7 @@ import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { Input } from "../ui/input";
 import LoadingTrigger from "./LoadingTrigger";
+import { ScrollButtons } from "./ScrollButtons";
 
 interface PageAdsProps {
   pageId: string;
@@ -150,13 +151,6 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
     handleSearchAds(false, searchQuery);
   };
 
-  const scrollTo = useCallback((position: "top" | "bottom") => {
-    window.scrollTo({
-      top: position === "top" ? 0 : document.body.scrollHeight,
-      behavior: "smooth",
-    });
-  }, []);
-
   const handleReset = () => {
     setSearchQuery("");
     setSearchResults(null);
@@ -168,132 +162,147 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
   }
 
   return (
-    <div className="relative min-h-screen bg-gray-100  p-2 dark:bg-gray-900">
-      <Card className="mb-6 overflow-hidden">
-        <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-white">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+      {/* Title and Search Section */}
+      <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-6 shadow-lg">
+        <div className="container mx-auto">
+          <h1 className="mb-4 text-center text-3xl font-bold text-white">
+            Page Ads
+          </h1>
+
           {pageInfo && (
             <div className="mb-6 flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0">
               <Image
                 src={pageInfo.page_profile_picture_url}
                 alt={pageInfo.page_name}
-                width={100}
-                height={100}
+                width={80}
+                height={80}
                 className="rounded-full border-4 border-white"
               />
               <div className="flex-1 text-center md:text-left">
-                <h2 className="mb-2 text-3xl font-bold">
+                <h2 className="mb-2 text-2xl font-bold text-white">
                   {pageInfo.page_name}
                 </h2>
-                <p className="mb-1 text-sm opacity-80">
+                <p className="mb-1 text-sm text-white opacity-80">
                   {pageInfo.page_categories &&
                     Object.values(pageInfo.page_categories).join(", ")}
                 </p>
-                <p className="mb-2 text-lg font-semibold">
+                <p className="mb-2 text-lg font-semibold text-white">
                   {pageInfo.page_like_count.toLocaleString()} Likes
                 </p>
                 <a
                   href={pageInfo.page_profile_uri}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-white px-4 py-2 font-semibold text-blue-600 transition-colors hover:bg-opacity-90"
+                  className="inline-block rounded-full bg-white bg-opacity-20 px-4 py-1 text-sm font-semibold text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
                 >
                   Visit Page
                 </a>
               </div>
             </div>
           )}
-          <form onSubmit={handleSearch} className="relative">
-            <Input
-              type="text"
-              placeholder="Search ads..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border-none bg-white bg-opacity-20 pr-20 text-white placeholder-white placeholder-opacity-75"
-            />
-            {searchQuery && (
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="absolute right-12 top-1/2 -translate-y-1/2 transform text-white hover:text-blue-200"
-                onClick={handleReset}
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            )}
+
+          <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
+            <div className="relative flex-grow">
+              <Input
+                type="text"
+                placeholder="Search ads..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={(e) => e.key === "Enter" && handleSearch(e)}
+                aria-label="Search ads"
+                className="w-full rounded-full border-none bg-white bg-opacity-20 px-6 py-3 text-white placeholder-white placeholder-opacity-75 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              {searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white hover:bg-white hover:bg-opacity-20"
+                  onClick={handleReset}
+                  aria-label="Clear search"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
             <Button
-              type="submit"
-              className="absolute right-0 top-0 h-full bg-white bg-opacity-20 text-white hover:bg-opacity-30"
+              onClick={handleSearch}
               disabled={isLoading}
+              aria-label="Search ads"
+              className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             >
-              <Search className="h-4 w-4" />
+              <span className="relative flex items-center px-6 py-2">
+                {isLoading ? (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  <Search className="mr-2 h-4 w-4" />
+                )}
+                Search
+              </span>
             </Button>
-          </form>
+          </div>
         </div>
-        {totalCount !== null && (
-          <div className="bg-gray-200 p-4 text-center dark:bg-gray-800">
-            <p className="text-lg font-bold">
-              {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
-            </p>
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto p-4">
+        {error && (
+          <div
+            className="mb-6 rounded-lg bg-red-100 p-4 text-red-700 dark:bg-red-900 dark:text-red-100"
+            role="alert"
+          >
+            {error}
           </div>
         )}
-      </Card>
 
-      {error && (
-        <Card className="mb-4 p-4 text-center text-red-500">
-          <p className="font-semibold">{error}</p>
-        </Card>
-      )}
+        {totalCount !== null && (
+          <div className="mb-6 text-center">
+            <span className="inline-block rounded-full bg-purple-100 px-6 py-3 text-lg font-bold text-purple-800 shadow-md dark:bg-purple-900 dark:text-purple-200">
+              {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
+            </span>
+          </div>
+        )}
 
-      {searchResults && searchResults.ads.length > 0 ? (
-        <>
-          <AdsList ads={searchResults.ads} />
-          {!searchResults.isResultComplete && (
-            <>
-              <LoadingTrigger
-                onIntersect={handleLoadMore}
-                isLoading={isLoading}
-              />
-              {isLoading && (
-                <div className="mt-4 text-center">
-                  <p>Loading more ads...</p>
-                </div>
-              )}
-              {remainingCount !== null && remainingCount > 0 && (
-                <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-                  {remainingCount} more ads available
-                </p>
-              )}
-            </>
-          )}
-        </>
-      ) : (
-        searchResults && (
-          <Card className="p-4 text-center">
-            <p>No ads found for this page.</p>
-          </Card>
-        )
-      )}
+        {searchResults && searchResults.ads.length > 0 ? (
+          <div className="space-y-8">
+            <AdsList ads={searchResults.ads} />
+            {!searchResults.isResultComplete && (
+              <div className="flex flex-col items-center space-y-4">
+                <LoadingTrigger
+                  onIntersect={handleLoadMore}
+                  isLoading={isLoading}
+                />
+                {isLoading ? (
+                  <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    <p>Loading more ads...</p>
+                  </div>
+                ) : (
+                  <Button
+                    onClick={handleLoadMore}
+                    className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-white shadow-md transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                  >
+                    Load More
+                  </Button>
+                )}
+                {remainingCount !== null && remainingCount > 0 && (
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {remainingCount} more ads available
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        ) : (
+          searchResults && (
+            <p className="text-center text-lg text-gray-600 dark:text-gray-400">
+              No ads found for this page. Try adjusting your search criteria.
+            </p>
+          )
+        )}
 
-      <div className="fixed bottom-16 right-2 flex flex-col space-y-1">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => scrollTo("top")}
-          className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="h-5 w-5" />
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => scrollTo("bottom")}
-          className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
-          aria-label="Scroll to bottom"
-        >
-          <ArrowDown className="h-5 w-5" />
-        </Button>
+        {/* Scroll buttons */}
+        <ScrollButtons />
       </div>
     </div>
   );
