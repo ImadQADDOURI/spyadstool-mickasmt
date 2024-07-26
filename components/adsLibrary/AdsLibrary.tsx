@@ -1,7 +1,15 @@
 // components/adsLibrary/AdsLibrary.tsx
 
 import React, { useCallback, useEffect, useState } from "react";
-import { ArrowDown, ArrowUp, Plus, X } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUp,
+  Filter,
+  Loader2,
+  Plus,
+  Search,
+  X,
+} from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
@@ -10,6 +18,7 @@ import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
+import { Input } from "../ui/input";
 import Category from "./category";
 import Country from "./country";
 import EndDate from "./endDate";
@@ -237,11 +246,24 @@ export const AdsLibrary = () => {
     });
   }, []);
 
+  // Enter search
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearchAds();
+    }
+  };
+
+  // X Reset filters
+  const resetSearch = () => {
+    setSearchQuery("");
+    setSearchResults(null);
+    setTotalCount(null);
+    setRemainingCount(null);
+    // You might want to reset other states as well
+  };
+
   return (
-    <div className="relative min-h-screen p-4">
-      <Button onClick={() => setIsPanelOpen(true)} className="mb-4">
-        Filters {appliedFiltersCount > 0 && `(${appliedFiltersCount})`}
-      </Button>
+    <div className=" min-h-screen bg-gray-100  dark:bg-gray-900">
       <>
         {/* Sliding Panel */}
         <div
@@ -308,86 +330,158 @@ export const AdsLibrary = () => {
           </div>
         </div>
       </>
-      {/* Main content */}
-      <div className="space-y-4">
-        <div className="flex space-x-2">
-          <SearchByKeyword onSearch={setSearchQuery} />
-          <Button onClick={() => handleSearchAds()} disabled={isLoading}>
-            {isLoading ? "Searching..." : "Search"}
-          </Button>
+
+      {/* Search Section */}
+      <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-6 shadow-lg">
+        <div className="container mx-auto">
+          <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
+            <div className="relative flex-grow">
+              <Input
+                type="text"
+                placeholder="Search ads..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleKeyPress}
+                aria-label="Search ads"
+                className="w-full rounded-full border-none bg-white bg-opacity-20 px-6 py-3 text-white placeholder-white placeholder-opacity-75 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              {searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white hover:bg-white hover:bg-opacity-20"
+                  onClick={resetSearch}
+                  aria-label="Clear search"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+            <Button
+              onClick={() => handleSearchAds()}
+              disabled={isLoading}
+              aria-label="Search ads"
+              className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+            >
+              <span className="relative flex items-center px-6 py-2">
+                {isLoading ? (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  <Search className="mr-2 h-4 w-4" />
+                )}
+                Search
+              </span>
+            </Button>
+            <Button
+              onClick={() => setIsPanelOpen(true)}
+              aria-label="Open filters panel"
+              className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+            >
+              <span className="relative flex items-center px-6 py-2">
+                <Filter className="mr-2 h-4 w-4" />
+                Filters {appliedFiltersCount > 0 && `(${appliedFiltersCount})`}
+              </span>
+            </Button>
+          </div>
         </div>
+      </div>
 
-        {error && <div className="font-semibold text-red-500">{error}</div>}
-
-        {totalCount !== null && (
-          <div className="text-lg font-bold">
-            {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
+      {/* Main Content */}
+      <div className="container mx-auto p-4">
+        {error && (
+          <div
+            className="mb-6 rounded-lg bg-red-100 p-4 text-red-700 dark:bg-red-900 dark:text-red-100"
+            role="alert"
+          >
+            {error}
           </div>
         )}
 
-        {/* Rest of component (AdsList, Load More button, etc.) */}
+        {totalCount !== null && (
+          <div className="mb-6 text-center">
+            <span
+              className="inline-block rounded-full bg-purple-100 px-4 py-2 text-lg font-bold text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+              aria-live="polite"
+            >
+              {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
+            </span>
+          </div>
+        )}
+
+        {/* Loading indicator */}
+        {isLoading && (
+          <div className="flex justify-center py-8" aria-live="polite">
+            <Loader2 className="h-12 w-12 animate-spin text-purple-600 dark:text-purple-400" />
+          </div>
+        )}
+
+        {/* Ads List */}
         {searchResults && searchResults.ads.length > 0 ? (
-          // <>
-          //   <AdsList ads={searchResults.ads} />
-          //   {!searchResults.isResultComplete && (
-          //     <Card className="mt-4 flex flex-col items-center justify-center p-4">
-          //       <Button onClick={handleLoadMore} disabled={isLoading}>
-          //         <Plus className="mr-2 h-4 w-4" />
-          //         {isLoading ? "Loading..." : "Load More Ads"}
-          //       </Button>
-          //       {remainingCount !== null && (
-          //         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          //           {remainingCount} more ads available
-          //         </p>
-          //       )}
-          //     </Card>
-          //   )}
-          // </>
-          <>
+          <div className="space-y-8">
             <AdsList ads={searchResults.ads} />
             {!searchResults.isResultComplete && (
-              <>
+              <div className="flex flex-col items-center space-y-4">
                 <LoadingTrigger
                   onIntersect={handleLoadMore}
                   isLoading={isLoading}
                 />
-                {isLoading && (
-                  <div className="mt-4 text-center">
+                {isLoading ? (
+                  <div
+                    className="flex items-center space-x-2 text-gray-600 dark:text-gray-400"
+                    aria-live="polite"
+                  >
+                    <Loader2 className="h-5 w-5 animate-spin" />
                     <p>Loading more ads...</p>
                   </div>
+                ) : (
+                  <Button
+                    onClick={handleLoadMore}
+                    className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white shadow-md transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                  >
+                    Load More
+                  </Button>
                 )}
                 {remainingCount !== null && (
-                  <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                  <p
+                    className="text-sm text-gray-600 dark:text-gray-400"
+                    aria-live="polite"
+                  >
                     {remainingCount} more ads available
                   </p>
                 )}
-              </>
+              </div>
             )}
-          </>
+          </div>
         ) : (
           searchResults && (
-            <p>No ads found. Try adjusting your search criteria.</p>
+            <p
+              className="text-center text-lg text-gray-600 dark:text-gray-400"
+              role="status"
+            >
+              No ads found. Try adjusting your search criteria.
+            </p>
           )
         )}
 
+        {/* Scroll buttons */}
         <div className="fixed bottom-16 right-2 flex flex-col space-y-1">
           <Button
             variant="outline"
             size="sm"
             onClick={() => scrollTo("top")}
-            className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+            className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
             aria-label="Scroll to top"
           >
-            <ArrowUp className="h-4 w-4" />
+            <ArrowUp className="h-5 w-5" />
           </Button>
           <Button
             variant="outline"
             size="sm"
             onClick={() => scrollTo("bottom")}
-            className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+            className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
             aria-label="Scroll to bottom"
           >
-            <ArrowDown className="h-4 w-4" />
+            <ArrowDown className="h-5 w-5" />
           </Button>
         </div>
       </div>

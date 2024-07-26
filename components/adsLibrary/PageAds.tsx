@@ -168,7 +168,7 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
   }
 
   return (
-    <div className="relative min-h-screen p-4">
+    <div className="relative min-h-screen bg-gray-100  p-2 dark:bg-gray-900">
       <Card className="mb-6 overflow-hidden">
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-white">
           {pageInfo && (
@@ -231,7 +231,7 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
           </form>
         </div>
         {totalCount !== null && (
-          <div className="bg-gray-100 p-4 text-center dark:bg-gray-800">
+          <div className="bg-gray-200 p-4 text-center dark:bg-gray-800">
             <p className="text-lg font-bold">
               {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
             </p>
@@ -280,19 +280,19 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
           variant="outline"
           size="sm"
           onClick={() => scrollTo("top")}
-          className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+          className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
           aria-label="Scroll to top"
         >
-          <ArrowUp className="h-4 w-4" />
+          <ArrowUp className="h-5 w-5" />
         </Button>
         <Button
           variant="outline"
           size="sm"
           onClick={() => scrollTo("bottom")}
-          className="rounded-full bg-background/80 backdrop-blur-sm transition-opacity hover:opacity-100 dark:bg-background/20 dark:hover:bg-gray-700"
+          className="rounded-full bg-white bg-opacity-80 p-3 text-gray-800 shadow-md backdrop-blur-sm transition-all hover:bg-opacity-100 hover:shadow-lg dark:bg-gray-800 dark:bg-opacity-80 dark:text-white dark:hover:bg-opacity-100"
           aria-label="Scroll to bottom"
         >
-          <ArrowDown className="h-4 w-4" />
+          <ArrowDown className="h-5 w-5" />
         </Button>
       </div>
     </div>
