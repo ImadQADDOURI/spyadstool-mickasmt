@@ -17,7 +17,6 @@ import { AdsList } from "@/components/adsLibrary/AdsList";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
-import { Card } from "../ui/card";
 import { Input } from "../ui/input";
 import Category from "./category";
 import Country from "./country";
@@ -27,7 +26,6 @@ import LoadingTrigger from "./LoadingTrigger";
 import Media from "./media";
 import Platform from "./platform";
 import { ScrollButtons } from "./ScrollButtons";
-import SearchByKeyword from "./searchByKeyword";
 import StartDate from "./startDate";
 import Status from "./status";
 

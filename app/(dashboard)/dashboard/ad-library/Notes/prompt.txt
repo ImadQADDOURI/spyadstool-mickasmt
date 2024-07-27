@@ -955,6 +955,12 @@ use same styling from adsLibrary on pageAds
 
 ------------------------------------------------------------------------------------------------------------------------
 
+i need to modify AdDetails 
+for the layout i want the ads to be displayed in a very small way in the left side in a carrousel and have an overall look on the number of ads loaded and to free the right side so i can use it to display some analytics and charts,
+and while isComplete = false the user can load more ads add a button to do so next to the carrousel ,
+
+the from detailedAds we need to extract  
+
 
 ------------------------------------------------------------------------------------------------------------------------
 
