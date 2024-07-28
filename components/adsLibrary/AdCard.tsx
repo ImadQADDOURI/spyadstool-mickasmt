@@ -31,9 +31,10 @@ import PageNameWithPopover from "./PageNameWithPopover";
 
 interface AdCardProps {
   ad: Ad;
+  compact?: boolean;
 }
 
-export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
+export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
   const {
     adArchiveID,
     startDate,
@@ -199,6 +200,53 @@ export const AdCard: React.FC<AdCardProps> = ({ ad }) => {
 
     return `${formatDate(startDate)} - ${formatDate(endDate)}`;
   };
+
+  if (compact) {
+    const imageUrl =
+      snapshot.cards?.[0]?.resized_image_url ||
+      snapshot.cards?.[0]?.video_preview_image_url ||
+      snapshot.images?.[0]?.resized_image_url ||
+      snapshot.videos?.[0]?.video_preview_image_url ||
+      "";
+
+    return (
+      <div className="relative h-24 w-24 overflow-hidden rounded-lg shadow-md">
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt="Ad thumbnail"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
+        <div className="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 p-1">
+          <p className="truncate text-xs font-semibold text-white">
+            {adArchiveID}
+          </p>
+          <p className="text-xs text-white">{renderDate()}</p>
+        </div>
+      </div>
+    );
+  }
+  // return (
+  // <div className="h-ful relative w-full overflow-hidden rounded-lg shadow-md">
+  //   {renderMedia()}
+  //   <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white">
+  //     <p className="text-xs">{ad.adArchiveID}</p>
+  //     <p className="text-xs">{renderDate()}</p>
+  //   </div>
+  // </div>
+  // <div className="group relative w-full overflow-hidden rounded-lg pb-[100%] shadow-md">
+  //   {renderMedia()}
+  //   <div className="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+  //     <p className="truncate text-xs font-semibold text-white">
+  //       ID: {adArchiveID}
+  //     </p>
+  //     <p className="text-xs text-white">{renderDate()}</p>
+  //   </div>
+  // </div>
+
+  //   );
+  // }
 
   return (
     <Card className="w-full max-w-md">

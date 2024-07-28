@@ -43,6 +43,7 @@ export interface Ad {
       cta_type?: string;
       original_image_url?: string;
       resized_image_url?: string;
+      video_preview_image_url?: string;
     }>;
     page_profile_picture_url?: string;
     link_url?: string;

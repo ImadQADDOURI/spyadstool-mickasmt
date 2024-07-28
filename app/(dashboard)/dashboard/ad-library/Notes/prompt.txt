@@ -959,7 +959,22 @@ i need to modify AdDetails
 for the layout i want the ads to be displayed in a very small way in the left side in a carrousel and have an overall look on the number of ads loaded and to free the right side so i can use it to display some analytics and charts,
 and while isComplete = false the user can load more ads add a button to do so next to the carrousel ,
 
-the from detailedAds we need to extract  
+
+now i need to modify AdDetais layout
+ for the layout i want the ads to be displayed in a very small way in the left side in a way that i can see theme in a smaller way like carousel or something i don't now exactly,  and have an overall look on the number of ads loaded and to free the right side so i can use it to display some analytics and charts, and while isComplete = false the user can load more ads add a button to do so next to the carrousel ,
+
+i want the ads to be displayed as small cards so i can have an over look and for the ads loaded and "Load More" i want theme in top then the ads under the text and the button
+add let's add on AdCardProps {
+  ...
+  compact?: boolean;}
+to test if compact then display only adArchiveID adimage and date
+
+the ads height is big reduce ( height near or = weight ) it and overlay it with the text ({adArchiveID},{renderDate()})
+don't display all the ads, display only 5 on lg on sm only 1 ad card inside a carousel or something and if i want to see the othores i click on arrows < >
+divide screen to two halfs one for carousel and one for analytics in sm screensdisplay as flex col
+improve the overall styling don't forget to make it responsive 
+no custom css use tailwind, if you have some improvements go aheag
+
 
 
 ------------------------------------------------------------------------------------------------------------------------

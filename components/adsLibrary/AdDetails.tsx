@@ -9,7 +9,7 @@ import { searchAds } from "@/app/actions/search_ads";
 import { Button } from "../ui/button";
 import { AdCard } from "./AdCard";
 import Analytics from "./Analytics";
-import Carousel from "./Carousel";
+import { Carousel } from "./Carousel";
 import LoadingTrigger from "./LoadingTrigger";
 
 interface AdDetailsProps {
@@ -105,31 +105,28 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
-      <div className="relative h-[90vh] w-full max-w-6xl overflow-hidden rounded-lg bg-white p-6 dark:bg-gray-800">
-        <Button
-          variant="ghost"
-          size="sm"
-          className="absolute right-2 top-2"
+      <div className="relative h-[90vh] w-full max-w-7xl overflow-hidden rounded-lg bg-white p-6 dark:bg-gray-800">
+        <button
+          className="absolute right-2 top-2 p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
           onClick={onClose}
         >
-          <X className="h-4 w-4" />
-        </Button>
-        <h2 className="mb-4 text-2xl font-bold">Ad Details</h2>
-        <div className="flex h-full">
-          <div className="w-1/3 pr-4">
-            <Carousel ads={detailedAds} isLoading={isLoading} error={error} />
-            <div className="mt-4 flex items-center justify-between">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                {detailedAds.length} of {totalCount || "?"} ads loaded
-              </p>
-              {!isComplete && (
-                <Button onClick={handleLoadMore} disabled={isLoading}>
-                  {isLoading ? "Loading..." : "Load More"}
-                </Button>
-              )}
-            </div>
+          <X className="h-6 w-6" />
+        </button>
+        <h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">
+          Ad Details
+        </h2>
+        <div className="flex h-[calc(100%-3rem)] flex-col gap-6 lg:flex-row">
+          <div className="h-1/2 w-full lg:h-full lg:w-1/2">
+            <Carousel
+              ads={detailedAds}
+              isLoading={isLoading}
+              error={error}
+              totalCount={totalCount}
+              isComplete={isComplete}
+              onLoadMore={handleLoadMore}
+            />
           </div>
-          <div className="w-2/3 pl-4">
+          <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Analytics ads={detailedAds} />
           </div>
         </div>

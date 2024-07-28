@@ -209,3 +209,7 @@ installation steps :
 ---
 
 pnpm dlx shadcn-ui@latest add carousel
+
+---
+
+pnpm add react-slick slick-carousel
