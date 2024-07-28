@@ -105,18 +105,18 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
-      <div className="relative h-[90vh] w-full max-w-7xl overflow-hidden rounded-lg bg-white p-6 dark:bg-gray-800">
+      <div className="relative h-[90vh] w-full max-w-7xl overflow-hidden rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
         <button
-          className="absolute right-2 top-2 p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          className="absolute right-2 top-2 rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200"
           onClick={onClose}
         >
           <X className="h-6 w-6" />
         </button>
-        <h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">
+        <h2 className="mb-4 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-2xl font-bold text-transparent">
           Ad Details
         </h2>
         <div className="flex h-[calc(100%-3rem)] flex-col gap-6 lg:flex-row">
-          <div className="h-1/2 w-full lg:h-full lg:w-1/2">
+          <div className="h-1/2 w-full overflow-hidden rounded-lg bg-gray-50 shadow-inner dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Carousel
               ads={detailedAds}
               isLoading={isLoading}
@@ -126,7 +126,7 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
               onLoadMore={handleLoadMore}
             />
           </div>
-          <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 dark:bg-gray-900 lg:h-full lg:w-1/2">
+          <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 shadow-inner dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Analytics ads={detailedAds} />
           </div>
         </div>

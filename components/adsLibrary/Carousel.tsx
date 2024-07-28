@@ -51,22 +51,22 @@ export const Carousel: React.FC<CarouselProps> = ({
     infinite: false,
     speed: 4, // Increased speed for faster sliding
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToShow: 4,
+          slidesToScroll: 3,
         },
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -90,7 +90,7 @@ export const Carousel: React.FC<CarouselProps> = ({
           <button
             onClick={onLoadMore}
             disabled={isLoading}
-            className="rounded-md bg-blue-500 px-3 py-1 text-sm text-white transition-colors duration-300 hover:bg-blue-600"
+            className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-2 text-sm font-semibold text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-offset-gray-800"
           >
             {isLoading ? "Loading..." : "Load More"}
           </button>
@@ -108,7 +108,10 @@ export const Carousel: React.FC<CarouselProps> = ({
           <Slider {...settings}>
             {ads.map((ad) => (
               <div key={ad.adArchiveID} className="px-2">
-                <button onClick={() => handleAdClick(ad)} className="w-full">
+                <button
+                  onClick={() => handleAdClick(ad)}
+                  className="w-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                >
                   <AdCard ad={ad} compact={true} />
                 </button>
               </div>
@@ -119,14 +122,14 @@ export const Carousel: React.FC<CarouselProps> = ({
 
       {selectedAd && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-white p-6 dark:bg-gray-800">
+          <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
             <button
               onClick={closeAdDetails}
-              className="absolute right-2 top-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              className="absolute right-2 top-2 rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200"
             >
               <X className="h-6 w-6" />
             </button>
-            <h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">
+            <h2 className="mb-4 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-2xl font-bold text-transparent">
               Ad Details
             </h2>
             <AdCard ad={selectedAd} compact={false} />
