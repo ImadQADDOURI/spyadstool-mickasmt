@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import {
+  BadgeCheck,
+  BadgeMinus,
   ExternalLink,
   Facebook,
   Globe,
@@ -219,6 +221,13 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           />
         )}
         <div className="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 p-1">
+          <p>
+            {isActive ? (
+              <BadgeCheck className="h-4 w-4 text-white" />
+            ) : (
+              <BadgeMinus className="h-4 w-4 text-white" />
+            )}
+          </p>{" "}
           <p className="truncate text-xs font-semibold text-white">
             {adArchiveID}
           </p>
