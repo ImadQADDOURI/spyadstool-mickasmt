@@ -1,7 +1,7 @@
 // app/components/adsLibrary/TrackingPixelDetector.tsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AlertCircle, Loader2, Search, XCircle } from "lucide-react";
 
@@ -11,6 +11,7 @@ import { detectTrackingPixels } from "@/app/actions/detectTrackingPixels";
 interface TrackingPixelDetectorProps {
   url?: string;
   usePuppeteer?: boolean;
+  autoDetect?: boolean;
 }
 
 const pixelIcons: Record<string, string> = {
@@ -32,11 +33,30 @@ const pixelIcons: Record<string, string> = {
 export default function TrackingPixelDetector({
   url,
   usePuppeteer = false,
+  autoDetect = true, // New prop to control automatic detection
 }: TrackingPixelDetectorProps) {
   const [detectedPixels, setDetectedPixels] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showButton, setShowButton] = useState(true);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (autoDetect && buttonRef.current) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            detectPixels();
+          }
+        },
+        { threshold: 1.0 },
+      );
+
+      observer.observe(buttonRef.current);
+
+      return () => observer.disconnect();
+    }
+  }, [autoDetect, url]);
 
   const detectPixels = async () => {
     if (!url) return;
@@ -59,6 +79,7 @@ export default function TrackingPixelDetector({
   if (showButton) {
     return (
       <button
+        ref={buttonRef}
         onClick={detectPixels}
         className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 dark:focus:ring-lime-800"
       >

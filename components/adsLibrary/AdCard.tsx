@@ -292,7 +292,11 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
 
         <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
           <span className="mr-2">Pixels</span>
-          <TrackingPixelDetector url={snapshot.link_url} usePuppeteer={true} />
+          <TrackingPixelDetector
+            url={snapshot.link_url}
+            usePuppeteer={true}
+            autoDetect={false}
+          />
         </div>
 
         {ad.collationCount && ad.collationCount > 0 && (
