@@ -30,6 +30,7 @@ import {
 import { AdDetails } from "./AdDetails";
 import ExpandableText from "./expandableText";
 import PageNameWithPopover from "./PageNameWithPopover";
+import TrackingPixelDetector from "./TrackingPixelDetector";
 
 interface AdCardProps {
   ad: Ad;
@@ -287,6 +288,11 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
         <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
           <span className="mr-2">Platforms</span>
           {renderPlatformIcons()}
+        </div>
+
+        <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+          <span className="mr-2">Pixels</span>
+          <TrackingPixelDetector url={snapshot.link_url} usePuppeteer={true} />
         </div>
 
         {ad.collationCount && ad.collationCount > 0 && (

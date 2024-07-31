@@ -1,6 +1,6 @@
-i am building an app using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing.
+i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing.
 
-Here's a description of the overall CSS styling for the AdsLibrary component, which you can use as a reference when building other components to maintain coherence:
+Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
 Certainly! Here's a more concise and straightforward description of the styling:
 
 1. Colors:
@@ -952,8 +952,37 @@ no custom css use tailwind, if you have some improvements go aheag
 
 ------------------------------------------------------------------------------------------------------------------------
 
+i need a component that i passe a url link as argument, it fetch the website and detect the pixels used like facebook/snapshat... , what are the possible solutions to realise that ?
 
 ------------------------------------------------------------------------------------------------------------------------
-
-
+facebook(facebook/insta/...Meta) count as one pixels how to solve that
+some websites are bloking me so it causes pixels analysing failure
+and about the display i want the TrackingPixelDetector to return only the platform icons in a flex row no text no over styling, simple icons with normal background  
+also where to find all the pixels so i can add theme to my detectTrackingPixels.ts ?
 ------------------------------------------------------------------------------------------------------------------------
+
+i don't think we need Zod
+and i want to display if no pixels were found or it's an error
+if you have some improvements tell me 
+------------------------------------------------------------------------------------------------------------------------
+i get this error in terminal for some links:
+TypeError: Cannot read properties of null (reading 'toString')
+    at detectTrackingPixels (./app/actions/detectTrackingPixels.ts:46:32)
+digest: "286218183"
+ POST /dashboard/ad-library 500 in 21ms
+
+ and also this one :
+  ⨯ app\actions\detectTrackingPixels.ts (58:13) @ detectTrackingPixels
+ ⨯ Error: HTTP error! status: 403
+    at detectTrackingPixels (./app/actions/detectTrackingPixels.ts:51:19)
+digest: "582340617"
+  56 |
+  57 |     if (!response.ok) {
+> 58 |       throw new Error(`HTTP error! status: ${response.status}`);
+     |             ^
+  59 |     }
+  60 |
+  61 |     const html = await response.text();
+
+  ------------------------------------------------------------------------------------------------------------------------
+  i want to modify detectTrackingPixels.ts to have a prop puppeteer:boolean so if true it uses puppeteer else simple fetch 
