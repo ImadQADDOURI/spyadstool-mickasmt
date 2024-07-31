@@ -1,7 +1,6 @@
 i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing.
 
 Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
-Certainly! Here's a more concise and straightforward description of the styling:
 
 1. Colors:
    - Primary: Purple to Pink gradient
@@ -986,3 +985,14 @@ digest: "582340617"
 
   ------------------------------------------------------------------------------------------------------------------------
   i want to modify detectTrackingPixels.ts to have a prop puppeteer:boolean so if true it uses puppeteer else simple fetch 
+
+  ------------------------------------------------------------------------------------------------------------------------
+  Task:
+
+1-the display is bad and some times the chart does not load correctly showing only a dot or a line,
+
+2-add the date value on x axis in the 0 of the axis so i can know the start point
+
+3-the chart in dark mode is looking awful, use a gradient with light colors and coherent to pink and purple
+
+4-do you have some improvements

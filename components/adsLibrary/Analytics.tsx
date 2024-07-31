@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useMemo } from "react";
+import { useTheme } from "next-themes";
 import {
   Area,
   AreaChart,
@@ -25,6 +26,8 @@ interface AnalyticsProps {
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
+  const { theme } = useTheme();
+
   const chartData = useMemo(() => {
     const dataMap = new Map<string, number>();
     const today = new Date();
@@ -37,12 +40,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
       let endDate: Date;
 
       if (ad.endDate === undefined || new Date(ad.endDate * 1000) < startDate) {
-        // Ad is ongoing
         endDate = today;
       } else {
-        // Ad has a defined end date
         endDate = new Date(ad.endDate * 1000);
-        endDate.setDate(endDate.getDate() - 1); // Count up to one day before end date
+        endDate.setDate(endDate.getDate() - 1);
       }
 
       for (
@@ -64,11 +65,29 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
   const currentActiveVersions =
     chartData[chartData.length - 1]?.activeVersions || 0;
 
+  const formatXAxis = (tickItem: string) => {
+    const date = new Date(tickItem);
+    return `${date.getMonth() + 1}/${date.getDate()}`;
+  };
+
+  const formatTooltipDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  };
+
+  const chartColor = theme === "dark" ? "#FF1493" : "#8B00FF";
+
   return (
-    <Card className="w-full">
+    <Card className="w-full transition-shadow duration-300 hover:shadow-lg">
       <CardHeader>
-        <CardTitle>Ad Version Activity Analytics</CardTitle>
-        <CardDescription>
+        <CardTitle className="text-2xl font-bold">
+          Ad Version Activity Analytics
+        </CardTitle>
+        <CardDescription className="text-sm text-gray-500">
           Number of active ad versions over time
         </CardDescription>
       </CardHeader>
@@ -78,33 +97,62 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
             data={chartData}
             margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
           >
-            <XAxis dataKey="date" />
-            <YAxis allowDecimals={false} domain={[0, "dataMax + 1"]} />
-            <Tooltip />
+            <XAxis
+              dataKey="date"
+              tickFormatter={formatXAxis}
+              interval="preserveStartEnd"
+              tickCount={5}
+              stroke={theme === "dark" ? "#888" : "#333"}
+            />
+            <YAxis
+              allowDecimals={false}
+              domain={[0, "dataMax + 1"]}
+              tickCount={5}
+              stroke={theme === "dark" ? "#888" : "#333"}
+            />
+            <Tooltip
+              labelFormatter={(label) => formatTooltipDate(label as string)}
+              contentStyle={{
+                backgroundColor:
+                  theme === "dark"
+                    ? "rgba(51, 51, 51, 0.8)"
+                    : "rgba(255, 255, 255, 0.8)",
+                border: "none",
+                borderRadius: "8px",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                backdropFilter: "blur(4px)",
+              }}
+              itemStyle={{
+                color: theme === "dark" ? "#fff" : "#333",
+              }}
+            />
             <defs>
-              <linearGradient
-                id="colorActiveVersions"
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="1"
-              >
-                <stop offset="5%" stopColor="#8B5CF6" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#EC4899" stopOpacity={0.2} />
+              <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor={chartColor} stopOpacity={0.8} />
+                <stop offset="100%" stopColor={chartColor} stopOpacity={0.1} />
               </linearGradient>
             </defs>
             <Area
               type="monotone"
               dataKey="activeVersions"
-              stroke="#8B5CF6"
-              fillOpacity={1}
-              fill="url(#colorActiveVersions)"
+              stroke={chartColor}
+              fill="url(#colorGradient)"
+              strokeWidth={3}
+              dot={false}
+              activeDot={{
+                r: 6,
+                strokeWidth: 2,
+                stroke: theme === "dark" ? "#fff" : "#333",
+              }}
             />
           </AreaChart>
         </ResponsiveContainer>
-        <div className="mt-4 text-center">
-          <p className="text-lg font-semibold">
-            Current Active Ad Versions: {currentActiveVersions}
+        <div className="mt-6 text-center">
+          <p className="text-2xl font-bold">
+            Current Active Ad Versions:
+            <span className="ml-2 text-3xl text-indigo-600 dark:text-indigo-400">
+              {currentActiveVersions}
+            </span>
           </p>
         </div>
       </CardContent>
