@@ -28,37 +28,32 @@ interface AnalyticsProps {
 const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
   const { theme } = useTheme();
 
-  const { chartData, activeAdsCount } = useMemo(() => {
+  const chartData = useMemo(() => {
     const dataMap = new Map<string, number>();
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-
     let activeCount = 0;
 
     ads.forEach((ad) => {
       if (ad.startDate === undefined) return;
-      // // display ads Dates
-      // console.log(
-      //   `Before : Start Date: ${new Date(ad.startDate * 1000).toLocaleDateString()}, End Date: ${ad.endDate ? new Date(ad.endDate * 1000).toLocaleDateString() : "Ongoing"}, Active: ${ad.isActive}`,
-      // );
+
+      // display ads Dates
+      console.log(
+        `Before : Start Date: ${new Date(ad.startDate * 1000).toLocaleDateString()}, End Date: ${ad.endDate ? new Date(ad.endDate * 1000).toLocaleDateString() : "Ongoing"}, Active: ${ad.isActive}`,
+      );
       const startDate = new Date(ad.startDate * 1000);
       let endDate: Date;
 
-      if (
-        // if endDate not a valid date use today as end date
-        ad.endDate === undefined ||
-        new Date(ad.endDate * 1000) < startDate ||
-        new Date(ad.endDate * 1000) >= tomorrow
-      ) {
-        console.log("🚀🚀🚀🚀 !!! invalid end date !!!", ad.endDate);
+      if (ad.endDate === undefined || new Date(ad.endDate * 1000) < startDate) {
         endDate = today;
       } else {
         endDate = new Date(ad.endDate * 1000);
+        endDate.setDate(endDate.getDate());
       }
-
-      //Populating the Data Map:For each day between the start and end date of an ad, we increment the count in our dataMap.This gives us a day-by-day count of how many ads were active on each date.
+      // display ads Dates after processing
+      console.log(
+        `After: Start Date: ${startDate.toLocaleDateString()}, End Date: ${endDate.toLocaleDateString()}, Active: ${ad.isActive}`,
+      );
       for (
         let date = new Date(startDate);
         date <= endDate;
@@ -67,14 +62,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
         const dateString = date.toISOString().split("T")[0];
         dataMap.set(dateString, (dataMap.get(dateString) || 0) + 1);
       }
-
-      // Count current active ads,We increment activeCount for each ad that is currently active.
+      // Count current active ads
       if (ad.isActive) {
         activeCount++;
       }
     });
 
-    //// Adding Extra Days:
     // Add a day at the start with value 0
     if (dataMap.size > 0) {
       const firstDay = new Date(
@@ -110,22 +103,21 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
       }
     }
 
-    //Preparing Chart Data:
-    //We convert our dataMap into an array of objects, each containing a date and the count of active ads for that date.
-    //We sort this array by date to ensure chronological order.
     const dates = Array.from(dataMap, ([date, activeVersions]) => ({
       date,
       activeVersions,
     })).sort((a, b) => a.date.localeCompare(b.date));
 
-    // log the ( date / active ads ) array
-    // for (const date of dates) {
-    //   console.log(`  ${date.date}: ${date.activeVersions}`);
-    // }
-    // console.log("🚀🚀🚀🚀");
+    for (const date of dates) {
+      console.log(`  ${date.date}: ${date.activeVersions}`);
+    }
+    console.log("🚀🚀🚀🚀");
 
-    return { chartData: dates, activeAdsCount: activeCount };
+    return dates;
   }, [ads]);
+
+  const currentActiveVersions =
+    chartData[chartData.length - 1]?.activeVersions || 0;
 
   const formatXAxis = (tickItem: string) => {
     const date = new Date(tickItem);
@@ -213,7 +205,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
           <p className="text-2xl font-bold">
             Current Active Ad Versions:
             <span className="ml-2 text-3xl text-indigo-600 dark:text-indigo-400">
-              {activeAdsCount}
+              {currentActiveVersions}
             </span>
           </p>
         </div>

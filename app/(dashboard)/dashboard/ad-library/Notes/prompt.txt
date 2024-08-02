@@ -1,5 +1,4 @@
-i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing.
-
+i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing and explanatory comments.
 Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
 
 1. Colors:
@@ -996,3 +995,145 @@ digest: "582340617"
 3-the chart in dark mode is looking awful, use a gradient with light colors and coherent to pink and purple
 
 4-do you have some improvements
+  ------------------------------------------------------------------------------------------------------------------------
+tasks:
+1>
+Current Active Ad Versions is not working correctly
+ads that have been inacctive for mounths still get count in the Current Active Ads and ads that are still active and ongoing are not count in Current Active Ads
+the correct value of Current Active Ad need to be calculated using ad.isActive (f/t) 
+
+
+2>
+and can you verify the logic on how to sum the ads how to know the ads that are still ongoing
+some actual ads dates and active or inactive status
+ Start Date: 7/31/2024
+ End Date: 7/30/2024
+ active:  true
+ --------------------
+ Start Date: 5/24/2024
+ End Date: 7/30/2024
+ active:  true
+ --------------------
+ Start Date: 5/9/2024
+ End Date: 7/30/2024
+ active:  true
+ --------------------
+ Start Date: 4/9/2024
+ End Date: 5/6/2024
+ active:  false
+--------------------
+ Start Date: 2/2/2024
+ End Date: 4/8/2024
+ active:  false
+
+
+for modifications and explanations, mentions it in comments
+
+
+here is some data examples:
+ Start Date: 8/1/2024, End Date: 8/1/2024, Active: true
+ Start Date: 7/31/2024, End Date: 8/1/2024, Active: true
+ Start Date: 7/30/2024, End Date: 8/1/2024, Active: true
+ Start Date: 7/28/2024, End Date: 8/1/2024, Active: true
+ Start Date: 7/25/2024, End Date: 8/1/2024, Active: true
+ Start Date: 1/22/2024, End Date: 1/29/2024, Active: false
+ Start Date: 1/28/2024, End Date: 2/24/2024, Active: false
+ Start Date: 8/1/2024, End Date: 8/1/2024, Active: false
+ Start Date: 7/31/2024, End Date: 7/31/2024, Active: false
+ Start Date: 7/31/2024, End Date: 7/31/2024, Active: true
+ Start Date: 7/29/2024, End Date: 7/30/2024, Active: false
+ Start Date: 7/29/2024, End Date: 7/31/2024, Active: false
+ Start Date: 7/29/2024, End Date: 7/31/2024, Active: true
+ Start Date: 7/29/2024, End Date: 8/1/2024, Active: false
+
+today is not displayed on the chart, is there a way to hundle and display today correctly ?
+and ads with endDate = yesterday (e.g endDate=7/31/2024 and today 8/1/2024 is counted as active ) so deal with that somehow, i don't know how we can solve that, do you have any idea ? what i noticed is ads that ended yesteday keep the status active until two days passes then the status changes to inactive
+maybe we should extend the ads with enddate = yesterday and isActive=true to today
+
+console.log( `Ad: Start Date: ${new Date(ad.startDate * 1000).toLocaleDateString()}, End Date: ${ad.endDate ? new Date(ad.endDate * 1000).toLocaleDateString() : "Ongoing"}, Active: ${ad.isActive}`,);
+
+  if ( ad.isActive  ) { currentActive++; }
+
+
+ if (ad.endDate === undefined || new Date(ad.endDate * 1000) < startDate) {
+        endDate = new Date(today.getTime() + 24 * 60 * 60 * 1000);
+        endDate = today;
+      } else {
+        endDate = new Date(ad.endDate * 1000);
+        endDate.setHours(23, 59, 59, 999); // Set to end of the day
+        endDate.setTime(endDate.getTime() + 24 * 60 * 60 * 1000); // Add one day
+      }
+-------------------------------------------------------------------------------
+
+calculate Current Active Ad Versions by counting the ads that verify (ad.isActive=true and ad.endDate is >= today or undefined or < startDate the only case were it will not be count is if( startDate <= endDate < yesterday ))
+and in case Current Active Ad Versions > 0 thene add today to the chart and for the value use Current Active Ad Versions
+
+-------------------------------------------------------------------------------
+render date() in AdsLibrary endDate yesterday => started on start date
+-------------------------------------------------------------------------------
+first of all the work is done two times for the same data the function is called two times in a row
+-------------------------------------------------------------------------------
+
+endDate should be inclusive so Add one day to endDate
+Count current active ads like that: if (isActive) {activeAdsCount++;}
+and if current active ads > 0 add another day and use for the value current active ads
+
+
+
+    // Add a day at the start with value 0
+    if (dataMap.size > 0) {
+      const firstDay = new Date(
+        Math.min(
+          ...Array.from(dataMap.keys()).map((date) => new Date(date).getTime()),
+        ),
+      );
+      const startDay = new Date(firstDay);
+      startDay.setDate(startDay.getDate() - 1);
+      const startDayString = startDay.toISOString().split("T")[0];
+      dataMap.set(startDayString, 0);
+    }
+
+    // Add an extra day at the end
+    if (activeCount > 0) {
+      const extraDay = new Date(today);
+      extraDay.setDate(extraDay.getDate() + 1);
+      const extraDayString = extraDay.toISOString().split("T")[0];
+      dataMap.set(extraDayString, activeCount);
+    } else {
+      // If there are no active ads, add an extra day with value 0
+      const dates = Array.from(dataMap.keys()).map((date) => new Date(date));
+      if (dates.length > 0) {
+        const lastDay = new Date(Math.max(...dates.map((d) => d.getTime())));
+        const extraDay = new Date(lastDay);
+        extraDay.setDate(extraDay.getDate() + 1);
+        const extraDayString = extraDay.toISOString().split("T")[0];
+        dataMap.set(extraDayString, 0);
+      } else {
+        // If dataMap is empty, use today's date
+        const extraDayString = today.toISOString().split("T")[0];
+        dataMap.set(extraDayString, 0);
+      }
+    }
+
+-------------------------------------------------------------------------------
+
+    we should make endDate inclusive // we should make endDate inclusive by adding one day+ 24 * 60 * 60 * 1000
+    rewrite the code it's not written properly
+    and use activeAdsCount: activeCount istead of currentActiveVersions
+     // Count current active ads
+      if (ad.isActive) {
+        activeCount++;
+      }
+
+
+i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css, lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing; for modifications and explanations, add explanatory comments.
+
+i need some modification on Analytics.tsx Task:
+the main logic is fine but syntax and organization of code no
+    rewrite the code it's not written properly
+    and use activeAdsCount: activeCount istead of currentActiveVersions
+     // Count current active ads
+      if (ad.isActive) {
+        activeCount++;
+      }
+complete the conditions or maybe inverse it and use not ! to test if not a valid range !( startdate<=enddate<today)  : if (ad.endDate === undefined || new Date(ad.endDate * 1000) < startDate || {/* bigger than today */}) 
