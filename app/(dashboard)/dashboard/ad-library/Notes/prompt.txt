@@ -1,5 +1,12 @@
-i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing and explanatory comments.
+i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing .
+
+good practices coding, stable logic , well structured, optimized with explanatory comments.
+
+Reusability, Performance, Lightweight, Flexibility and Separation of Concerns
+
 if you have modifications on code give me just what to change not the whole code
+
+
 Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
 
 1. Colors:
@@ -1144,3 +1151,14 @@ complete the conditions or maybe inverse it and use not ! to test if not a valid
 Tasks:
 1.create a component categoryAsKeyword.tsx, similar to country.tsx same overall logic with the clear prop and everything, the data we will create @/lib/Categories.ts, it returns null if nothing selected or return the selected category.
 2.what are the necessary modifications on adsLibrary give me just what to change not the whole code it's big
+
+
+---------------------------------------------------------------------------------------------
+
+
+Reusability, Performance, Lightweight, Flexibility and Separation of Concerns
+tasks:
+let's separate the code of the SlidingPanel + filters from adsLibrary.tsx with all it's logic so i can use it on other components as well
+let's use Custom Hook + Context
+good practices coding, stable logic , well structured, optimized with explanatory comments.
+
