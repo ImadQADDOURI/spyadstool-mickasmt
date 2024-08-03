@@ -19,7 +19,7 @@ type CategoryProps = {
 };
 
 const categories = [
-  { value: "all", label: "All Categories" },
+  { value: "all", label: "All" },
   { value: "political_and_issue_ads", label: "Political and Issue Ads" },
 ];
 
@@ -46,7 +46,7 @@ export const Category: React.FC<CategoryProps> = React.memo(
     return (
       <Select value={value || undefined} onValueChange={handleSelect}>
         <SelectTrigger className="w-full">
-          <SelectValue placeholder="All categories" />
+          <SelectValue placeholder="All Types" />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>

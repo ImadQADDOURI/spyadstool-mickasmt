@@ -19,6 +19,7 @@ import { searchAds } from "@/app/actions/search_ads";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import Category from "./category";
+import CategoryAsKeyword from "./categoryAsKeyword";
 import Country from "./country";
 import EndDate from "./endDate";
 import Language from "./language";
@@ -42,6 +43,9 @@ export const AdsLibrary = () => {
   const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
   const [startDate, setStartDate] = useState<string | null>(null);
   const [endDate, setEndDate] = useState<string | null>(null);
+  const [selectedCategoryAsKeyword, setSelectedCategoryAsKeyword] = useState<
+    string | null
+  >(null);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<AdsData | null>(null);
@@ -56,6 +60,7 @@ export const AdsLibrary = () => {
   // Count applied filters
   const countAppliedFilters = useCallback(() => {
     let count = 0;
+    if (selectedCategoryAsKeyword) count++;
     if (selectedCountry) count++;
     if (selectedCategory) count++;
     if (selectedLanguages) count++;
@@ -66,6 +71,7 @@ export const AdsLibrary = () => {
     if (endDate) count++;
     setAppliedFiltersCount(count);
   }, [
+    selectedCategoryAsKeyword,
     selectedCountry,
     selectedCategory,
     selectedLanguages,
@@ -92,6 +98,7 @@ export const AdsLibrary = () => {
     setSelectedMedia(null);
     setStartDate(null);
     setEndDate(null);
+    setSelectedCategoryAsKeyword(null);
   };
   // Reset clearFilters after it's been applied
   useEffect(() => {
@@ -177,6 +184,8 @@ export const AdsLibrary = () => {
             useExistingParams && searchResults
               ? searchResults.collationToken
               : "",
+
+          category_as_keyword: selectedCategoryAsKeyword,
         };
 
         const Results = await searchAds(searchParams);
@@ -218,6 +227,7 @@ export const AdsLibrary = () => {
       }
     },
     [
+      selectedCategoryAsKeyword,
       endDate,
       startDate,
       selectedMedia,
@@ -283,11 +293,16 @@ export const AdsLibrary = () => {
 
         {/* Filter components */}
         <div className="space-y-6">
-          <Country onSelectCountry={setSelectedCountry} clear={clearFilters} />
           <Category
             onSelectCategory={setSelectedCategory}
             clear={clearFilters}
           />
+          <Country onSelectCountry={setSelectedCountry} clear={clearFilters} />
+          <CategoryAsKeyword
+            onSelectCategory={setSelectedCategoryAsKeyword}
+            clear={clearFilters}
+          />
+
           <Language
             onSelectLanguages={setSelectedLanguages}
             clear={clearFilters}

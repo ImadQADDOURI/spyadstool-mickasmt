@@ -44,6 +44,14 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     addParam("start_date[min]", filters.start_date_min);
     addParam("start_date[max]", filters.start_date_max);
 
+    // Handle category_as_keyword
+    let searchQuery = filters.q || "";
+    if (filters.category_as_keyword) {
+      searchQuery += (searchQuery ? " " : "") + filters.category_as_keyword;
+    }
+    // Use the addParam function to add the combined query
+    addParam("q", searchQuery);
+
     // Handle arrays
     if (filters.page_ids && filters.page_ids.length > 0) {
       filters.page_ids.forEach((id, index) => {

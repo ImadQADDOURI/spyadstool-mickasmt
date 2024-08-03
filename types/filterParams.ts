@@ -37,4 +37,7 @@ export type FilterParams = {
 
   //Page ADs
   view_all_page_id?: string | null;
+
+  //categoryAsKeyword
+  category_as_keyword?: string | null;
 };
