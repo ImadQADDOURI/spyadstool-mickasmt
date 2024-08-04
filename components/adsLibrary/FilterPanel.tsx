@@ -86,7 +86,10 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
           onClick={applyFilters}
           className="w-full rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
         >
-          Apply Filters ({countAppliedFilters()})
+          Apply Filters
+          {countAppliedFilters() > 0
+            ? " (" + countAppliedFilters() + ")"
+            : null}
         </Button>
       </div>
     </div>

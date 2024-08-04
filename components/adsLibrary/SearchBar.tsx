@@ -34,7 +34,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   const resetSearch = () => {
     setSearchQuery("");
-    onSearch("");
+    // onSearch("");
   };
 
   return (
