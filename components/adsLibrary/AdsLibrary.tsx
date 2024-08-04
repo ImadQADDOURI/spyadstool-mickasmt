@@ -206,7 +206,6 @@ export const AdsLibrary = () => {
             ...adsData,
             ads: [...prevResults!.ads, ...adsData.ads],
           }));
-          // Update remaining count
           setRemainingCount(Results.payload.totalCount - adsData.ads.length);
         } else {
           setSearchResults(adsData);
