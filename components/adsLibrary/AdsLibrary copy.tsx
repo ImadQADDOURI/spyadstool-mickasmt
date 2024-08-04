@@ -19,17 +19,17 @@ import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import Category from "./category";
-import CategoryAsKeyword from "./categoryAsKeyword";
 import Country from "./country";
 import EndDate from "./endDate";
-import Language from "./language";
+import Category from "./filters/category";
+import CategoryAsKeyword from "./filters/categoryAsKeyword";
+import Language from "./filters/language";
+import Media from "./filters/media";
+import Platform from "./filters/platform";
+import Status from "./filters/status";
 import LoadingTrigger from "./LoadingTrigger";
-import Media from "./media";
-import Platform from "./platform";
 import { ScrollButtons } from "./ScrollButtons";
 import StartDate from "./startDate";
-import Status from "./status";
 
 export const AdsLibrary = () => {
   const router = useRouter();

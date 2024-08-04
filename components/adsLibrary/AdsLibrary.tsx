@@ -2,35 +2,17 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  ArrowDown,
-  ArrowUp,
-  Filter,
-  Loader2,
-  Plus,
-  Search,
-  X,
-} from "lucide-react";
+import { Filter } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
-import { AdsList } from "@/components/adsLibrary/AdsList";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
-import { Input } from "../ui/input";
-import Category from "./category";
-import CategoryAsKeyword from "./categoryAsKeyword";
-import Country from "./country";
-import EndDate from "./endDate";
-import Language from "./language";
-import LoadingTrigger from "./LoadingTrigger";
-import Media from "./media";
-import Platform from "./platform";
+import { FilterPanel } from "./FilterPanel";
 import { ScrollButtons } from "./ScrollButtons";
 import { SearchBar } from "./SearchBar";
-import StartDate from "./startDate";
-import Status from "./status";
+import { SearchResults } from "./SearchResults";
 
 export const AdsLibrary = () => {
   const router = useRouter();
@@ -156,18 +138,6 @@ export const AdsLibrary = () => {
     handleSearchAds();
   };
 
-  // Count applied filters
-  const countAppliedFilters = useCallback(() => {
-    const params = new URLSearchParams(searchParams.toString());
-    return Array.from(params.keys()).filter((key) => key !== "q").length;
-  }, [searchParams]);
-
-  // Apply filters
-  const applyFilters = () => {
-    performSearch();
-    setIsPanelOpen(false);
-  };
-
   // Clear all filters
   const clearAllFilters = () => {
     router.push("/dashboard/ad-library");
@@ -202,55 +172,13 @@ export const AdsLibrary = () => {
         Ads Library
       </h1>
 
-      {/* Sliding Panel */}
-      <div
-        className={`fixed inset-y-0 left-0 z-50 w-80 transform overflow-y-auto bg-white p-6 shadow-lg transition-transform duration-300 ease-in-out dark:bg-gray-800 ${
-          isPanelOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="mb-6 flex items-center justify-between">
-          <h2 className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-2xl font-bold text-transparent">
-            Filters
-          </h2>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => setIsPanelOpen(false)}
-            className="rounded-full p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
-
-        {/* Filter components */}
-        <div className="space-y-6">
-          <Category />
-          <Country />
-          <CategoryAsKeyword />
-          <Language />
-          <Media />
-          <Platform />
-          <Status />
-          <StartDate />
-          <EndDate />
-        </div>
-
-        <div className="mt-8 space-y-4">
-          <Button
-            onClick={clearAllFilters}
-            variant="outline"
-            className="w-full rounded-full border-2 border-gray-300 bg-transparent px-6 py-2 text-gray-700 transition-all hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
-          >
-            Clear All
-          </Button>
-          <Button
-            onClick={applyFilters}
-            className="w-full rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-          >
-            Apply Filters
-          </Button>
-        </div>
-      </div>
+      {/* Filter Panel Component */}
+      <FilterPanel
+        isPanelOpen={isPanelOpen}
+        setIsPanelOpen={setIsPanelOpen}
+        performSearch={performSearch}
+        clearAllFilters={clearAllFilters}
+      />
 
       {/* Search Section */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-6 shadow-lg">
@@ -264,99 +192,25 @@ export const AdsLibrary = () => {
             >
               <span className="relative flex items-center px-6 py-2">
                 <Filter className="mr-2 h-4 w-4" />
-                Filters{" "}
-                {countAppliedFilters() > 0 && `(${countAppliedFilters()})`}
+                Filters
               </span>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto p-4">
-        {error && (
-          <div
-            className="mb-6 rounded-lg bg-red-100 p-4 text-red-700 dark:bg-red-900 dark:text-red-100"
-            role="alert"
-          >
-            {error}
-          </div>
-        )}
+      {/* Search Results Component */}
+      <SearchResults
+        isLoading={isLoading}
+        error={error}
+        totalCount={totalCount}
+        searchResults={searchResults}
+        handleLoadMore={handleLoadMore}
+        remainingCount={remainingCount}
+      />
 
-        {totalCount !== null && (
-          <div className="mb-6 text-center">
-            <span
-              className="inline-block rounded-full bg-purple-100 px-6 py-3 text-lg font-bold text-purple-800 shadow-md dark:bg-purple-900 dark:text-purple-200"
-              aria-live="polite"
-            >
-              {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
-            </span>
-          </div>
-        )}
-
-        {/* Loading indicator */}
-        {isLoading && (
-          <div className="flex justify-center py-12" aria-live="polite">
-            <div className="relative h-20 w-20">
-              <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
-              <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
-                <Loader2 className="h-10 w-10 animate-spin text-white" />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Ads List */}
-        {searchResults && searchResults.ads.length > 0 ? (
-          <div className="space-y-8">
-            <AdsList ads={searchResults.ads} />
-            {!searchResults.isResultComplete && (
-              <div className="flex flex-col items-center space-y-4">
-                <LoadingTrigger
-                  onIntersect={handleLoadMore}
-                  isLoading={isLoading}
-                />
-                {isLoading ? (
-                  <div
-                    className="flex items-center space-x-2 text-gray-600 dark:text-gray-400"
-                    aria-live="polite"
-                  >
-                    <Loader2 className="h-5 w-5 animate-spin" />
-                    <p>Loading more ads...</p>
-                  </div>
-                ) : (
-                  <Button
-                    onClick={handleLoadMore}
-                    className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-white shadow-md transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-                  >
-                    Load More
-                  </Button>
-                )}
-                {remainingCount !== null && (
-                  <p
-                    className="text-sm text-gray-600 dark:text-gray-400"
-                    aria-live="polite"
-                  >
-                    {remainingCount} more ads available
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
-        ) : (
-          searchResults && (
-            <p
-              className="text-center text-lg text-gray-600 dark:text-gray-400"
-              role="status"
-            >
-              No ads found. Try adjusting your search criteria.
-            </p>
-          )
-        )}
-
-        {/* Scroll buttons */}
-        <ScrollButtons />
-      </div>
+      {/* Scroll buttons */}
+      <ScrollButtons />
     </div>
   );
 };

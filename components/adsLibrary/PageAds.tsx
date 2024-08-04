@@ -202,6 +202,7 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
             </div>
           )}
 
+          {/* Search Section */}
           <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
             <div className="relative flex-grow">
               <Input
@@ -263,6 +264,7 @@ export const PageAds: React.FC<PageAdsProps> = ({ pageId }) => {
           </div>
         )}
 
+        {/* Ads List */}
         {searchResults && searchResults.ads.length > 0 ? (
           <div className="space-y-8">
             <AdsList ads={searchResults.ads} />

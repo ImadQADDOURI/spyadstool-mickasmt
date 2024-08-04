@@ -3,15 +3,15 @@
 import React from "react";
 
 import { Button } from "../ui/button";
-import Category from "./category";
 import Country from "./country";
 import EndDate from "./endDate";
-import Language from "./language";
-import Media from "./media";
-import Platform from "./platform";
+import Category from "./filters/category";
+import Language from "./filters/language";
+import Media from "./filters/media";
+import Platform from "./filters/platform";
+import Status from "./filters/status";
 import SearchByKeyword from "./searchByKeyword";
 import StartDate from "./startDate";
-import Status from "./status";
 
 interface SearchFiltersProps {
   selectedCountry: string;
