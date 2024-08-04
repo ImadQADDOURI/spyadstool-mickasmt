@@ -1162,3 +1162,39 @@ let's separate the code of the SlidingPanel + filters from adsLibrary.tsx with a
 let's use Custom Hook + Context
 good practices coding, stable logic , well structured, optimized with explanatory comments.
 
+
+---------------------------------------------------------------------------------------------
+i have a lot of problems dealing with the filters, the code is so bad with repetitive renders, lot of callback functions.
+i want to Change the approach to use the URL for setting and getting filters instead ot the current method
+Each filter component (e.g., Country.tsx, Category.tsx) should update the URL query parameters when a filter is applied.
+Read URL parameters on component mount and set the initial state of filters.
+Listen for URL changes and update the state accordingly.
+
+---------------------------------------------------------------------------------------------
+Key changes in both components:
+
+We've removed the props and now use useRouter and useSearchParams hooks from Next.js to interact with the URL directly.
+The component state is now derived from the URL parameters.
+When a selection is made, we update the URL parameters directly instead of calling a callback function.
+We've removed the clear prop and its associated logic, as clearing can now be handled by the parent component by updating the URL.
+
+These changes make the components more self-contained and reduce the need for prop drilling. The parent AdsLibrary component can now focus on reading the URL parameters to perform the search, without needing to manage the state of each individual filter.
+
+---------------------------------------------------------------------------------------------
+
+
+i need some modification on adslibrary, i want on page refresh to clear all the filters router.push("/dashboard/ad-library");
+and about the search Query is not handled correctly (q) it should add it to the filterparams but it's not 
+and the logic behind the filter param q is:
+if user input a text use it for q, 
+also if categoryAsKeyword is selected you should concatenate it to q
+else if no q (user hasn't typed anything) remove it 
+but if  categoryAsKeyword is selected use it as q
+if you have some improvements or optimizations go ahead
+
+
+---------------------------------------------------------------------------------------------
+i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css, lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing . good practices coding, stable logic , well structured, optimized with explanatory comments. Reusability, Performance, Lightweight, Flexibility and Separation of Concerns
+i have a lot of problems dealing with the filters, the code is so bad with repetitive renders, lot of callback functions. i want to Change the approach to use the URL for setting and getting filters instead ot the current method
+i already started the changes , and i want you to help me complete what i started
+Key changes in components: We've removed the props and now use useRouter and useSearchParams hooks from Next.js to interact with the URL directly. The component state is now derived from the URL parameters. When a selection is made, we update the URL parameters directly instead of calling a callback function. We've removed the clear prop and its associated logic, as clearing can now be handled by the parent component by updating the URL. These changes make the components more self-contained and reduce the need for prop drilling. The parent AdsLibrary component can now focus on reading the URL parameters to perform the search, without needing to manage the state of each individual filter.

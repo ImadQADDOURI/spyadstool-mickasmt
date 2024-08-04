@@ -2,6 +2,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, ChevronsUpDown, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -27,47 +28,42 @@ const platforms = [
   { value: "messenger", label: "Messenger" },
 ];
 
-type PlatformProps = {
-  onSelectPlatforms: (value: string[] | null) => void;
-  clear?: boolean;
-};
-
-export const Platform: React.FC<PlatformProps> = ({
-  onSelectPlatforms,
-  clear = false,
-}) => {
+export const Platform: React.FC = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [open, setOpen] = React.useState(false);
-  const [selectedPlatforms, setSelectedPlatforms] = React.useState<
-    string[] | null
-  >(null);
 
-  // Clear selected Platforms if clear is true
-  React.useEffect(() => {
-    if (clear) {
-      setSelectedPlatforms(null);
-      onSelectPlatforms(null);
-    }
-  }, [clear, onSelectPlatforms]);
+  const selectedPlatforms =
+    searchParams.get("publisher_platforms")?.split(",") || [];
 
   const handleSelect = (platformValue: string) => {
-    setSelectedPlatforms((prev) => {
-      const newSelection = prev
-        ? prev.includes(platformValue)
-          ? prev.filter((value) => value !== platformValue)
-          : [...prev, platformValue]
-        : [platformValue];
-      onSelectPlatforms(newSelection.length ? newSelection : null);
-      return newSelection.length ? newSelection : null;
-    });
+    const params = new URLSearchParams(searchParams);
+    const current = params.get("publisher_platforms")?.split(",") || [];
+    const updated = current.includes(platformValue)
+      ? current.filter((value) => value !== platformValue)
+      : [...current, platformValue];
+
+    if (updated.length) {
+      params.set("publisher_platforms", updated.join(","));
+    } else {
+      params.delete("publisher_platforms");
+    }
+
+    router.push(`?${params.toString()}`);
   };
 
   const handleRemove = (platformValue: string) => {
-    setSelectedPlatforms((prev) => {
-      if (!prev) return null;
-      const newSelection = prev.filter((value) => value !== platformValue);
-      onSelectPlatforms(newSelection.length ? newSelection : null);
-      return newSelection.length ? newSelection : null;
-    });
+    const params = new URLSearchParams(searchParams);
+    const current = params.get("publisher_platforms")?.split(",") || [];
+    const updated = current.filter((value) => value !== platformValue);
+
+    if (updated.length) {
+      params.set("publisher_platforms", updated.join(","));
+    } else {
+      params.delete("publisher_platforms");
+    }
+
+    router.push(`?${params.toString()}`);
   };
 
   return (
@@ -79,7 +75,7 @@ export const Platform: React.FC<PlatformProps> = ({
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {selectedPlatforms && selectedPlatforms.length > 0 ? (
+          {selectedPlatforms.length > 0 ? (
             <div className="flex flex-wrap gap-1">
               {selectedPlatforms.map((value) => (
                 <Badge key={value} variant="secondary" className="mr-1">
@@ -125,7 +121,7 @@ export const Platform: React.FC<PlatformProps> = ({
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      selectedPlatforms?.includes(platform.value)
+                      selectedPlatforms.includes(platform.value)
                         ? "opacity-100"
                         : "opacity-0",
                     )}

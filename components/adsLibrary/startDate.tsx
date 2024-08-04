@@ -2,49 +2,35 @@
 "use client";
 
 import React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-interface StartDateProps {
-  onSelectStartDate: (date: string | null) => void;
-  start_date_min?: string | null;
-  maxDate?: string;
-  clear?: boolean;
-}
-
 const MIN_DATE = "2018-05-07";
 
-export const StartDate: React.FC<StartDateProps> = ({
-  onSelectStartDate,
-  start_date_min,
-  maxDate,
-  clear = false,
-}) => {
-  const [selectedDate, setSelectedDate] = React.useState<string | null>(null);
+export const StartDate: React.FC = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Clear selected Start Date if clear is true
-  React.useEffect(() => {
-    if (clear) {
-      setSelectedDate(null);
-      onSelectStartDate(null);
-    }
-  }, [clear, onSelectStartDate]);
-
-  // Update selectedDate when start_date_min changes
-  React.useEffect(() => {
-    setSelectedDate(start_date_min || null);
-  }, [start_date_min]);
+  const selectedDate = searchParams.get("start_date") || null;
+  const endDate = searchParams.get("end_date") || null;
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const params = new URLSearchParams(searchParams.toString());
     const newDate = event.target.value || null;
-    setSelectedDate(newDate);
-    onSelectStartDate(newDate);
+    if (newDate) {
+      params.set("start_date", newDate);
+    } else {
+      params.delete("start_date");
+    }
+    router.push(`?${params.toString()}`, { scroll: false });
   };
 
   const clearDate = () => {
-    setSelectedDate(null);
-    onSelectStartDate(null);
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("start_date");
+    router.push(`?${params.toString()}`, { scroll: false });
   };
 
   const today = new Date().toISOString().split("T")[0];
@@ -64,7 +50,7 @@ export const StartDate: React.FC<StartDateProps> = ({
           value={selectedDate || ""}
           onChange={handleDateChange}
           min={MIN_DATE}
-          max={maxDate || today}
+          max={endDate || today}
           className="w-auto rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm 
                    focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
                    dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-400 

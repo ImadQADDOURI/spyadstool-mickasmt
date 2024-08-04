@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import { countryCodesAlpha2 } from "@/lib/countryCodesAlpha2";
 import { cn } from "@/lib/utils";
@@ -21,30 +22,21 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-type CountryProps = {
-  onSelectCountry: (value: string | null) => void;
-  clear?: boolean;
-};
-
-export const Country: React.FC<CountryProps> = ({
-  onSelectCountry,
-  clear = false,
-}) => {
+export const Country: React.FC = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState<string | null>(null);
 
-  // Clear selected country if clear is true
-  React.useEffect(() => {
-    if (clear) {
-      setValue(null);
-      onSelectCountry(null);
-    }
-  }, [clear, onSelectCountry]);
+  const value = searchParams.get("countries");
 
   const handleSelect = (currentValue: string) => {
-    const newValue = currentValue === value ? null : currentValue;
-    setValue(newValue);
-    onSelectCountry(newValue);
+    const params = new URLSearchParams(searchParams.toString());
+    if (currentValue === value) {
+      params.delete("countries");
+    } else {
+      params.set("countries", currentValue);
+    }
+    router.push(`?${params.toString()}`);
     setOpen(false);
   };
 

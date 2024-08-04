@@ -2,6 +2,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, ChevronsUpDown, X } from "lucide-react";
 
 import { languages } from "@/lib/languages";
@@ -22,47 +23,39 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-type LanguageProps = {
-  onSelectLanguages: (value: string[] | null) => void;
-  clear?: boolean;
-};
-
-export const Language: React.FC<LanguageProps> = ({
-  onSelectLanguages,
-  clear = false,
-}) => {
+export const Language: React.FC = () => {
   const [open, setOpen] = React.useState(false);
-  const [selectedLanguages, setSelectedLanguages] = React.useState<
-    string[] | null
-  >(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Clear selected languages if clear is true
-  React.useEffect(() => {
-    if (clear) {
-      setSelectedLanguages(null);
-      onSelectLanguages(null);
-    }
-  }, [clear, onSelectLanguages]);
+  const selectedLanguages =
+    searchParams.get("content_languages")?.split(",") || [];
+
+  const updateURL = React.useCallback(
+    (newLanguages: string[]) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (newLanguages.length === 0) {
+        params.delete("content_languages");
+      } else {
+        params.set("content_languages", newLanguages.join(","));
+      }
+      router.push(`?${params.toString()}`, { scroll: false });
+    },
+    [router, searchParams],
+  );
 
   const handleSelect = (languageCode: string) => {
-    setSelectedLanguages((prev) => {
-      const newSelection = prev
-        ? prev.includes(languageCode)
-          ? prev.filter((code) => code !== languageCode)
-          : [...prev, languageCode]
-        : [languageCode];
-      onSelectLanguages(newSelection.length ? newSelection : null);
-      return newSelection.length ? newSelection : null;
-    });
+    const newSelection = selectedLanguages.includes(languageCode)
+      ? selectedLanguages.filter((code) => code !== languageCode)
+      : [...selectedLanguages, languageCode];
+    updateURL(newSelection);
   };
 
   const handleRemove = (languageCode: string) => {
-    setSelectedLanguages((prev) => {
-      if (!prev) return null;
-      const newSelection = prev.filter((code) => code !== languageCode);
-      onSelectLanguages(newSelection.length ? newSelection : null);
-      return newSelection.length ? newSelection : null;
-    });
+    const newSelection = selectedLanguages.filter(
+      (code) => code !== languageCode,
+    );
+    updateURL(newSelection);
   };
 
   return (
@@ -74,7 +67,7 @@ export const Language: React.FC<LanguageProps> = ({
           aria-expanded={open}
           className="w-full justify-between"
         >
-          {selectedLanguages && selectedLanguages.length > 0 ? (
+          {selectedLanguages.length > 0 ? (
             <div className="flex flex-wrap gap-1">
               {selectedLanguages.map((code) => (
                 <Badge key={code} variant="secondary" className="mr-1">
@@ -118,7 +111,7 @@ export const Language: React.FC<LanguageProps> = ({
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      selectedLanguages?.includes(language.code)
+                      selectedLanguages.includes(language.code)
                         ? "opacity-100"
                         : "opacity-0",
                     )}

@@ -28,7 +28,6 @@ import LoadingTrigger from "./LoadingTrigger";
 import Media from "./media";
 import Platform from "./platform";
 import { ScrollButtons } from "./ScrollButtons";
-import { SearchBar } from "./SearchBar";
 import StartDate from "./startDate";
 import Status from "./status";
 
@@ -149,11 +148,27 @@ export const AdsLibrary = () => {
     }
   }, [searchResults, handleSearchAds, isLoading]);
 
+  // Enter search
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      performSearch();
+    }
+  };
+
   const performSearch = () => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("q", searchQuery);
     router.push(`?${params.toString()}`);
     handleSearchAds();
+  };
+
+  // X Reset filters
+  const resetSearch = () => {
+    setSearchQuery("");
+    router.push("/dashboard/ad-library");
+    setSearchResults(null);
+    setTotalCount(null);
+    setRemainingCount(null);
   };
 
   // Count applied filters
@@ -186,14 +201,6 @@ export const AdsLibrary = () => {
       }
     }
   }, [router]);
-
-  const handleSearch = useCallback(
-    (query: string) => {
-      setSearchQuery(query);
-      handleSearchAds();
-    },
-    [handleSearchAds],
-  );
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -256,7 +263,43 @@ export const AdsLibrary = () => {
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-6 shadow-lg">
         <div className="container mx-auto">
           <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
-            <SearchBar onSearch={handleSearch} isLoading={isLoading} />
+            <div className="relative flex-grow">
+              <Input
+                type="text"
+                placeholder="Search ads..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleKeyPress}
+                aria-label="Search ads"
+                className="w-full rounded-full border-none bg-white bg-opacity-20 px-6 py-3 text-white placeholder-white placeholder-opacity-75 focus:outline-none focus:ring-2 focus:ring-white"
+              />
+              {searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white hover:bg-white hover:bg-opacity-20"
+                  onClick={resetSearch}
+                  aria-label="Clear search"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+            <Button
+              onClick={() => handleSearchAds()}
+              disabled={isLoading}
+              aria-label="Search ads"
+              className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+            >
+              <span className="relative flex items-center px-6 py-2">
+                {isLoading ? (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  <Search className="mr-2 h-4 w-4" />
+                )}
+                Search
+              </span>
+            </Button>
             <Button
               onClick={() => setIsPanelOpen(true)}
               aria-label="Open filters panel"

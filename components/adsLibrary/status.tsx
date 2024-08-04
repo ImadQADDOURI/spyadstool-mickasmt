@@ -2,6 +2,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, ChevronsUpDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -24,37 +25,21 @@ const statuses = [
   { value: "inactive", label: "Inactive" },
 ];
 
-type StatusProps = {
-  onSelectStatus: (value: string | null) => void;
-  clear?: boolean;
-};
-
-export const Status: React.FC<StatusProps> = ({
-  onSelectStatus,
-  clear = false,
-}) => {
+export const Status: React.FC = () => {
   const [open, setOpen] = React.useState(false);
-  const [selectedStatus, setSelectedStatus] = React.useState<string | null>(
-    null,
-  );
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Clear selected Status if clear is true
-  React.useEffect(() => {
-    if (clear) {
-      setSelectedStatus(null);
-      onSelectStatus(null);
-    }
-  }, [clear, onSelectStatus]);
+  const selectedStatus = searchParams.get("active_status") || null;
 
   const handleSelect = (statusValue: string) => {
+    const params = new URLSearchParams(searchParams.toString());
     if (selectedStatus === statusValue) {
-      // Deselect: set to null
-      setSelectedStatus(null);
-      onSelectStatus(null);
+      params.delete("active_status");
     } else {
-      setSelectedStatus(statusValue);
-      onSelectStatus(statusValue);
+      params.set("active_status", statusValue);
     }
+    router.push(`?${params.toString()}`, { scroll: false });
     setOpen(false);
   };
 

@@ -2,6 +2,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, ChevronsUpDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -27,35 +28,21 @@ const mediaTypes = [
   { value: "none", label: "No image or video" },
 ];
 
-type MediaProps = {
-  onSelectMedia: (value: string | null) => void;
-  clear?: boolean;
-};
-
-export const Media: React.FC<MediaProps> = ({
-  onSelectMedia,
-  clear = false,
-}) => {
+export const Media: React.FC = () => {
   const [open, setOpen] = React.useState(false);
-  const [selectedMedia, setSelectedMedia] = React.useState<string | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Clear selected Media if clear is true
-  React.useEffect(() => {
-    if (clear) {
-      setSelectedMedia(null);
-      onSelectMedia(null);
-    }
-  }, [clear, onSelectMedia]);
+  const selectedMedia = searchParams.get("media_type") || null;
 
   const handleSelect = (mediaValue: string) => {
+    const params = new URLSearchParams(searchParams.toString());
     if (selectedMedia === mediaValue) {
-      // Deselect: set to null
-      setSelectedMedia(null);
-      onSelectMedia(null);
+      params.delete("media_type");
     } else {
-      setSelectedMedia(mediaValue);
-      onSelectMedia(mediaValue);
+      params.set("media_type", mediaValue);
     }
+    router.push(`?${params.toString()}`, { scroll: false });
     setOpen(false);
   };
 

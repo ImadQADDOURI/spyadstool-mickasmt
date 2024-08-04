@@ -2,6 +2,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Check, ChevronsUpDown } from "lucide-react";
 
 import { categories } from "@/lib/Categories";
@@ -21,29 +22,21 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-type CategoryAsKeywordProps = {
-  onSelectCategory: (value: string | null) => void;
-  clear?: boolean;
-};
-
-export const CategoryAsKeyword: React.FC<CategoryAsKeywordProps> = ({
-  onSelectCategory,
-  clear = false,
-}) => {
+export const CategoryAsKeyword: React.FC = () => {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState<string | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  React.useEffect(() => {
-    if (clear) {
-      setValue(null);
-      onSelectCategory(null);
-    }
-  }, [clear, onSelectCategory]);
+  const value = searchParams.get("category_as_keyword") || null;
 
   const handleSelect = (currentValue: string) => {
-    const newValue = currentValue === value ? null : currentValue;
-    setValue(newValue);
-    onSelectCategory(newValue);
+    const params = new URLSearchParams(searchParams.toString());
+    if (currentValue === value) {
+      params.delete("category_as_keyword");
+    } else {
+      params.set("category_as_keyword", currentValue);
+    }
+    router.push(`?${params.toString()}`, { scroll: false });
     setOpen(false);
   };
 
