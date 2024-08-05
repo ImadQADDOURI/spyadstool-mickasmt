@@ -2,13 +2,11 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Filter } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
 import { searchAds } from "@/app/actions/search_ads";
 
-import { Button } from "../ui/button";
 import { FilterPanel } from "./FilterPanel";
 import { ScrollButtons } from "./ScrollButtons";
 import { SearchBar } from "./SearchBar";
@@ -24,8 +22,6 @@ export const AdsLibrary = () => {
   const [error, setError] = useState<string | null>(null);
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
-
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
     return results.flatMap((monthGroup) =>
@@ -131,74 +127,41 @@ export const AdsLibrary = () => {
     }
   }, [searchResults, handleSearchAds, isLoading]);
 
-  const performSearch = () => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("q", searchQuery);
-    router.push(`?${params.toString()}`);
-    handleSearchAds();
-  };
-
-  // Clear all filters
-  const clearAllFilters = () => {
-    router.push("/dashboard/ad-library");
-    setSearchQuery("");
-    setSearchResults(null);
-    setTotalCount(null);
-    setRemainingCount(null);
-  };
-
-  // Clear all filters on page refresh
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.performance) {
-      if (performance.navigation.type === 1) {
-        // Check if it's a page refresh
-        router.push("/dashboard/ad-library");
-      }
-    }
-  }, [router]);
-
+  //////////////////
+  //In essence, handleSearch acts as the bridge between user input (search query) and the underlying data fetching mechanism. It ensures that the UI and the data stay synchronized, providing a seamless search experience for the user.
+  //Here's a breakdown of its usage in different contexts:
+  //In FilterPanel: When the user applies filters in the filter panel and clicks the "Apply Filters" button, the handleSearch function is called without any arguments. This triggers a search using the current searchQuery state value, along with any applied filters.
+  //In SearchBar: When the user enters a search term in the search bar and either presses Enter or clicks the "Search" button, the handleSearch function is called with the entered search query as the argument. This initiates a search with the specific search term entered by the user.
   const handleSearch = useCallback(
-    (query: string) => {
+    (query: string = searchQuery) => {
+      // Use default value from searchQuery
       setSearchQuery(query);
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("q", query); // Use the passed query directly
+      router.push(`?${params.toString()}`);
       handleSearchAds();
     },
-    [handleSearchAds],
+    [searchParams, router, handleSearchAds, searchQuery],
   );
-
+  /////////////////////////
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
-      {/* Title */}
-      <h1 className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-4 text-center text-3xl font-bold text-white">
-        Ads Library
-      </h1>
+      {/* Title & Search Section */}
+      <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
+        <h1 className=" p-4 text-center text-3xl font-bold text-white">
+          Ads Library
+        </h1>
+        <div className=" p-6 shadow-2xl">
+          <div className="container mx-auto">
+            <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
+              <SearchBar onSearch={handleSearch} isLoading={isLoading} />
 
-      {/* Filter Panel Component */}
-      <FilterPanel
-        isPanelOpen={isPanelOpen}
-        setIsPanelOpen={setIsPanelOpen}
-        performSearch={performSearch}
-        clearAllFilters={clearAllFilters}
-      />
-
-      {/* Search Section */}
-      <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-6 shadow-lg">
-        <div className="container mx-auto">
-          <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
-            <SearchBar onSearch={handleSearch} isLoading={isLoading} />
-            <Button
-              onClick={() => setIsPanelOpen(true)}
-              aria-label="Open filters panel"
-              className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-              <span className="relative flex items-center px-6 py-2">
-                <Filter className="mr-2 h-4 w-4" />
-                Filters
-              </span>
-            </Button>
+              {/* Filter Button & Filter Panel  */}
+              <FilterPanel onSearch={handleSearch} />
+            </div>
           </div>
         </div>
       </div>
-
       {/* Search Results Component */}
       <SearchResults
         isLoading={isLoading}
