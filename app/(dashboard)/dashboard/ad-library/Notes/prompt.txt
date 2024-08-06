@@ -1198,3 +1198,9 @@ i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Res
 i have a lot of problems dealing with the filters, the code is so bad with repetitive renders, lot of callback functions. i want to Change the approach to use the URL for setting and getting filters instead ot the current method
 i already started the changes , and i want you to help me complete what i started
 Key changes in components: We've removed the props and now use useRouter and useSearchParams hooks from Next.js to interact with the URL directly. The component state is now derived from the URL parameters. When a selection is made, we update the URL parameters directly instead of calling a callback function. We've removed the clear prop and its associated logic, as clearing can now be handled by the parent component by updating the URL. These changes make the components more self-contained and reduce the need for prop drilling. The parent AdsLibrary component can now focus on reading the URL parameters to perform the search, without needing to manage the state of each individual filter.
+
+---------------------------------------------------------------------------------------------
+
+task i want to optimize and improve PageAds so that it uses url instead of states, and use the components used in adsLibrary.tsx and make it coherent with it 
+
+plus i want to add the filters to  PageAds

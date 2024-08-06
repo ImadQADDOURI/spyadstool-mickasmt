@@ -27,7 +27,9 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
 
   const countAppliedFilters = () => {
     const params = new URLSearchParams(searchParams.toString());
-    return Array.from(params.keys()).filter((key) => key !== "q").length;
+    return Array.from(params.keys()).filter(
+      (key) => !["q", "pageId"].includes(key),
+    ).length;
   };
 
   const applyFilters = () => {
@@ -37,7 +39,15 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
 
   // Clear all filters
   const clearAllFilters = () => {
-    router.push("/dashboard/ad-library");
+    const currentParams = new URLSearchParams(searchParams.toString());
+    const pageId = currentParams.get("pageId");
+    const baseUrl = "/dashboard/ad-library";
+
+    if (pageId) {
+      router.push(`${baseUrl}?pageId=${pageId}`);
+    } else {
+      router.push(baseUrl);
+    }
   };
 
   // Clear all filters on page refresh
@@ -45,10 +55,10 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
     if (typeof window !== "undefined" && window.performance) {
       if (performance.navigation.type === 1) {
         // Check if it's a page refresh
-        router.push("/dashboard/ad-library");
+        clearAllFilters();
       }
     }
-  }, [router]);
+  }, []);
 
   return (
     <>

@@ -10,11 +10,11 @@ import { FilterParams } from "@/types/filterParams";
 import { AdsList } from "@/components/adsLibrary/AdsList";
 import { searchAds } from "@/app/actions/search_ads";
 
-import { Button } from "../ui/button";
-import { Card } from "../ui/card";
-import { Input } from "../ui/input";
-import LoadingTrigger from "./LoadingTrigger";
-import { ScrollButtons } from "./ScrollButtons";
+import LoadingTrigger from "../../../../../components/adsLibrary/LoadingTrigger";
+import { ScrollButtons } from "../../../../../components/adsLibrary/ScrollButtons";
+import { Button } from "../../../../../components/ui/button";
+import { Card } from "../../../../../components/ui/card";
+import { Input } from "../../../../../components/ui/input";
 
 interface PageAdsProps {
   pageId: string;

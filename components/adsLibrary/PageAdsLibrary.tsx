@@ -1,8 +1,10 @@
-// components/adsLibrary/AdsLibrary.tsx
+// components/adsLibrary/PageAdsLibrary.tsx
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
+import { ThumbsUp } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
@@ -13,7 +15,7 @@ import { ScrollButtons } from "./ScrollButtons";
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
 
-export const AdsLibrary = () => {
+export const PageAdsLibrary = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -23,6 +25,7 @@ export const AdsLibrary = () => {
   const [error, setError] = useState<string | null>(null);
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
+  const [pageInfo, setPageInfo] = useState<any | null>(null);
 
   const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
     return results.flatMap((monthGroup) =>
@@ -53,13 +56,15 @@ export const AdsLibrary = () => {
   }, []);
 
   const handleSearchAds = useCallback(
-    async (useExistingParams = false) => {
+    async (useExistingParams = false, initialLoad = false) => {
       setIsLoading(true);
       setError(null);
       try {
         const currentParams = new URLSearchParams(searchParams.toString());
+        const pageId = currentParams.get("pageId");
+
         const filterParams: FilterParams = {
-          q: currentParams.get("q") || "",
+          q: initialLoad ? "" : currentParams.get("q") || "",
           countries: currentParams.get("countries")?.split(",") || null,
           ad_type: currentParams.get("ad_type") || null,
           content_languages:
@@ -83,11 +88,18 @@ export const AdsLibrary = () => {
             useExistingParams && searchResults
               ? searchResults.collationToken
               : "",
+          view_all_page_id: pageId || null,
+          search_type: "page",
         };
 
         const Results = await searchAds(filterParams);
 
         const extractedAds = extractAdsFromResults(Results.payload.results);
+
+        // Set page info on initial load
+        if (initialLoad && extractedAds.length > 0) {
+          setPageInfo(extractedAds[0].snapshot);
+        }
 
         const adsData: AdsData = {
           isResultComplete: Results.payload.isResultComplete,
@@ -128,36 +140,67 @@ export const AdsLibrary = () => {
     }
   }, [searchResults, handleSearchAds, isLoading]);
 
-  //////////////////
-  //In essence, handleSearch acts as the bridge between user input (search query) and the underlying data fetching mechanism. It ensures that the UI and the data stay synchronized, providing a seamless search experience for the user.
-  //Here's a breakdown of its usage in different contexts:
-  //In FilterPanel: When the user applies filters in the filter panel and clicks the "Apply Filters" button, the handleSearch function is called without any arguments. This triggers a search using the current searchQuery state value, along with any applied filters.
-  //In SearchBar: When the user enters a search term in the search bar and either presses Enter or clicks the "Search" button, the handleSearch function is called with the entered search query as the argument. This initiates a search with the specific search term entered by the user.
   const handleSearch = useCallback(
     (query: string = searchQuery) => {
-      // Use default value from searchQuery
       setSearchQuery(query);
       const params = new URLSearchParams(searchParams.toString());
-      params.set("q", query); // Use the passed query directly
+      params.set("q", query);
       router.push(`?${params.toString()}`);
       handleSearchAds();
     },
     [searchParams, router, handleSearchAds, searchQuery],
   );
-  /////////////////////////
+
+  // Initial load effect
+  useEffect(() => {
+    handleSearchAds(false, true);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       {/* Title & Search Section */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
-        <h1 className=" p-4 text-center text-3xl font-bold text-white">
-          Ads Library
+        <h1 className="p-4 text-center text-3xl font-bold text-white">
+          {searchParams.get("pageId")
+            ? `Page ID: ${searchParams.get("pageId")}`
+            : "Page ID"}
         </h1>
-        <div className=" p-6 shadow-2xl">
+        {pageInfo && (
+          <div className="mb-6 ml-6 flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0">
+            <Image
+              src={pageInfo.page_profile_picture_url}
+              alt={pageInfo.page_name}
+              width={80}
+              height={80}
+              className="rounded-full border-4 border-white"
+            />
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="mb-2 text-2xl font-bold text-white">
+                {pageInfo.page_name}
+              </h2>
+              <p className="mb-1 text-sm text-white opacity-80">
+                {pageInfo.page_categories &&
+                  Object.values(pageInfo.page_categories).join(", ")}
+              </p>
+              <p className="mb-2 flex items-center text-lg font-semibold text-white">
+                <ThumbsUp className="mr-1 h-5 w-5" />
+                {pageInfo.page_like_count.toLocaleString()} Likes
+              </p>
+              <a
+                href={pageInfo.page_profile_uri}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-white bg-opacity-20 px-4 py-1 text-sm font-semibold text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              >
+                Visit Page
+              </a>
+            </div>
+          </div>
+        )}
+        <div className="p-6 shadow-2xl">
           <div className="container mx-auto">
             <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
               <SearchBar onSearch={handleSearch} isLoading={isLoading} />
-
-              {/* Filter Button & Filter Panel  */}
               <FilterPanel onSearch={handleSearch} />
             </div>
           </div>
@@ -179,4 +222,4 @@ export const AdsLibrary = () => {
   );
 };
 
-export default AdsLibrary;
+export default PageAdsLibrary;

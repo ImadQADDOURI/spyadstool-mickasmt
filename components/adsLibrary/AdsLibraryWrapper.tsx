@@ -1,12 +1,18 @@
 // @/components/adsLibrary/AdsLibraryWrapper
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { AdsLibrary } from "@/components/adsLibrary/AdsLibrary";
-import PageAds from "@/components/adsLibrary/PageAds";
 
-export default function AdsLibraryWrapper({ initialPageId }: { initialPageId?: string }) {
+import { AdsLibrary } from "@/components/adsLibrary/AdsLibrary";
+
+import PageAdsLibrary from "./PageAdsLibrary";
+
+export default function AdsLibraryWrapper({
+  initialPageId,
+}: {
+  initialPageId?: string;
+}) {
   const [pageId, setPageId] = useState<string | undefined>(initialPageId);
   const searchParams = useSearchParams();
 
@@ -19,5 +25,5 @@ export default function AdsLibraryWrapper({ initialPageId }: { initialPageId?: s
     return <AdsLibrary />;
   }
 
-  return <PageAds pageId={pageId} />;
+  return <PageAdsLibrary />;
 }
