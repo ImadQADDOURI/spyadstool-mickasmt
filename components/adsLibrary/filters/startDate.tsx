@@ -41,7 +41,7 @@ export const StartDate: React.FC = () => {
         htmlFor="start-date"
         className="whitespace-nowrap text-sm font-medium"
       >
-        Start :
+        Min :
       </label>
       <div className="relative flex-grow">
         <input

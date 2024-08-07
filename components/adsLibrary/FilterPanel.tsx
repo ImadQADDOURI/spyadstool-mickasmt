@@ -17,11 +17,15 @@ import Status from "./filters/status";
 
 interface FilterPanelProps {
   onSearch: () => void;
+  isPanelOpen: boolean;
+  setIsPanelOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
-
+export const FilterPanel: React.FC<FilterPanelProps> = ({
+  onSearch,
+  isPanelOpen,
+  setIsPanelOpen,
+}) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -62,21 +66,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
 
   return (
     <>
-      <Button
-        onClick={
-          !isPanelOpen
-            ? () => setIsPanelOpen(true)
-            : () => setIsPanelOpen(false)
-        }
-        aria-label="Open filters panel"
-        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-      >
-        <span className="relative flex items-center px-6 py-2">
-          <Filter className="mr-2 h-4 w-4" />
-          Filters
-        </span>
-      </Button>
-
+      {/* Filters panel  */}
       <div
         className={`fixed inset-y-0 -left-4 z-50 w-80 transform overflow-y-auto bg-white p-6 shadow-lg transition-transform duration-300 ease-in-out dark:bg-gray-800 ${
           isPanelOpen ? "translate-x-0" : "-translate-x-full"

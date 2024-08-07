@@ -14,6 +14,7 @@ import { FilterPanel } from "./FilterPanel";
 import { ScrollButtons } from "./ScrollButtons";
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
+import StickyWrapper from "./StickyWrapper";
 
 export const PageAdsLibrary = () => {
   const router = useRouter();
@@ -157,7 +158,7 @@ export const PageAdsLibrary = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-800">
       {/* Title & Search Section */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
         <h1 className="p-4 text-center text-3xl font-bold text-white">
@@ -197,14 +198,17 @@ export const PageAdsLibrary = () => {
             </div>
           </div>
         )}
-        <div className="p-6 shadow-2xl">
-          <div className="container mx-auto">
-            <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
-              <SearchBar onSearch={handleSearch} isLoading={isLoading} />
-              <FilterPanel onSearch={handleSearch} />
+
+        {/* Sticky SearchBar & Filter Section */}
+        <StickyWrapper>
+          <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 p-1 shadow-2xl">
+            <div className="container mx-auto">
+              <div className="flex flex-col space-y-4 ">
+                <SearchBar onSearch={handleSearch} isLoading={isLoading} />
+              </div>
             </div>
           </div>
-        </div>
+        </StickyWrapper>
       </div>
       {/* Search Results Component */}
       <SearchResults

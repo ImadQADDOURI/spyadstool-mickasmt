@@ -2,10 +2,12 @@
 
 import React from "react";
 import { Loader2 } from "lucide-react";
+
 import { AdsData } from "@/types/ad";
+
+import { Button } from "../ui/button";
 import { AdsList } from "./AdsList";
 import LoadingTrigger from "./LoadingTrigger";
-import { Button } from "../ui/button";
 
 interface SearchResultsProps {
   isLoading: boolean;
@@ -43,18 +45,6 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
           >
             {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
           </span>
-        </div>
-      )}
-
-      {/* Loading indicator */}
-      {isLoading && (
-        <div className="flex justify-center py-12" aria-live="polite">
-          <div className="relative h-20 w-20">
-            <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
-            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
-              <Loader2 className="h-10 w-10 animate-spin text-white" />
-            </div>
-          </div>
         </div>
       )}
 
@@ -104,6 +94,18 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
             No ads found. Try adjusting your search criteria.
           </p>
         )
+      )}
+
+      {/* Loading indicator */}
+      {isLoading && (
+        <div className="flex justify-center py-12" aria-live="polite">
+          <div className="relative h-20 w-20">
+            <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
+            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
+              <Loader2 className="h-10 w-10 animate-spin text-white" />
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

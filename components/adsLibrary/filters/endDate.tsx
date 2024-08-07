@@ -41,7 +41,7 @@ export const EndDate: React.FC = () => {
         htmlFor="end-date"
         className="whitespace-nowrap text-sm font-medium"
       >
-        End :
+        Max :
       </label>
       <div className="relative flex-grow">
         <input

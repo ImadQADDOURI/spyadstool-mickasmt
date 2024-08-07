@@ -2,13 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Loader2, Search, X } from "lucide-react";
+import { Filter, Loader2, Search, X } from "lucide-react";
 
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import FilterPanel from "./FilterPanel"; // Import FilterPanel
 
 interface SearchBarProps {
-  onSearch: (query: string) => void;
+  onSearch: (query?: string) => void;
   isLoading: boolean;
 }
 
@@ -19,6 +20,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   const router = useRouter();
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
+  const [isPanelOpen, setIsPanelOpen] = useState(false); // State for filter panel
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams.toString());
@@ -39,6 +41,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   return (
     <div className="flex flex-grow items-center space-x-4">
+      {/* Search Input */}
       <div className="relative flex-grow">
         <Input
           type="text"
@@ -53,7 +56,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           <Button
             variant="ghost"
             size="sm"
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white hover:bg-white hover:bg-opacity-20"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full text-white hover:bg-gray-800 hover:bg-opacity-20"
             onClick={resetSearch}
             aria-label="Clear search"
           >
@@ -61,11 +64,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           </Button>
         )}
       </div>
+      {/* Search Button */}
       <Button
         onClick={() => onSearch(searchQuery)}
         disabled={isLoading}
         aria-label="Search ads"
-        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 "
       >
         <span className="relative flex items-center px-6 py-2">
           {isLoading ? (
@@ -76,6 +80,25 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           Search
         </span>
       </Button>
+
+      {/* Filter Button */}
+      <Button
+        onClick={() => setIsPanelOpen(!isPanelOpen)} // Toggle panel visibility
+        aria-label="Open filters panel"
+        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800  focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+      >
+        <span className="relative flex items-center px-6 py-2">
+          <Filter className="mr-2 h-4 w-4" />
+          Filters
+        </span>
+      </Button>
+
+      {/* Filter Panel */}
+      <FilterPanel
+        onSearch={onSearch}
+        isPanelOpen={isPanelOpen}
+        setIsPanelOpen={setIsPanelOpen}
+      />
     </div>
   );
 };
