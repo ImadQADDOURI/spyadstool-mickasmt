@@ -1,8 +1,8 @@
 // components/adsLibrary/FilterPanel.tsx
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Filter, X } from "lucide-react";
+import { X } from "lucide-react";
 
 import { Button } from "../ui/button";
 import Category from "./filters/category";
@@ -14,6 +14,7 @@ import Media from "./filters/media";
 import Platform from "./filters/platform";
 import StartDate from "./filters/startDate";
 import Status from "./filters/status";
+import Sort from "./filters/sort";
 
 interface FilterPanelProps {
   onSearch: () => void;
@@ -89,6 +90,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         {/* Filter components */}
         <div className="space-y-6">
           <Category />
+          <Sort />
           <Country />
           <CategoryAsKeyword />
           <Language />
@@ -99,17 +101,17 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
           <EndDate />
         </div>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-8 flex flex-row space-x-1">
           <Button
             onClick={clearAllFilters}
             variant="outline"
-            className="w-full rounded-full border-2 border-gray-300 bg-transparent px-6 py-2 text-gray-700 transition-all hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+            className="w-1/3 rounded-full border-2 border-gray-300 bg-transparent px-6 py-2 text-gray-700 transition-all hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
           >
-            Clear All
+            Clear
           </Button>
           <Button
             onClick={applyFilters}
-            className="w-full rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            className="w-2/3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
           >
             Apply Filters
             {countAppliedFilters() > 0

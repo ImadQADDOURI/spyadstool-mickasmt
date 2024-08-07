@@ -32,7 +32,7 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     addParam("q", filters.q);
     addParam("v", filters.v);
     addParam("session_id", filters.session_id);
-    addParam("sort_data[direction]", filters.sort_direction); //"desc"
+    addParam("sort_data[direction]", filters.sort_data); //"desc"
     addParam("sort_data[mode]", filters.sort_mode); // "relevancy_monthly_grouped"
     addParam("search_type", filters.search_type); //"keyword_unordered"
     addParam("forward_cursor", filters.forward_cursor);

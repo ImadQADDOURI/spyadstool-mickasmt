@@ -21,8 +21,10 @@ export type FilterParams = {
   start_date_min?: string | null;
   start_date_max?: string | null;
 
+  //sort_data[direction]
+  sort_data?: string | null;
+
   //sorting
-  sort_direction?: string | null;
   sort_mode?: string | null;
   search_type?: string | null;
   count?: number | null;

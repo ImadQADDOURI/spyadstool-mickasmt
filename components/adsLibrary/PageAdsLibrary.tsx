@@ -10,7 +10,6 @@ import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
 import { searchAds } from "@/app/actions/search_ads";
 
-import { FilterPanel } from "./FilterPanel";
 import { ScrollButtons } from "./ScrollButtons";
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
@@ -77,6 +76,8 @@ export const PageAdsLibrary = () => {
           start_date_min: currentParams.get("start_date") || null,
           start_date_max: currentParams.get("end_date") || null,
           category_as_keyword: currentParams.get("category_as_keyword") || null,
+          sort_data: currentParams.get("sort_data") || null,
+
           forward_cursor:
             useExistingParams && searchResults
               ? searchResults.forwardCursor
