@@ -44,7 +44,7 @@ export const DisplayFilters: React.FC<DisplayFiltersProps> = ({ isParamsOpen, se
 
   return (
     <Sheet open={isParamsOpen} onOpenChange={setIsParamsOpen}>
-      <SheetContent>
+      <SheetContent side={"left"}>
         <SheetHeader>
           <SheetTitle className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-2xl font-bold text-transparent">
         Display Filters
@@ -68,18 +68,18 @@ export const DisplayFilters: React.FC<DisplayFiltersProps> = ({ isParamsOpen, se
            
           />
 
-<div className="mt-8 flex flex-row space-x-1">
-<Button
+          <div className="mt-8 w-full flex flex-row space-x-1">
+            <Button
               onClick={handleClearFilters}
               variant="outline"
             className="w-1/3 rounded-full border-2 border-gray-300 bg-transparent px-6 py-2 text-gray-700 transition-all hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
-          >
+            >
             Clear
-          </Button>
-          <Button
+           </Button>
+            <Button
               onClick={handleApplyFilters}
               className="w-2/3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-2 text-white transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-          >
+            >
             Apply Filters
             </Button>
           </div>
