@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Filter, Loader2, Search, X } from "lucide-react";
+import { Filter, Loader2, Search, Settings, X } from "lucide-react";
 
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import FilterPanel from "./FilterPanel"; // Import FilterPanel
+import {DisplayFilters} from './DisplayFilters';
 
 interface SearchBarProps {
   onSearch: (query?: string) => void;
@@ -21,7 +22,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
   const [isPanelOpen, setIsPanelOpen] = useState(false); // State for filter panel
-
+  const [isParamsOpen, setIsParamsOpen] = useState(false);// State for display filters
   useEffect(() => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("q", searchQuery);
@@ -73,9 +74,9 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       >
         <span className="relative flex items-center px-6 py-2">
           {isLoading ? (
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <Loader2 className="mr-2 h-6 w-6 animate-spin" />
           ) : (
-            <Search className="mr-2 h-4 w-4" />
+            <Search className="mr-2 h-6 w-6" />
           )}
           Search
         </span>
@@ -88,10 +89,22 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800  focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
       >
         <span className="relative flex items-center px-6 py-2">
-          <Filter className="mr-2 h-4 w-4" />
+          <Filter className="mr-2 h-6 w-6" />
           Filters
         </span>
       </Button>
+
+      {/*Display Filters*/}
+      <Button
+        onClick={() => setIsParamsOpen(true)}
+        aria-label="Open Settings panel"
+        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800  focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+       >
+         <span className="relative flex items-center px-6 py-2">
+        <Settings className=" h-6 w-6" />
+        </span>
+      </Button>
+      <DisplayFilters isParamsOpen={isParamsOpen} setIsParamsOpen={setIsParamsOpen} />
 
       {/* Filter Panel */}
       <FilterPanel

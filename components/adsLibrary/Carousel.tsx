@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 import { Ad } from "@/types/ad";
 
-import { AdCard } from "../AdCard";
+import { AdCard } from "./AdCard";
 
 import "slick-carousel/slick/slick.css";
 

@@ -6,6 +6,7 @@ Reusability, Performance, Lightweight, Flexibility and Separation of Concerns
 
 if you have modifications on code give me just what to change not the whole code
 
+Drawer,Dialog,Sheet
 
 Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
 
@@ -1204,3 +1205,20 @@ Key changes in components: We've removed the props and now use useRouter and use
 task i want to optimize and improve PageAds so that it uses url instead of states, and use the components used in adsLibrary.tsx and make it coherent with it 
 
 plus i want to add the filters to  PageAds
+https://ui.shadcn.com/docs/components/drawer
+---------------------------------------------------------------------------------------------
+i need a way to add some display filters
+i have already some filters that are used actualy in the building of a request params to the API, but i have also some filters that are not used in the request but just on display filters, those work after the api results are recieved, do you think i add them to the existing filter side panel or i create a new one for the display filters ? or what do you think will be more suitable ?
+i don't want code yet , just discuss with me the potontial solutions 
+
+in the client-side rendering (if the filters are just used for display purposes).
+---------------------------------------------------------------------------------------------
+
+ button to Clear all filters by removing them from the url by name not by using router.push(i want to keep other url params), and call the clear filters also on page refresh
+
+ for the triggering of this new panel i will use a button in the searchBar.tsx component that will passe the props {isParamsOpen=.., setIsParamsOpen=..} to close and open the panel
+ for the filters let's start by :
+ 1-Slider for Total ads, from 1 to 20+ that set the url param collationCount to the selected value (default 1, no need to set the url param)
+
+ --------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------

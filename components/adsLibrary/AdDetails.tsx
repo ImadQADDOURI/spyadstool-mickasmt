@@ -9,7 +9,7 @@ import { searchAds } from "@/app/actions/search_ads";
 import { Button } from "../ui/button";
 import { AdCard } from "./AdCard";
 import Analytics from "./Analytics";
-import { Carousel } from "./filters/Carousel";
+import { Carousel } from "./Carousel";
 import LoadingTrigger from "./LoadingTrigger";
 
 interface AdDetailsProps {

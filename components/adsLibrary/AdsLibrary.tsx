@@ -152,7 +152,7 @@ export const AdsLibrary = () => {
       {/* Title & Search Section */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
         <h1 className=" p-4 text-center text-3xl font-bold text-white">
-          Ads Library
+          Ads Library +
         </h1>
       </div>
 
