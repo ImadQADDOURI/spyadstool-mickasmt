@@ -6,8 +6,8 @@ import { Filter, Loader2, Search, Settings, X } from "lucide-react";
 
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { DisplayFilters } from "./DisplayFilters";
 import FilterPanel from "./FilterPanel"; // Import FilterPanel
-import {DisplayFilters} from './DisplayFilters';
 
 interface SearchBarProps {
   onSearch: (query?: string) => void;
@@ -22,7 +22,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
   const [isPanelOpen, setIsPanelOpen] = useState(false); // State for filter panel
-  const [isParamsOpen, setIsParamsOpen] = useState(false);// State for display filters
+  const [isParamsOpen, setIsParamsOpen] = useState(false); // State for display filters
   useEffect(() => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("q", searchQuery);
@@ -41,7 +41,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div className="flex flex-grow items-center space-x-4">
+    <div className="flex flex-grow items-center space-x-2">
       {/* Search Input */}
       <div className="relative flex-grow">
         <Input
@@ -65,6 +65,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           </Button>
         )}
       </div>
+
       {/* Search Button */}
       <Button
         onClick={() => onSearch(searchQuery)}
@@ -72,46 +73,20 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         aria-label="Search ads"
         className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 "
       >
-        <span className="relative flex items-center px-6 py-2">
+        <span className="relative flex items-center px-4 py-2">
           {isLoading ? (
-            <Loader2 className="mr-2 h-6 w-6 animate-spin" />
+            <Loader2 className="h-6 w-6 animate-spin" />
           ) : (
-            <Search className="mr-2 h-6 w-6" />
+            <Search className="h-6 w-6" />
           )}
-          Search
         </span>
       </Button>
 
-      {/* Filter Button */}
-      <Button
-        onClick={() => setIsPanelOpen(!isPanelOpen)} // Toggle panel visibility
-        aria-label="Open filters panel"
-        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800  focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-      >
-        <span className="relative flex items-center px-6 py-2">
-          <Filter className="mr-2 h-6 w-6" />
-          Filters
-        </span>
-      </Button>
+      {/*Search Filters*/}
+      <FilterPanel onSearch={onSearch} />
 
       {/*Display Filters*/}
-      <Button
-        onClick={() => setIsParamsOpen(true)}
-        aria-label="Open Settings panel"
-        className="relative overflow-hidden rounded-full bg-white bg-opacity-20 p-0.5 text-white transition-all hover:bg-gray-800  focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-       >
-         <span className="relative flex items-center px-6 py-2">
-        <Settings className=" h-6 w-6" />
-        </span>
-      </Button>
-      <DisplayFilters isParamsOpen={isParamsOpen} setIsParamsOpen={setIsParamsOpen} />
-
-      {/* Filter Panel */}
-      <FilterPanel
-        onSearch={onSearch}
-        isPanelOpen={isPanelOpen}
-        setIsPanelOpen={setIsPanelOpen}
-      />
+      <DisplayFilters />
     </div>
   );
 };
