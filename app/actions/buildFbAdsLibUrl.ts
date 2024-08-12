@@ -27,6 +27,7 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     params["active_status"] = filters.active_status || "all";
     params["media_type"] = filters.media_type || "all";
     params["count"] = filters.count || 30;
+    params["excluded-ids[0]"] = "1657611331670372";
 
     // Add optional parameters
     addParam("q", filters.q);
@@ -34,7 +35,7 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     addParam("session_id", filters.session_id);
     addParam("sort_data[direction]", filters.sort_data); //"desc"
     addParam("sort_data[mode]", filters.sort_mode); // "relevancy_monthly_grouped"
-    addParam("search_type", filters.search_type); //"keyword_unordered"
+    addParam("search_type", filters.search_type); //"keyword_unordered" // keyword_exact_phrase
     addParam("forward_cursor", filters.forward_cursor);
     addParam("backward_cursor", filters.backward_cursor);
     addParam("collation_token", filters.collation_token);
@@ -47,7 +48,7 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     // Handle category_as_keyword
     let searchQuery = filters.q || "";
     if (filters.category_as_keyword) {
-      searchQuery += (searchQuery ? " " : "") + filters.category_as_keyword;
+      searchQuery += (searchQuery ? ", " : "") + filters.category_as_keyword;
     }
     // Use the addParam function to add the combined query
     addParam("q", searchQuery);

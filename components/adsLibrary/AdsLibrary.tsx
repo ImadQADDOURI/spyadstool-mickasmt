@@ -72,6 +72,7 @@ export const AdsLibrary = () => {
           start_date_max: currentParams.get("end_date") || null,
           category_as_keyword: currentParams.get("category_as_keyword") || null,
           sort_data: currentParams.get("sort_data") || null,
+          search_type: currentParams.get("search_type"),
 
           forward_cursor:
             useExistingParams && searchResults

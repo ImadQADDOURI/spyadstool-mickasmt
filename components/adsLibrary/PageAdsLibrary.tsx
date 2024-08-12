@@ -77,6 +77,7 @@ export const PageAdsLibrary = () => {
           start_date_max: currentParams.get("end_date") || null,
           category_as_keyword: currentParams.get("category_as_keyword") || null,
           sort_data: currentParams.get("sort_data") || null,
+          search_type: currentParams.get("search_type") || "page",
 
           forward_cursor:
             useExistingParams && searchResults
@@ -91,7 +92,6 @@ export const PageAdsLibrary = () => {
               ? searchResults.collationToken
               : "",
           view_all_page_id: pageId || null,
-          search_type: "page",
         };
 
         const Results = await searchAds(filterParams);
@@ -157,6 +157,25 @@ export const PageAdsLibrary = () => {
   useEffect(() => {
     handleSearchAds(false, true);
   }, []);
+
+  // redirects the user to "/dashboard/ad-library" when they click the browser's back button
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      // Prevent the default back behavior
+      event.preventDefault();
+
+      // Redirect to the dashboard/ad-library
+      router.push("/dashboard/ad-library");
+    };
+
+    // Add the event listener when the component mounts
+    window.addEventListener("popstate", handlePopState);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [router]);
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-800">

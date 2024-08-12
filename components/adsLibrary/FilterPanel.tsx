@@ -25,6 +25,7 @@ import EndDate from "./filters/endDate";
 import Language from "./filters/language";
 import Media from "./filters/media";
 import Platform from "./filters/platform";
+import SearchType from "./filters/SearchType";
 import Sort from "./filters/sort";
 import StartDate from "./filters/startDate";
 import Status from "./filters/status";
@@ -44,6 +45,7 @@ const filterParams = [
   "sort_data",
   "start_date",
   "active_status",
+  "search_type",
 ];
 
 export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
@@ -91,6 +93,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
           <SheetDescription>Adjust your search filters</SheetDescription>
         </SheetHeader>
         <div className="space-y-5 py-4">
+          <SearchType />
           <Category />
           <Sort />
           <Country />

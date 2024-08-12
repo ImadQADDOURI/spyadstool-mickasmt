@@ -16,6 +16,9 @@ import {
 
 const categories = [
   { value: "all", label: "All" },
+  { value: "credit_ads", label: " Credit Ads" },
+  { value: "employment_ads", label: "Employment Ads" },
+  { value: "housing_ads", label: "Housing Ads" },
   { value: "political_and_issue_ads", label: "Political and Issue Ads" },
 ];
 
