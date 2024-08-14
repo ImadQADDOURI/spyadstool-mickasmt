@@ -121,41 +121,46 @@ async function fetchWithPuppeteer(
   const browser = await getBrowser();
   const page = await browser.newPage();
 
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-  );
+  try {
+    await page.setUserAgent(
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    );
 
-  const resources: string[] = [];
-  await page.setRequestInterception(true);
-  page.on("request", (request) => {
-    resources.push(request.url());
-    request.continue();
-  });
+    const resources: string[] = [];
+    await page.setRequestInterception(true);
+    page.on("request", (request) => {
+      resources.push(request.url());
+      request.continue();
+    });
 
-  await page.goto(url, {
-    waitUntil: "networkidle0",
-    timeout: DEFAULT_SETTINGS.Navigation_TIMEOUT,
-  });
+    await page.goto(url, {
+      waitUntil: "networkidle0",
+      timeout: DEFAULT_SETTINGS.Navigation_TIMEOUT,
+    });
 
-  // Scroll to the bottom of the page
-  await page.evaluate(() => {
-    window.scrollTo(0, document.body.scrollHeight);
-  });
+    // Scroll to the bottom of the page
+    await page.evaluate(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
 
-  // Add a delay to allow for dynamic content to load
-  // Use the configurable dynamicTimeout
-  await new Promise((resolve) => setTimeout(resolve, dynamicTimeout));
+    // Add a delay to allow for dynamic content to load
+    // Use the configurable dynamicTimeout
+    await new Promise((resolve) => setTimeout(resolve, dynamicTimeout));
 
-  const html = await page.content();
+    const html = await page.content();
 
-  await page.close();
+    return { html, resources };
+  } catch (error) {
+    console.error(`Error fetching ${url}:`, error);
+    throw error;
+  } finally {
+    await page.close();
 
-  if (!keepBrowserOpen) {
-    await browser.close();
-    browserInstance = null;
+    if (!keepBrowserOpen) {
+      await browser.close();
+      browserInstance = null;
+    }
   }
-
-  return { html, resources };
 }
 
 async function fetchWithSimpleRequest(url: string): Promise<FetchResult> {
