@@ -295,7 +295,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           <TrackingPixelDetector
             url={snapshot.link_url}
             usePuppeteer={true}
-            autoDetect={false}
+            autoDetect={false} // prop to control automatic detection
           />
         </div>
 

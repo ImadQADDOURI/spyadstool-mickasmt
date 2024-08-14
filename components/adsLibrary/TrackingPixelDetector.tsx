@@ -68,7 +68,13 @@ export default function TrackingPixelDetector({
     setIsLoading(true);
     setShowButton(false);
     try {
-      const pixels = await detectTrackingPixels(url, usePuppeteer, keepBrowserOpen, useCache, dynamicTimeout);
+      const pixels = await detectTrackingPixels(
+        url,
+        usePuppeteer,
+        keepBrowserOpen,
+        useCache,
+        dynamicTimeout,
+      );
       setDetectedPixels(pixels);
       setError(null);
     } catch (err) {

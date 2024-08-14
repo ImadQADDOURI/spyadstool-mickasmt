@@ -10,7 +10,7 @@ const DEFAULT_SETTINGS = {
   KEEP_BROWSER_OPEN: true,
   Navigation_TIMEOUT: 10000, // time to wait for navigation to complete
   DYNAMIC_TIMEOUT: 1000, // time to wait for dynamic content to load
-  USE_CACHE: false,
+  USE_CACHE: true,
   CACHE_DURATION: 1000 * 60 * 60 * 24, // 24 hours
 };
 //CACHE_DURATION = 1000 * 60 * 60; // 1 hour
@@ -221,6 +221,7 @@ export async function detectTrackingPixels(
       cache[url] = { result: detectedPixels, timestamp: now };
     }
 
+    console.log("Detected pixels:", detectedPixels);
     return detectedPixels;
   } catch (error) {
     console.error("Error in detectTrackingPixels:", error);
