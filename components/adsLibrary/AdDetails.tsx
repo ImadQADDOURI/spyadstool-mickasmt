@@ -66,7 +66,7 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
           });
           setForwardCursor(results.payload.forwardCursor);
           setIsResultComplete(results.payload.isComplete);
-          setTotalCount(results.payload.totalCount);
+          !totalCount && setTotalCount(results.payload.totalCount); //Set totalCount only in the first call from searchAds response
           setRemainingCount((prevCount) => {
             const newCount =
               (prevCount ?? results.payload.totalCount) - extractedAds.length;
