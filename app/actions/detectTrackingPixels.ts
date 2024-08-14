@@ -105,12 +105,26 @@ const trackingPixelDetectors: TrackingPixelDetector[] = [
 
 let browserInstance: puppeteer.Browser | null = null;
 
-async function getBrowser() {
+async function getBrowser(): Promise<puppeteer.Browser> {
   if (!browserInstance) {
     browserInstance = await puppeteer.launch({
       headless: DEFAULT_SETTINGS.BROWSER_HEADLESS,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
+  } else {
+    try {
+      // Check if the browser is still open and usable
+      await browserInstance.version();
+    } catch (error) {
+      console.log(
+        "Existing browser instance is not usable, creating a new one",
+      );
+      await closeBrowser(); // Ensure the old instance is properly closed
+      browserInstance = await puppeteer.launch({
+        headless: DEFAULT_SETTINGS.BROWSER_HEADLESS,
+        args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      });
+    }
   }
   return browserInstance;
 }
@@ -156,9 +170,9 @@ async function fetchWithPuppeteer(
   } finally {
     await page.close();
 
+    // Close the browser if keepBrowserOpen is false
     if (!keepBrowserOpen) {
-      await browser.close();
-      browserInstance = null;
+      await closeBrowser();
     }
   }
 }
@@ -257,8 +271,13 @@ export async function detectTrackingPixelsMultiple(
 // Function to manually close the browser if it's open
 export async function closeBrowser() {
   if (browserInstance) {
-    await browserInstance.close();
-    browserInstance = null;
+    try {
+      await browserInstance.close();
+    } catch (error) {
+      console.error("Error closing browser:", error);
+    } finally {
+      browserInstance = null;
+    }
   }
 }
 
