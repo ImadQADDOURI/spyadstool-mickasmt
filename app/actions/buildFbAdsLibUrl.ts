@@ -27,7 +27,7 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     params["active_status"] = filters.active_status || "all";
     params["media_type"] = filters.media_type || "all";
     params["count"] = filters.count || 30;
-    params["excluded-ids[0]"] = "1657611331670372";
+    //params["excluded-ids[0]"] = "1657611331670372";
 
     // Add optional parameters
     addParam("q", filters.q);

@@ -5,12 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AlertCircle, Loader2, Search, XCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button"; // Assuming you're using shadcn/ui
 import { detectTrackingPixels } from "@/app/actions/detectTrackingPixels";
 
 interface TrackingPixelDetectorProps {
   url?: string;
   usePuppeteer?: boolean;
+  keepBrowserOpen?: boolean;
+  useCache?: boolean;
+  dynamicTimeout?: number;
   autoDetect?: boolean;
 }
 
@@ -32,8 +34,11 @@ const pixelIcons: Record<string, string> = {
 
 export default function TrackingPixelDetector({
   url,
-  usePuppeteer = false,
-  autoDetect = true, // New prop to control automatic detection
+  usePuppeteer,
+  keepBrowserOpen,
+  useCache,
+  dynamicTimeout,
+  autoDetect = false, // prop to control automatic detection
 }: TrackingPixelDetectorProps) {
   const [detectedPixels, setDetectedPixels] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -63,7 +68,7 @@ export default function TrackingPixelDetector({
     setIsLoading(true);
     setShowButton(false);
     try {
-      const pixels = await detectTrackingPixels(url, usePuppeteer);
+      const pixels = await detectTrackingPixels(url, usePuppeteer, keepBrowserOpen, useCache, dynamicTimeout);
       setDetectedPixels(pixels);
       setError(null);
     } catch (err) {

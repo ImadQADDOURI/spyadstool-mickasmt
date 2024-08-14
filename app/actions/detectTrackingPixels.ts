@@ -1,100 +1,166 @@
 // app/actions/detectTrackingPixels.ts
 "use server";
 
-import puppeteer from "puppeteer";
+import * as puppeteer from "puppeteer";
+
+// Global default settings
+const DEFAULT_SETTINGS = {
+  USE_PUPPETEER: true,
+  BROWSER_HEADLESS: false,
+  KEEP_BROWSER_OPEN: true,
+  Navigation_TIMEOUT: 10000, // time to wait for navigation to complete
+  DYNAMIC_TIMEOUT: 1000, // time to wait for dynamic content to load
+  USE_CACHE: false,
+  CACHE_DURATION: 1000 * 60 * 60 * 24, // 24 hours
+};
+//CACHE_DURATION = 1000 * 60 * 60; // 1 hour
+//CACHE_DURATION = 1000 * 60 * 60 * 24; // 24 hours
+
+//CACHE_DURATION = Infinity; // no time limit
+//While this would maximize performance, it's generally not recommended because:
+//Websites can change their tracking pixels over time.
+//You might miss new tracking technologies or pixels that are added.
+//If there was an error in detection, it would never self-correct.
+
+interface FetchResult {
+  html: string;
+  resources: string[];
+}
 
 interface TrackingPixelDetector {
   name: string;
-  detect: (html: string) => boolean;
+  patterns: string[];
 }
 
 const trackingPixelDetectors: TrackingPixelDetector[] = [
   {
     name: "Meta",
-    detect: (html) =>
-      html.includes("connect.facebook.net") ||
-      html.includes("facebook-jssdk") ||
-      html.includes("facebook.com/tr") ||
-      html.includes("instagram.com/embed.js") ||
-      html.includes("facebook.com/plugins"),
+    patterns: [
+      "connect.facebook.net",
+      "facebook-jssdk",
+      "facebook.com/tr",
+      "instagram.com/embed.js",
+      "facebook.com/plugins",
+    ],
   },
   {
     name: "Snapchat",
-    detect: (html) =>
-      html.includes("sc-static.net/scevent.min.js") ||
-      html.includes("tr6.snapchat.com"),
+    patterns: ["sc-static.net/scevent.min.js", "tr6.snapchat.com"],
   },
   {
     name: "Google",
-    detect: (html) =>
-      html.includes("google-analytics.com/analytics.js") ||
-      html.includes("googletagmanager.com/gtag/js") ||
-      html.includes("googleadservices.com/pagead/conversion") ||
-      html.includes("google.com/ads/ga-audiences"),
+    patterns: [
+      "google-analytics.com/analytics.js",
+      "googletagmanager.com/gtag/js",
+      "googleadservices.com/pagead/conversion",
+      "google.com/ads/ga-audiences",
+    ],
   },
   {
     name: "LinkedIn",
-    detect: (html) =>
-      html.includes("snap.licdn.com/li.lms-analytics/insight.min.js") ||
-      html.includes("platform.linkedin.com"),
+    patterns: [
+      "snap.licdn.com/li.lms-analytics/insight.min.js",
+      "platform.linkedin.com",
+    ],
   },
   {
     name: "Twitter",
-    detect: (html) =>
-      html.includes("static.ads-twitter.com/uwt.js") ||
-      html.includes("platform.twitter.com"),
+    patterns: ["static.ads-twitter.com/uwt.js", "platform.twitter.com"],
   },
   {
     name: "TikTok",
-    detect: (html) =>
-      html.includes("analytics.tiktok.com") || html.includes("tiktok.com/i18n"),
+    patterns: ["analytics.tiktok.com", "tiktok.com/i18n"],
   },
   {
     name: "Pinterest",
-    detect: (html) =>
-      html.includes("pintrk") || html.includes("assets.pinterest.com"),
+    patterns: ["pintrk", "assets.pinterest.com"],
   },
   {
     name: "Amazon",
-    detect: (html) =>
-      html.includes("amazon-adsystem.com") || html.includes("assoc-amazon.com"),
+    patterns: ["amazon-adsystem.com", "assoc-amazon.com"],
   },
   {
     name: "Microsoft",
-    detect: (html) =>
-      html.includes("clarity.ms") || html.includes("bat.bing.com"),
+    patterns: ["clarity.ms", "bat.bing.com"],
   },
   {
     name: "Adobe",
-    detect: (html) =>
-      html.includes("demdex.net") || html.includes("omtrdc.net"),
+    patterns: ["demdex.net", "omtrdc.net"],
   },
   {
     name: "Criteo",
-    detect: (html) => html.includes("static.criteo.net"),
+    patterns: ["static.criteo.net"],
   },
   {
     name: "Taboola",
-    detect: (html) => html.includes("cdn.taboola.com"),
+    patterns: ["cdn.taboola.com"],
   },
   {
     name: "Outbrain",
-    detect: (html) => html.includes("outbrain.com/outbrain.js"),
+    patterns: ["outbrain.com/outbrain.js"],
   },
 ];
 
-async function fetchWithPuppeteer(url: string) {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto(url);
-  const html = await page.content();
-  await browser.close();
-  return html;
+let browserInstance: puppeteer.Browser | null = null;
+
+async function getBrowser() {
+  if (!browserInstance) {
+    browserInstance = await puppeteer.launch({
+      headless: DEFAULT_SETTINGS.BROWSER_HEADLESS,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    });
+  }
+  return browserInstance;
 }
 
-async function fetchWithSimpleRequest(url: string) {
+async function fetchWithPuppeteer(
+  url: string,
+  keepBrowserOpen: boolean = DEFAULT_SETTINGS.KEEP_BROWSER_OPEN,
+  dynamicTimeout: number = DEFAULT_SETTINGS.DYNAMIC_TIMEOUT,
+): Promise<FetchResult> {
+  const browser = await getBrowser();
+  const page = await browser.newPage();
+
+  await page.setUserAgent(
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  );
+
+  const resources: string[] = [];
+  await page.setRequestInterception(true);
+  page.on("request", (request) => {
+    resources.push(request.url());
+    request.continue();
+  });
+
+  await page.goto(url, {
+    waitUntil: "networkidle0",
+    timeout: DEFAULT_SETTINGS.Navigation_TIMEOUT,
+  });
+
+  // Scroll to the bottom of the page
+  await page.evaluate(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+
+  // Add a delay to allow for dynamic content to load
+  // Use the configurable dynamicTimeout
+  await new Promise((resolve) => setTimeout(resolve, dynamicTimeout));
+
+  const html = await page.content();
+
+  await page.close();
+
+  if (!keepBrowserOpen) {
+    await browser.close();
+    browserInstance = null;
+  }
+
+  return { html, resources };
+}
+
+async function fetchWithSimpleRequest(url: string): Promise<FetchResult> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 1000); // 5 second timeout
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
 
   const response = await fetch(url, {
     signal: controller.signal,
@@ -110,40 +176,103 @@ async function fetchWithSimpleRequest(url: string) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
-  return await response.text();
+  const html = await response.text();
+  return { html, resources: [] };
 }
+
+function detectPixels(result: FetchResult): string[] {
+  const allContent = result.html + " " + result.resources.join(" ");
+  return trackingPixelDetectors
+    .filter((detector) =>
+      detector.patterns.some((pattern) => allContent.includes(pattern)),
+    )
+    .map((detector) => detector.name);
+}
+
+const cache: { [url: string]: { result: string[]; timestamp: number } } = {};
 
 export async function detectTrackingPixels(
   url: string,
-  usePuppeteer: boolean = false,
+  usePuppeteer: boolean = DEFAULT_SETTINGS.USE_PUPPETEER,
+  keepBrowserOpen: boolean = DEFAULT_SETTINGS.KEEP_BROWSER_OPEN,
+  useCache: boolean = DEFAULT_SETTINGS.USE_CACHE,
+  dynamicTimeout: number = DEFAULT_SETTINGS.DYNAMIC_TIMEOUT,
 ): Promise<string[]> {
-  try {
-    console.log(
-      "🚀🚀🚀🚀 ~ file: detectTrackingPixels.ts: usePuppeteer:",
-      usePuppeteer,
-    );
-
-    let html: string;
-
-    if (usePuppeteer) {
-      html = await fetchWithPuppeteer(url);
-    } else {
-      html = await fetchWithSimpleRequest(url);
-    }
-
-    if (!html) {
-      throw new Error("Received empty response from the server");
-    }
-
-    return trackingPixelDetectors
-      .filter((detector) => detector.detect(html))
-      .map((detector) => detector.name);
-  } catch (error) {
-    console.error("Error fetching or analyzing the website:", error);
-    if (error instanceof Error) {
-      throw new Error(error.message);
-    } else {
-      throw new Error("An unknown error occurred");
-    }
+  const now = Date.now();
+  if (
+    useCache &&
+    cache[url] &&
+    now - cache[url].timestamp < DEFAULT_SETTINGS.CACHE_DURATION
+  ) {
+    return cache[url].result;
   }
+
+  try {
+    let result: FetchResult;
+    if (usePuppeteer) {
+      result = await fetchWithPuppeteer(url, keepBrowserOpen, dynamicTimeout);
+    } else {
+      result = await fetchWithSimpleRequest(url);
+    }
+
+    const detectedPixels = detectPixels(result);
+
+    if (useCache) {
+      cache[url] = { result: detectedPixels, timestamp: now };
+    }
+
+    return detectedPixels;
+  } catch (error) {
+    console.error("Error in detectTrackingPixels:", error);
+    throw error;
+  }
+}
+
+export async function detectTrackingPixelsMultiple(
+  urls: string[],
+  usePuppeteer: boolean = DEFAULT_SETTINGS.USE_PUPPETEER,
+  keepBrowserOpen: boolean = DEFAULT_SETTINGS.KEEP_BROWSER_OPEN,
+  useCache: boolean = DEFAULT_SETTINGS.USE_CACHE,
+  dynamicTimeout: number = DEFAULT_SETTINGS.DYNAMIC_TIMEOUT,
+): Promise<{ [url: string]: string[] }> {
+  const results = await Promise.all(
+    urls.map((url) =>
+      detectTrackingPixels(
+        url,
+        usePuppeteer,
+        keepBrowserOpen,
+        useCache,
+        dynamicTimeout,
+      ),
+    ),
+  );
+  return Object.fromEntries(urls.map((url, index) => [url, results[index]]));
+}
+
+// Function to manually close the browser if it's open
+export async function closeBrowser() {
+  if (browserInstance) {
+    await browserInstance.close();
+    browserInstance = null;
+  }
+}
+
+{
+  /*
+  // For a single URL
+const pixels = await detectTrackingPixels('https://example.com', true, true, true, 2000);
+console.log(pixels);
+
+// For multiple URLs
+const multipleResults = await detectTrackingPixelsMultiple(
+  ['https://example1.com', 'https://example2.com'],
+  true, // use Puppeteer
+  true, // keep browser open
+  true  // use cache
+);
+console.log(multipleResults);
+
+// To manually close the browser when you're done
+await closeBrowser();
+  */
 }
