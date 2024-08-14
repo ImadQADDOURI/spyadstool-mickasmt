@@ -5,6 +5,8 @@ import * as puppeteer from "puppeteer";
 
 // Global default settings
 const DEFAULT_SETTINGS = {
+  USER_AGENT:
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
   USE_PUPPETEER: true,
   BROWSER_HEADLESS: false,
   KEEP_BROWSER_OPEN: true,
@@ -73,7 +75,7 @@ const trackingPixelDetectors: TrackingPixelDetector[] = [
   },
   {
     name: "Pinterest",
-    patterns: ["pintrk", "assets.pinterest.com"],
+    patterns: ["pintrk", "assets.pinterest.com", "ct.pinterest.com"],
   },
   {
     name: "Amazon",
@@ -122,9 +124,7 @@ async function fetchWithPuppeteer(
   const page = await browser.newPage();
 
   try {
-    await page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-    );
+    await page.setUserAgent(DEFAULT_SETTINGS.USER_AGENT);
 
     const resources: string[] = [];
     await page.setRequestInterception(true);
@@ -170,8 +170,7 @@ async function fetchWithSimpleRequest(url: string): Promise<FetchResult> {
   const response = await fetch(url, {
     signal: controller.signal,
     headers: {
-      "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "User-Agent": DEFAULT_SETTINGS.USER_AGENT,
     },
   });
 
