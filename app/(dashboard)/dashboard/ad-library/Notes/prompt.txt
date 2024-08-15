@@ -1221,4 +1221,16 @@ in the client-side rendering (if the filters are just used for display purposes)
  1-Slider for Total ads, from 1 to 20+ that set the url param collationCount to the selected value (default 1, no need to set the url param)
 
  --------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+I am building a SaaS using Next.js 14, TypeScript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/UI, Tailwind CSS, Lucide React, Stripe, Server Actions, and Zod. The project emphasizes error handling, best coding practices, responsive design, light and dark themes, clean and visually appealing UI, stable logic, well-structured code, optimized with explanatory comments, reusability, performance, lightweight design, flexibility, and separation of concerns.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+
+ in steps if one return error the other should return the results not everything will return error
 ---------------------------------------------------------------------------------------------

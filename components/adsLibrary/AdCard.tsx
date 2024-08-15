@@ -28,6 +28,7 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import { AdDetails } from "./AdDetails";
+import DisplayPixelPlatformPayment from "./DisplayPixelPlatformPayment";
 import ExpandableText from "./expandableText";
 import PageNameWithPopover from "./PageNameWithPopover";
 import TrackingPixelDetector from "./TrackingPixelDetector";
@@ -118,7 +119,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
                       {"title" in item && (
                         <>
                           <p className="text-sm font-bold">{item.title}</p>
-                          <p className="text-xs">
+                          <p className="text-sm">
                             {item.body && (
                               <ExpandableText
                                 text={item.body || ""}
@@ -165,10 +166,10 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
 
   const renderPlatformIcons = () => {
     const icons: { [key: string]: React.ReactNode } = {
-      facebook: <Facebook className="h-4 w-4" color="#0866FF" />,
-      instagram: <Instagram className="h-4 w-4" color="#D915DA" />,
-      messenger: <MessageCircle className="h-4 w-4" color="#0084FF" />,
-      audience_network: <AudienceNetworkIcon className="h-4 w-4" />,
+      facebook: <Facebook className="h-5 w-5" color="#0866FF" />,
+      instagram: <Instagram className="h-5 w-5" color="#D915DA" />,
+      messenger: <MessageCircle className="h-5 w-5" color="#0084FF" />,
+      audience_network: <AudienceNetworkIcon className="h-5 w-5" />,
     };
 
     return publisherPlatform?.map((platform) => (
@@ -229,10 +230,10 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
               <BadgeMinus className="h-4 w-4 text-white" />
             )}
           </p>{" "}
-          <p className="truncate text-xs font-semibold text-white">
+          <p className="truncate text-sm font-semibold text-white">
             {adArchiveID}
           </p>
-          <p className="text-xs text-white">{renderDate()}</p>
+          <p className="text-sm text-white">{renderDate()}</p>
         </div>
       </div>
     );
@@ -261,7 +262,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
   return (
     <Card className="w-full max-w-md">
       <CardContent className="p-4">
-        <div className="mb-2 flex  justify-between text-xs text-gray-700 dark:text-gray-100">
+        <div className="mb-2 flex  justify-between text-sm text-gray-700 dark:text-gray-100">
           <div>Library ID: {adArchiveID || "N/A"}</div>
           <div className="m-0 flex flex-row">
             <Button variant="ghost" size="sm">
@@ -273,7 +274,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           </div>
         </div>
 
-        <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+        <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <span
             className={`mr-2 inline-flex items-center rounded-full px-2 py-1 font-semibold ${isActive ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
           >
@@ -281,26 +282,37 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           </span>
         </div>
 
-        <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+        <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <span>{renderDate()}</span>
         </div>
 
-        <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+        <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <span className="mr-2">Platforms</span>
           {renderPlatformIcons()}
         </div>
 
-        <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+        {/* <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <span className="mr-2">Pixels</span>
           <TrackingPixelDetector
             url={snapshot.link_url}
             usePuppeteer={true}
             autoDetect={false} // prop to control automatic detection
           />
+        </div> */}
+
+        <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
+          <DisplayPixelPlatformPayment
+            url={snapshot.link_url}
+            usePuppeteer={true}
+            keepBrowserOpen={true}
+            useCache={true}
+            dynamicTimeout={1000}
+            autoDetect={false}
+          />
         </div>
 
         {ad.collationCount && ad.collationCount > 0 && (
-          <div className="mb-2 flex items-center text-xs text-gray-700 dark:text-gray-100">
+          <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
             <span className="mr-2">ADs</span>
             <span className="mr-2 text-lg font-bold text-red-600">
               {ad.collationCount || 0}
@@ -341,7 +353,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
         {snapshot?.body?.markup &&
           snapshot?.body?.markup.__html !==
             "&#123;&#123;product.brand&#125;&#125;" && (
-            <div className=" text-xs">
+            <div className=" text-sm">
               <ExpandableText
                 text={snapshot.body.markup.__html || ""}
                 maxLength={50}
