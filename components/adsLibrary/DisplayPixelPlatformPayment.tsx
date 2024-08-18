@@ -105,7 +105,16 @@ export default function DisplayPixelPlatformPayment({
   }, [autoDetect, url]);
 
   const detectFeatures = async () => {
-    if (!url) return;
+    if (!url) {
+      console.log("No URL provided, exiting.");
+      return;
+    }
+
+    if (isLoading) {
+      console.log("Already loading, exiting.");
+      return;
+    }
+
     setIsLoading(true);
     setShowButton(false);
     try {
@@ -119,7 +128,7 @@ export default function DisplayPixelPlatformPayment({
       setDetectedFeatures(result);
       setError(null);
     } catch (err) {
-      console.error("Failed to detect features:", err);
+      console.error("Detection failed:", err);
       setError(
         err instanceof Error ? err.message : "Failed to analyze the website",
       );
@@ -135,9 +144,9 @@ export default function DisplayPixelPlatformPayment({
         <button
           ref={buttonRef}
           onClick={detectFeatures}
-          className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200 "
+          className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200"
         >
-          <span title="Analyze the Pixels Frameworks & Payements used in the website">
+          <span title="Analyze the Pixels Frameworks & Payments used in the website">
             <FileScan className="h-5 w-5" />
           </span>
         </button>
@@ -198,7 +207,7 @@ export default function DisplayPixelPlatformPayment({
   );
 
   return (
-    <div className="">
+    <div>
       {renderFeatureSection("Pixel", detectedFeatures.pixels)}
       {renderFeatureSection("Framework", detectedFeatures.platforms)}
       {renderFeatureSection("Payment", detectedFeatures.payments)}

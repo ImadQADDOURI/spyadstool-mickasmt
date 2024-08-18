@@ -44,8 +44,7 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     //   cleanedText,
     // );
 
-    data &&
-      console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
+    // data && console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
 
     data.payload.totalCount &&
       console.log(

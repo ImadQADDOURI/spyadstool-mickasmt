@@ -139,9 +139,20 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
     }
   };
 
+  // Effect to disable scrolling and hide overflow when component mounts
+  useEffect(() => {
+    // Disable scrolling and hide overflow
+    document.body.style.overflow = "hidden";
+
+    // Re-enable scrolling and show overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, []);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
-      <div className="relative h-[90vh] w-full max-w-7xl overflow-hidden rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
+      <div className="relative h-[90vh] w-[90vw] overflow-hidden rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
         <button
           className="absolute right-2 top-2 rounded-full p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200"
           onClick={onClose}
