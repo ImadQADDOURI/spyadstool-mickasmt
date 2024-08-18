@@ -171,7 +171,7 @@ export default function DisplayPixelPlatformPayment({
                     height={24}
                     className="transition-transform group-hover:scale-110"
                   />
-                  <span className="absolute -top-4 left-7 min-w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="absolute left-1/2 top-1/2 z-10 min-w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
                     {feature}
                   </span>
                 </div>

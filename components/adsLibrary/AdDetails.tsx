@@ -1,15 +1,18 @@
 // components/adsLibrary/AdDetails.tsx
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import { Ad } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
+import { fetchAdLibraryDetails } from "@/app/actions/fetchAdDetails";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
 import { AdCard } from "./AdCard";
 import Analytics from "./Analytics";
 import { Carousel } from "./Carousel";
+import { EuAdStatistic } from "./EuAdStatistic";
 import LoadingTrigger from "./LoadingTrigger";
 
 interface AdDetailsProps {
@@ -27,6 +30,14 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
   const initialFetchDone = useRef(false);
 
+  // EU ADs
+  const [adDetails, setAdDetails] = useState(null);
+  const [isLoadingEuStats, setIsLoadingEuStats] = useState(false);
+  const [euStatsError, setEuStatsError] = useState<string | null>(null);
+  const searchParams = useSearchParams();
+  const countries = searchParams.get("countries");
+
+  // Function to get ad versions
   const fetchAdDetails = useCallback(
     async (useExistingParams = false) => {
       if (isComplete || isLoading) return;
@@ -85,6 +96,29 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
     [ad, forwardCursor, isComplete, isLoading],
   );
 
+  // Function to get EU ad stats
+  const fetchEuAdStats = useCallback(async () => {
+    setIsLoadingEuStats(true);
+    setEuStatsError(null);
+    console.log("🚀🚀🚀🚀 - ad.isAAAEligible", ad.isAAAEligible);
+
+    try {
+      const result = await fetchAdLibraryDetails({
+        adArchiveID: ad.adArchiveID || "",
+        pageID: ad.pageID || "",
+        isAdNotAAAEligible: !ad.isAAAEligible,
+        country: countries ? countries.split(",")[0] : "", // Use the first country if available, otherwise empty string
+        //sessionID: "25ac405f-b00b-47a5-837c-6e45899967dd", // Consider generating this dynamically
+      });
+      setAdDetails(result);
+    } catch (err) {
+      setEuStatsError("Failed to fetch EU ad statistics");
+      console.error(err);
+    } finally {
+      setIsLoadingEuStats(false);
+    }
+  }, [ad.adArchiveID, ad.pageID]);
+
   useEffect(() => {
     if (!initialFetchDone.current) {
       setDetailedAds([]);
@@ -93,9 +127,11 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
       setTotalCount(null);
       setRemainingCount(null);
       fetchAdDetails(false);
+      fetchEuAdStats(); // Fetch EU ad stats automatically
+
       initialFetchDone.current = true;
     }
-  }, [ad.collationID, fetchAdDetails]);
+  }, [ad.collationID, fetchAdDetails, fetchEuAdStats]);
 
   const handleLoadMore = () => {
     if (!isComplete && !isLoading) {
@@ -128,6 +164,12 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
           </div>
           <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 shadow-inner dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Analytics ads={detailedAds} />
+
+            <EuAdStatistic
+              data={adDetails}
+              isLoading={isLoadingEuStats}
+              error={euStatsError}
+            />
           </div>
         </div>
       </div>

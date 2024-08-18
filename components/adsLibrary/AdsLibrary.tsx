@@ -48,6 +48,7 @@ export const AdsLibrary = () => {
           entityType: ad.entityType,
           gatedType: ad.gatedType,
           hideDataStatus: ad.hideDataStatus,
+          isAAAEligible: ad.isAAAEligible,
         })),
     );
   }, []);

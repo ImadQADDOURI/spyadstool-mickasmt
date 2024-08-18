@@ -8,6 +8,7 @@ import {
   getStoredOptions,
 } from "@/app/actions/buildFbAdsLibOPTIONS";
 import { buildFbAdsLibUrl } from "@/app/actions/buildFbAdsLibUrl";
+import FacebookAdsCaptureControl from "@/app/actions/FacebookAdsCaptureControl";
 //import { puppeteerCapture_Requests_Responses } from "@/app/(dashboard)/dashboard/ad-library/Notes/puppeteerCaptureXHRRequestsAndResponses";
 import { puppeteerCaptureXHRRequests } from "@/app/actions/puppeteerCaptureXHRRequests";
 
@@ -102,6 +103,9 @@ export default function Home() {
       >
         {isPending ? "Processing..." : "buildFbAdsLibUrl"}
       </button>
+
+      <h1>Facebook Ads Capture</h1>
+      <FacebookAdsCaptureControl />
     </div>
   );
 }

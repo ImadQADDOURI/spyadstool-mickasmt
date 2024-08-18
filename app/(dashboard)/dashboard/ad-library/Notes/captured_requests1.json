@@ -1,0 +1,996 @@
+[
+  {
+    "url": "https://www.facebook.com/ads/library",
+    "method": "GET",
+    "headers": {
+      "accept-language": "en-US",
+      "upgrade-insecure-requests": "1",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "text/css,*/*;q=0.1"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/AfkovGwo3ee.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/uId_CU9mxkt.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iPn14/y1/l/en_GB/n1mWAzWH7bCPFeeKGGxoySPMZ0VOTYR2RkeANh2LmdUKN8MKuq7c0gxkDoYqzmzEmcnwJLVSs6dozrNpW5SX4lGUi8P03cpaMcMTLxfm4T0EtQ12g5lPgtnd84wTTFDMcX7a.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iWAt4/yI/l/en_GB/RnveEWLK2sFhu0V-xE0Dm6opygvmf1DZUM2ACZDBbtGQvTL4Co79bZtFaCQIadbj6QZo-Ubyi2Z_5Gdl7q8aEjwJNF7eqKzChcEnVA1o8cyJhQLlzxa86gnLwJslTCoMhS8Kf44brkw8ZEZc_yXMbJQ9xo9qJJZ4Hkc5SVY--86o1uXe06b9PJbCqV_XC8gWnmLsZ-8Gsi3mhX3M-FxhzK607yUWNn8vvr8-t_NU0hrCOZOPsLHFt4TJLEewrd1Q98ohh8qVeLP0PF5V0HZeX1pPD5KjfS6W9wWrtcY5P7vQWGvw8vAtlGXL6hNFn8Y6HBxVcrUHjL.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3ibRM4/yC/l/en_GB/Dev6gbmgg57lzACOoEeKwyYv4wcTI6wuPKSXEtVxcNNce8bpvmBaJMvGRyWw-DXmi9vglXG2lvA2cRH3HyUIK3OVCvh05H0pEZV2uVRDCtX_mvTsbPkHFwXv2Z0AGQyqBpFHXR8Jo_HlTVRthKpRgRlNTGGFibYGKyYf7OlnW8Fo3c5422GY_tk0zMjQ_TjgeS_IqatmAprVKofGS2XQrPJIv2Ntp9FZ0ulI_d6wVE4oPGLDIF_Q2DXG_45W5NGgfS2Zev6zoaUQprgPDEvbOOd0DmMpjxUvIc4ub7YZLR03ognRGK7xEPDU7RLzLlvauv7ecWs-f1.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iKHK4/y9/l/en_GB/4UI40CR9H8v8oh6Q05wGCqv5XNL-9DDc5i6cT8CrnegiSoGG-XRHWKu96GQL_41UGHLvWAmAGzSZla2k-M-0R18Txwp6JTkF_SL_qvTaQBpRFyU_Ss0m2FQBPUHqpW7iMOz4QNGu0zP18-bSFRxoUP7w0g0c4p9FeI5J3nMTIeKE74kTnG9L5YB-VsPnhw6paohCJ58PBw6xcozDOWl6IXhjz8bosVoTLfOiozg6DJaQFc_01MNdzIJ68K8h1RG83PCZ1dPtuQU13dLIUHq-21YfkScoGbfiH1CzQMqk7DxtVMrzimBugxqUqU5AStCWCFKecf1Z_j.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/dTYA2Yv9jkKkPJT79ttdZRon0UuxC75F1d1LXz3ceTiLMJLwoHxAuR5YoOkcpo7-31Ix-iigRGwnVDTKQXoqzmxkcF0x-QSE-CSOwcW6k1wDNgebxYTYVo6OtmFj-WitD4bnVjhEmWtexg2o43V_lX68EuubvXiw-VZ8qtBz4joOt5k3YfAJUDhJC44VuyMkZjqFQuYlj4_FRPn682s9tZFN_DFGgYYd75UhjGDG-8vDU-8XL3I5mCD6owlExFQEEU-9uCosPh4YV8dWSLV9K_Om4Ea9NCxTXoQuDbperKOMtTnPQm8xvjnjsDnkD71FZNDE4KBOjS.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3ihdx4/y0/l/en_GB/eQpY6trRuz9NEGHx1WsFd5sAiNSKp3NtBS22irz8haUhgTq3FGQA0zo8wGvV-hRRK_CWb5eF2LgT6ANNMR0kRxESDMte-mMtRefjLtBcbPXqZ-T_g-aIoR2pWONm5WRzwViXltI6LzXsC3DhqGSyTrrFyr0VZ2fo2OfEXonhHqgwD_cBcrTiH6ETNhUTIL_1ZLqyzrHxNs24SHhJjCs18JP1bBb2IMuANyXXCNpZrl9DRier_ew3yuSwmm5i4ENd4wtrQNTt_qv7zLsidbBwTXmPbWtAQAnJCS2poSjbPLPv-777WqtTBmYvzlETvwSo-Qsg67lQtC.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/zao_10s3BdtykP3sg5R3tcxA_mSL2OTtX776nuZyGLJLKkpzGHIWRyFzwprkDuG8cg5fuh8OjL1-9xOdtWh9W1SMocHRAiwhHpTTD1mBmOPahf6Nqe12aDbfK0yFNE5mcACFwkHy5bQsu7_xxJjq52ueLlgEO7wYVlG1svjiYxCuF1zKq_iSWY19l-b2sGyd_37Uj0TPTo7KtVtLUap4zLHyNRsd_DRYFayWnuAjp03ENXDH-qN_iBHsBqD1l5CDHsb9GTclsBg2n62jkZOdoVTZkV4WzGOH8v7DFM91nH1hznrq386tOFNb1Yk33JiNUO_qMEygGd.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/LFpVjnyLimwU_Xg_nUIQp8D8N_h8C3i-sgc7D8ljaKywPxEnUOWkWvllDZXVnCsZ0XiNt3QRXOlHQORyuy4_mE8zKeMwiAqe9Aws9E2yXIaC-lNT71RnrqNf_vFzUWn3gpUDaQJpXFcJmnDjdnc7qoMBeu7rXMuTSGZHQ6Gq9kJajNnqK-bdLN3ah1HDiTLsjJf8Rdw4nf8DgP_6JGeiuOBohiECHVw_BGLXVj-wP0p1497-zeu-6FMpx-Qee5ct9xPfj6FOJyUsaW9b_kJxZ4BKt-kqAhLClEYpmjdB-XAZtFuhotjhOfBRuamPOAc4bPq-X9Rtlh.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3ift_4/y9/l/en_GB/4Mia0r27FvuhrLCLZ_77IBibTMY_9zEpOU0ARserrAp27KLzr7jSBjHwDrOZ-gBe4qV8zom8-2oE_pM9EqUZHqlBEqmKxIeUzi_Wwn2MsmNXWPELB7xQe3KJPe1YcrX0YehcLVNlYeNmTXUTNGviGHs5yoMr-IHSgrKztiAKwhscrkVlujPXpxqycK8GqYHRf1XUj6-2mZDkZ5mAK7yObCea8nRZMXpX7Euth1QVpAr6dQoMlj6hos1-swiB2vh7e73FosAZGdmMt9NnKFlzLQiXL64I14zQaOO6CYgT8QRTykh7MYUsWO8CP90GZogqr_MuMR1WtC.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i2yr4/y9/l/en_GB/nlwcQnGG0nNIulIbdaOgOKm7usPzgirdkfuvlSPhght26sGRNTC1EdSAZ1yV2PTqyzsv3F9o7Gp8iXEOY3dlnNJfGpJMR6V6Pv_pwFwa88avn9f7DqPl5o-eReufl6J2VVisJmvs7XPEh0X-vsucg8SwGw6nfoEjcNkXOdxPI39CN3xfRz3vd1JAJjZ1VnU_ElPKhuL9GmThhPU-M02lATPhQBHAl1sFxf9yxYW6o52VEgvzxeLkz8OGksejRJlsMyyv3nVlWfYAR1-eMr9imKPFU7Q1VTNgmpOtQyZlRuwJVXlYhzi07EHWNEHS0dV3lTX2ViYqOT.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iEnj4/ys/l/en_GB/8LQ--7DdT47DqimAhAIw3XmRK2Vgf3lQhMPSbkCj_IAXeAdROxzc0zrlo2ewHSwOoxKA5tUyMtHkLVRhzwmuqjycufS25N4PnLoHEkD4V_yQ1IXut0y8DG9Ste0evy0r65ZwGtOR9YH2SGjxcrs4DSpVqQxdIW_ijlEZrIiRqyQ_wA5zq6_oysYzN9nSgZ7eiU29fyRXfCbMoRdLrIF9XhTmEVlfVT5cu-EfcWXL84DYQ2eYEJh8_Sm0iIX4uqetfxZizIhM7ZE8w3XZIw7sMwPclAKiq-Y-cPxTAS5su78x3YqX-IpZARZ4dsX0rs1t31DxAB55MC.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iiZM4/yr/l/en_GB/PD5FdTjCcNz1H3nk6T9VmNmwq2f1Rc8vvu4w1PnuTIaMfii6mcjzAH2xfu9-329QERB56oHFPf7hUquSinOzkgk-pe581xufSjSmde-tcwzRnL8Q2lFI2VnJz_LZpF5QDJZDEnmmS-lz0ev1c1IrqNaNO4qDKtH-UfTj354dsTJRti_z9SHEQyr9DsPbkp_Z4-rpixbvn8fQaNv4mSDDwqt9PdXfYMvfm5j7xb4WhjtuonofA_Vi-yp_AACiQ7nOxYHeB-FGaQfaAgOFSRfZiLOv-bRlAl9Dc83rlP9npSYzJSkbm2E2gbyaPfPQ6EvX8vQeCKXZyY.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iMKZ4/yO/l/en_GB/dZvweJVzLZYgX9rsfYgSSc9YGBY5wb8Oju7blNkLJOdwnmVdz0nkwqFttujKxObAOHZSdODzJgoWR9aF9vQmZ7tSg2WLg1Fg5qRosTLOI8efdnylYdjODyHU2gaanYneYOwldxTLZB-frpw9ZeA9PzxjeVJj1cB_io0DT3GUMGpYaVzCWc5yhHGyh_AoclCGfb5wod9zaAhF1GRVmIc7xFoXfrH1S1kUC8YBVuhOKoH1Ny0U7TcbpVm3R9yqJvpnuT_THlPUXjWWOGSMW8iYTTKuJD9oL7aLR5ukUIXhi_Dzk8la6q8Z6U_EIKBYVSEvh43DHDC7bh.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iA8W4/ye/l/en_GB/j2kpJvozg45QgDiKJpuLbHrtBsV9wYIYGtEe1kBKRWgWlc0uGVIwKwp2bx1kU1VCMgA3aEjcUkSjviDYDE9mWPnjQ3bUMb_sKFe0VpGVpWWbcF0KVaBtN_ID5m_8fV5vhGeyoB5NnPqM-33SuIpQn5BxILQaNDgybJlDZlaAFuaSsPJqKmQs9LblJEXW9uUsx1BMw7WnkF6dwNvhWRQJS99Ab8JxFPYI53SgtcQY1ZmbKNsW6NxVlR3UuK0f-SGWh0pMeHZzLoSQhSj31vMFC4oobdS3ReUDjqemd1JPViuLMRDJx7jq5XfBcyLiGHRzxdYqFvH6C2.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iOYH4/ym/l/en_GB/yjTDsOvUYArcrGFmV0MhvCge3H0Dyi2tA0lN1B275lwEkY3uyUGr0LkrnTBQ860vSnTp32rxiQaAD7RaSQvxv7K6eQlMGnDSywSxeSNPS84ovpHq0M3Zz4naOxMkHKwF55bIgdT0wSZys_JmqvsUqRQolCU6DBN8kGp-YPb_HyPoDfgDZXt_NrFJta5r4SZsZI39YAP3dYSLQmtvvT57bX8VXMPW9PTi5JUB_jiUPLS7LIUckW8KFeeXSp8ahPvkFrJzYX-eWxAns81y9pOt_XEDSogS4dHesCAvfAf548y46igVHKgY1J7vqkPq31o2NQD25L7y4q.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iJtp4/yf/l/en_GB/lrzJSxeZ4kn9KEN3INWQ5A5WlK-OP53k3uabpUPzVXPVSwz-S2in5hm6bNZr391Zpyb2pQFPQDP7D-9pTCIWg9CDdtxNgpOF-IUtrvllSgmiojwM1H6zhEp9fY5rwYdTXtBfMxeztNE7_0cSaJYNFIhcWg8TS4KHzXBng_Mo9yLh2sUUig9m1MYc2I7tnZ8iFUdsGEt6t0Ee1zJtBwgwOX3q2CAPlhMrQt-JD0HPgeqTOt4TWbYQMsWt17WYmhMr3npQYNCBDPIinwFk1zZCk3Yx1Zfvc5yrVCFzsB4_cMN8pNwXJuFh6yFbhN_qaQ3Hpx0k_YXXiK.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1zc4/yi/l/en_GB/dY93ff-ziK23kviCvyVjxr8xWAeaznsUcqM9-8KxVBJviZBeoiwNdQaASjNIcS4ukigOdUUCElC_PKBVjIIXoTwDVg5jeaqX_BYlUURUJQKnUYoUo5mHQnICJjv3NjKnma32PnQNC7JnTB9lWd4c6Y7kEzplHzpj3bQJcHz4wgJORuJRufibyIVFnjYsRw74S8K-fTH_2BjKzH-62Go7eBTV5NLRa-CQyjoSaAMZfr7a_9LTnvNfC6rdLJcqLkB9aFo_t9jmzH6MJ7uF5GT5zFw_GLEi1OEAT7j4qdqgEt8tlxtXfydIcug29Ku6af4_FwKCQ5cCDE.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3inak4/yn/l/en_GB/mJTCkJ2ZtBxy7e07e28I0I7bZeE6SA13i3kKBF3Nb_MtNf4eg9aaAFTp1zvzaUwxfaULR3GMI39JkXmkTXpdxY51J-e0NmeL3T39-S6eJpcKdV4ZO_n98FhdtV6vzl6VLYmiAYDLzNStYH2qEOeHJ1lnWriPJd6KGzqeF7oxHCf2S8YEtL6B5GwHJzI99a9VdzGQRJm6hDYpKLg7JwnOPexxa51BdNf4hLXwlTy9UgUhUmmDyURZik7zqknCrq5T8Xw5mxH2MxTK_Uq_wBDF-GR0Yz5tHTb-yS-DXd5NVjTWVkLWdBMaNA9XC5_BxqkIYfeDrb5WIi.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iXlb4/yz/l/en_GB/uNE_x2mRUy2KdI_A-qpLlbUiIcFSE9KrL6Rf3nmoBhIldchWkjbjPd4a_ygDmVHks64mxtm0WwKeQKcaX_BHF4JpMzrumJJsgEgvv02NhaAkGolvtZq5X3Sbt5nezJUNSbMy2W44ColOkJkZuaSu_-M7wI_-VNBXgdTi1nABprq0zeKOSdTu8p1ORemOFcl78pkSYKYcfDZJXwmwDitkKfUKbo22yiJU9sk1o7KmSB2lmKUQxkfT4SEvIRrtunS9D_HWmkrmMqBbGo6Syl03Uaz5TZebbyL5kP41uS9AIKaAha0kTgvGtPIZg15fZsx67rtuDBYFLa.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iqls4/yF/l/en_GB/CvNc12Ue8gLKu7caR6gcRneDvRlepAMVH3sFM7G6pzEDeJ9DjnIuqn1Lznsjnn64J2h3wwfLJX_AiNDyUefSVXs7mnDh8qHykFj0rjV0egmOJufHWGkyNbWzdQo3opqI98S1q1DONa90-N2xRV1V9zERDheEXSci5hCGRIRgUUG2gGqK9-H7vKdxhM9UUM6-jXcfgSMlqjBaqM5DDth2riDcYnaVydP_U_ZHZsLWzDnTHI4oOmak0klVw4TB9cW8aBFe4ckytkWD5lSNl4KaRV-J4e-mV18pGtG5WaNF4WRyWzc1xmX68NnIHYsja878xE4bUzuVJb.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iplJ4/yX/l/en_GB/YrAB5iY9wPxUtEJC84LsHqcEEgkL9Xoeq-w6kCA2_Cdh_p4s_cSQFXlUqDfa0Uyt2QlNInKxOqejphkAfY-7LtaVJFD_i31tGJDHk0m9uyGMytz6pP_KwHmG2wBEdGWSx-Dp1mO_xUrjjtuxn19ASkNPg6n3EYlPy6r2l5GCIIsVHfrsPbteoMrmQIgK6BRhjoh4s9VXIx5db_8mHERz6pNGhHp8-DDpaIBhZn22DkKn2_lr0hmeqFZH6e3guIlcTl3UgiTLyjebOLVZ7Yn_xLoIXDRnPA8z0TOnBAZ_GOC4-20dC09D5Mt-EkgTe_IqNa_VCxO5Dq.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/cD3Q7YVuf9K.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZW52anNvbiIpO2lmKGRhdGFFbGVtZW50IT1udWxsKXt2YXIgY29weVZhcmlhYmxlcz1mdW5jdGlvbihhKXtmb3IodmFyIGIgaW4gdmFyaWFibGVzKWFbYl09dmFyaWFibGVzW2JdfSx2YXJpYWJsZXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCk7d2luZG93LnJlcXVpcmVMYXp5P3dpbmRvdy5yZXF1aXJlTGF6eShbIkVudiJdLGNvcHlWYXJpYWJsZXMpOih3aW5kb3cuRW52PXdpbmRvdy5FbnZ8fHt9LGNvcHlWYXJpYWJsZXMod2luZG93LkVudikpfQovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95TC9yL2RiZ3JNc25EMThwLmpzP19uY194PUlqM1dwOGxnNUt6Cg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9fYW5ub3RhdG9yPWZ1bmN0aW9uKGEpe3JldHVybiBhfSxfX2Rfc3R1Yj1bXSxfX2Q9ZnVuY3Rpb24oYSxiLGMsZCl7X19kX3N0dWIucHVzaChbYSxiLGMsZF0pfSxfX3JsX3N0dWI9W10scmVxdWlyZUxhenk9ZnVuY3Rpb24oKXtfX3JsX3N0dWIucHVzaChhcmd1bWVudHMpfTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveTIvci9jTWRfU1pvdjlFaS5qcz9fbmNfeD1JajNXcDhsZzVLego=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9idGxkcj17fTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveUgvci9aTGNLT2JOdU8xYi5qcz9fbmNfeD1JajNXcDhsZzVLego=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiX19lcW1jIik7aWYoZGF0YUVsZW1lbnQhPW51bGwpe3ZhciBwYXJhbXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCksdXJpPXBhcmFtcy51LGV2ZW50X2lkPXBhcmFtcy5lLHNjcmlwdF9wYXRoPXBhcmFtcy5zLHdlaWdodD1wYXJhbXMudyxmYl9kdHNnPXBhcmFtcy5mLGxzZD1wYXJhbXMubDtpZihuYXZpZ2F0b3Iuc2VuZEJlYWNvbil7dmFyIG1hcms9ZnVuY3Rpb24oYSxiKXt2YXIgYz1wJiZwLm5vdz9NYXRoLmZsb29yKHAubm93KCkpOk1hdGgubWF4KERhdGUubm93KCktc3RhcnQsMCk7YT0iZXZlbnRfaWQ9IitldmVudF9pZCsoYT09bnVsbD8iIjoiJm1hcmtlcl9pZD0iK2EpKyImbWFya2VyX3BhZ2VfdGltZT0iK2MrIiZzY3JpcHRfcGF0aD0iK2VuY29kZVVSSUNvbXBvbmVudChzY3JpcHRfcGF0aCkrIiZ3ZWlnaHQ9Iit3ZWlnaHQrKGI/IiZjbGllbnRfc3RhcnQ9MSI6IiIpKyhmYl9kdHNnPyImZmJfZHRzZz0iK2VuY29kZVVSSUNvbXBvbmVudChmYl9kdHNnKToiIikrKGxzZD8iJmxzZD0iK2VuY29kZVVSSUNvbXBvbmVudChsc2QpOiIiKTtjPW5ldyBCbG9iKFthXSx7dHlwZToiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkIn0pO25hdmlnYXRvci5zZW5kQmVhY29uKHVyaSxjKX0sc3RhcnQ9RGF0ZS5ub3coKSxwPXdpbmRvdy5wZXJmb3JtYW5jZTttYXJrKHdlaWdodD4wPyJDbGllbnRTY3JpcHRTdGFydCI6bnVsbCwhMCk7d2VpZ2h0PjAmJndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJiZWZvcmV1bmxvYWQiLGZ1bmN0aW9uKCl7bWFyaygiQ2xpZW50VW5sb2FkIiwhMSl9KX19Ci8vIyBzb3VyY2VVUkw9aHR0cHM6Ly9zdGF0aWMueHguZmJjZG4ubmV0L3JzcmMucGhwL3YzL3lvL3Ivck1qVVYzdGxnNS0uanM/X25jX3g9SWozV3A4bGc1S3oK",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "url": "https://www.facebook.com/ajax/qm/?__a=1&__user=0&__comet_req=1&jazoest=2829",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCmZ1bmN0aW9uIHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl7cmV0dXJuIGEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmJvZHkmJmEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmhlYWR9ZnVuY3Rpb24gaXNUYWdTdXBwb3J0ZWQoYSl7cmV0dXJuIGEubm9kZU5hbWU9PT0iU0NSSVBUInx8YS5ub2RlTmFtZT09PSJMSU5LIiYmKChhPWdldE5vZGVEYXRhU2V0KGEpKT09bnVsbD92b2lkIDA6YS5hc3luY0Nzcyl9ZnVuY3Rpb24gZ2V0Tm9kZURhdGFTZXQoYSl7cmV0dXJuIShhLmRhdGFzZXQgaW5zdGFuY2VvZiB3aW5kb3cuRE9NU3RyaW5nTWFwKT9udWxsOmEuZGF0YXNldH1mdW5jdGlvbiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl7dmFyIGI7dHJ5e2lmKGEubm9kZVR5cGUhPT1Ob2RlLkVMRU1FTlRfTk9ERSlyZXR1cm59Y2F0Y2goYSl7cmV0dXJufWlmKHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl8fCFpc1RhZ1N1cHBvcnRlZChhKSlyZXR1cm47dmFyIGM9KGI9Z2V0Tm9kZURhdGFTZXQoYSkpPT1udWxsP3ZvaWQgMDpiLmJvb3Rsb2FkZXJIYXNoO2lmKGMhPW51bGwmJmMhPT0iIil7dmFyIGQ9bnVsbCxlPWZ1bmN0aW9uKCl7d2luZG93Ll9idGxkcltjXT0xLGQ9PW51bGw/dm9pZCAwOmQoKX07ZD1mdW5jdGlvbigpe2EucmVtb3ZlRXZlbnRMaXN0ZW5lcigibG9hZCIsZSksYS5yZW1vdmVFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9O2EuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsZSk7YS5hZGRFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9fShmdW5jdGlvbigpe0FycmF5LmZyb20oZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnc2NyaXB0LGxpbmtbZGF0YS1hc3luYy1jc3M9IjEiXScpKS5mb3JFYWNoKGZ1bmN0aW9uKGEpe3JldHVybiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl9KTt2YXIgYT1uZXcgTXV0YXRpb25PYnNlcnZlcihmdW5jdGlvbihhLGIpe2EuZm9yRWFjaChmdW5jdGlvbihhKXthLnR5cGU9PT0iY2hpbGRMaXN0IiYmQXJyYXkuZnJvbShhLmFkZGVkTm9kZXMpLmZvckVhY2goZnVuY3Rpb24oYSl7YWRkTG9hZEV2ZW50TGlzdGVuZXJzKGEpfSl9KX0pO2Eub2JzZXJ2ZShkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaHRtbCIpWzBdLHthdHRyaWJ1dGVzOiExLGNoaWxkTGlzdDohMCxzdWJ0cmVlOiEwfSl9KSgpOwovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95dS9yL2VtbUZmRnNUVXRELmpzP19uY194PUlqM1dwOGxnNUt6Cg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    }
+  },
+  {
+    "url": "https://scontent.frba3-1.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c15.0.50.50a_cp0_dst-jpg_p50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=qVIqR-mgg0AQ7kNvgH-VHbj&_nc_ht=scontent.frba3-1.fna&oh=00_AYAOOUepj8OmulbqggBOQzB8BJ6vYsLL0gyXWln4nQ-e_w&oe=66E6BC96",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryMobileFocusedStateProviderQuery",
+      "x-fb-lsd": "AVoYM3QB6TA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=1&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__hsi=7403728660076992667&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKU28xaaws8nwhE34yE1mUdEGdw46wbLwrU6Ci2G0z85C1Iwqo1uo7u1rw&__csr=jMNWvFOl-AD_qUFaUOiGQkhlnl9nGl5EHGyk99BDysV2sLOFAHu8K8ji8F8-fUowOBwqU9EW6o4G0B8iBxbxi322q2m0C85-cy8dVE6u2e3904vw8648W3a7U1AUow5yw-w55w1wi03qq00hpy00JKU0bq201By0aGw&__comet_req=1&lsd=AVoYM3QB6TA&jazoest=2829&__spin_r=1015732531&__spin_b=trunk&__spin_t=1723814909&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryMobileFocusedStateProviderQuery&variables=%7B%22adType%22%3A%22POLITICAL_AND_ISSUE_ADS%22%2C%22audienceTimeframe%22%3A%22LAST_7_DAYS%22%2C%22country%22%3A%22ALL%22%2C%22viewAllPageID%22%3A%220%22%2C%22fetchPageInfo%22%3Afalse%2C%22fetchSharedDisclaimers%22%3Afalse%2C%22activeStatus%22%3A%22ACTIVE%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%5D%2C%22countries%22%3A%5B%22MA%22%5D%2C%22excludedIDs%22%3A%5B%5D%2C%22location%22%3Anull%2C%22mediaType%22%3A%22ALL%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22queryString%22%3A%22%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3Anull%2C%22sessionID%22%3A%22501978a1-83c4-4cbc-8cb8-d37520be2352%22%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3Anull%7D&server_timestamps=true&doc_id=26655791350701201"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/MFbY0Unez3B.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/_lqbRueJ-Pt.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/pduPyM7LvfK.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/T--l3skOCUJ.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/v1mnY4Wr823.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yh/r/pXADmoqqN0T.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yH/r/c_1vdG88uNh.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yU/r/zSaFQ46AO2w.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yP/r/iX9Jk-vLwV6.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yL/r/jpTznPCSR81.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/y-/r/nOnEZAhe_ON.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yU/r/8HxHE1uET3u.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryMobileFocusedStateProviderRefetchQuery",
+      "x-fb-lsd": "AVoYM3QB6TA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=2&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__hsi=7403728660076992667&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKU28xaaws8nwhE34yE1mUdEGdw46wbLwrU6Ci2G0z85C1Iwqo1uo7u1rw&__csr=jMNWvFOl-AD_qUFaUOiGQkhlnl9nGl5EHGyk99BDysV2sLOFAHu8K8ji8F8-fUowOBwqU9EW6o4G0B8iBxbxi322q2m0C85-cy8dVE6u2e3904vw8648W3a7U1AUow5yw-w55w1wi03qq00hpy00JKU0bq201By0aGw&__comet_req=1&lsd=AVoYM3QB6TA&jazoest=2829&__spin_r=1015732531&__spin_b=trunk&__spin_t=1723814909&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryMobileFocusedStateProviderRefetchQuery&variables=%7B%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22POLITICAL_AND_ISSUE_ADS%22%2C%22audienceTimeframe%22%3A%22LAST_7_DAYS%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%5D%2C%22countries%22%3A%5B%22MA%22%5D%2C%22country%22%3A%22ALL%22%2C%22excludedIDs%22%3A%5B%5D%2C%22fetchPageInfo%22%3Afalse%2C%22fetchSharedDisclaimers%22%3Afalse%2C%22location%22%3Anull%2C%22mediaType%22%3A%22ALL%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22queryString%22%3A%22%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3Anull%2C%22sessionID%22%3A%22501978a1-83c4-4cbc-8cb8-d37520be2352%22%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3Anull%2C%22viewAllPageID%22%3A%220%22%7D&server_timestamps=true&doc_id=8010675412346585"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryMobileFocusedStateProviderQuery",
+      "x-fb-lsd": "AVoYM3QB6TA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=3&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__hsi=7403728660076992667&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKU28xaaws8nwhE34yE1mUdEGdw46wbLwrU6Ci2G0z85C1Iwqo1uo7u1rw&__csr=jMNWvFOl-AD_qUFaUOiGQkhlnl9nGl5EHGyk99BDysV2sLOFAHu8K8ji8F8-fUowOBwqU9EW6o4G0B8iBxbxi322q2m0C85-cy8dVE6u2e3904vw8648W3a7U1AUow5yw-w55w1wi03qq00hpy00JKU0bq201By0aGw&__comet_req=1&lsd=AVoYM3QB6TA&jazoest=2829&__spin_r=1015732531&__spin_b=trunk&__spin_t=1723814909&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryMobileFocusedStateProviderQuery&variables=%7B%22adType%22%3A%22POLITICAL_AND_ISSUE_ADS%22%2C%22audienceTimeframe%22%3A%22LAST_7_DAYS%22%2C%22country%22%3A%22MA%22%2C%22viewAllPageID%22%3A%220%22%2C%22fetchPageInfo%22%3Afalse%2C%22fetchSharedDisclaimers%22%3Afalse%2C%22activeStatus%22%3A%22ACTIVE%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%5D%2C%22countries%22%3A%5B%22MA%22%5D%2C%22excludedIDs%22%3A%5B%5D%2C%22location%22%3Anull%2C%22mediaType%22%3A%22ALL%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22queryString%22%3A%22%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3Anull%2C%22sessionID%22%3A%22501978a1-83c4-4cbc-8cb8-d37520be2352%22%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3Anull%7D&server_timestamps=true&doc_id=26655791350701201"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yh/r/pXADmoqqN0T.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yH/r/c_1vdG88uNh.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yU/r/zSaFQ46AO2w.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/l/0,cross/KjAm52n7rkm5WGSXgNGxEe3ke9qDJLrXhBM7xUX4SCaPwY6kPng79QcoOl0bUu7vB0kMsVaWqOxiaBF2YT3tVNZx5EEkTzrjXatA8L537b4cpiX4R2whplpKTj_5hcqM_gwp_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css?_nc_x=Ij3Wp8lg5Kz",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://scontent.xx.fbcdn.net/hads-ak-prn2/1487645_6012475414660_1439393861_n.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yP/r/iX9Jk-vLwV6.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yL/r/jpTznPCSR81.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/y-/r/nOnEZAhe_ON.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yU/r/8HxHE1uET3u.kf",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryMobileFocusedStateProviderRefetchQuery",
+      "x-fb-lsd": "AVoYM3QB6TA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=4&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__hsi=7403728660076992667&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKU28xaaws8nwhE34yE1mUdEGdw46wbLwrU6Ci2G0z85C1Iwqo1uo7u1rw&__csr=jMNWvFOl-AD_qUFaUOiGQkhlnl9nGl5EHGyk99BDysV2sLOFAHu8K8ji8F8-fUowOBwqU9EW6o4G0B8iBxbxi322q2m0C85-cy8dVE6u2e3904vw8648W3a7U1AUow5yw-w55w1wi03qq00hpy00JKU0bq201By0aGw&__comet_req=1&lsd=AVoYM3QB6TA&jazoest=2829&__spin_r=1015732531&__spin_b=trunk&__spin_t=1723814909&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryMobileFocusedStateProviderRefetchQuery&variables=%7B%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22POLITICAL_AND_ISSUE_ADS%22%2C%22audienceTimeframe%22%3A%22LAST_7_DAYS%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%5D%2C%22countries%22%3A%5B%22MA%22%5D%2C%22country%22%3A%22MA%22%2C%22excludedIDs%22%3A%5B%5D%2C%22fetchPageInfo%22%3Afalse%2C%22fetchSharedDisclaimers%22%3Afalse%2C%22location%22%3Anull%2C%22mediaType%22%3A%22ALL%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22queryString%22%3A%22%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3Anull%2C%22sessionID%22%3A%22501978a1-83c4-4cbc-8cb8-d37520be2352%22%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3Anull%2C%22viewAllPageID%22%3A%220%22%7D&server_timestamps=true&doc_id=8010675412346585"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7403728660076992667&__jssesw=1&__req=5&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__spin_b=trunk&__spin_r=1015732531&__spin_t=1723814909&__user=0&dpr=1&jazoest=2829&lsd=AVoYM3QB6TA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryfjlHDr2LU38vrkAs",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iSJk4/yN/l/en_GB/Al7b3OEjLe9Vtl96S9Gt82TsZtpNnfKK0WYH9sjhTZ30rAdxR2a5C3MVcewjCQmte6MGSV78RnJwjlLmcO0ayms2bS5KDsgW4AZVU_M1zF0sAj.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i0N74/yg/l/en_GB/uPu-UyH_eSl.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/FSGgKrxNEjp.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/FIciUd9uO9Q.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1ZF4/yU/l/en_GB/ia1T2eiOVth.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/Rg2ccx3CrnY.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/lUGowUIPhm5.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i9GV4/yX/l/en_GB/mhJMv7G9c9a.js?_nc_x=Ij3Wp8lg5Kz",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    }
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/CpFtBjsmTWC.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    }
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7403728660076992667&__jssesw=1&__req=6&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__spin_b=trunk&__spin_r=1015732531&__spin_t=1723814909&__user=0&dpr=1&jazoest=2829&lsd=AVoYM3QB6TA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryQVA7rSTQql8axTUo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; _js_datr=_VO_ZjVetG6E9khHJsdL0J_A",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "------WebKitFormBoundaryQVA7rSTQql8axTUo\r\nContent-Disposition: form-data; name=\"ts\"\r\n\r\n1723814906651\r\n------WebKitFormBoundaryQVA7rSTQql8axTUo\r\nContent-Disposition: form-data; name=\"q\"\r\n\r\n[{\"app_id\":\"541639493889025\",\"posts\":[[\"falco:bd_pdc_signals\",{\"e\":\"{\\\"asid\\\":\\\"a4933200-0b5f-447b-b675-ea463d1a7470\\\",\\\"ct\\\":1659080345,\\\"sjd\\\":\\\"zFCUtJLQNUBilOZ7bxE5RdIVGISu+5A6q7OUAs6sMaYcVA4n2XMQ+MseQ9JsZG5uTkI9k+IiENIxUcGM1bBx0iRBXDk74x5QjDup0VL51WXgR1kzHfYLxO6SFqBv4yZpnN3ylzSNI4QVZFoaa4MpskaPoB++0CqqxgDhBu6P+xU=\\\",\\\"sid\\\":-1}\",\"r\":1,\"d\":\"$^|AcZoIfvg8I83CCcpK4YLIZrhndlb41CMvDwtQgVd0NfX0HDdK1zAatUFf8dkh2Zt3RyzPPbO7RyqIt3bi6mMiB3mHIdE|fd.AcaTj25qnw3SCLAkke90zjiyZOeQnsCdj80DVbuosaARKIqVB9joSv-vRI-VmrrMkVsX7_1WecyR-3V3HCFKoIRc\",\"s\":\"vn5iys:k9a8q7:2yw8js\",\"t\":1723814911969.8,\"b\":[1,128]},1723814906650.9,0,532]],\"trigger\":\"falco:bd_pdc_signals\",\"user\":\"0\",\"webSessionId\":\"vn5iys:k9a8q7:2yw8js\"}]\r\n------WebKitFormBoundaryQVA7rSTQql8axTUo--\r\n"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19951.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7403728660076992667&__jssesw=1&__req=7&__rev=1015732531&__s=vn5iys%3Ak9a8q7%3A2yw8js&__spin_b=trunk&__spin_r=1015732531&__spin_t=1723814909&__user=0&dpr=1&jazoest=2829&lsd=AVoYM3QB6TA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryexWklNAqZhgJjWJI",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; _js_datr=_VO_ZjVetG6E9khHJsdL0J_A",
+      "origin": "https://www.facebook.com"
+    }
+  }
+]

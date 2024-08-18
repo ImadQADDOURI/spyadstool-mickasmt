@@ -12,6 +12,7 @@ export interface Ad {
   pageID?: string;
   publisherPlatform?: string[];
   isActive?: boolean;
+  isAAAEligible: boolean;
   snapshot: {
     ad_creative_id: string;
     body?: {

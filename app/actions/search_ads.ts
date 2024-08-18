@@ -4,7 +4,10 @@
 
 import { FilterParams } from "@/types/filterParams";
 //import store_XHR_Request_Options from "@/lib/store_XHR_Request_Options";
-import { getStoredOptions } from "@/app/actions/buildFbAdsLibOPTIONS";
+import {
+  getFbAdsLibOptionsWithoutDB,
+  getStoredOptions,
+} from "@/app/actions/buildFbAdsLibOPTIONS";
 import { buildFbAdsLibUrl } from "@/app/actions/buildFbAdsLibUrl";
 
 export const searchAds = async (filters: FilterParams): Promise<any> => {
@@ -12,8 +15,10 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     // Build the URL with the given filters
     const url = await buildFbAdsLibUrl(filters);
 
-    // Get the request options
-    const options = await getStoredOptions();
+    // Get the request options from DB
+    //const options = await getStoredOptions();
+    // Get the request options from function
+    const options = await getFbAdsLibOptionsWithoutDB();
 
     //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ url:", url);
     //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ options:", options);
