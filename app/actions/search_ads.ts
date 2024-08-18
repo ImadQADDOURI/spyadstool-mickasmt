@@ -44,15 +44,17 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     //   cleanedText,
     // );
 
-    //console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
+    data &&
+      console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
 
-    console.log(
-      "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ ADs Found :",
-      data.payload.totalCount,
-    );
+    data.payload.totalCount &&
+      console.log(
+        "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ ADs Found :",
+        data.payload.totalCount,
+      );
     return data;
   } catch (error) {
-    console.error("🚀🚀🚀🚀Error fetching data:", error.message);
+    console.error("🚀🚀🚀🚀 ~ searchAds ~ Error fetching data:", error.message);
     throw new Error("Failed to fetch data from Facebook Ads Library");
   }
 };
