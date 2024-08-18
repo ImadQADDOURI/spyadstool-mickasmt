@@ -3,7 +3,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { AlertCircle, Loader2, Search, XCircle } from "lucide-react";
+import {
+  AlertCircle,
+  FileScan,
+  Info,
+  Loader2,
+  Search,
+  XCircle,
+} from "lucide-react";
 
 import { detectPixelPlatformPayment } from "@/app/actions/detectPixelPlatformPayment";
 
@@ -123,15 +130,18 @@ export default function DisplayPixelPlatformPayment({
 
   if (showButton) {
     return (
-      <button
-        ref={buttonRef}
-        onClick={detectFeatures}
-        className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 dark:focus:ring-lime-800"
-      >
-        <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
-          Analyze Website
-        </span>
-      </button>
+      <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
+        <span className="mr-2">Analyze Website</span>
+        <button
+          ref={buttonRef}
+          onClick={detectFeatures}
+          className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200 "
+        >
+          <span title="Analyze the Pixels Frameworks & Payements used in the website">
+            <FileScan className="h-5 w-5" />
+          </span>
+        </button>
+      </div>
     );
   }
 

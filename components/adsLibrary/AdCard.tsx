@@ -6,6 +6,7 @@ import {
   BadgeMinus,
   ExternalLink,
   Facebook,
+  Flame,
   Globe,
   Heart,
   Info,
@@ -13,6 +14,7 @@ import {
   MessageCircle,
   Play,
   ThumbsUp,
+  TrendingUp,
 } from "lucide-react";
 
 import { Ad } from "@/types/ad";
@@ -312,12 +314,58 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
         </div>
 
         {ad.collationCount && ad.collationCount > 0 && (
+          <div className="relative mb-4 transform overflow-hidden rounded-lg transition-all duration-300 hover:scale-105">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-90"></div>
+            <div className="relative flex items-center justify-between px-4 py-2">
+              <div className="flex items-center space-x-3">
+                <TrendingUp className="h-6 w-6 text-white drop-shadow-sm" />
+                <span className="text-lg font-bold text-white drop-shadow">
+                  ADs
+                </span>
+              </div>
+              <div className="flex items-center space-x-2 ">
+                <span className="text-2xl font-extrabold text-white drop-shadow-md ">
+                  {ad.collationCount || 0}
+                </span>
+                {ad.collationCount > 5 && (
+                  <Flame className="h-6 w-6 animate-pulse text-yellow-300" />
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+        {/* {ad.collationCount && ad.collationCount > 0 && (
+          <div className="relative mb-4 transform overflow-hidden rounded-lg transition-all duration-300 hover:scale-105">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-90"></div>
+            <div className="relative flex items-center justify-between px-4 py-2">
+              <div className="flex items-center space-x-3">
+                <TrendingUp className="h-6 w-6 text-white drop-shadow-sm" />
+                <span className="text-lg font-bold text-white drop-shadow">
+                  ADs
+                </span>
+              </div>
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-2xl font-extrabold text-white drop-shadow-md">
+                {ad.collationCount || 0}
+              </span>
+              {ad.collationCount > 5 && (
+                <Flame className="h-6 w-6 animate-pulse text-yellow-300" />
+              )}
+            </div>
+          </div>
+        )} */}
+
+        {ad.isAAAEligible && (
           <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
-            <span className="mr-2">ADs</span>
-            <span className="mr-2 text-lg font-bold text-red-600">
-              {ad.collationCount || 0}
-            </span>
-            <span title="ads use this creative and text">
+            <Image
+              src={"/icons/europe.png"}
+              alt={``}
+              width={24}
+              height={24}
+              className="mr-2"
+            />
+            <span className="mr-2">{` EU transparency`} </span>
+
+            <span title="Additional information for ads that were shown in EU. Click See ad details">
               <Info className="h-4 w-4 cursor-pointer" />
             </span>
           </div>
