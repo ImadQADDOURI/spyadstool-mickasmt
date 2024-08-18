@@ -93,57 +93,62 @@ export async function getStoredOptions() {
 
 // function to get options without using DB
 export async function getFbAdsLibOptionsWithoutDB() {
-  const cookieStore = cookies();
+  try {
+    const cookieStore = cookies();
 
-  const options = {
-    method: "POST",
-    headers: {
-      accept: "*/*",
-      "accept-language": "en-US,en;q=0.9,fr;q=0.8",
-      "content-type": "application/x-www-form-urlencoded",
-      cookie: cookieStore.toString(), // Use Next.js cookies
-      origin: "https://www.facebook.com",
-      priority: "u=1, i",
-      referer: "https://www.facebook.com/ads/library/",
-      "sec-ch-prefers-color-scheme": "light",
-      "sec-ch-ua":
-        '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
-      "sec-ch-ua-full-version-list":
-        '"Google Chrome";v="125.0.6422.142", "Chromium";v="125.0.6422.142", "Not.A/Brand";v="24.0.0.0"',
-      "sec-ch-ua-mobile": "?0",
-      "sec-ch-ua-model": '""',
-      "sec-ch-ua-platform": '"Windows"',
-      "sec-ch-ua-platform-version": '"15.0.0"',
-      "sec-fetch-dest": "empty",
-      "sec-fetch-mode": "cors",
-      "sec-fetch-site": "same-origin",
-      "user-agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-      "x-asbd-id": "129477",
-      "x-fb-lsd": "AVrXxsv8opo",
-    },
-    body: new URLSearchParams({
-      __aaid: "0",
-      __user: "0",
-      __a: "1",
-      __req: "z",
-      __hs: "19883.BP:DEFAULT.2.0..0.0",
-      dpr: "1",
-      __ccg: "GOOD",
-      __rev: "1014085198",
-      __s: "61ej9b:8c98qm:xglcc6",
-      __hsi: "7378503818031070885",
-      __dyn:
-        "7xeUmxa3-Q8zo5ObwKBAgc9o9E6u5U4e1FxebzEdF8ixy7EiwvoWdwJwCwfW7oqx60Vo1upEK12wvk1bwbG78b87C2m3K2y11wBz81bo4a4oaEd86a0HU9k2C2218waG5E6i588Egz898mwkE-U6-3e4Ueo2sxOXwJwKwHxaaws8nwhE2Lxiaw4qxa7o-3qazo8U3ywbLwrU6Ci2G0z85C1Iwqo1uo7u1rw",
-      __csr: "",
-      lsd: "AVrXxsv8opo",
-      jazoest: "21096",
-      __spin_r: "1014085198",
-      __spin_b: "trunk",
-      __spin_t: "1717941793",
-      __jssesw: "1",
-    }).toString(),
-  };
+    const options = {
+      method: "POST",
+      headers: {
+        accept: "*/*",
+        "accept-language": "en-US,en;q=0.9,fr;q=0.8",
+        "content-type": "application/x-www-form-urlencoded",
+        cookie: cookieStore.toString(), // Use Next.js cookies
+        origin: "https://www.facebook.com",
+        priority: "u=1, i",
+        referer: "https://www.facebook.com/ads/library/",
+        "sec-ch-prefers-color-scheme": "light",
+        "sec-ch-ua":
+          '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+        "sec-ch-ua-full-version-list":
+          '"Google Chrome";v="125.0.6422.142", "Chromium";v="125.0.6422.142", "Not.A/Brand";v="24.0.0.0"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-model": '""',
+        "sec-ch-ua-platform": '"Windows"',
+        "sec-ch-ua-platform-version": '"15.0.0"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        "x-asbd-id": "129477",
+        "x-fb-lsd": "AVrXxsv8opo",
+      },
+      body: new URLSearchParams({
+        __aaid: "0",
+        __user: "0",
+        __a: "1",
+        __req: "z",
+        __hs: "19883.BP:DEFAULT.2.0..0.0",
+        dpr: "1",
+        __ccg: "GOOD",
+        __rev: "1014085198",
+        __s: "61ej9b:8c98qm:xglcc6",
+        __hsi: "7378503818031070885",
+        __dyn:
+          "7xeUmxa3-Q8zo5ObwKBAgc9o9E6u5U4e1FxebzEdF8ixy7EiwvoWdwJwCwfW7oqx60Vo1upEK12wvk1bwbG78b87C2m3K2y11wBz81bo4a4oaEd86a0HU9k2C2218waG5E6i588Egz898mwkE-U6-3e4Ueo2sxOXwJwKwHxaaws8nwhE2Lxiaw4qxa7o-3qazo8U3ywbLwrU6Ci2G0z85C1Iwqo1uo7u1rw",
+        __csr: "",
+        lsd: "AVrXxsv8opo",
+        jazoest: "21096",
+        __spin_r: "1014085198",
+        __spin_b: "trunk",
+        __spin_t: "1717941793",
+        __jssesw: "1",
+      }).toString(),
+    };
 
-  return options;
+    return options;
+  } catch (error) {
+    console.error("Error in getFbAdsLibOptionsWithoutDB:", error);
+    throw new Error("Failed to get Facebook Ads Library options from getFbAdsLibOptionsWithoutDB");
+  }
 }
