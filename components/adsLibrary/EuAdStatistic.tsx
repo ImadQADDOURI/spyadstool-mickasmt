@@ -35,25 +35,72 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
     age_country_gender_reach_breakdown,
   } = aaaInfo;
 
-  // Calculate totals
+  // Initialize totals
   let totalMale = 0;
   let totalFemale = 0;
   let totalUnknown = 0;
-  const countryTotals: { [key: string]: number } = {};
+  const countryTotals: Record<
+    string,
+    { total: number; male: number; female: number; unknown: number }
+  > = {};
+  const ageRangeTotals: Record<
+    string,
+    { total: number; male: number; female: number; unknown: number }
+  > = {};
 
+  // Calculate totals
   age_country_gender_reach_breakdown.forEach((country) => {
-    let countryTotal = 0;
     country.age_gender_breakdowns.forEach((breakdown) => {
-      totalMale += breakdown.male || 0;
-      totalFemale += breakdown.female || 0;
-      totalUnknown += breakdown.unknown || 0;
-      countryTotal +=
-        (breakdown.male || 0) +
-        (breakdown.female || 0) +
-        (breakdown.unknown || 0);
+      const male = breakdown.male || 0;
+      const female = breakdown.female || 0;
+      const unknown = breakdown.unknown || 0;
+
+      // Update global totals
+      totalMale += male;
+      totalFemale += female;
+      totalUnknown += unknown;
+
+      // Update country-specific totals
+      if (!countryTotals[country.country]) {
+        countryTotals[country.country] = {
+          total: 0,
+          male: 0,
+          female: 0,
+          unknown: 0,
+        };
+      }
+      countryTotals[country.country].male += male;
+      countryTotals[country.country].female += female;
+      countryTotals[country.country].unknown += unknown;
+      countryTotals[country.country].total += male + female + unknown;
+
+      // Update age range totals
+      if (!ageRangeTotals[breakdown.age_range]) {
+        ageRangeTotals[breakdown.age_range] = {
+          total: 0,
+          male: 0,
+          female: 0,
+          unknown: 0,
+        };
+      }
+      ageRangeTotals[breakdown.age_range].male += male;
+      ageRangeTotals[breakdown.age_range].female += female;
+      ageRangeTotals[breakdown.age_range].unknown += unknown;
+      ageRangeTotals[breakdown.age_range].total += male + female + unknown;
     });
-    countryTotals[country.country] = countryTotal;
   });
+
+  // Sort age ranges
+  const sortedAgeRanges = Object.entries(ageRangeTotals).sort((a, b) => {
+    const ageA = parseInt(a[0].split("-")[0]);
+    const ageB = parseInt(b[0].split("-")[0]);
+    return ageA - ageB;
+  });
+
+  // Sort countries by total audience size
+  const sortedCountries = Object.entries(countryTotals).sort(
+    (a, b) => b[1].total - a[1].total,
+  );
 
   return (
     <div className="rounded-lg bg-white p-4 shadow-md dark:bg-gray-700">
@@ -80,15 +127,31 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
           </ul>
         </div>
         <div>
+          <strong>Audience by Age Range:</strong>
+          <ul className="list-inside list-disc">
+            {sortedAgeRanges.map(([ageRange, totals]) => (
+              <li key={ageRange}>
+                {ageRange}: {totals.total.toLocaleString()}
+                (M: {totals.male.toLocaleString()}, F:{" "}
+                {totals.female.toLocaleString()}, U:{" "}
+                {totals.unknown.toLocaleString()})
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
           <strong>Audience by Country:</strong>
           <ul className="list-inside list-disc">
-            {Object.entries(countryTotals).map(([countryCode, total]) => {
+            {sortedCountries.map(([countryCode, totals]) => {
               const countryLabel =
                 countryCodesAlpha2.find((c) => c.value === countryCode)
                   ?.label || countryCode;
               return (
                 <li key={countryCode}>
-                  {countryLabel}: {total.toLocaleString()}
+                  {countryLabel}: {totals.total.toLocaleString()}
+                  (M: {totals.male.toLocaleString()}, F:{" "}
+                  {totals.female.toLocaleString()}, U:{" "}
+                  {totals.unknown.toLocaleString()})
                 </li>
               );
             })}
