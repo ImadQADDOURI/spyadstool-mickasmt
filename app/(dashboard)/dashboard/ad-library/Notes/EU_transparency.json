@@ -1,0 +1,1297 @@
+--------------------------------------------------------------------------------------
+{
+  "errors": [
+    {
+      "message": "A server error noncoercible_variable_value occured. Check server logs for details.",
+      "severity": "CRITICAL",
+      "code": 1675012,
+      "api_error_code": null,
+      "summary": "Your request couldn't be processed",
+      "description": "There was a problem with this request. We're working on getting it fixed as soon as we can.",
+      "description_raw": "There was a problem with this request. We're working on getting it fixed as soon as we can.",
+      "is_silent": false,
+      "is_transient": false,
+      "is_not_critical": false,
+      "requires_reauth": false,
+      "allow_user_retry": false,
+      "debug_info": null,
+      "query_path": null,
+      "fbtrace_id": "BZShZ+H6xch",
+      "www_request_id": "Az6d7M9qCu6Jkkv47ncbj8k"
+    }
+  ],
+  "extensions": {
+    "is_final": true
+  }
+}
+
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": "Your favorite pet food – made in 🇩🇪\nDOGGY Dog & KITTY Cat für dein Soul Pet. 🐕😺\nBesorg's dir! 👇\nhttps://ktty.cat\nhttps://dggy.dog"
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "152434144623648"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": 1117,
+              "ig_username": "kitty.cat_doggy.dog",
+              "ig_verification": false,
+              "likes": 344,
+              "page_alias": "kittycatanddoggydog",
+              "page_category": "Pet supplies",
+              "page_cover_photo": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-6/427987592_122129219108105737_4959519482727378742_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=957871&_nc_ohc=8GwTP-BDf9YQ7kNvgGormUT&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDmKvbZw26SxqkP83NFbVk7wnK2uP-pTG4qheAngRdvlw&oe=66C8A991",
+              "page_id": "152434144623648",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "KITTY Cat & DOGGY Dog",
+              "page_profile_uri": "https://www.facebook.com/kittycatanddoggydog/",
+              "page_verification": "NOT_VERIFIED",
+              "profile_photo": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.30808-1/418083542_122121586886105737_4377013586906560590_n.jpg?stp=dst-jpg_p148x148&_nc_cat=103&ccb=1-7&_nc_sid=c9219a&_nc_ohc=QXgVcZeEKgIQ7kNvgHY7y0_&_nc_ht=scontent.ffez1-2.fna&oh=00_AYAb2ESO9Wca2XGZqvEhHXdNp1eoX5TC-N3o70q9uQC1lw&oe=66C8A034",
+              "is_profile_page": false
+            }
+          }
+        },
+        "aaa_info": {
+          "targets_eu": true,
+          "location_audience": [
+            {
+              "name": "Germany",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            }
+          ],
+          "gender_audience": "All",
+          "age_audience": {
+            "min": 18,
+            "max": 65
+          },
+          "eu_total_reach": 1117,
+          "age_country_gender_reach_breakdown": [
+            {
+              "country": "DE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "18-24",
+                  "male": 36,
+                  "female": 68,
+                  "unknown": 2
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 29,
+                  "female": 191,
+                  "unknown": 2
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 27,
+                  "female": 275,
+                  "unknown": 1
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 36,
+                  "female": 233,
+                  "unknown": null
+                },
+                {
+                  "age_range": "55-64",
+                  "male": 25,
+                  "female": 159,
+                  "unknown": null
+                },
+                {
+                  "age_range": "65+",
+                  "male": 11,
+                  "female": 48,
+                  "unknown": null
+                }
+              ]
+            }
+          ],
+          "payer_beneficiary_data": [
+            {
+              "payer": "Fox4Pets GmbH & Co. KG",
+              "beneficiary": "Fox4Pets GmbH & Co. KG"
+            }
+          ],
+          "has_violating_payer_beneficiary": false,
+          "is_ad_taken_down": false
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
+
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": ""
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "268191879708111"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": 514,
+              "ig_username": "nicecat_eis",
+              "ig_verification": false,
+              "likes": 8,
+              "page_alias": "",
+              "page_category": "Gelateria",
+              "page_cover_photo": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-6/433653969_286176711173588_4085508436447271748_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=957871&_nc_ohc=jD_kJFxO80kQ7kNvgHPU4Pl&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAojZc7HcvWeOOFHvoZ454Q9Dd4hb_JbYJpTOODgeFsGg&oe=66C8C642",
+              "page_id": "268191879708111",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "N'Ice Cat",
+              "page_profile_uri": "https://www.facebook.com/61557177465598/",
+              "page_verification": "NOT_VERIFIED",
+              "profile_photo": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.30808-1/434105460_286176591173600_4679751215122168401_n.jpg?stp=dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=c9219a&_nc_ohc=waNRexJIDKAQ7kNvgEQpGFq&_nc_ht=scontent.ffez1-2.fna&oh=00_AYBVecOKnMWlJPPldUQXFi873z-jZaZevUMBnB58O9d1mQ&oe=66C8B58B",
+              "is_profile_page": false
+            }
+          }
+        },
+        "aaa_info": {
+          "targets_eu": true,
+          "location_audience": [
+            {
+              "name": "Schulzendorf, Germany",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            }
+          ],
+          "gender_audience": "All",
+          "age_audience": {
+            "min": 18,
+            "max": 48
+          },
+          "eu_total_reach": 26243,
+          "age_country_gender_reach_breakdown": [
+            {
+              "country": "DE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "45-54",
+                  "male": 474,
+                  "female": 278,
+                  "unknown": 4
+                },
+                {
+                  "age_range": "18-24",
+                  "male": 7610,
+                  "female": 4406,
+                  "unknown": 82
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 7108,
+                  "female": 2886,
+                  "unknown": 51
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 2240,
+                  "female": 1003,
+                  "unknown": 28
+                }
+              ]
+            }
+          ],
+          "payer_beneficiary_data": [
+            {
+              "payer": "N'ice cat",
+              "beneficiary": "N'ice cat"
+            }
+          ],
+          "has_violating_payer_beneficiary": false,
+          "is_ad_taken_down": false
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
+
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": "\n"
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "183872968312216"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": 17439,
+              "ig_username": "popdust",
+              "ig_verification": true,
+              "likes": 478248,
+              "page_alias": "popdust",
+              "page_category": "News & media website",
+              "page_cover_photo": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-6/355866670_827418658753938_4652016323711761200_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=957871&_nc_ohc=Nps3iwSgzhkQ7kNvgE4541A&_nc_ht=scontent.ffez2-2.fna&oh=00_AYCVrLoreIj2qEsb-zlLDjGBVVa1zRO5XQ82V0jpSXTX2w&oe=66C891A5",
+              "page_id": "183872968312216",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "Popdust",
+              "page_profile_uri": "https://www.facebook.com/popdust/",
+              "page_verification": "BLUE_VERIFIED",
+              "profile_photo": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/429779823_987626806066455_6513135142705584749_n.jpg?stp=dst-jpg_p148x148&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=4GfQYHLrQ6UQ7kNvgFL3-Yj&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCUGOZ-6fz7UQbnbkhj0fisnHirhwALmyvcmos6XLY4jg&oe=66C8A30D",
+              "is_profile_page": false
+            }
+          }
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
+
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": ""
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "281242241734173"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": null,
+              "ig_username": null,
+              "ig_verification": null,
+              "likes": 12,
+              "page_alias": "",
+              "page_category": "Book",
+              "page_cover_photo": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-6/434462641_7492471240788645_4182472169012033752_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=957871&_nc_ohc=JwlJjUznrXEQ7kNvgGYjAGm&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBlCeeCOoLIG-6wX9h_fQlsw1jt26lT3bVkujklcwtP3w&oe=66C8BFA6",
+              "page_id": "281242241734173",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "Caorleincartolina",
+              "page_profile_uri": "https://www.facebook.com/61557975897581/",
+              "page_verification": "NOT_VERIFIED",
+              "profile_photo": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/434462288_7492472654121837_4151572643844764486_n.jpg?stp=dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=c9219a&_nc_ohc=ZF55U5lUraoQ7kNvgEp5btJ&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBbRo24yx0Lx3q2v8BKVhmNG9GyzFC3W0-nwEAFxNVfYg&oe=66C8B1AA",
+              "is_profile_page": false
+            }
+          }
+        },
+        "aaa_info": {
+          "targets_eu": true,
+          "location_audience": [
+            {
+              "name": "Annone Veneto, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Caorle, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Cinto Caomaggiore, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Concordia Sagittaria, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Fossalta di Portogruaro, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Portogruaro, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Pravisdomini, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "San Donà di Piave, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "San Michele al Tagliamento, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "San Stino Di Livenza, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            },
+            {
+              "name": "Torre Di Mosto, Italy",
+              "num_obfuscated": 0,
+              "type": "CITY",
+              "excluded": false
+            }
+          ],
+          "gender_audience": "All",
+          "age_audience": {
+            "min": 18,
+            "max": 65
+          },
+          "eu_total_reach": 13259,
+          "age_country_gender_reach_breakdown": [
+            {
+              "country": "IT",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "18-24",
+                  "male": 1162,
+                  "female": 52,
+                  "unknown": 6
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 1539,
+                  "female": 142,
+                  "unknown": 4
+                },
+                {
+                  "age_range": "55-64",
+                  "male": 2085,
+                  "female": 846,
+                  "unknown": 9
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 1627,
+                  "female": 556,
+                  "unknown": 11
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 1273,
+                  "female": 250,
+                  "unknown": 7
+                },
+                {
+                  "age_range": "65+",
+                  "male": 2566,
+                  "female": 1187,
+                  "unknown": 14
+                }
+              ]
+            }
+          ],
+          "payer_beneficiary_data": [
+            {
+              "payer": "Denis Marson",
+              "beneficiary": "Denis Marson"
+            }
+          ],
+          "has_violating_payer_beneficiary": false,
+          "is_ad_taken_down": false
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": "Vi aspettiamo in Franciacorta, a Monticelli Brusati (BS), per visitare le nostre cantine e degustare i nostri prodotti.\n\n🇪🇺 CAMPAGNA FINANZIATA AI SENSI DEL REG. UE N. 1308/2013\n🇪🇺 CAMPAIGN FINANCED ACCORDING TO EU REGULATION N. 1308/2013"
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "42342673127"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": 16111,
+              "ig_username": "montinafranciacorta",
+              "ig_verification": false,
+              "likes": 23846,
+              "page_alias": "montinafranciacorta",
+              "page_category": "Local business",
+              "page_cover_photo": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.30808-6/277357066_10161729626203128_4667646978463826630_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=957871&_nc_ohc=AgrahVqqmUEQ7kNvgFOecCS&_nc_ht=scontent.ffez1-1.fna&oh=00_AYCdBy0Ad-RQAIWKsaN61qPMJY84b5_yBJl7LsnUEGdBsw&oe=66C8C75F",
+              "page_id": "42342673127",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "Montina Franciacorta",
+              "page_profile_uri": "https://www.facebook.com/montinafranciacorta/",
+              "page_verification": "NOT_VERIFIED",
+              "profile_photo": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/435255311_848095937361948_8163532574981355067_n.jpg?stp=dst-jpg_p148x148&_nc_cat=105&ccb=1-7&_nc_sid=c9219a&_nc_ohc=U4AUM42pB5cQ7kNvgEUZ0VC&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBGiIC1prz9AwERtu5g7CjN567-0wxwRj4feCrDjkF_Hg&oe=66C8B1F5",
+              "is_profile_page": false
+            }
+          }
+        },
+        "aaa_info": {
+          "targets_eu": true,
+          "location_audience": [
+            {
+              "name": "Lombardia, Italy",
+              "num_obfuscated": 0,
+              "type": "regions",
+              "excluded": false
+            }
+          ],
+          "gender_audience": "All",
+          "age_audience": {
+            "min": 18,
+            "max": 65
+          },
+          "eu_total_reach": 1756,
+          "age_country_gender_reach_breakdown": [
+            {
+              "country": "IT",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "65+",
+                  "male": 52,
+                  "female": 28,
+                  "unknown": 3
+                },
+                {
+                  "age_range": "18-24",
+                  "male": 259,
+                  "female": 143,
+                  "unknown": 7
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 141,
+                  "female": 78,
+                  "unknown": 2
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 169,
+                  "female": 75,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 402,
+                  "female": 186,
+                  "unknown": 2
+                },
+                {
+                  "age_range": "55-64",
+                  "male": 109,
+                  "female": 86,
+                  "unknown": 2
+                }
+              ]
+            }
+          ],
+          "payer_beneficiary_data": [
+            {
+              "payer": "Tenute La Montina",
+              "beneficiary": "Tenute La Montina"
+            }
+          ],
+          "has_violating_payer_beneficiary": false,
+          "is_ad_taken_down": false
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": "Navnering, have a team of professional designers to provide stylish, personalized gifts. You can use "
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "374073699690610"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": null,
+              "ig_username": null,
+              "ig_verification": null,
+              "likes": 2992,
+              "page_alias": "Navnering",
+              "page_category": "Jewellery/watches",
+              "page_cover_photo": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-6/355272575_649677277180695_8045690058112203964_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=957871&_nc_ohc=V6bZltGUNLYQ7kNvgGaRXzI&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCHEZKx3VTbRZEyHhcigq8i1djxWOVd2lE9DZ9gf2Ppfw&oe=66C89C27",
+              "page_id": "374073699690610",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "Navnering",
+              "page_profile_uri": "https://www.facebook.com/Navnering/",
+              "page_verification": "NOT_VERIFIED",
+              "profile_photo": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/355669592_649677280514028_1918482063528787780_n.jpg?stp=dst-jpg_p148x148&_nc_cat=107&ccb=1-7&_nc_sid=c9219a&_nc_ohc=uZWlM3f25ucQ7kNvgEVofkW&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBdx_wmnm63aLXlzLUpy4oidRTVf-K5IPuVdcBlfL4YPA&oe=66C89291",
+              "is_profile_page": false
+            }
+          }
+        },
+        "aaa_info": {
+          "targets_eu": true,
+          "location_audience": [
+            {
+              "name": "Ireland",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Italy",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Netherlands",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Spain",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Sweden",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Finland",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Denmark",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Belgium",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Greece",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Austria",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Poland",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "France",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Germany",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            }
+          ],
+          "gender_audience": "All",
+          "age_audience": {
+            "min": 18,
+            "max": 65
+          },
+          "eu_total_reach": 22,
+          "age_country_gender_reach_breakdown": [
+            {
+              "country": "FR",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "35-44",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "18-24",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 3,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "DE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "35-44",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "ES",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 2,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "NL",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "GR",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "35-44",
+                  "male": 1,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "AT",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "65+",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "DK",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "BE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            }
+          ],
+          "payer_beneficiary_data": [
+            {
+              "payer": "福州九点九亿贸易有限公司",
+              "beneficiary": "福州九点九亿贸易有限公司"
+            }
+          ],
+          "has_violating_payer_beneficiary": false,
+          "is_ad_taken_down": false
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
+--------------------------------------------------------------------------------------
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": "Bijoux.cool, have a team of professional designers to provide stylish, personalized gifts. You can use your lover’s name and/or photos to create unique and practical souvenirs on those special days."
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "187658008670123"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": null,
+              "ig_username": null,
+              "ig_verification": null,
+              "likes": 3081,
+              "page_alias": "Bijoux.cool",
+              "page_category": "Jewellery/watches",
+              "page_cover_photo": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-6/358711333_662378072574193_3853333906919348691_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=957871&_nc_ohc=CI-1_QMxGzYQ7kNvgEbn02d&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBV8ejBlveMA4uJbf1WOKxxxGmFdYGVmEwPSS6GQIqaeg&oe=66C8C33A",
+              "page_id": "187658008670123",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "Bijoux.cool",
+              "page_profile_uri": "https://www.facebook.com/Bijoux.cool/",
+              "page_verification": "NOT_VERIFIED",
+              "profile_photo": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/359822917_662378069240860_4725386671053402118_n.jpg?stp=dst-jpg_p148x148&_nc_cat=108&ccb=1-7&_nc_sid=c9219a&_nc_ohc=NCaIfJ4pNXYQ7kNvgFrCPmN&_nc_ht=scontent.ffez2-2.fna&oh=00_AYCIPHUZvn-fuunc8dYGPNnAyKCe3ehgsxGPmVd0nLKesQ&oe=66C8C3B5",
+              "is_profile_page": false
+            }
+          }
+        },
+        "aaa_info": {
+          "targets_eu": true,
+          "location_audience": [
+            {
+              "name": "Ireland",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Italy",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Netherlands",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Spain",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Sweden",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Finland",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Denmark",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Belgium",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Greece",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Austria",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Poland",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "France",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            },
+            {
+              "name": "Germany",
+              "num_obfuscated": 0,
+              "type": "countries",
+              "excluded": false
+            }
+          ],
+          "gender_audience": "All",
+          "age_audience": {
+            "min": 18,
+            "max": 65
+          },
+          "eu_total_reach": 49,
+          "age_country_gender_reach_breakdown": [
+            {
+              "country": "SE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "35-44",
+                  "male": 4,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "DE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "35-44",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "FI",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "PL",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "35-44",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "FR",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "25-34",
+                  "male": 1,
+                  "female": 2,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "35-44",
+                  "male": null,
+                  "female": 2,
+                  "unknown": null
+                },
+                {
+                  "age_range": "55-64",
+                  "male": null,
+                  "female": 2,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "BE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 2,
+                  "female": null,
+                  "unknown": 1
+                },
+                {
+                  "age_range": "65+",
+                  "male": 2,
+                  "female": 2,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "IT",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "55-64",
+                  "male": 1,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "NL",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "55-64",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "35-44",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "IE",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "35-44",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "18-24",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "45-54",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "AT",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "45-54",
+                  "male": null,
+                  "female": 1,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "18-24",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "DK",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "55-64",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "25-34",
+                  "male": 2,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            },
+            {
+              "country": "GR",
+              "age_gender_breakdowns": [
+                {
+                  "age_range": "25-34",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                },
+                {
+                  "age_range": "18-24",
+                  "male": 1,
+                  "female": null,
+                  "unknown": null
+                }
+              ]
+            }
+          ],
+          "payer_beneficiary_data": [
+            {
+              "payer": "福州九点九亿贸易有限公司",
+              "beneficiary": "福州九点九亿贸易有限公司"
+            }
+          ],
+          "has_violating_payer_beneficiary": false,
+          "is_ad_taken_down": false
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": {
+    "is_final": true
+  }
+}
