@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   AlertCircle,
+  FileQuestion,
   FileScan,
+  FileWarning,
   Info,
   Loader2,
   Search,
@@ -141,15 +143,25 @@ export default function DisplayPixelPlatformPayment({
     return (
       <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
         <span className="mr-2">Analyze Website</span>
-        <button
-          ref={buttonRef}
-          onClick={detectFeatures}
-          className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200"
-        >
-          <span title="Analyze the Pixels Frameworks & Payments used in the website">
-            <FileScan className="h-5 w-5" />
+        {url ? (
+          <button
+            ref={buttonRef}
+            onClick={detectFeatures}
+            className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200"
+          >
+            <span title="Analyze the Pixels Frameworks & Payments used in the website">
+              <FileScan className="h-5 w-5" />
+            </span>
+          </button>
+        ) : (
+          // Notify the user if no URL is provided
+          <span
+            className=" flex items-center text-sm text-gray-500"
+            title="No URL to analyze."
+          >
+            <FileWarning className="h-5 w-5" />
           </span>
-        </button>
+        )}
       </div>
     );
   }
