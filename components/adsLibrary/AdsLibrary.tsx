@@ -13,6 +13,8 @@ import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
 import StickyWrapper from "./StickyWrapper";
 
+import GenderPieChart from "@/components/adsLibrary/GenderPieChart";
+
 export const AdsLibrary = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -178,6 +180,8 @@ export const AdsLibrary = () => {
         handleLoadMore={handleLoadMore}
         remainingCount={remainingCount}
       />
+      {/* //for test */}
+    <GenderPieChart men={100} women={150} unknown={50} />
 
       {/* Scroll buttons */}
       <ScrollButtons />

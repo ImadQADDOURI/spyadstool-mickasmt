@@ -2,6 +2,7 @@
 import React from "react";
 
 import { countryCodesAlpha2 } from "@/lib/countryCodesAlpha2";
+import GenderPieChart from "@/components/adsLibrary/GenderPieChart";
 
 interface EuAdStatisticProps {
   data: any;
@@ -118,14 +119,20 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
         <p>
           <strong>EU Total Reach:</strong> {eu_total_reach.toLocaleString()}
         </p>
-        <div>
+        {/* <div>
           <strong>Total Audience by Gender:</strong>
           <ul className="list-inside list-disc">
             <li>Male: {totalMale.toLocaleString()}</li>
             <li>Female: {totalFemale.toLocaleString()}</li>
             <li>Unknown: {totalUnknown.toLocaleString()}</li>
           </ul>
-        </div>
+        </div> */}
+        <GenderPieChart
+          men={totalMale}
+          women={totalFemale}
+          unknown={totalUnknown}
+        />
+
         <div>
           <strong>Audience by Age Range:</strong>
           <ul className="list-inside list-disc">

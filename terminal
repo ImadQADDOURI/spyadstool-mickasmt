@@ -213,3 +213,7 @@ pnpm dlx shadcn-ui@latest add carousel
 ---
 
 pnpm add react-slick slick-carousel
+
+---
+
+pnpm dlx shadcn-ui@latest add chart
