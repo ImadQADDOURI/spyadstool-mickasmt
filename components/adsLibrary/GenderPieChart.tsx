@@ -88,7 +88,8 @@ const GenderPieChart: React.FC<GenderPieChartProps> = ({
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-              <Pie className="m-0"
+              <Pie
+                className="m-0"
                 data={chartData}
                 dataKey="value"
                 nameKey="gender"
@@ -105,14 +106,15 @@ const GenderPieChart: React.FC<GenderPieChartProps> = ({
                 {chartData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.fill} />
                 ))}
-                <Label className="m-0"
+
+                <Label
                   content={({ viewBox }) => {
-                    const { cx, cy } = viewBox;
+                    // Type assertion for viewBox
+                    const { cx, cy } = viewBox as { cx: number; cy: number };
                     return (
                       <text
                         x={cx}
                         y={cy}
-                        fill="var(--foreground)"
                         textAnchor="middle"
                         dominantBaseline="central"
                       >
@@ -130,7 +132,7 @@ const GenderPieChart: React.FC<GenderPieChartProps> = ({
                           x={cx}
                           y={cy}
                           dy="1.5em"
-                          fontSize="14"
+                          fontSize="12"
                           className="fill-gray-700 dark:fill-gray-100"
                         >
                           Total
