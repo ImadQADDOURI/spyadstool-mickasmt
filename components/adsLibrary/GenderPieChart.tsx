@@ -75,8 +75,8 @@ const GenderPieChart: React.FC<GenderPieChartProps> = ({
   };
 
   return (
-    <Card className="flex flex-col  border-none bg-transparent shadow-none m-0">
-      <CardHeader className="items-center pb-0 m-0">
+    <Card className="flex flex-col border-none bg-transparent shadow-none">
+      <CardHeader className="items-center pb-0">
         <CardTitle className=" pb-0">Gender Distribution</CardTitle>
         {/* <CardDescription>Total: {total}</CardDescription> */}
       </CardHeader>
@@ -146,7 +146,7 @@ const GenderPieChart: React.FC<GenderPieChartProps> = ({
               /> */}
               <ChartLegend
                 content={<CustomLegendContent />}
-                className="flex w-full -translate-y-6 justify-center m-0"
+                className="flex w-full -translate-y-6 justify-center"
               />
             </PieChart>
           </ResponsiveContainer>
