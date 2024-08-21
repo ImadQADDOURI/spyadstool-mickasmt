@@ -2,6 +2,8 @@
 import React from "react";
 
 import { countryCodesAlpha2 } from "@/lib/countryCodesAlpha2";
+import AgeBarChart from "@/components/adsLibrary/AgeBarChart";
+import CountryBarChart from "@/components/adsLibrary/CountryBarChart";
 import GenderPieChart from "@/components/adsLibrary/GenderPieChart";
 
 interface EuAdStatisticProps {
@@ -103,6 +105,27 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
     (a, b) => b[1].total - a[1].total,
   );
 
+  // Prepare data for AgeBarChart
+  const ageBarChartData = sortedAgeRanges.map(([ageRange, totals]) => ({
+    ageRange,
+    total: totals.total,
+    male: totals.male,
+    female: totals.female,
+    unknown: totals.unknown,
+  }));
+
+  // Prepare data for CountryBarChart
+  const countryBarChartData = sortedCountries.map(([countryCode, totals]) => ({
+    countryCode,
+    countryLabel:
+      countryCodesAlpha2.find((c) => c.value === countryCode)?.label ||
+      countryCode,
+    total: totals.total,
+    male: totals.male,
+    female: totals.female,
+    unknown: totals.unknown,
+  }));
+
   return (
     <div className="rounded-lg bg-white p-4 shadow-md dark:bg-gray-700">
       <h3 className="mb-2 text-lg font-semibold">European Union Statistics</h3>
@@ -133,7 +156,7 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
           unknown={totalUnknown}
         />
 
-        <div>
+        {/* <div>
           <strong>Audience by Age Range:</strong>
           <ul className="list-inside list-disc">
             {sortedAgeRanges.map(([ageRange, totals]) => (
@@ -145,8 +168,10 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
               </li>
             ))}
           </ul>
-        </div>
-        <div>
+        </div> */}
+        <AgeBarChart data={ageBarChartData} />
+
+        {/* <div>
           <strong>Audience by Country:</strong>
           <ul className="list-inside list-disc">
             {sortedCountries.map(([countryCode, totals]) => {
@@ -163,7 +188,9 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
               );
             })}
           </ul>
-        </div>
+        </div> */}
+
+        <CountryBarChart data={countryBarChartData} />
       </div>
     </div>
   );
