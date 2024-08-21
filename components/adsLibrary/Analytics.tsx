@@ -145,10 +145,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
 
   return (
     <Card className="w-full transition-shadow duration-300 hover:shadow-lg">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold">
-          Ad Version Activity Analytics
-        </CardTitle>
+      <CardHeader className="items-center">
+        <CardTitle className="text-2xl font-bold">Ad Scale</CardTitle>
         <CardDescription className="text-sm text-gray-500">
           Number of active ad versions over time
         </CardDescription>

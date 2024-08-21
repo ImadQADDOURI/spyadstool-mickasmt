@@ -67,19 +67,19 @@ export const CountryBarChart: React.FC<CountryBarChartProps> = ({ data }) => {
 
   return (
     <Card className="flex w-full flex-col border-none bg-transparent shadow-none">
-      <CardHeader>
+      <CardHeader className="items-center">
         <CardTitle>Audience by Country</CardTitle>
         <CardDescription>
           Distribution of audience across different countries (Top 20)
         </CardDescription>
-        <Input
-          placeholder="Search countries..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="mt-2"
-        />
       </CardHeader>
-      <CardContent>
+      <Input
+        placeholder="Search countries..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="mb-2 mr-9 w-40 place-self-end"
+      />
+      <CardContent className="">
         <ChartContainer config={chartConfig}>
           <ResponsiveContainer width="100%" height={450}>
             <BarChart data={filteredData} layout="vertical">
