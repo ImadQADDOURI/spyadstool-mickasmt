@@ -3,6 +3,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Loader2 } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
@@ -12,8 +13,6 @@ import { ScrollButtons } from "./ScrollButtons";
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
 import StickyWrapper from "./StickyWrapper";
-
-import GenderPieChart from "@/components/adsLibrary/GenderPieChart";
 
 export const AdsLibrary = () => {
   const router = useRouter();
@@ -171,6 +170,18 @@ export const AdsLibrary = () => {
         </div>
       </StickyWrapper>
 
+      {/* Loading indicator */}
+      {isLoading && (
+        <div className="flex justify-center py-12" aria-live="polite">
+          <div className="relative h-20 w-20">
+            <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
+            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
+              <Loader2 className="h-10 w-10 animate-spin text-white" />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Search Results Component */}
       <SearchResults
         isLoading={isLoading}
@@ -180,8 +191,6 @@ export const AdsLibrary = () => {
         handleLoadMore={handleLoadMore}
         remainingCount={remainingCount}
       />
-      {/* //for test */}
-    <GenderPieChart men={100} women={150} unknown={50} />
 
       {/* Scroll buttons */}
       <ScrollButtons />

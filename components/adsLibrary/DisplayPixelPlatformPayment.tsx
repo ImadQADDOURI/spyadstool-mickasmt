@@ -14,6 +14,12 @@ import {
   XCircle,
 } from "lucide-react";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { detectPixelPlatformPayment } from "@/app/actions/detectPixelPlatformPayment";
 
 interface TrackingDetectorProps {
@@ -88,6 +94,32 @@ export default function DisplayPixelPlatformPayment({
   const [error, setError] = useState<string | null>(null);
   const [showButton, setShowButton] = useState(true);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const nonTrackableWebsites = [
+    "facebook.com",
+    "whatsapp.com",
+    "instagram.com",
+    "twitter.com",
+    "linkedin.com",
+    "youtube.com",
+    "tiktok.com",
+    "snapchat.com",
+    "pinterest.com",
+    "reddit.com",
+    "tumblr.com",
+    "quora.com",
+    "github.com",
+    "stackoverflow.com",
+    "medium.com",
+    "wikipedia.org",
+    "google.com",
+    "bing.com",
+    "yahoo.com",
+    "duckduckgo.com",
+  ];
+
+  const isNonTrackableWebsite = (url: string): boolean => {
+    return nonTrackableWebsites.some((domain) => url.includes(domain));
+  };
 
   useEffect(() => {
     if (autoDetect && buttonRef.current) {
@@ -144,23 +176,48 @@ export default function DisplayPixelPlatformPayment({
       <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
         <span className="mr-2">Analyze Website</span>
         {url ? (
-          <button
-            ref={buttonRef}
-            onClick={detectFeatures}
-            className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200"
-          >
-            <span title="Analyze the Pixels Frameworks & Payments used in the website">
-              <FileScan className="h-5 w-5" />
-            </span>
-          </button>
+          isNonTrackableWebsite(url) ? (
+            // Notify the user if non Trackable Websites
+
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span className="flex items-center text-sm text-yellow-500">
+                    <Info className="mr-1 h-5 w-5" />
+                  </span>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>
+                    This is a known platform where tracking is not applicable
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          ) : (
+            <button
+              ref={buttonRef}
+              onClick={detectFeatures}
+              className="relative z-30 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-300 to-lime-300 p-1 text-sm font-medium text-gray-900 transition-transform duration-300 hover:scale-105 hover:text-white focus:outline-none focus:ring-4 focus:ring-lime-200"
+            >
+              <span title="Analyze the Pixels Frameworks & Payments used in the website">
+                <FileScan className="h-5 w-5" />
+              </span>
+            </button>
+          )
         ) : (
           // Notify the user if no URL is provided
-          <span
-            className=" flex items-center text-sm text-gray-500"
-            title="No URL to analyze."
-          >
-            <FileWarning className="h-5 w-5" />
-          </span>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="flex items-center text-sm text-gray-500">
+                  <FileWarning className="h-5 w-5" />
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>No URL to analyze</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         )}
       </div>
     );

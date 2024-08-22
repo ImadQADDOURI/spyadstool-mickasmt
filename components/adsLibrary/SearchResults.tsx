@@ -59,12 +59,13 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
                 isLoading={isLoading}
               />
               {isLoading ? (
-                <div
-                  className="flex items-center space-x-2 text-gray-600 dark:text-gray-400"
-                  aria-live="polite"
-                >
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                  <p>Loading more ads...</p>
+                <div className="flex justify-center py-12" aria-live="polite">
+                  <div className="relative h-20 w-20">
+                    <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
+                    <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
+                      <Loader2 className="h-10 w-10 animate-spin text-white" />
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <Button
@@ -76,7 +77,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
               )}
               {remainingCount !== null && (
                 <p
-                  className="text-sm text-gray-600 dark:text-gray-400"
+                  className="text-lg text-gray-600 dark:text-gray-400"
                   aria-live="polite"
                 >
                   {remainingCount} more ads available
@@ -96,17 +97,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
         )
       )}
 
-      {/* Loading indicator */}
-      {isLoading && (
-        <div className="flex justify-center py-12" aria-live="polite">
-          <div className="relative h-20 w-20">
-            <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
-            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
-              <Loader2 className="h-10 w-10 animate-spin text-white" />
-            </div>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 };
