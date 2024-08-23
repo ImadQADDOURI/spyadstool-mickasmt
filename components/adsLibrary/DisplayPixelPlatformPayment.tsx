@@ -14,6 +14,7 @@ import {
   XCircle,
 } from "lucide-react";
 
+import { isNonTrackableWebsite } from "@/lib/nonTrackableWebsites";
 import {
   Tooltip,
   TooltipContent,
@@ -94,32 +95,6 @@ export default function DisplayPixelPlatformPayment({
   const [error, setError] = useState<string | null>(null);
   const [showButton, setShowButton] = useState(true);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const nonTrackableWebsites = [
-    "facebook.com",
-    "whatsapp.com",
-    "instagram.com",
-    "twitter.com",
-    "linkedin.com",
-    "youtube.com",
-    "tiktok.com",
-    "snapchat.com",
-    "pinterest.com",
-    "reddit.com",
-    "tumblr.com",
-    "quora.com",
-    "github.com",
-    "stackoverflow.com",
-    "medium.com",
-    "wikipedia.org",
-    "google.com",
-    "bing.com",
-    "yahoo.com",
-    "duckduckgo.com",
-  ];
-
-  const isNonTrackableWebsite = (url: string): boolean => {
-    return nonTrackableWebsites.some((domain) => url.includes(domain));
-  };
 
   useEffect(() => {
     if (autoDetect && buttonRef.current) {
