@@ -1,6 +1,7 @@
 // components/adsLibrary/AdCard.tsx
 import React, { useState } from "react";
 import Image from "next/image";
+import parse from "html-react-parser";
 import {
   BadgeCheck,
   BadgeMinus,
@@ -17,7 +18,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-import { Ad } from "@/types/ad";
+import { Ad, MediaItem } from "@/types/ad";
 import AudienceNetworkIcon from "@/components/shared/AudienceNetworkIcon";
 
 import { Button } from "../ui/button";
@@ -39,6 +40,8 @@ interface AdCardProps {
   ad: Ad;
   compact?: boolean;
 }
+
+type Snapshot = Ad["snapshot"];
 
 export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
   const {
@@ -70,17 +73,17 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
     const images = snapshot.images ?? [];
     const videos = snapshot.videos ?? [];
 
-    const mediaItems = [...cards, ...images, ...videos];
+    const mediaItems: MediaItem[] = [...cards, ...images, ...videos];
 
     if (mediaItems.length > 0) {
       return (
-        <Carousel className="w-full rounded-3xl bg-gray-50  dark:bg-gray-800">
+        <Carousel className="w-full rounded-3xl bg-gray-50 dark:bg-gray-800">
           <CarouselContent>
             {mediaItems.map((item, index) => (
               <CarouselItem key={index}>
                 <div className="flex flex-col">
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md">
-                    {"resized_image_url" in item && item.resized_image_url && (
+                    {item.resized_image_url && (
                       <Image
                         src={item.resized_image_url}
                         alt={item.title || `Ad image ${index + 1}`}
@@ -88,66 +91,59 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
                         objectFit="cover"
                       />
                     )}
-                    {"video_preview_image_url" in item &&
-                      item.video_preview_image_url && (
-                        <>
-                          {playingVideo === index ? (
-                            <video
-                              src={item.video_sd_url}
-                              controls
-                              autoPlay
-                              className="h-full w-full object-cover"
+                    {item.video_preview_image_url && (
+                      <>
+                        {playingVideo === index ? (
+                          <video
+                            src={item.video_sd_url || undefined}
+                            controls
+                            autoPlay
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <>
+                            <Image
+                              src={item.video_preview_image_url}
+                              alt={`Video preview ${index + 1}`}
+                              layout="fill"
+                              objectFit="cover"
                             />
-                          ) : (
-                            <>
-                              <Image
-                                src={item.video_preview_image_url}
-                                alt={`Video preview ${index + 1}`}
-                                layout="fill"
-                                objectFit="cover"
-                              />
-                              <Play
-                                className="absolute inset-0 m-auto h-12 w-12 cursor-pointer text-white opacity-80 hover:opacity-100"
-                                onClick={() => setPlayingVideo(index)}
-                              />
-                            </>
-                          )}
-                        </>
-                      )}
+                            <Play
+                              className="absolute inset-0 m-auto h-12 w-12 cursor-pointer text-white opacity-80 hover:opacity-100"
+                              onClick={() => setPlayingVideo(index)}
+                            />
+                          </>
+                        )}
+                      </>
+                    )}
                   </div>
                   <div className="flex flex-col items-center justify-center p-2">
                     <div>
-                      {" "}
-                      {"title" in item && (
+                      {item.title && (
                         <>
                           <p className="text-sm font-bold">{item.title}</p>
-                          <p className="text-sm">
+                          <p className="text-xs">
                             {item.body && (
-                              <ExpandableText
-                                text={item.body || ""}
-                                maxLength={15}
-                              />
+                              <ExpandableText text={item.body} maxLength={25} />
                             )}
                           </p>
                         </>
                       )}
                     </div>
                     <div>
-                      <>
-                        {"link_url" in item && item.link_url && (
-                          <button className="group relative mt-1 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-red-100 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 dark:focus:ring-red-400">
-                            <span className="relative rounded-md bg-white px-5 py-1 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
-                              <a
-                                href={item.link_url + ""}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {item.cta_text || "Learn More"}
-                              </a>
-                            </span>
-                          </button>
-                        )}
-                      </>
+                      {item.link_url && (
+                        <button className="group relative mt-1 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-red-100 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 dark:focus:ring-red-400">
+                          <span className="relative rounded-md bg-white px-5 py-1 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
+                            <a
+                              href={item.link_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {item.cta_text || "Learn More"}
+                            </a>
+                          </span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -304,7 +300,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
 
         <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <DisplayPixelPlatformPayment
-            url={snapshot.link_url}
+            url={snapshot.link_url || undefined}
             usePuppeteer={true}
             keepBrowserOpen={true}
             useCache={true}
@@ -392,22 +388,22 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           )}
 
           <div>
-            <PageNameWithPopover snapshot={ad.snapshot} />
+            <PageNameWithPopover snapshot={snapshot as Snapshot} />
           </div>
         </div>
-
-        {renderMedia()}
 
         {snapshot?.body?.markup &&
           snapshot?.body?.markup.__html !==
             "&#123;&#123;product.brand&#125;&#125;" && (
-            <div className=" text-sm">
+            <div className=" text-xs">
               <ExpandableText
                 text={snapshot.body.markup.__html || ""}
                 maxLength={50}
               />
             </div>
           )}
+
+        {renderMedia()}
       </CardContent>
       <CardFooter>
         {snapshot?.link_url && (

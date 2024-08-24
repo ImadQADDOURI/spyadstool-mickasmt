@@ -217,3 +217,7 @@ pnpm add react-slick slick-carousel
 ---
 
 pnpm dlx shadcn-ui@latest add chart
+
+---
+
+pnpm add html-react-parser

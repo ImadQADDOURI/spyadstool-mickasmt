@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Globe, ThumbsUp } from "lucide-react";
 
+import { Ad } from "@/types/ad";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -13,15 +14,7 @@ import {
 } from "@/components/ui/popover";
 
 interface PageNameWithPopoverProps {
-  snapshot: {
-    page_name?: string;
-    page_categories?: { [key: string]: string };
-    page_like_count?: number;
-    link_url?: string;
-    page_profile_uri?: string;
-    page_profile_picture_url?: string;
-    page_id?: string;
-  };
+  snapshot: Ad["snapshot"];
 }
 
 const PageNameWithPopover: React.FC<PageNameWithPopoverProps> = ({
@@ -81,7 +74,7 @@ const PageNameWithPopover: React.FC<PageNameWithPopoverProps> = ({
                 <p className="flex items-center text-sm">
                   <Globe className="mr-1 h-4 w-4" />
                   <a
-                    href={link_url}
+                    href={link_url || undefined}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:underline"

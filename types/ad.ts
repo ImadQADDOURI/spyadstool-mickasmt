@@ -1,75 +1,20 @@
 // types/ad.ts
-
-export interface Ad {
-  adid?: string;
-  adArchiveID?: string;
-  collationCount?: number;
-  collationID?: number;
-  currency?: string;
-  startDate?: number;
-  endDate?: number;
-  pageName?: string;
-  pageID?: string;
-  publisherPlatform?: string[];
-  isActive?: boolean;
-  isAAAEligible: boolean;
-  snapshot: {
-    ad_creative_id: string;
-    body?: {
-      markup?: {
-        __html?: string;
-      };
-    };
-    images?: Array<{
-      title?: string;
-      body?: string;
-      cta_text?: string;
-      original_image_url?: string;
-      resized_image_url?: string;
-    }>;
-    videos?: Array<{
-      title?: string;
-      body?: string;
-      cta_text?: string;
-      video_hd_url?: string;
-      video_sd_url?: string;
-      video_preview_image_url?: string;
-    }>;
-    cards?: Array<{
-      title?: string;
-      body?: string;
-      link_url?: string;
-      caption?: string;
-      cta_text?: string;
-      cta_type?: string;
-      original_image_url?: string;
-      resized_image_url?: string;
-      video_preview_image_url?: string;
-    }>;
-    page_profile_picture_url?: string;
-    link_url?: string;
-    cta_text?: string;
-    cta_type?: string;
-    title?: string;
-    caption?: string;
-    page_like_count?: number;
-  };
-  categories: number[];
-  impressionsWithIndex?: {
-    impressionsText?: string | null;
-    impressionsIndex?: number;
-  };
-  spend?: {
-    lower_bound?: string;
-    upper_bound?: string;
-  };
-  reachEstimate?: {
-    lower_bound?: string;
-    upper_bound?: string;
-  };
-  entityType?: string;
-  gatedType?: string;
-  hideDataStatus?: string;
+export interface MediaItem {
+  title?: string;
+  body?: string;
+  cta_text?: string;
+  cta_type?: string;
+  link_description?: string | null;
+  link_url?: string;
+  original_image_url?: string;
+  resized_image_url?: string;
+  watermarked_resized_image_url?: string;
+  image_crops?: Record<string, any>;
+  video_hd_url?: string | null;
+  video_sd_url?: string | null;
+  video_preview_image_url?: string | null;
+  watermarked_video_hd_url?: string | null;
+  watermarked_video_sd_url?: string | null;
 }
 
 export interface AdsData {
@@ -80,21 +25,11 @@ export interface AdsData {
   collationToken: string;
   ads: Ad[];
 }
-/*
 
-export type SearchResults = {
-  ads: Ad[];
-  totalCount: number;
-  isResultComplete: boolean;
-  forwardCursor: string;
-  backwardCursor: string;
-  collationToken: string;
-};
-
-export type Ad = {
+export interface Ad {
   adid: string;
   adArchiveID: string;
-  archiveTypes: number[];
+  archiveTypes: any[];
   categories: number[];
   containsDigitallyCreatedMedia: boolean;
   containsSensitiveContent: boolean;
@@ -126,35 +61,42 @@ export type Ad = {
   pageIsDeleted: boolean;
   pageName: string;
   politicalCountries: string[];
-  reachEstimate: string | null;
+  reachEstimate: {
+    lower_bound?: string;
+    upper_bound?: string;
+  } | null;
   reportCount: number | null;
   snapshot: {
     ad_creative_id: string;
-    cards?: {
-      body: string;
-      title: string;
-      link_url: string;
-      video_sd_url?: string;
-      video_hd_url?: string;
-      video_preview_image_url?: string;
-    }[];
-    videos?: {
-      video_sd_url: string;
-      video_hd_url: string;
-      video_preview_image_url: string;
-    }[];
+
+    cards?: MediaItem[];
+
     body_translations: Record<string, string>;
     byline: string | null;
-    caption: string;
-    cta_text: string;
+    caption: string | null;
+    cta_text: string | null;
+    dynamic_item_flags: Record<string, any>;
+    dynamic_versions: any | null;
+    edited_snapshots: any[];
+    effective_authorization_category: string;
+    event: any[];
+    extra_images: any[];
+    extra_links: any[];
+    extra_texts: any[];
+    extra_videos: any[];
+    instagram_shopping_products: any[];
     display_format: string;
     title: string | null;
     link_description: string | null;
-    link_url: string;
+    link_url: string | null;
     page_welcome_message: string | null;
-    images: any[];
+
+    images?: MediaItem[];
+
+    videos?: MediaItem[];
+
     creation_time: number;
-    page_id: string;
+    page_id: string | number;
     page_name: string;
     page_profile_picture_url: string;
     page_categories: Record<string, string>;
@@ -173,15 +115,25 @@ export type Ad = {
       };
       callerHash: string;
     };
+    brazil_tax_id: string | null;
+    branded_content: any | null;
     current_page_name: string;
     disclaimer_label: string | null;
     page_like_count: number;
     page_profile_uri: string;
-    cta_type: string;
+    page_is_deleted: boolean;
+    root_reshared_post: any | null;
+    cta_type: string | null;
+    additional_info: any | null;
+    ec_certificates: any | null;
+    country_iso_code: string | null;
+    instagram_branded_content: any | null;
   };
-  spend: string | null;
+  spend: {
+    lower_bound?: string;
+    upper_bound?: string;
+  } | null;
   stateMediaRunLabel: string | null;
   publisherPlatform: string[];
   menuItems: any[];
-};
-*/
+}

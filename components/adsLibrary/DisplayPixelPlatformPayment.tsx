@@ -24,7 +24,7 @@ import {
 import { detectPixelPlatformPayment } from "@/app/actions/detectPixelPlatformPayment";
 
 interface TrackingDetectorProps {
-  url?: string;
+  url?: string | undefined;
   usePuppeteer?: boolean;
   keepBrowserOpen?: boolean;
   useCache?: boolean;

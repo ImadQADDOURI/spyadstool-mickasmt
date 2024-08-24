@@ -7,6 +7,7 @@ import { Loader2 } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
+import { extractAdsFromResults } from "@/lib/adDataExtractor";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { ScrollButtons } from "./ScrollButtons";
@@ -24,35 +25,6 @@ export const AdsLibrary = () => {
   const [error, setError] = useState<string | null>(null);
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
-
-  const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
-    return results.flatMap((monthGroup) =>
-      monthGroup
-        .filter((ad: any) => ad.collationCount !== undefined)
-        .map((ad: any) => ({
-          adid: ad.adid,
-          adArchiveID: ad.adArchiveID,
-          collationCount: ad.collationCount,
-          collationID: ad.collationID,
-          currency: ad.currency,
-          startDate: ad.startDate,
-          endDate: ad.endDate,
-          pageName: ad.pageName,
-          pageID: ad.pageID,
-          publisherPlatform: ad.publisherPlatform,
-          isActive: ad.isActive,
-          snapshot: ad.snapshot,
-          categories: ad.categories,
-          impressionsWithIndex: ad.impressionsWithIndex,
-          spend: ad.spend,
-          reachEstimate: ad.reachEstimate,
-          entityType: ad.entityType,
-          gatedType: ad.gatedType,
-          hideDataStatus: ad.hideDataStatus,
-          isAAAEligible: ad.isAAAEligible,
-        })),
-    );
-  }, []);
 
   const handleSearchAds = useCallback(
     async (useExistingParams = false) => {

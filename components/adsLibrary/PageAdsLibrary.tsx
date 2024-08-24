@@ -7,6 +7,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ThumbsUp } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
+import { extractAdsFromResults } from "@/lib/adDataExtractor";
+
 import { FilterParams } from "@/types/filterParams";
 import { searchAds } from "@/app/actions/search_ads";
 
@@ -26,34 +28,6 @@ export const PageAdsLibrary = () => {
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
   const [pageInfo, setPageInfo] = useState<any | null>(null);
-
-  const extractAdsFromResults = useCallback((results: any[]): Ad[] => {
-    return results.flatMap((monthGroup) =>
-      monthGroup
-        .filter((ad: any) => ad.collationCount !== undefined)
-        .map((ad: any) => ({
-          adid: ad.adid,
-          adArchiveID: ad.adArchiveID,
-          collationCount: ad.collationCount,
-          collationID: ad.collationID,
-          currency: ad.currency,
-          startDate: ad.startDate,
-          endDate: ad.endDate,
-          pageName: ad.pageName,
-          pageID: ad.pageID,
-          publisherPlatform: ad.publisherPlatform,
-          isActive: ad.isActive,
-          snapshot: ad.snapshot,
-          categories: ad.categories,
-          impressionsWithIndex: ad.impressionsWithIndex,
-          spend: ad.spend,
-          reachEstimate: ad.reachEstimate,
-          entityType: ad.entityType,
-          gatedType: ad.gatedType,
-          hideDataStatus: ad.hideDataStatus,
-        })),
-    );
-  }, []);
 
   const handleSearchAds = useCallback(
     async (useExistingParams = false, initialLoad = false) => {
