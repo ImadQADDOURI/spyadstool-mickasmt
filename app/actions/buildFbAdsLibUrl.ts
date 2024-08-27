@@ -45,11 +45,19 @@ export async function buildFbAdsLibUrl(filters: FilterParams): Promise<string> {
     addParam("start_date[min]", filters.start_date_min);
     addParam("start_date[max]", filters.start_date_max);
 
-    // Handle category_as_keyword
+    // Handle category_as_keyword and niche_as_keyword
     let searchQuery = filters.q || "";
     if (filters.category_as_keyword) {
       searchQuery += (searchQuery ? ", " : "") + filters.category_as_keyword;
     }
+    if (filters.niche_as_keyword) {
+      searchQuery += (searchQuery ? ", " : "") + filters.niche_as_keyword;
+      // search_type should be set to "keyword_exact_phrase" if niche_as_keyword is provided
+      params["search_type"] = "keyword_exact_phrase";
+    } else {
+      addParam("search_type", filters.search_type);
+    }
+
     // Use the addParam function to add the combined query
     addParam("q", searchQuery);
 

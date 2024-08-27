@@ -24,6 +24,7 @@ import Country from "./filters/country";
 import EndDate from "./filters/endDate";
 import Language from "./filters/language";
 import Media from "./filters/media";
+import NicheAsKeyword from "./filters/nicheAsKeyword";
 import Platform from "./filters/platform";
 import SearchType from "./filters/SearchType";
 import Sort from "./filters/sort";
@@ -34,9 +35,11 @@ interface FilterPanelProps {
   onSearch: () => void;
 }
 
+// Search Filters
 const filterParams = [
   "ad_type",
   "category_as_keyword",
+  "niche_as_keyword",
   "countries",
   "end_date",
   "content_languages",
@@ -95,9 +98,10 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({ onSearch }) => {
         <div className="space-y-5 py-4">
           <SearchType />
           <Category />
-          <Sort />
+          {/* <Sort /> */}
           <Country />
           <CategoryAsKeyword />
+          <NicheAsKeyword />
           <Language />
           <Media />
           <Platform />

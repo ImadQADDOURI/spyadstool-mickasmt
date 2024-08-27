@@ -7,9 +7,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ThumbsUp } from "lucide-react";
 
 import { Ad, AdsData } from "@/types/ad";
-import { extractAdsFromResults } from "@/lib/adDataExtractor";
-
 import { FilterParams } from "@/types/filterParams";
+import { extractAdsFromResults } from "@/lib/adDataExtractor";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { ScrollButtons } from "./ScrollButtons";
@@ -50,6 +49,8 @@ export const PageAdsLibrary = () => {
           start_date_min: currentParams.get("start_date") || null,
           start_date_max: currentParams.get("end_date") || null,
           category_as_keyword: currentParams.get("category_as_keyword") || null,
+          niche_as_keyword: currentParams.get("niche_as_keyword") || null,
+
           sort_data: currentParams.get("sort_data") || null,
           search_type: currentParams.get("search_type") || "page",
 

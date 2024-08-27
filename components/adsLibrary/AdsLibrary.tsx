@@ -45,6 +45,7 @@ export const AdsLibrary = () => {
           start_date_min: currentParams.get("start_date") || null,
           start_date_max: currentParams.get("end_date") || null,
           category_as_keyword: currentParams.get("category_as_keyword") || null,
+          niche_as_keyword: currentParams.get("niche_as_keyword") || null,
           sort_data: currentParams.get("sort_data") || null,
           search_type: currentParams.get("search_type"),
 

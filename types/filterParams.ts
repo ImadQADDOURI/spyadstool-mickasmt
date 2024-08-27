@@ -42,4 +42,6 @@ export type FilterParams = {
 
   //categoryAsKeyword
   category_as_keyword?: string | null;
+  //nicheAsKeyword
+  niche_as_keyword?: string | null;
 };
