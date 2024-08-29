@@ -221,3 +221,9 @@ pnpm dlx shadcn-ui@latest add chart
 ---
 
 pnpm add html-react-parser
+
+---
+
+pnpm dlx shadcn-ui@latest add table
+
+---

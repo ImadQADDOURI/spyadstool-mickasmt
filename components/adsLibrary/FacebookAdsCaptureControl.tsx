@@ -6,7 +6,7 @@ import { useState } from "react";
 import {
   startCapturingFacebookAds,
   stopCapturingAndCloseBrowser,
-} from "../actions/captureFacebookAds";
+} from "@/app/actions/captureFacebookAds";
 
 export default function FacebookAdsCaptureControl() {
   const [status, setStatus] = useState("");

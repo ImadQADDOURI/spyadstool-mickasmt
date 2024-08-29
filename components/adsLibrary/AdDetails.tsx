@@ -13,6 +13,7 @@ import { AdCard } from "./AdCard";
 import Analytics from "./Analytics";
 import { Carousel } from "./Carousel";
 import { EuAdStatistic } from "./EuAdStatistic";
+import KeywordAnalysisTable from "./KeywordAnalysisTable";
 import LoadingTrigger from "./LoadingTrigger";
 
 interface AdDetailsProps {
@@ -175,6 +176,8 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
           </div>
           <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 shadow-inner dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Analytics ads={detailedAds} />
+
+            <KeywordAnalysisTable ad={ad} />
 
             <EuAdStatistic
               data={adDetails}
