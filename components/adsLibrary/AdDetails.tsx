@@ -1,12 +1,13 @@
-// components/adsLibrary/AdDetails.tsx
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import parse from "html-react-parser";
 
 import { Ad } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
 import { fetchAdLibraryDetails } from "@/app/actions/fetchAdDetails";
 import { searchAds } from "@/app/actions/search_ads";
+import { analyzeKeywords } from "@/app/actions/geminiAi";
 
 import { Button } from "../ui/button";
 import { AdCard } from "./AdCard";
@@ -21,6 +22,7 @@ interface AdDetailsProps {
   onClose: () => void;
 }
 
+
 export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
   const [detailedAds, setDetailedAds] = useState<Ad[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -32,11 +34,16 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
   const initialFetchDone = useRef(false);
 
   // EU ADs
-  const [adDetails, setAdDetails] = useState(null);
+  const [adDetails, setAdDetails] = useState<any>(null);
   const [isLoadingEuStats, setIsLoadingEuStats] = useState(false);
   const [euStatsError, setEuStatsError] = useState<string | null>(null);
   const searchParams = useSearchParams();
   const countries = searchParams.get("countries");
+
+   // Keyword Analysis
+   const [keywordAnalysis, setKeywordAnalysis] = useState<any>(null);
+   const [isLoadingKeywords, setIsLoadingKeywords] = useState(false);
+   const [keywordError, setKeywordError] = useState<string | null>(null);
 
   // Function to get ad versions
   const fetchAdDetails = useCallback(
@@ -109,7 +116,6 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
         pageID: ad.pageID || "",
         isAdNotAAAEligible: !ad.isAAAEligible,
         country: countries ? countries.split(",")[0] : "", // Use the first country if available, otherwise empty string
-        //sessionID: "25ac405f-b00b-47a5-837c-6e45899967dd", // Consider generating this dynamically
       });
       setAdDetails(result);
     } catch (err) {
@@ -118,7 +124,22 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
     } finally {
       setIsLoadingEuStats(false);
     }
-  }, [ad.adArchiveID, ad.pageID]);
+  }, [ad.adArchiveID, ad.pageID, ad.isAAAEligible, countries]);
+
+   // Function to fetch keyword analysis
+  const fetchKeywordAnalysis = useCallback(async () => {
+    setIsLoadingKeywords(true);
+    setKeywordError(null);
+    try {
+      const result = await analyzeKeywords(ad);
+      setKeywordAnalysis(result);
+    } catch (error) {
+      console.error("Error analyzing keywords:", error);
+      setKeywordError("Failed to analyze keywords");
+    } finally {
+      setIsLoadingKeywords(false);
+    }
+  }, [ad]);
 
   useEffect(() => {
     if (!initialFetchDone.current) {
@@ -128,11 +149,14 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
       setTotalCount(null);
       setRemainingCount(null);
       fetchAdDetails(false);
-      fetchEuAdStats(); // Fetch EU ad stats automatically
+      fetchEuAdStats();
+      fetchKeywordAnalysis();
 
       initialFetchDone.current = true;
     }
-  }, [ad.collationID, fetchAdDetails, fetchEuAdStats]);
+  }, [ad.collationID, fetchAdDetails, fetchEuAdStats, fetchKeywordAnalysis]);
+
+
 
   const handleLoadMore = () => {
     if (!isComplete && !isLoading) {
@@ -177,12 +201,16 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
           <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 shadow-inner dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Analytics ads={detailedAds} />
 
-            <KeywordAnalysisTable ad={ad} />
-
             <EuAdStatistic
               data={adDetails}
               isLoading={isLoadingEuStats}
               error={euStatsError}
+            />
+            
+            <KeywordAnalysisTable
+              data={keywordAnalysis}
+              isLoading={isLoadingKeywords}
+              error={keywordError}
             />
           </div>
         </div>

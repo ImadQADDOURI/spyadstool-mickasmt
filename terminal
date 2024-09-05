@@ -227,3 +227,7 @@ pnpm add html-react-parser
 pnpm dlx shadcn-ui@latest add table
 
 ---
+
+pnpm add openai
+pnpm add @google/generative-ai
+

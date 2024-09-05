@@ -280,6 +280,13 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           </span>
         </div>
 
+        <div>
+          <h1> {ad?.snapshot.title}</h1>
+        </div>
+        <div>
+          <h1> {ad?.snapshot.caption} </h1>
+        </div>
+
         <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <span>{renderDate()}</span>
         </div>
