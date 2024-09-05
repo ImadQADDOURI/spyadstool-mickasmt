@@ -2,7 +2,6 @@
 "use server";
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import parse from "html-react-parser";
 
 import { Ad } from "@/types/ad";
 import { extractText, parseText } from "@/lib/adTextExtractor";
@@ -19,7 +18,15 @@ export interface AdAnalysis {
 }
 
 function parseResponse(responseText: string): AdAnalysis {
-  const parsedResponse = JSON.parse(responseText);
+  let parsedResponse;
+  try {
+    parsedResponse = JSON.parse(responseText);
+  } catch (error) {
+    console.error("Error parsing JSON:", error);
+    console.log("Attempting to extract partial data...");
+    parsedResponse = extractPartialJSON(responseText);
+  }
+
   return {
     topKeywords: (parsedResponse.top || []).map(
       ({ w, c }: { w: string; c: number }) => ({ word: w, count: c }),
@@ -36,12 +43,28 @@ function parseResponse(responseText: string): AdAnalysis {
   };
 }
 
+function extractPartialJSON(text: string): any {
+  const result: any = {};
+  const regex = /"(\w+)":\s*(\[[^\]]+\]|"[^"]+")/g;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    try {
+      result[match[1]] = JSON.parse(match[2]);
+    } catch (e) {
+      console.warn(`Couldn't parse value for key ${match[1]}`);
+    }
+  }
+
+  return result;
+}
+
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY!);
 
-export async function analyzeKeywords(ad: Ad) {
+export async function analyzeKeywords(ad: Ad): Promise<AdAnalysis> {
   const extractedText = extractText(ad);
   const parsedText = parseText(extractedText);
-  console.log("🤖🤖🤖🤖", parsedText);
+  console.log("🤖🤖🤖🤖 Parsed Text:", parsedText);
 
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -68,20 +91,47 @@ Rules:
 
 Ad text: "${parsedText}"
 `;
-  {
-    /*
-     const prompt = `
+
+  try {
+    const result = await model.generateContent(prompt);
+    const response = result.response;
+    let responseText = response.text();
+
+    // Clean the response text
+    responseText = responseText.replace(/^```json\n|\n```$/g, "").trim();
+    console.log("🤖🤖🤖🤖 Raw API Response:", responseText);
+
+    const analysisResult = parseResponse(responseText);
+    return analysisResult;
+  } catch (error) {
+    console.error("Error in keyword analysis:", error);
+    return {
+      topKeywords: [],
+      longTailKeywords: [],
+      genderTarget: [],
+      ageTarget: [],
+      adCategories: [],
+      targetAudience: [],
+      estimatedBudget: "Unknown",
+      adObjective: [],
+    };
+  }
+}
+
+{
+  /*
+   const prompt = `
 Analyze this ad text. Return JSON:
 {
-  "langs": ["language1", ...],
-  "top": [{"w": "word", "c": count}, ...],
-  "long": [{"p": "phrase", "c": count}, ...],
-  "gender_target": ["Men", "Women", "All"],
-  "age_target": ["13-24", "25-34", "35-44", "45-54", "55-64", "65+"],
-  "ad_categories": ["category1", ...],
-  "target_audience": ["audience1", ...],
-  "estimated_budget": string,
-  "ad_objective": ["objective1", ...]
+"langs": ["language1", ...],
+"top": [{"w": "word", "c": count}, ...],
+"long": [{"p": "phrase", "c": count}, ...],
+"gender_target": ["Men", "Women", "All"],
+"age_target": ["13-24", "25-34", "35-44", "45-54", "55-64", "65+"],
+"ad_categories": ["category1", ...],
+"target_audience": ["audience1", ...],
+"estimated_budget": string,
+"ad_objective": ["objective1", ...]
 }
 
 Rules:
@@ -95,21 +145,21 @@ Rules:
 
 Ad text: "${parsedText}"
 `;
-  {
-    */
-    /* const prompt = `
+{
+  */
+  /* const prompt = `
 Analyze this ad text and return a JSON object:
 {
-  "langs": ["language1", "language2", ...],
-  "top": [{"w": "word", "c": count}, ...],
-  "long": [{"p": "phrase", "c": count}, ...],
-  "gender_target": ["gender1", "gender2", ...],
-  "age_target": ["age_range1", "age_range2", ...],
-  "tone": ["tone1", "tone2", ...],
-  "ad_categories": ["category1", "category2", ...],
-  "target_audience": ["audience1", "audience2", ...],
-  "estimated_budget": "low/medium/high",
-  "ad_objective": ["objective1", "objective2", ...]
+"langs": ["language1", "language2", ...],
+"top": [{"w": "word", "c": count}, ...],
+"long": [{"p": "phrase", "c": count}, ...],
+"gender_target": ["gender1", "gender2", ...],
+"age_target": ["age_range1", "age_range2", ...],
+"tone": ["tone1", "tone2", ...],
+"ad_categories": ["category1", "category2", ...],
+"target_audience": ["audience1", "audience2", ...],
+"estimated_budget": "low/medium/high",
+"ad_objective": ["objective1", "objective2", ...]
 }
 
 Guidelines:
@@ -132,20 +182,4 @@ Ad text (first 1000 characters): "${parsedText.substring(0, 1000)}"
 `;
 
 */
-  }
-
-  const result = await model.generateContent(prompt);
-  const response = result.response;
-  let responseText = response.text();
-
-  // Clean the response text
-  responseText = responseText.replace(/^```json\n|\n```$/g, "").trim();
-
-  try {
-    const analysisResult = parseResponse(responseText);
-    return analysisResult;
-  } catch (error) {
-    console.error("Failed to parse Gemini response:", error);
-    console.error("Raw response:", responseText);
-  }
 }
