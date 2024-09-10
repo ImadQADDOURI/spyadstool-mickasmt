@@ -66,7 +66,6 @@ const KeywordAnalysisTable: React.FC<KeywordAnalysisTableProps> = ({
             label="Target Age Range"
             value={data.ageTarget.join(", ")}
           />
-          <InsightItem label="Budget Level" value={data.estimatedBudget} />
           <InsightItem
             label="Ad Categories"
             value={data.adCategories.join(", ")}
@@ -75,10 +74,18 @@ const KeywordAnalysisTable: React.FC<KeywordAnalysisTableProps> = ({
             label="Target Audience"
             value={data.targetAudience.join(", ")}
           />
+          <InsightItem label="Estimated Budget" value={data.estimatedBudget} />
           <InsightItem
             label="Ad Objectives"
             value={data.adObjective.join(", ")}
           />
+          <InsightItem
+            label="Marketing Strategy"
+            value={data.marketingStrategies.join(", ")}
+          />
+          <InsightItem label="Season" value={data.seasonTarget.join(", ")} />
+          <InsightItem label="Competition" value={data.competition + " %"} />
+          <InsightItem label="CPM" value={data.cpm + " $"} />
         </div>
 
         <p className="mt-2 text-sm text-gray-600">

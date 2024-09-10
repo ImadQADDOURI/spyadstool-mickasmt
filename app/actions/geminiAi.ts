@@ -15,6 +15,10 @@ export interface AdAnalysis {
   targetAudience: string[];
   estimatedBudget: string;
   adObjective: string[];
+  marketingStrategies: string[];
+  seasonTarget: string[];
+  competition: number;
+  cpm: number;
 }
 
 function parseResponse(responseText: string): AdAnalysis {
@@ -23,7 +27,6 @@ function parseResponse(responseText: string): AdAnalysis {
     parsedResponse = JSON.parse(responseText);
   } catch (error) {
     console.error("Error parsing JSON:", error);
-    console.log("Attempting to extract partial data...");
     parsedResponse = extractPartialJSON(responseText);
   }
 
@@ -40,6 +43,10 @@ function parseResponse(responseText: string): AdAnalysis {
     targetAudience: parsedResponse.target_audience || [],
     estimatedBudget: parsedResponse.estimated_budget || "",
     adObjective: parsedResponse.ad_objective || [],
+    marketingStrategies: parsedResponse.marketing_strategies || [],
+    seasonTarget: parsedResponse.season_target || [],
+    competition: parsedResponse.competition || 0,
+    cpm: parsedResponse.cpm || 0,
   };
 }
 
@@ -64,12 +71,11 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY!);
 export async function analyzeKeywords(ad: Ad): Promise<AdAnalysis> {
   const extractedText = extractText(ad);
   const parsedText = parseText(extractedText);
-  console.log("🤖🤖🤖🤖 Parsed Text:", parsedText);
 
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const prompt = `
-Analyze this ad text. Return JSON:
+Analyze ad text. Return JSON:
 {
   "top": [{"w": "word", "c": count}, ...],
   "long": [{"p": "phrase", "c": count}, ...],
@@ -77,16 +83,18 @@ Analyze this ad text. Return JSON:
   "age_target": ["13-24", "25-34", "35-44", "45-54", "55-64", "65+"],
   "ad_categories": ["category1", ...],
   "target_audience": ["audience1", ...],
-  "estimated_budget": string,
-  "ad_objective": ["objective1", ...]
+  "estimated_budget": "Low" | "Medium" | "High",
+  "ad_objective": ["objective1", ...],
+  "marketing_strategies": ["Problem-Solving", "Prestige", "Emotional", "Trends", "Holidays"],
+  "season_target": ["Spring", "Summer", "Autumn", "Winter"],
+  "competition": number,
+  "cpm": number
 }
-
 Rules:
-- top: 15 most frequent words (3+ chars)
-- long: 15 most frequent 2-4 word phrases
-- gender_target & age_target: Estimate based on content
-- Other fields: Infer from text, use general terms
-- Simple analysis, no deep processing
+- top/long: 15 most frequent words/phrases (3+ chars)
+- Simple analysis, basic patterns
+- competition: estimated market competition (0-100)
+- cpm: estimated average Cost Per Mille in USD
 - JSON only, no explanations
 
 Ad text: "${parsedText}"
@@ -95,14 +103,13 @@ Ad text: "${parsedText}"
   try {
     const result = await model.generateContent(prompt);
     const response = result.response;
-    let responseText = response.text();
-
-    // Clean the response text
-    responseText = responseText.replace(/^```json\n|\n```$/g, "").trim();
+    let responseText = response
+      .text()
+      .replace(/^```json\n|\n```$/g, "")
+      .trim();
     console.log("🤖🤖🤖🤖 Raw API Response:", responseText);
 
-    const analysisResult = parseResponse(responseText);
-    return analysisResult;
+    return parseResponse(responseText);
   } catch (error) {
     console.error("Error in keyword analysis:", error);
     return {
@@ -114,6 +121,10 @@ Ad text: "${parsedText}"
       targetAudience: [],
       estimatedBudget: "Unknown",
       adObjective: [],
+      marketingStrategies: [],
+      seasonTarget: [],
+      competition: 0,
+      cpm: 0,
     };
   }
 }
