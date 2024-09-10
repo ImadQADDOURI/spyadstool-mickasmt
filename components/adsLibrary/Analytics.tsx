@@ -21,6 +21,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import AnalyzeTrends from "./AnalyzeTrends";
+
 interface AnalyticsProps {
   ads: Ad[];
 }
@@ -215,6 +217,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
             </span>
           </p>
         </div>
+        <AnalyzeTrends
+          chartData={chartData}
+          periods={[7, 30, 0]} // Customize periods as needed // [7, 30, 0];  7 days, 30 days, all-time
+        />
       </CardContent>
     </Card>
   );
