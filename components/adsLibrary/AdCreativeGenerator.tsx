@@ -24,7 +24,7 @@ const AdCreativeGenerator: React.FC<{ ad: Ad }> = ({ ad }) => {
       const creative = await generateAdCreative(ad);
       setAdCreative(creative);
     } catch (err) {
-      setError("Failed to generate ad creative. Please try again.");
+      setError("Failed to generate ad copy. Please try again.");
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -34,7 +34,7 @@ const AdCreativeGenerator: React.FC<{ ad: Ad }> = ({ ad }) => {
   return (
     <div className="space-y-4">
       <Button onClick={handleGenerateCreative} disabled={isLoading}>
-        {isLoading ? "Generating..." : "Generate Ad Creative"}
+        {isLoading ? "Generating..." : "Generate Ad Creative Copy"}
       </Button>
 
       {error && <p className="text-red-500">{error}</p>}
@@ -42,7 +42,7 @@ const AdCreativeGenerator: React.FC<{ ad: Ad }> = ({ ad }) => {
       {adCreative && (
         <Card>
           <CardHeader>
-            <CardTitle>Generated Ad Creative</CardTitle>
+            <CardTitle>Generated Ad Creative Copy</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             <div>

@@ -21,14 +21,57 @@ export interface AdAnalysis {
   cpm: number;
 }
 
-function parseResponse(responseText: string): AdAnalysis {
-  let parsedResponse;
+export interface AdCreative {
+  primaryText: string;
+  headline: string;
+  description: string;
+  callToAction: string;
+}
+
+function robustJSONParse(text: string): any {
+  // First, try standard JSON parsing
   try {
-    parsedResponse = JSON.parse(responseText);
-  } catch (error) {
-    console.error("Error parsing JSON:", error);
-    parsedResponse = extractPartialJSON(responseText);
+    return JSON.parse(text);
+  } catch (e) {
+    console.warn("Standard JSON parsing failed, attempting robust parsing");
   }
+
+  // If that fails, try to extract as much as possible
+  const result: any = {};
+  const keyValueRegex =
+    /"(\w+)":\s*(?:(\[[^\]]*\])|(\{[^}]*\})|"([^"]*)"|(true|false|null|-?\d+(?:\.\d+)?)|(\{[^{]*\}))/g;
+  let match;
+
+  while ((match = keyValueRegex.exec(text)) !== null) {
+    const [
+      ,
+      key,
+      arrayValue,
+      objectValue,
+      stringValue,
+      primitiveValue,
+      nestedObjectValue,
+    ] = match;
+    try {
+      if (arrayValue) {
+        result[key] = JSON.parse(arrayValue);
+      } else if (objectValue || nestedObjectValue) {
+        result[key] = robustJSONParse(objectValue || nestedObjectValue);
+      } else if (stringValue !== undefined) {
+        result[key] = stringValue;
+      } else if (primitiveValue) {
+        result[key] = JSON.parse(primitiveValue);
+      }
+    } catch (e) {
+      console.warn(`Couldn't parse value for key ${key}`);
+    }
+  }
+
+  return result;
+}
+
+function parseResponse(responseText: string): AdAnalysis {
+  const parsedResponse = robustJSONParse(responseText);
 
   return {
     topKeywords: (parsedResponse.top || []).map(
@@ -50,24 +93,9 @@ function parseResponse(responseText: string): AdAnalysis {
   };
 }
 
-function extractPartialJSON(text: string): any {
-  const result: any = {};
-  const regex = /"(\w+)":\s*(\[[^\]]+\]|"[^"]+")/g;
-  let match;
-
-  while ((match = regex.exec(text)) !== null) {
-    try {
-      result[match[1]] = JSON.parse(match[2]);
-    } catch (e) {
-      console.warn(`Couldn't parse value for key ${match[1]}`);
-    }
-  }
-
-  return result;
-}
-
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY!);
 
+// Analyze ad text & Estimation
 export async function analyzeKeywords(ad: Ad): Promise<AdAnalysis> {
   const extractedText = extractText(ad);
   const parsedText = parseText(extractedText);
@@ -75,29 +103,28 @@ export async function analyzeKeywords(ad: Ad): Promise<AdAnalysis> {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const prompt = `
-Analyze ad text. Return JSON:
+Analyze ad. Return JSON:
 {
-  "top": [{"w": "word", "c": count}, ...],
-  "long": [{"p": "phrase", "c": count}, ...],
-  "gender_target": ["Men", "Women", "All"],
-  "age_target": ["13-24", "25-34", "35-44", "45-54", "55-64", "65+"],
-  "ad_categories": ["category1", ...],
-  "target_audience": ["audience1", ...],
-  "estimated_budget": "Low" | "Medium" | "High",
-  "ad_objective": ["objective1", ...],
-  "marketing_strategies": ["Problem-Solving", "Prestige", "Emotional", "Trends", "Holidays"],
-  "season_target": ["Spring", "Summer", "Autumn", "Winter"],
-  "competition": number,
-  "cpm": number
+  "top": [{"w": "word", "c": count}],
+  "long": [{"p": "phrase", "c": count}],
+  "gender_target": ["Men"|"Women"|"All"],
+  "age_target": ["min-max"],
+  "ad_categories": ["category"],
+  "target_audience": ["specific audience"],
+  "estimated_budget": "Low"|"Medium"|"High",
+  "ad_objective": ["primary objective"],
+  "marketing_strategies": ["Problem-Solving"|"Prestige"|"Emotional"|"Trends"|"Holidays"],
+  "season_target": ["Spring"|"Summer"|"Autumn"|"Winter"],
+  "competition": 0-100,
+  "cpm": estimated USD
 }
 Rules:
-- top/long: 15 most frequent words/phrases (3+ chars)
-- Simple analysis, basic patterns
-- competition: estimated market competition (0-100)
-- cpm: estimated average Cost Per Mille in USD
-- JSON only, no explanations
-
-Ad text: "${parsedText}"
+- top/long: 15 most relevant, exclude common words
+- Infer from content, tone, and context
+- competition: market competitiveness
+- cpm: based on targeting and content quality
+- Concise, accurate analysis
+Ad: "${parsedText}"
 `;
 
   try {
@@ -119,7 +146,7 @@ Ad text: "${parsedText}"
       ageTarget: [],
       adCategories: [],
       targetAudience: [],
-      estimatedBudget: "Unknown",
+      estimatedBudget: "",
       adObjective: [],
       marketingStrategies: [],
       seasonTarget: [],
@@ -130,14 +157,6 @@ Ad text: "${parsedText}"
 }
 
 // Generate ad creative
-export interface AdCreative {
-  primaryText: string;
-  headline: string;
-  description: string;
-  callToAction: string;
-}
-
-// Add this new function to your geminiAi.ts file
 export async function generateAdCreative(ad: Ad): Promise<AdCreative> {
   const extractedText = extractText(ad);
   const parsedText = parseText(extractedText);
@@ -145,43 +164,49 @@ export async function generateAdCreative(ad: Ad): Promise<AdCreative> {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const prompt = `
-Optimize this ad text into a professional Facebook Ad creative. Return JSON:
-{
-  "primaryText": "Engaging text with emojis (max 125 chars)",
-  "headline": "Short, catchy headline",
-  "description": "Compelling description",
-  "callToAction": "One of: [No button, Sign up, Subscribe, Watch more, Send WhatsApp message, Apply now, Book now, Contact us, Download, Get offer, Get quote, Get showtimes, Learn more, Listen now, Send message, Order now, Play game, Request time, See menu, Shop now]"
-}
-Rules:
-- Enhance marketing appeal and professionalism
-- Use appropriate emojis in primaryText
-- Maintain original message and tone
-- Choose most suitable CTA
-- JSON only, no explanations
-
-Original ad: "${parsedText}"
-`;
+  Create high-converting Facebook Ad. Return JSON:
+  {
+    "primaryText": "Engaging text with emojis (125 chars max)",
+    "headline": "Powerful headline (5-7 words)",
+    "description": "Compelling description (2-3 sentences)",
+    "callToAction": "Best CTA"
+  }
+  Rules:
+  - Use AIDA: Attention, Interest, Desire, Action
+  - Incorporate urgency/scarcity
+  - Highlight unique value proposition
+  - Use power words and emotional triggers
+  - Include social proof
+  - Ensure ad stands out
+  - Maintain core message
+  - Strategic emoji use
+  - Choose from CTAs: [Sign up, Subscribe, Learn more, Shop now, Book now, Get offer, Download, Contact us]
+  Original ad: "${parsedText}"
+  `;
 
   try {
     const result = await model.generateContent(prompt);
     const response = result.response;
-    let responseText = response.text().replace(/^```json\n|\n```$/g, "").trim();
+    let responseText = response
+      .text()
+      .replace(/^```json\n|\n```$/g, "")
+      .trim();
     console.log("🎨🎨🎨🎨 Generated Ad Creative:", responseText);
 
-    const parsedResponse = JSON.parse(responseText);
+    const parsedResponse = robustJSONParse(responseText);
     return {
       primaryText: parsedResponse.primaryText || "",
       headline: parsedResponse.headline || "",
       description: parsedResponse.description || "",
-      callToAction: parsedResponse.callToAction || "",
+      callToAction: parsedResponse.callToAction || "Learn more",
     };
   } catch (error) {
     console.error("Error in ad creative generation:", error);
     return {
-      primaryText: "Error ",
-      headline: "Error ",
-      description: "Error ",
-      callToAction: "Error ",
+      primaryText: "Error generating ad creative",
+      headline: "Error",
+      description: "An error occurred while generating the ad creative.",
+      callToAction: "Learn more",
     };
   }
 }
