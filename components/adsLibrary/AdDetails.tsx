@@ -1,16 +1,17 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import parse from "html-react-parser";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import { Ad } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
 import { fetchAdLibraryDetails } from "@/app/actions/fetchAdDetails";
-import { searchAds } from "@/app/actions/search_ads";
 import { analyzeKeywords } from "@/app/actions/geminiAi";
+import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
 import { AdCard } from "./AdCard";
+import AdCreativeGenerator from "./AdCreativeGenerator";
 import Analytics from "./Analytics";
 import { Carousel } from "./Carousel";
 import { EuAdStatistic } from "./EuAdStatistic";
@@ -21,7 +22,6 @@ interface AdDetailsProps {
   ad: Ad;
   onClose: () => void;
 }
-
 
 export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
   const [detailedAds, setDetailedAds] = useState<Ad[]>([]);
@@ -40,10 +40,10 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
   const searchParams = useSearchParams();
   const countries = searchParams.get("countries");
 
-   // Keyword Analysis
-   const [keywordAnalysis, setKeywordAnalysis] = useState<any>(null);
-   const [isLoadingKeywords, setIsLoadingKeywords] = useState(false);
-   const [keywordError, setKeywordError] = useState<string | null>(null);
+  // Keyword Analysis
+  const [keywordAnalysis, setKeywordAnalysis] = useState<any>(null);
+  const [isLoadingKeywords, setIsLoadingKeywords] = useState(false);
+  const [keywordError, setKeywordError] = useState<string | null>(null);
 
   // Function to get ad versions
   const fetchAdDetails = useCallback(
@@ -126,7 +126,7 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
     }
   }, [ad.adArchiveID, ad.pageID, ad.isAAAEligible, countries]);
 
-   // Function to fetch keyword analysis
+  // Function to fetch keyword analysis
   const fetchKeywordAnalysis = useCallback(async () => {
     setIsLoadingKeywords(true);
     setKeywordError(null);
@@ -155,8 +155,6 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
       initialFetchDone.current = true;
     }
   }, [ad.collationID, fetchAdDetails, fetchEuAdStats, fetchKeywordAnalysis]);
-
-
 
   const handleLoadMore = () => {
     if (!isComplete && !isLoading) {
@@ -197,6 +195,7 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
               isComplete={isComplete}
               onLoadMore={handleLoadMore}
             />
+            <AdCreativeGenerator ad={ad} />
           </div>
           <div className="h-1/2 w-full overflow-y-auto rounded-lg bg-gray-50 p-4 shadow-inner dark:bg-gray-900 lg:h-full lg:w-1/2">
             <Analytics ads={detailedAds} />
@@ -206,7 +205,7 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
               isLoading={isLoadingEuStats}
               error={euStatsError}
             />
-            
+
             <KeywordAnalysisTable
               data={keywordAnalysis}
               isLoading={isLoadingKeywords}

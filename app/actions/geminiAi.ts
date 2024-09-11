@@ -129,68 +129,62 @@ Ad text: "${parsedText}"
   }
 }
 
-{
-  /*
-   const prompt = `
-Analyze this ad text. Return JSON:
-{
-"langs": ["language1", ...],
-"top": [{"w": "word", "c": count}, ...],
-"long": [{"p": "phrase", "c": count}, ...],
-"gender_target": ["Men", "Women", "All"],
-"age_target": ["13-24", "25-34", "35-44", "45-54", "55-64", "65+"],
-"ad_categories": ["category1", ...],
-"target_audience": ["audience1", ...],
-"estimated_budget": string,
-"ad_objective": ["objective1", ...]
+// Generate ad creative
+export interface AdCreative {
+  primaryText: string;
+  headline: string;
+  description: string;
+  callToAction: string;
 }
 
+// Add this new function to your geminiAi.ts file
+export async function generateAdCreative(ad: Ad): Promise<AdCreative> {
+  const extractedText = extractText(ad);
+  const parsedText = parseText(extractedText);
+
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  const prompt = `
+Optimize this ad text into a professional Facebook Ad creative. Return JSON:
+{
+  "primaryText": "Engaging text with emojis (max 125 chars)",
+  "headline": "Short, catchy headline",
+  "description": "Compelling description",
+  "callToAction": "One of: [No button, Sign up, Subscribe, Watch more, Send WhatsApp message, Apply now, Book now, Contact us, Download, Get offer, Get quote, Get showtimes, Learn more, Listen now, Send message, Order now, Play game, Request time, See menu, Shop now]"
+}
 Rules:
-- langs: All detected languages, full names
-- top: 15 most frequent words (3+ chars)
-- long: 15 most frequent 2-4 word phrases
-- gender_target & age_target: Estimate based on content
-- Other fields: Infer from text, use general terms
-- Simple analysis, no deep processing
+- Enhance marketing appeal and professionalism
+- Use appropriate emojis in primaryText
+- Maintain original message and tone
+- Choose most suitable CTA
 - JSON only, no explanations
 
-Ad text: "${parsedText}"
-`;
-{
-  */
-  /* const prompt = `
-Analyze this ad text and return a JSON object:
-{
-"langs": ["language1", "language2", ...],
-"top": [{"w": "word", "c": count}, ...],
-"long": [{"p": "phrase", "c": count}, ...],
-"gender_target": ["gender1", "gender2", ...],
-"age_target": ["age_range1", "age_range2", ...],
-"tone": ["tone1", "tone2", ...],
-"ad_categories": ["category1", "category2", ...],
-"target_audience": ["audience1", "audience2", ...],
-"estimated_budget": "low/medium/high",
-"ad_objective": ["objective1", "objective2", ...]
-}
-
-Guidelines:
-1. langs: List ALL languages detected in the text, even if mixed. Use full language names.
-2. top: List the 15 most frequent words. Only include words with 3 or more characters. Perform simple frequency counts.
-3. long: List the 15 most frequent 2-4 word combinations. Use simple frequency analysis.
-4. gender_target: Estimate targeted genders (e.g., "men", "women", "all").
-5. age_target: Estimate age ranges (e.g., "13-24", "25-34", "35-44", "45-54", "55-64", "65+").
-6. tone: Infer the tone of the ad (e.g., "professional", "casual", "urgent", "informative").
-7. ad_categories: Categorize the ad (e.g., "product", "service", "event", "brand awareness").
-8. target_audience: Identify specific audience segments (e.g., "parents", "students", "professionals", "tech enthusiasts").
-9. estimated_budget: Guess the ad's budget level based on content and complexity.
-10. ad_objective: Infer the main objectives of the ad (e.g., "sales", "lead generation", "brand awareness", "app install").
-
-Important:
-- Keep analysis simple and fast. Use basic text patterns, not deep analysis.
-- Return only the JSON object, no explanations.
-
-Ad text (first 1000 characters): "${parsedText.substring(0, 1000)}"
+Original ad: "${parsedText}"
 `;
 
-*/
+  try {
+    const result = await model.generateContent(prompt);
+    const response = result.response;
+    let responseText = response.text().replace(/^```json\n|\n```$/g, "").trim();
+    console.log("🎨🎨🎨🎨 Generated Ad Creative:", responseText);
+
+    const parsedResponse = JSON.parse(responseText);
+    return {
+      primaryText: parsedResponse.primaryText || "",
+      headline: parsedResponse.headline || "",
+      description: parsedResponse.description || "",
+      callToAction: parsedResponse.callToAction || "",
+    };
+  } catch (error) {
+    console.error("Error in ad creative generation:", error);
+    return {
+      primaryText: "Error ",
+      headline: "Error ",
+      description: "Error ",
+      callToAction: "Error ",
+    };
+  }
 }
+
+// Usage example in your component or API route
+// const adCreative = await generateAdCreative(adObject);
