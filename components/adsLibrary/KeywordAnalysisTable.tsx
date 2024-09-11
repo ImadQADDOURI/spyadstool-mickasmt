@@ -58,14 +58,8 @@ const KeywordAnalysisTable: React.FC<KeywordAnalysisTableProps> = ({
         </h3>
 
         <div className="grid grid-cols-2 gap-3">
-          <InsightItem
-            label="Target Gender"
-            value={data.genderTarget.join(", ")}
-          />
-          <InsightItem
-            label="Target Age Range"
-            value={data.ageTarget.join(", ")}
-          />
+          <InsightItem label="Target Gender" value={data.genderTarget} />
+          <InsightItem label="Target Age Range" value={data.ageTarget} />
           <InsightItem
             label="Ad Categories"
             value={data.adCategories.join(", ")}

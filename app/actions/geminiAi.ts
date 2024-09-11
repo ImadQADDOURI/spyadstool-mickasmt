@@ -157,14 +157,17 @@ Ad: "${parsedText}"
 }
 
 // Generate ad creative
-export async function generateAdCreative(ad: Ad): Promise<AdCreative> {
+export async function generateAdCreative(
+  ad: Ad,
+  language: string = "English",
+): Promise<AdCreative> {
   const extractedText = extractText(ad);
   const parsedText = parseText(extractedText);
 
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const prompt = `
-  Create high-converting Facebook Ad. Return JSON:
+  Create high-converting Facebook Ad in ${language}. Return JSON:
   {
     "primaryText": "Engaging text with emojis (125 chars max)",
     "headline": "Powerful headline (5-7 words)",
@@ -181,6 +184,8 @@ export async function generateAdCreative(ad: Ad): Promise<AdCreative> {
   - Maintain core message
   - Strategic emoji use
   - Choose from CTAs: [Sign up, Subscribe, Learn more, Shop now, Book now, Get offer, Download, Contact us]
+  - Generate all text except callToAction in ${language}
+  - If ${language} is not supported, use English
   Original ad: "${parsedText}"
   `;
 
@@ -191,25 +196,25 @@ export async function generateAdCreative(ad: Ad): Promise<AdCreative> {
       .text()
       .replace(/^```json\n|\n```$/g, "")
       .trim();
-    console.log("🎨🎨🎨🎨 Generated Ad Creative:", responseText);
+    console.log(`🎨🎨🎨🎨 Generated Ad Creative:`, responseText);
 
     const parsedResponse = robustJSONParse(responseText);
     return {
       primaryText: parsedResponse.primaryText || "",
       headline: parsedResponse.headline || "",
       description: parsedResponse.description || "",
-      callToAction: parsedResponse.callToAction || "Learn more",
+      callToAction: parsedResponse.callToAction || "",
     };
   } catch (error) {
-    console.error("Error in ad creative generation:", error);
+    console.error(`Error in ad creative generation (${language}):`, error);
     return {
-      primaryText: "Error generating ad creative",
+      primaryText: `Error generating ad creative in ${language}`,
       headline: "Error",
-      description: "An error occurred while generating the ad creative.",
-      callToAction: "Learn more",
+      description: `An error occurred while generating the ad creative in ${language}.`,
+      callToAction: "Error",
     };
   }
 }
 
 // Usage example in your component or API route
-// const adCreative = await generateAdCreative(adObject);
+// const adCreative = await generateAdCreative(adObject, language);
