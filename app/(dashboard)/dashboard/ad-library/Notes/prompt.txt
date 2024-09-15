@@ -1,8 +1,5 @@
-i am building a SAAS using Next.js 14, typescript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui, tailwind css,  lucide react, Stripe and Server Actions, Zod, error handling, best practices coding, responsive design, light and dark theme, clean and visually appealing .
+I am building a SaaS using Next.js 14, TypeScript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/UI, Tailwind CSS, Lucide React, Stripe, Server Actions, and Zod. The project emphasizes error handling, best coding practices, responsive design, light and dark themes, clean and visually appealing UI, stable logic, well-structured code, optimized with explanatory comments, reusability, performance, lightweight design, flexibility, and separation of concerns. Proper TypeScript typing . The final deliverable should be a well-documented and commented, efficient that adheres to the best practices mentioned.
 
-good practices coding, stable logic , well structured, optimized with explanatory comments.
-
-Reusability, Performance, Lightweight, Flexibility and Separation of Concerns
 
 if you have modifications on code give me just what to change not the whole code
 
@@ -1234,3 +1231,42 @@ I am building a SaaS using Next.js 14, TypeScript, Prisma, Neon, Auth.js v5, Res
 
  in steps if one return error the other should return the results not everything will return error
 ---------------------------------------------------------------------------------------------
+
+$$ Save ads to collections $$
+
+
+if tries to save same ad with the same id already in the collection prevent him by showing a message
+
+
+
+Add a visual indicator (e.g., a filled heart icon) to show which ads are already saved in any of the user's collections.
+
+Implementing a way to unsave ads from collections directly in this dialog.
+Adding confirmation dialogs for unsaving actions to prevent accidental removals.
+
+Implement pagination or infinite scrolling for collections if a user has many collections.
+Add a search functionality to filter collections in the dialog.
+
+
+
+
+now i want to create the page to display saved collections
+the page display the user collections as cards; 
+each card has the name of the collection, an image (maybe from the first ad of the collection ), the number of saved ads inside, last time updated like (e.g. 1w | 9m | 6h | 1y | ) 
+add to this page the CreateCollectionButton component
+if you have some improvements or suggestions tell me
+
+the card has a pen icon that onclick take the user to the collection page to display the ads inside
+
+
+Creating a page to display saved ads within a collection.
+Implementing edit functionality for collection names.
+Add a way to view all saved ads across all collections or filter by collection.
+Implement pagination or infinite scrolling for large collections of saved ads.
+
+
+
+???add a limit to collections by user and saved ads in collection use the config doc where i configure my app, so i can controlle how many collection and ads per collection for each user
+???Implement proper validation on the server-side for all incoming data.
+???Add unit and integration tests to ensure the reliability of the component and server actions.
+???Implement caching strategies to improve performance, especially for frequently accessed data like user collections. Extending the caching system to cover other frequently accessed data in your application.

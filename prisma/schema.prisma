@@ -44,25 +44,6 @@ model Session {
   @@map(name: "sessions")
 }
 
-model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
-
-  accounts Account[]
-  sessions Session[]
-
-  stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
-  stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
-  stripePriceId          String?   @map(name: "stripe_price_id")
-  stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
-
-  @@map(name: "users")
-}
 
 model VerificationToken {
   identifier String
@@ -85,4 +66,53 @@ model XHRRequestOptions {
   updatedAt      DateTime @updatedAt
 
   @@map(name: "xhr_request_options")
+}
+
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+
+  accounts Account[]
+  sessions Session[]
+  collections Collection[]
+
+  stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
+  stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
+  stripePriceId          String?   @map(name: "stripe_price_id")
+  stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
+
+  @@map(name: "users")
+}
+
+model Collection {
+  id        String   @id @default(cuid())
+  name      String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  savedAds  SavedAd[]
+
+  @@index([userId])
+  @@map(name: "collections")
+}
+
+model SavedAd {
+  id           String     @id @default(cuid())
+  adArchiveID  String
+  collectionId String
+  collection   Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  adData       Json
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@unique([adArchiveID, collectionId])
+  @@index([collectionId])
+  @@map(name: "saved_ads")
 }

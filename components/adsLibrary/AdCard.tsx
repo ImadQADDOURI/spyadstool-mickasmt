@@ -31,6 +31,7 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import { AdDetails } from "./AdDetails";
+import { SaveAdButton } from "./AdsCollections/SaveAdButton";
 import DisplayPixelPlatformPayment from "./DisplayPixelPlatformPayment";
 import ExpandableText from "./expandableText";
 import PageNameWithPopover from "./PageNameWithPopover";
@@ -262,6 +263,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
       <CardContent className="p-4">
         <div className="mb-2 flex  justify-between text-sm text-gray-700 dark:text-gray-100">
           <div>Library ID: {adArchiveID || "N/A"}</div>
+          <SaveAdButton ad={ad} />
           <div className="m-0 flex flex-row">
             <Button variant="ghost" size="sm">
               <ExternalLink className="h-4 w-4" />

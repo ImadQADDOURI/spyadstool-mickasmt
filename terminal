@@ -231,3 +231,6 @@ pnpm dlx shadcn-ui@latest add table
 pnpm add openai
 pnpm add @google/generative-ai
 
+---
+
+npx prisma studio ---<> Open a ui to see database

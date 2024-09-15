@@ -15,7 +15,7 @@ export const dashboardConfig: DashboardConfig = {
     */
     { title: "Trending", href: "/dashboard/trending" },
     { title: "Ad Library", href: "/dashboard/ad-library" },
-    { title: "Saved Ads", href: "/dashboard/saved-ads" },
+    { title: "Collections", href: "/dashboard/collections" },
     { title: "Extension", href: "/dashboard/extension" },
   ],
   sidebarNav: [

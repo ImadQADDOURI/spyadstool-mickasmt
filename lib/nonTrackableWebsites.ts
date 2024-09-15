@@ -13,6 +13,7 @@
  */
 export const nonTrackableWebsites = [
   "facebook.com",
+  "fb.com",
   "whatsapp.com",
   "instagram.com",
   "twitter.com",
