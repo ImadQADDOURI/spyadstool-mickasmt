@@ -16,7 +16,11 @@ import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
 import StickyWrapper from "./StickyWrapper";
 
-export const PageAdsLibrary = () => {
+interface PageAdsLibraryProps {
+  pageId: string;
+}
+
+export const PageAdsLibrary = ( { pageId }: PageAdsLibraryProps ) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -34,8 +38,6 @@ export const PageAdsLibrary = () => {
       setError(null);
       try {
         const currentParams = new URLSearchParams(searchParams.toString());
-        const pageId = currentParams.get("pageId");
-
         const filterParams: FilterParams = {
           q: initialLoad ? "" : currentParams.get("q") || "",
           countries: currentParams.get("countries")?.split(",") || null,
@@ -157,9 +159,7 @@ export const PageAdsLibrary = () => {
       {/* Title & Search Section */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
         <h1 className="p-4 text-center text-3xl font-bold text-white">
-          {searchParams.get("pageId")
-            ? `Page ID: ${searchParams.get("pageId")}`
-            : "Page ID"}
+          Page ID: {pageId}
         </h1>
         {pageInfo && (
           <div className="mb-6 ml-6 flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0">

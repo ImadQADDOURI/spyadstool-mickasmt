@@ -1,7 +1,7 @@
 // /app/dashboard/ad-library/page.tsx
 import { Suspense } from "react";
 
-import AdsLibraryWrapper from "@/components/adsLibrary/AdsLibraryWrapper";
+import AdsLibrary from "@/components/adsLibrary/AdsLibrary";
 
 interface SearchParams {
   pageId?: string;
@@ -16,7 +16,7 @@ export default function AdLibraryPage({
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <AdsLibraryWrapper initialPageId={pageId} />
+      <AdsLibrary />
     </Suspense>
   );
 }
