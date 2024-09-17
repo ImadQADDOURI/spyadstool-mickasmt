@@ -123,11 +123,10 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
                       {item.title && (
                         <>
                           <p className="text-sm font-bold">{item.title}</p>
-                          <p className="text-xs">
-                            {item.body && (
-                              <ExpandableText text={item.body} maxLength={25} />
-                            )}
-                          </p>
+
+                          {item.body && (
+                            <ExpandableText text={item.body} maxLength={25} />
+                          )}
                         </>
                       )}
                     </div>

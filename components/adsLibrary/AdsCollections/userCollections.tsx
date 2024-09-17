@@ -170,10 +170,29 @@ export default function UserCollections() {
       );
       if (result.success) {
         await fetchCollections(); // Refresh collections to update counts
-        toast({
-          title: "Ads moved",
-          description: "All ads have been moved successfully.",
-        });
+
+        if (result.message) {
+          // Handle cases where no action was taken
+          toast({
+            title: "Move operation",
+            description: result.message,
+          });
+        } else {
+          const movedCount = result.movedAdsCount;
+          const totalCount = result.totalAdsCount;
+          const deletedCount = result.deletedAdsCount;
+
+          let message = `${movedCount} ad${movedCount !== 1 ? "s" : ""} moved successfully.`;
+          if (deletedCount && deletedCount > 0) {
+            message += ` ${deletedCount} ad${deletedCount !== 1 ? "s were" : " was"} already in the destination collection and ${deletedCount !== 1 ? "were" : "was"} deleted from the source collection.`;
+          }
+          message += ` The source collection is now empty.`;
+
+          toast({
+            title: "Ads moved and cleaned up",
+            description: message,
+          });
+        }
       } else {
         throw new Error(result.error || "Failed to move ads");
       }

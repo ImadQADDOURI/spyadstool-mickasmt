@@ -204,26 +204,91 @@ export async function moveAllAds(
     const user = await getCurrentUser();
     if (!user) throw new Error("User not authenticated");
 
+    // Initial checks
+    const [sourceCollection, destinationCollection] = await prisma.$transaction(
+      [
+        prisma.collection.findUnique({
+          where: { id: sourceCollectionId },
+          select: { id: true, savedAdsCount: true },
+        }),
+        prisma.collection.findUnique({
+          where: { id: destinationCollectionId },
+          select: { id: true },
+        }),
+      ],
+    );
+
+    if (!sourceCollection) {
+      throw new Error("Source collection not found");
+    }
+
+    if (!destinationCollection) {
+      throw new Error("Destination collection not found");
+    }
+
+    if (sourceCollection.savedAdsCount === 0) {
+      return {
+        success: true,
+        movedAdsCount: 0,
+        totalAdsCount: 0,
+        deletedAdsCount: 0,
+        message: "The source collection is already empty. No ads to move.",
+      };
+    }
+
+    if (sourceCollectionId === destinationCollectionId) {
+      return {
+        success: true,
+        movedAdsCount: 0,
+        totalAdsCount: sourceCollection.savedAdsCount,
+        deletedAdsCount: 0,
+        message:
+          "Source and destination collections are the same. No action taken.",
+      };
+    }
+
     const result = await prisma.$transaction(async (prisma) => {
-      const sourceCollection = await prisma.collection.findFirst({
-        where: { id: sourceCollectionId, userId: user.id },
-        include: { savedAds: true },
-      });
-
-      if (!sourceCollection) throw new Error("Source collection not found");
-
-      const destinationCollection = await prisma.collection.findFirst({
-        where: { id: destinationCollectionId, userId: user.id },
-      });
-
-      if (!destinationCollection)
-        throw new Error("Destination collection not found");
-
-      const movedAdsCount = await prisma.savedAd.updateMany({
+      // Get all ads from the source collection
+      const sourceAds = await prisma.savedAd.findMany({
         where: { collectionId: sourceCollectionId },
-        data: { collectionId: destinationCollectionId },
+        select: { id: true, adArchiveID: true, adData: true, imageUrl: true },
       });
 
+      // Get existing adArchiveIDs in the destination collection
+      const existingAdArchiveIDs = new Set(
+        (
+          await prisma.savedAd.findMany({
+            where: { collectionId: destinationCollectionId },
+            select: { adArchiveID: true },
+          })
+        ).map((ad) => ad.adArchiveID),
+      );
+
+      // Filter out ads that already exist in the destination collection
+      const adsToMove = sourceAds.filter(
+        (ad) => !existingAdArchiveIDs.has(ad.adArchiveID),
+      );
+
+      // Move unique ads to the destination collection
+      const movedAds = await Promise.all(
+        adsToMove.map((ad) =>
+          prisma.savedAd.create({
+            data: {
+              adArchiveID: ad.adArchiveID,
+              collectionId: destinationCollectionId,
+              adData: ad.adData as Prisma.InputJsonValue,
+              imageUrl: ad.imageUrl,
+            },
+          }),
+        ),
+      );
+
+      // Delete ALL ads from the source collection
+      await prisma.savedAd.deleteMany({
+        where: { collectionId: sourceCollectionId },
+      });
+
+      // Update savedAdsCount for both collections
       await prisma.collection.update({
         where: { id: sourceCollectionId },
         data: {
@@ -235,17 +300,26 @@ export async function moveAllAds(
       await prisma.collection.update({
         where: { id: destinationCollectionId },
         data: {
-          savedAdsCount: { increment: movedAdsCount.count },
+          savedAdsCount: { increment: movedAds.length },
           lastSavedAt: new Date(),
           updatedAt: new Date(),
         },
       });
 
-      return movedAdsCount.count;
+      return {
+        movedCount: movedAds.length,
+        totalCount: sourceAds.length,
+        deletedCount: sourceAds.length - movedAds.length,
+      };
     });
 
     revalidatePath("/dashboard/collections");
-    return { success: true, movedAdsCount: result };
+    return {
+      success: true,
+      movedAdsCount: result.movedCount,
+      totalAdsCount: result.totalCount,
+      deletedAdsCount: result.deletedCount,
+    };
   } catch (error) {
     console.error("Failed to move ads:", error);
     return {
