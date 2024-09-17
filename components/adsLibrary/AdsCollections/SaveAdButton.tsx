@@ -26,8 +26,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { CreateCollectionButton } from "@/components/adsLibrary/AdsCollections/CreateCollectionButton";
-import { getCollections } from "@/app/actions/collectionActions";
-import { checkAdSaveStatus, saveAd, unsaveAd } from "@/app/actions/saveAd";
+import { getCollections, checkAdSaveStatus, saveAd, unsaveAd } from "@/app/actions/collectionActions";
 
 interface SaveAdButtonProps {
   ad: Ad;

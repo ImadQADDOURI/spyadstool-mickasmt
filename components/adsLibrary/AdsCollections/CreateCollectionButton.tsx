@@ -16,8 +16,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { createCollection } from "@/app/actions/collectionActions";
-import { saveAd } from "@/app/actions/saveAd";
+import { createCollection, saveAd } from "@/app/actions/collectionActions";
 
 interface CreateCollectionButtonProps {
   ad?: Ad;
