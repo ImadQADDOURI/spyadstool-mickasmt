@@ -1,9 +1,9 @@
-// app/collections/[id]/page.tsx
+// app/dashboard/collections/[id]/page.tsx
 
-"use client";
-import { getCollectionById } from '@/app/actions/collectionActions';
-import { CollectionAdsDisplay } from '@/components/adsLibrary/AdsCollections/CollectionAdsDisplay';
-import { notFound } from 'next/navigation';
+import { notFound } from "next/navigation";
+
+import { CollectionAdsDisplay } from "@/components/adsLibrary/AdsCollections/CollectionAdsDisplay";
+import { getCollectionById } from "@/app/actions/collectionActions";
 
 interface PageProps {
   params: {
@@ -18,26 +18,5 @@ export default async function CollectionPage({ params }: PageProps) {
     notFound();
   }
 
-  const { collection } = result;
-  const ads = collection.savedAds?.map(savedAd => savedAd.adData) || [];
-
-  function formatDate(date: Date) {
-    return new Intl.DateTimeFormat('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    }).format(date);
-  }
-
-  return (
-    <CollectionAdsDisplay
-      collectionName={collection.name}
-      collectionId={collection.id}
-      ads={ads}
-      adCount={ads.length}
-      lastUpdated={formatDate(new Date(collection.updatedAt))}
-    />
-  );
+  return <CollectionAdsDisplay collection={result.collection} />;
 }

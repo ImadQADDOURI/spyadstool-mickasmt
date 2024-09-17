@@ -89,40 +89,40 @@ export function CreateCollectionButton({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button 
-          className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105"
-        >
-          <Plus className="h-6 w-6 m-2" />
+        <Button className="transform rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white transition-all duration-300 hover:scale-105 hover:opacity-90">
+          <Plus className="m-2 h-6 w-6" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-white dark:bg-gray-800 rounded-2xl">
+      <DialogContent className="rounded-2xl bg-white dark:bg-gray-800">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Create New Collection</DialogTitle>
+          <DialogTitle className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-2xl font-bold text-transparent">
+            Create New Collection
+          </DialogTitle>
         </DialogHeader>
         <div className="py-4">
           <Input
             value={newCollectionName}
             onChange={(e) => setNewCollectionName(e.target.value)}
             placeholder="Enter collection name"
-            className="bg-transparent border-2 border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-purple-500 rounded-full"
+            className="rounded-full border-2 border-gray-300 bg-transparent focus:ring-2 focus:ring-purple-500 dark:border-gray-700"
             disabled={isLoading}
           />
         </div>
         <DialogFooter>
-          <Button 
-            variant="outline" 
-            onClick={() => setIsOpen(false)} 
+          <Button
+            variant="outline"
+            onClick={() => setIsOpen(false)}
             disabled={isLoading}
             className="rounded-full"
           >
             Cancel
           </Button>
-          <Button 
-            onClick={handleCreateCollection} 
+          <Button
+            onClick={handleCreateCollection}
             disabled={isLoading}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:opacity-90 transition-opacity"
+            className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white transition-opacity hover:opacity-90"
           >
-            {isLoading ? 'Creating...' : 'Create'}
+            {isLoading ? "Creating..." : "Create"}
           </Button>
         </DialogFooter>
       </DialogContent>

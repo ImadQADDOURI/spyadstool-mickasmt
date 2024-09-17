@@ -26,7 +26,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { CreateCollectionButton } from "@/components/adsLibrary/AdsCollections/CreateCollectionButton";
-import { getCollections, checkAdSaveStatus, saveAd, unsaveAd } from "@/app/actions/collectionActions";
+import {
+  checkAdSaveStatus,
+  getCollections,
+  saveAd,
+  unsaveAd,
+} from "@/app/actions/collectionActions";
 
 interface SaveAdButtonProps {
   ad: Ad;
@@ -227,30 +232,30 @@ export function SaveAdButton({ ad }: SaveAdButtonProps) {
     <>
       <Dialog open={isOpen} onOpenChange={handleOpenChange}>
         <DialogTrigger asChild>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="rounded-full hover:bg-purple-100 dark:hover:bg-purple-900 transition-colors duration-200"
+          <Button
+            variant="ghost"
+            size="sm"
+            className="rounded-full transition-colors duration-200 hover:bg-purple-100 dark:hover:bg-purple-900"
           >
             <Heart
               className={`h-4 w-4 ${isAdSaved ? "fill-current text-pink-500" : "text-gray-600 dark:text-gray-300"}`}
             />
           </Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px] bg-white dark:bg-gray-800 rounded-2xl">
+        <DialogContent className="rounded-2xl bg-white dark:bg-gray-800 sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <DialogTitle className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-2xl font-bold text-transparent">
               Manage Ad in Collections
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
-              <Search className="h-6 w-6 ml-2 text-gray-400" />
+              <Search className="ml-2 h-6 w-6 text-gray-400" />
               <Input
                 placeholder="Search collections..."
                 value={searchTerm}
                 onChange={(e) => handleSearch(e.target.value)}
-                className="flex-grow bg-transparent border-2 border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-purple-500 rounded-full"
+                className="flex-grow rounded-full border-2 border-gray-300 bg-transparent focus:ring-2 focus:ring-purple-500 dark:border-gray-700"
               />
               {searchTerm && (
                 <Button
@@ -304,16 +309,16 @@ export function SaveAdButton({ ad }: SaveAdButtonProps) {
           </div>
         </DialogContent>
       </Dialog>
-  
+
       <AlertDialog
         open={unsaveConfirmation.isOpen}
         onOpenChange={(isOpen) =>
           setUnsaveConfirmation({ ...unsaveConfirmation, isOpen })
         }
       >
-        <AlertDialogContent className="bg-white dark:bg-gray-800 rounded-2xl">
+        <AlertDialogContent className="rounded-2xl bg-white dark:bg-gray-800">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <AlertDialogTitle className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-2xl font-bold text-transparent">
               Confirm Unsave
             </AlertDialogTitle>
             <AlertDialogDescription className="text-gray-600 dark:text-gray-400">
@@ -322,9 +327,11 @@ export function SaveAdButton({ ad }: SaveAdButtonProps) {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="rounded-full">Cancel</AlertDialogCancel>
+            <AlertDialogCancel className="rounded-full">
+              Cancel
+            </AlertDialogCancel>
             <AlertDialogAction
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:opacity-90 transition-opacity"
+              className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white transition-opacity hover:opacity-90"
               onClick={() =>
                 unsaveConfirmation.collectionId &&
                 handleUnsaveAd(unsaveConfirmation.collectionId)

@@ -1,11 +1,13 @@
 // components/adsLibrary/AdsCollections/CollectionCard.tsx
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { Clock, Image } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card";
+import React from "react";
+import Link from "next/link";
+import { Clock, Image } from "lucide-react";
+
 import { formatTimeAgo } from "@/lib/formatTimeAgo";
-import { CollectionOptions } from '@/components/adsLibrary/AdsCollections/CollectionOptions';
+import { Card, CardContent } from "@/components/ui/card";
+import { CollectionOptions } from "@/components/adsLibrary/AdsCollections/CollectionOptions";
 
 interface Collection {
   id: string;
@@ -23,10 +25,18 @@ interface CollectionCardProps {
   onMove: (collectionId: string) => void;
 }
 
-export function CollectionCard({ collection, onEdit, onDelete, onMove }: CollectionCardProps) {
+export function CollectionCard({
+  collection,
+  onEdit,
+  onDelete,
+  onMove,
+}: CollectionCardProps) {
   return (
     <Card className="group relative flex h-full transform flex-col overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-xl dark:bg-gray-800">
-      <Link href={`/dashboard/collections/${collection.id}`} className="absolute inset-0 z-10">
+      <Link
+        href={`/dashboard/collections/${collection.id}`}
+        className="absolute inset-0 z-10"
+      >
         <span className="sr-only">View collection</span>
       </Link>
       <CardContent className="flex h-full flex-col p-0">

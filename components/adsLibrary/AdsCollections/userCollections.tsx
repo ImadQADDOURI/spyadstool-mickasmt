@@ -1,13 +1,27 @@
 // components/adsLibrary/AdsCollections/userCollections.tsx
 "use client";
+
 import React, { useEffect, useState } from "react";
-import { Search, Loader2 } from "lucide-react";
+import { Loader2, Search } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { CreateCollectionButton } from "@/components/adsLibrary/AdsCollections/CreateCollectionButton";
-import { getCollections, updateCollection, deleteCollection, moveAllAds } from "@/app/actions/collectionActions";
+import {
+  deleteCollection,
+  getCollections,
+  moveAllAds,
+  updateCollection,
+} from "@/app/actions/collectionActions";
+
 import { ScrollButtons } from "../ScrollButtons";
 import { CollectionCard } from "./CollectionCard";
 
@@ -22,16 +36,23 @@ interface Collection {
 
 export default function UserCollections() {
   const [collections, setCollections] = useState<Collection[]>([]);
-  const [filteredCollections, setFilteredCollections] = useState<Collection[]>([]);
+  const [filteredCollections, setFilteredCollections] = useState<Collection[]>(
+    [],
+  );
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [editingCollection, setEditingCollection] = useState<Collection | null>(null);
+  const [editingCollection, setEditingCollection] = useState<Collection | null>(
+    null,
+  );
   const [editName, setEditName] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [isMoveDialogOpen, setIsMoveDialogOpen] = useState(false);
-  const [selectedCollectionId, setSelectedCollectionId] = useState<string | null>(null);
-  const [destinationCollectionId, setDestinationCollectionId] = useState<string>("");
+  const [selectedCollectionId, setSelectedCollectionId] = useState<
+    string | null
+  >(null);
+  const [destinationCollectionId, setDestinationCollectionId] =
+    useState<string>("");
   const { toast } = useToast();
 
   useEffect(() => {
@@ -43,12 +64,14 @@ export default function UserCollections() {
     try {
       const result = await getCollections();
       if (result.success && result.collections) {
-        const formattedCollections: Collection[] = result.collections.map(collection => ({
-          ...collection,
-          updatedAt: new Date(collection.updatedAt).toISOString(),
-          lastSavedAt: new Date(collection.lastSavedAt).toISOString(),
-          firstAdImageUrl: collection.savedAds[0]?.imageUrl || null
-        }));
+        const formattedCollections: Collection[] = result.collections.map(
+          (collection) => ({
+            ...collection,
+            updatedAt: new Date(collection.updatedAt).toISOString(),
+            lastSavedAt: new Date(collection.lastSavedAt).toISOString(),
+            firstAdImageUrl: collection.savedAds[0]?.imageUrl || null,
+          }),
+        );
         setCollections(formattedCollections);
         setFilteredCollections(formattedCollections);
       } else {
@@ -57,7 +80,8 @@ export default function UserCollections() {
     } catch (error) {
       toast({
         title: "Error fetching collections",
-        description: error instanceof Error ? error.message : "An unknown error occurred",
+        description:
+          error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive",
       });
     } finally {
@@ -68,7 +92,7 @@ export default function UserCollections() {
   const handleSearch = (searchTerm: string) => {
     setSearchTerm(searchTerm);
     const filtered = collections.filter((collection) =>
-      collection.name.toLowerCase().includes(searchTerm.toLowerCase())
+      collection.name.toLowerCase().includes(searchTerm.toLowerCase()),
     );
     setFilteredCollections(filtered);
   };
@@ -79,12 +103,15 @@ export default function UserCollections() {
     try {
       const result = await updateCollection(editingCollection.id, editName);
       if (result.success) {
-        const updatedCollections = collections.map(c =>
-          c.id === editingCollection.id ? { ...c, name: editName } : c
+        const updatedCollections = collections.map((c) =>
+          c.id === editingCollection.id ? { ...c, name: editName } : c,
         );
         setCollections(updatedCollections);
         setFilteredCollections(updatedCollections);
-        toast({ title: "Collection updated", description: "The collection name has been updated successfully." });
+        toast({
+          title: "Collection updated",
+          description: "The collection name has been updated successfully.",
+        });
         setIsDialogOpen(false);
       } else {
         throw new Error(result.error || "Failed to update collection");
@@ -92,7 +119,8 @@ export default function UserCollections() {
     } catch (error) {
       toast({
         title: "Error updating collection",
-        description: error instanceof Error ? error.message : "An unknown error occurred",
+        description:
+          error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive",
       });
     } finally {
@@ -107,17 +135,23 @@ export default function UserCollections() {
     try {
       const result = await deleteCollection(selectedCollectionId);
       if (result.success) {
-        const updatedCollections = collections.filter(c => c.id !== selectedCollectionId);
+        const updatedCollections = collections.filter(
+          (c) => c.id !== selectedCollectionId,
+        );
         setCollections(updatedCollections);
         setFilteredCollections(updatedCollections);
-        toast({ title: "Collection deleted", description: "The collection has been deleted successfully." });
+        toast({
+          title: "Collection deleted",
+          description: "The collection has been deleted successfully.",
+        });
       } else {
         throw new Error(result.error || "Failed to delete collection");
       }
     } catch (error) {
       toast({
         title: "Error deleting collection",
-        description: error instanceof Error ? error.message : "An unknown error occurred",
+        description:
+          error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive",
       });
     } finally {
@@ -130,17 +164,24 @@ export default function UserCollections() {
     if (!selectedCollectionId || !destinationCollectionId) return;
 
     try {
-      const result = await moveAllAds(selectedCollectionId, destinationCollectionId);
+      const result = await moveAllAds(
+        selectedCollectionId,
+        destinationCollectionId,
+      );
       if (result.success) {
         await fetchCollections(); // Refresh collections to update counts
-        toast({ title: "Ads moved", description: "All ads have been moved successfully." });
+        toast({
+          title: "Ads moved",
+          description: "All ads have been moved successfully.",
+        });
       } else {
         throw new Error(result.error || "Failed to move ads");
       }
     } catch (error) {
       toast({
         title: "Error moving ads",
-        description: error instanceof Error ? error.message : "An unknown error occurred",
+        description:
+          error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive",
       });
     } finally {
@@ -213,7 +254,9 @@ export default function UserCollections() {
             placeholder="New collection name"
           />
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsDialogOpen(false)}>Cancel</Button>
+            <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
+              Cancel
+            </Button>
             <Button onClick={handleEditName}>Save</Button>
           </DialogFooter>
         </DialogContent>
@@ -225,10 +268,20 @@ export default function UserCollections() {
           <DialogHeader>
             <DialogTitle>Confirm Deletion</DialogTitle>
           </DialogHeader>
-          <p>Are you sure you want to delete this collection? This action cannot be undone.</p>
+          <p>
+            Are you sure you want to delete this collection? This action cannot
+            be undone.
+          </p>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsDeleteDialogOpen(false)}>Cancel</Button>
-            <Button variant="destructive" onClick={handleDeleteCollection}>Delete</Button>
+            <Button
+              variant="outline"
+              onClick={() => setIsDeleteDialogOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button variant="destructive" onClick={handleDeleteCollection}>
+              Delete
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -247,15 +300,26 @@ export default function UserCollections() {
           >
             <option value="">Select a collection</option>
             {collections
-              .filter(c => c.id !== selectedCollectionId)
-              .map(c => (
-                <option key={c.id} value={c.id}>{c.name}</option>
-              ))
-            }
+              .filter((c) => c.id !== selectedCollectionId)
+              .map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                </option>
+              ))}
           </select>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsMoveDialogOpen(false)}>Cancel</Button>
-            <Button onClick={handleMoveAllAds} disabled={!destinationCollectionId}>Move</Button>
+            <Button
+              variant="outline"
+              onClick={() => setIsMoveDialogOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleMoveAllAds}
+              disabled={!destinationCollectionId}
+            >
+              Move
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

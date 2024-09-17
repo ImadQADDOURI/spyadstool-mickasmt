@@ -2,14 +2,11 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-
-import { prisma } from "@/lib/db";
-import { getCurrentUser } from "@/lib/session";
-import { Ad } from "@/types/ad";
-
-
 import { Prisma } from "@prisma/client";
 
+import { Ad } from "@/types/ad";
+import { prisma } from "@/lib/db";
+import { getCurrentUser } from "@/lib/session";
 
 export interface Collection {
   id: string;
@@ -97,32 +94,32 @@ export async function getCollections() {
 
     const collections = await prisma.collection.findMany({
       where: { userId: user.id },
-      select: {
-        id: true,
-        name: true,
-        savedAdsCount: true,
-        lastSavedAt: true,
-        updatedAt: true,
+      include: {
         savedAds: {
-          take: 1,
           select: {
+            id: true,
             imageUrl: true,
           },
         },
       },
-      orderBy: { updatedAt: 'desc' },
+      orderBy: { updatedAt: "desc" },
     });
 
     return {
       success: true,
-      collections: collections.map(c => ({
+      collections: collections.map((c) => ({
         ...c,
-        firstAdImageUrl: c.savedAds[0]?.imageUrl,
+        savedAdsCount: c.savedAds.length,
+        firstAdImageUrl: c.savedAds[0]?.imageUrl || null,
       })),
     };
   } catch (error) {
     console.error("Failed to fetch collections:", error);
-    return { success: false, error: error instanceof Error ? error.message : 'An unknown error occurred' };
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
   }
 }
 
@@ -191,91 +188,78 @@ export async function deleteCollection(id: string) {
     return { success: true };
   } catch (error) {
     console.error("Failed to delete collection:", error);
-    return { success: false, error: error instanceof Error ? error.message : 'An unknown error occurred' };
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
   }
 }
 
-export async function moveAllAds(sourceCollectionId: string, destinationCollectionId: string) {
+export async function moveAllAds(
+  sourceCollectionId: string,
+  destinationCollectionId: string,
+) {
   try {
     const user = await getCurrentUser();
     if (!user) throw new Error("User not authenticated");
 
-    // Ensure both collections belong to the user
-    const [sourceCollection, destinationCollection] = await Promise.all([
-      prisma.collection.findFirst({ where: { id: sourceCollectionId, userId: user.id } }),
-      prisma.collection.findFirst({ where: { id: destinationCollectionId, userId: user.id } }),
-    ]);
+    const result = await prisma.$transaction(async (prisma) => {
+      const sourceCollection = await prisma.collection.findFirst({
+        where: { id: sourceCollectionId, userId: user.id },
+        include: { savedAds: true },
+      });
 
-    if (!sourceCollection || !destinationCollection) {
-      throw new Error("Invalid source or destination collection");
-    }
+      if (!sourceCollection) throw new Error("Source collection not found");
 
-    // Get all ads from the source collection
-    const ads = await prisma.savedAd.findMany({
-      where: { collectionId: sourceCollectionId },
-    });
+      const destinationCollection = await prisma.collection.findFirst({
+        where: { id: destinationCollectionId, userId: user.id },
+      });
 
-    // Move ads to the destination collection
-    await prisma.$transaction(async (prisma) => {
-      for (const ad of ads) {
-        // Check if the ad already exists in the destination collection
-        const existingAd = await prisma.savedAd.findFirst({
-          where: {
-            adArchiveID: ad.adArchiveID,
-            collectionId: destinationCollectionId,
-          },
-        });
+      if (!destinationCollection)
+        throw new Error("Destination collection not found");
 
-        if (!existingAd) {
-          // If the ad doesn't exist in the destination, create it
-          await prisma.savedAd.create({
-            data: {
-              adArchiveID: ad.adArchiveID,
-              collectionId: destinationCollectionId,
-              adData: ad.adData as Prisma.InputJsonValue,
-              imageUrl: ad.imageUrl,
-            },
-          });
-        }
+      const movedAdsCount = await prisma.savedAd.updateMany({
+        where: { collectionId: sourceCollectionId },
+        data: { collectionId: destinationCollectionId },
+      });
 
-        // Delete the ad from the source collection
-        await prisma.savedAd.delete({
-          where: { id: ad.id },
-        });
-      }
-
-      // Update the savedAdsCount for both collections
       await prisma.collection.update({
         where: { id: sourceCollectionId },
-        data: { savedAdsCount: 0, lastSavedAt: new Date() },
+        data: {
+          savedAdsCount: 0,
+          updatedAt: new Date(),
+        },
       });
 
       await prisma.collection.update({
         where: { id: destinationCollectionId },
         data: {
-          savedAdsCount: { increment: ads.length },
+          savedAdsCount: { increment: movedAdsCount.count },
           lastSavedAt: new Date(),
+          updatedAt: new Date(),
         },
       });
+
+      return movedAdsCount.count;
     });
 
     revalidatePath("/dashboard/collections");
-    return { success: true };
+    return { success: true, movedAdsCount: result };
   } catch (error) {
     console.error("Failed to move ads:", error);
-    return { success: false, error: error instanceof Error ? error.message : 'An unknown error occurred' };
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
   }
 }
 
-
-export async function getCollectionById(
-  id: string,
-): Promise<{ success: boolean; collection?: Collection; error?: string }> {
+export async function getCollectionById(id: string) {
   try {
     const user = await getCurrentUser();
-    if (!user) {
-      throw new Error("User not authenticated");
-    }
+    if (!user) throw new Error("User not authenticated");
 
     const collection = await prisma.collection.findFirst({
       where: { id, userId: user.id },
@@ -295,7 +279,14 @@ export async function getCollectionById(
       );
     }
 
-    return { success: true, collection: transformToCollection(collection) };
+    return {
+      success: true,
+      collection: {
+        ...collection,
+        updatedAt: collection.updatedAt.toISOString(),
+        savedAdsCount: collection.savedAds.length,
+      },
+    };
   } catch (error) {
     console.error("Failed to fetch collection:", error);
     return {
@@ -305,9 +296,6 @@ export async function getCollectionById(
     };
   }
 }
-
-
-
 
 // ad actions
 
@@ -321,7 +309,7 @@ export async function saveAd(adData: Ad, collectionId: string) {
         data: {
           adArchiveID: adData.adArchiveID,
           collectionId: collectionId,
-          adData: adData as unknown as Prisma.JsonObject, // Type assertion
+          adData: adData as unknown as Prisma.InputJsonValue,
           imageUrl: extractImageFromAd(adData),
         },
       });
@@ -338,10 +326,15 @@ export async function saveAd(adData: Ad, collectionId: string) {
       return savedAd;
     });
 
+    revalidatePath(`/dashboard/collections/${collectionId}`);
     return { success: true, savedAd };
   } catch (error) {
     console.error("Failed to save ad:", error);
-    return { success: false, error: error instanceof Error ? error.message : 'An unknown error occurred' };
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
   }
 }
 
@@ -397,7 +390,9 @@ export async function unsaveAd(adArchiveID: string, collectionId: string) {
       });
 
       if (deletedAd.count === 0) {
-        throw new Error("Ad not found in the specified collection or you don't have permission to unsave it");
+        throw new Error(
+          "Ad not found in the specified collection or you don't have permission to unsave it",
+        );
       }
 
       await prisma.collection.update({
@@ -409,13 +404,17 @@ export async function unsaveAd(adArchiveID: string, collectionId: string) {
       });
     });
 
+    revalidatePath(`/dashboard/collections/${collectionId}`);
     return { success: true };
   } catch (error) {
     console.error("Failed to unsave ad:", error);
-    return { success: false, error: error instanceof Error ? error.message : 'An unknown error occurred' };
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
   }
 }
-
 
 // function to extract the image URL
 function extractImageFromAd(adData: Ad): string | undefined {
