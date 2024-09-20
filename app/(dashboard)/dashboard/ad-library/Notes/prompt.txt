@@ -1,9 +1,10 @@
-I am building a SaaS using Next.js 14, TypeScript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/UI, Tailwind CSS, Lucide React, Stripe, Server Actions, and Zod. The project emphasizes error handling, best coding practices, responsive design, light and dark themes, clean and visually appealing UI, stable logic, well-structured code, optimized with explanatory comments, reusability, performance, lightweight design, flexibility, and separation of concerns. Proper TypeScript typing . The final deliverable should be a well-documented and commented, efficient that adheres to the best practices mentioned.
-
-
-if you have modifications on code give me just what to change not the whole code
-
-Drawer,Dialog,Sheet
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+I am building a SaaS that allows users to search for, analyze, and manage ads. using Next.js 14, TypeScript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/UI, Tailwind CSS, Lucide React, Stripe, Server Actions, and Zod. The project emphasizes error handling, best coding practices, responsive design, light and dark themes, clean and visually appealing UI, stable logic, well-structured code, optimized with explanatory comments, reusability, performance, lightweight design, flexibility, and separation of concerns. standardized approach . Proper TypeScript typing . The final deliverable should be a well-documented and commented, efficient that adheres to the best practices mentioned.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 
 Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
 
@@ -1220,13 +1221,7 @@ in the client-side rendering (if the filters are just used for display purposes)
  --------------------------------------------------------------------------------------------
 
 
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
-I am building a SaaS using Next.js 14, TypeScript, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/UI, Tailwind CSS, Lucide React, Stripe, Server Actions, and Zod. The project emphasizes error handling, best coding practices, responsive design, light and dark themes, clean and visually appealing UI, stable logic, well-structured code, optimized with explanatory comments, reusability, performance, lightweight design, flexibility, and separation of concerns. standardized approach . Proper TypeScript typing . The final deliverable should be a well-documented and commented, efficient that adheres to the best practices mentioned.
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
+
 
 
  in steps if one return error the other should return the results not everything will return error

@@ -1,33 +1,41 @@
 // app/actions/detectPixelPlatformPayment.ts
 "use server";
 
+import { createHash } from "crypto";
 import * as puppeteer from "puppeteer";
 
-// Global default settings
+// Optimized settings for balancing speed and data collection
 const DEFAULT_SETTINGS = {
   USER_AGENT:
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-  USE_PUPPETEER: true,
   BROWSER_HEADLESS: false,
-  KEEP_BROWSER_OPEN: true,
-  Navigation_TIMEOUT: 10000, // time to wait for navigation to complete
-  DYNAMIC_TIMEOUT: 1000, // time to wait for dynamic content to load
-  USE_CACHE: true,
-  CACHE_DURATION: 1000 * 60 * 60 * 24, // 24 hours
+  INITIAL_WAIT: 1000, // 1 second
+  MAX_TOTAL_TIME: 6000, // 6 seconds
+  SCROLL_INTERVAL: 50, // 50 ms for faster scrolling
+  CACHE_DURATION: 24 * 60 * 60 * 1000, // 24 hours
 };
-//CACHE_DURATION = 1000 * 60 * 60; // 1 hour
-//CACHE_DURATION = 1000 * 60 * 60 * 24; // 24 hours
 
-//CACHE_DURATION = Infinity; // no time limit
-//While this would maximize performance, it's generally not recommended because:
-//Websites can change their tracking pixels over time.
-//You might miss new tracking technologies or pixels that are added.
-//If there was an error in detection, it would never self-correct.
+interface RequestData {
+  url: string;
+  type: string;
+  method: string;
+  postData?: string;
+}
 
 interface FetchResult {
   html: string;
-  resources: string[];
+  requests: RequestData[];
+  isComplete: boolean;
 }
+
+interface DetectionResult {
+  pixels: string[];
+  platforms: string[];
+  payments: string[];
+  isComplete: boolean;
+}
+
+// ... (keep your existing detector patterns)
 
 interface TrackingDetector {
   name: string;
@@ -63,6 +71,8 @@ const trackingPixelDetectors: TrackingDetector[] = [
       "googletagmanager.com/gtag/js",
       "googleadservices.com/pagead/conversion",
       "google.com/ads/ga-audiences",
+      "google-analytics",
+      "googleadservices",
     ],
   },
   {
@@ -78,7 +88,7 @@ const trackingPixelDetectors: TrackingDetector[] = [
   },
   {
     name: "TikTok",
-    patterns: ["analytics.tiktok.com", "tiktok.com/i18n"],
+    patterns: ["analytics.tiktok.com", "tiktok.com/i18n", "analytics.tiktok"],
   },
   {
     name: "Pinterest",
@@ -108,12 +118,22 @@ const trackingPixelDetectors: TrackingDetector[] = [
     name: "Outbrain",
     patterns: ["outbrain.com/outbrain.js"],
   },
+  {
+    name: "ABTasty",
+    patterns: ["abtasty.com"],
+  },
 ];
 // platform detectors
 const platformDetectors: TrackingDetector[] = [
   {
     name: "Shopify",
-    patterns: ["cdn.shopify.com", "shopify.com/s/files", "myshopify.com"],
+    patterns: [
+      "cdn.shopify.com",
+      "shopify.com/s/files",
+      "myshopify.com",
+      "shopifycdn",
+      "shopify",
+    ],
   },
   {
     name: "WooCommerce",
@@ -200,103 +220,141 @@ const paymentDetectors: TrackingDetector[] = [
   },
 ];
 
+const cache: Map<string, { result: DetectionResult; timestamp: number }> =
+  new Map();
+
 let browserInstance: puppeteer.Browser | null = null;
 
 async function getBrowser(): Promise<puppeteer.Browser> {
+  console.log("Getting browser instance...");
   if (!browserInstance) {
     browserInstance = await puppeteer.launch({
       headless: DEFAULT_SETTINGS.BROWSER_HEADLESS,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage",
+      ],
     });
-  } else {
-    try {
-      // Check if the browser is still open and usable
-      await browserInstance.version();
-    } catch (error) {
-      console.log(
-        "Existing browser instance is not usable, creating a new one",
-      );
-      await closeBrowser(); // Ensure the old instance is properly closed
-      browserInstance = await puppeteer.launch({
-        headless: DEFAULT_SETTINGS.BROWSER_HEADLESS,
-        args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      });
-    }
+    console.log("New browser instance created.");
   }
   return browserInstance;
 }
 
-async function fetchWithPuppeteer(
-  url: string,
-  keepBrowserOpen: boolean = DEFAULT_SETTINGS.KEEP_BROWSER_OPEN,
-  dynamicTimeout: number = DEFAULT_SETTINGS.DYNAMIC_TIMEOUT,
-): Promise<FetchResult> {
+async function fetchWithPuppeteer(url: string): Promise<FetchResult> {
+  console.log(`Starting fetchWithPuppeteer for URL: ${url}`);
   const browser = await getBrowser();
   const page = await browser.newPage();
 
-  try {
-    await page.setUserAgent(DEFAULT_SETTINGS.USER_AGENT);
+  let isComplete = false;
+  const requests: RequestData[] = [];
+  let latestHtml = "";
 
-    const resources: string[] = [];
+  try {
+    console.log("Setting up page...");
+    await page.setUserAgent(DEFAULT_SETTINGS.USER_AGENT);
     await page.setRequestInterception(true);
+
     page.on("request", (request) => {
-      resources.push(request.url());
+      requests.push({
+        url: request.url(),
+        type: request.resourceType(),
+        method: request.method(),
+        postData: request.postData(),
+      });
       request.continue();
     });
 
-    await page.goto(url, {
-      waitUntil: "networkidle0",
-      timeout: DEFAULT_SETTINGS.Navigation_TIMEOUT,
-    });
+    console.log("Starting navigation...");
+    const navigationPromise = page
+      .goto(url, { waitUntil: "networkidle0" })
+      .catch((error) => {
+        console.warn(`Navigation error for ${url}:`, error.message);
+      });
 
-    // Scroll to the bottom of the page
-    await page.evaluate(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    });
+    console.log(`Waiting initial ${DEFAULT_SETTINGS.INITIAL_WAIT}ms...`);
+    await new Promise((resolve) =>
+      setTimeout(resolve, DEFAULT_SETTINGS.INITIAL_WAIT),
+    );
 
-    // Add a delay to allow for dynamic content to load
-    // Use the configurable dynamicTimeout
-    await new Promise((resolve) => setTimeout(resolve, dynamicTimeout));
+    console.log("Starting progressive data collection...");
+    const dataCollectionPromise = progressiveDataCollection(page);
 
-    const html = await page.content();
+    console.log("Waiting for navigation or timeout...");
+    await Promise.race([
+      navigationPromise,
+      new Promise((resolve) =>
+        setTimeout(resolve, DEFAULT_SETTINGS.MAX_TOTAL_TIME),
+      ),
+    ]);
 
-    return { html, resources };
+    isComplete = true;
+    console.log("Navigation complete or max time reached.");
+
+    latestHtml = await dataCollectionPromise;
+    console.log("Data collection finished.");
+
+    return { html: latestHtml, requests, isComplete };
   } catch (error) {
-    console.error(`Error fetching ${url}:`, error);
-    throw error;
+    console.error(`Error during page fetch for ${url}:`, error);
+    return { html: latestHtml, requests, isComplete: false };
   } finally {
-    await page.close();
-
-    // Close the browser if keepBrowserOpen is false
-    if (!keepBrowserOpen) {
-      await closeBrowser();
-    }
+    console.log("Closing page...");
+    await page
+      .close()
+      .catch((error) => console.warn("Error closing page:", error));
   }
 }
 
-async function fetchWithSimpleRequest(url: string): Promise<FetchResult> {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 5000);
+async function progressiveDataCollection(
+  page: puppeteer.Page,
+): Promise<string> {
+  console.log("Starting progressive data collection...");
+  let latestHtml = "";
+  const startTime = Date.now();
 
-  const response = await fetch(url, {
-    signal: controller.signal,
-    headers: {
-      "User-Agent": DEFAULT_SETTINGS.USER_AGENT,
-    },
+  return new Promise<string>((resolve) => {
+    const interval = setInterval(async () => {
+      try {
+        console.log("Capturing current HTML and scrolling...");
+        latestHtml = await page.content().catch((error) => {
+          console.warn("Error capturing HTML:", error.message);
+          return latestHtml; // Return the last successful capture
+        });
+
+        await page
+          .evaluate(() => {
+            window.scrollBy(0, window.innerHeight);
+          })
+          .catch((error) => console.warn("Error scrolling:", error.message));
+
+        const bottomReached = await page
+          .evaluate(
+            () =>
+              window.innerHeight + window.scrollY >= document.body.offsetHeight,
+          )
+          .catch(() => true); // Assume bottom reached if evaluation fails
+
+        if (
+          bottomReached ||
+          Date.now() - startTime > DEFAULT_SETTINGS.MAX_TOTAL_TIME
+        ) {
+          console.log("Reached bottom or max time. Ending data collection.");
+          clearInterval(interval);
+          resolve(latestHtml);
+        }
+      } catch (error) {
+        console.error("Error in progressive data collection:", error);
+        clearInterval(interval);
+        resolve(latestHtml); // Resolve with the latest HTML we have
+      }
+    }, DEFAULT_SETTINGS.SCROLL_INTERVAL);
   });
-
-  clearTimeout(timeoutId);
-
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-
-  const html = await response.text();
-  return { html, resources: [] };
 }
 
 function detectFeatures(result: FetchResult): DetectionResult {
-  const allContent = result.html + " " + result.resources.join(" ");
+  console.log("Detecting features...");
+  const allContent = `${result.html} ${result.requests.map((r) => `${r.url} ${r.postData || ""}`).join(" ")}`;
 
   const detectForCategory = (detectors: TrackingDetector[]): string[] => {
     return detectors
@@ -306,118 +364,94 @@ function detectFeatures(result: FetchResult): DetectionResult {
       .map((detector) => detector.name);
   };
 
-  return {
+  const detectedFeatures = {
     pixels: detectForCategory(trackingPixelDetectors),
     platforms: detectForCategory(platformDetectors),
     payments: detectForCategory(paymentDetectors),
+    isComplete: result.isComplete,
   };
+
+  console.log("Feature detection complete:", detectedFeatures);
+  return detectedFeatures;
 }
 
-const cache: { [url: string]: { result: DetectionResult; timestamp: number } } =
-  {};
+function getCacheKey(url: string): string {
+  return createHash("md5").update(url).digest("hex");
+}
 
 export async function detectPixelPlatformPayment(
   url: string,
-  usePuppeteer: boolean = DEFAULT_SETTINGS.USE_PUPPETEER,
-  keepBrowserOpen: boolean = DEFAULT_SETTINGS.KEEP_BROWSER_OPEN,
-  useCache: boolean = DEFAULT_SETTINGS.USE_CACHE,
-  dynamicTimeout: number = DEFAULT_SETTINGS.DYNAMIC_TIMEOUT,
 ): Promise<DetectionResult> {
+  console.log(`Starting detection for URL: ${url}`);
+  const cacheKey = getCacheKey(url);
   const now = Date.now();
-  if (
-    useCache &&
-    cache[url] &&
-    now - cache[url].timestamp < DEFAULT_SETTINGS.CACHE_DURATION
-  ) {
-    return cache[url].result;
+  const cached = cache.get(cacheKey);
+
+  if (cached && now - cached.timestamp < DEFAULT_SETTINGS.CACHE_DURATION) {
+    console.log("Returning cached result.");
+    return cached.result;
   }
 
   try {
-    let result: FetchResult;
-    if (usePuppeteer) {
-      result = await fetchWithPuppeteer(url, keepBrowserOpen, dynamicTimeout);
-    } else {
-      result = await fetchWithSimpleRequest(url);
-    }
-
+    const result = await fetchWithPuppeteer(url);
     const detectedFeatures = detectFeatures(result);
 
-    if (useCache) {
-      cache[url] = { result: detectedFeatures, timestamp: now };
-    }
+    cache.set(cacheKey, { result: detectedFeatures, timestamp: now });
+    console.log("Detection complete and result cached.");
 
-    console.log("Detected features:", detectedFeatures);
     return detectedFeatures;
   } catch (error) {
-    console.error("Error in detectFeatures:", error);
-    // Return partial results if available, empty arrays otherwise
-    return {
-      pixels: [],
-      platforms: [],
-      payments: [],
-    };
+    console.error(`Error in detectFeatures for ${url}:`, error);
+    return { pixels: [], platforms: [], payments: [], isComplete: false };
   }
 }
 
 export async function detectFeaturesMultiple(
   urls: string[],
-  usePuppeteer: boolean = DEFAULT_SETTINGS.USE_PUPPETEER,
-  keepBrowserOpen: boolean = DEFAULT_SETTINGS.KEEP_BROWSER_OPEN,
-  useCache: boolean = DEFAULT_SETTINGS.USE_CACHE,
-  dynamicTimeout: number = DEFAULT_SETTINGS.DYNAMIC_TIMEOUT,
 ): Promise<{ [url: string]: DetectionResult }> {
+  console.log(`Starting multiple URL detection for ${urls.length} URLs`);
   const results = await Promise.all(
     urls.map((url) =>
-      detectPixelPlatformPayment(
-        url,
-        usePuppeteer,
-        keepBrowserOpen,
-        useCache,
-        dynamicTimeout,
-      ).catch((error) => {
+      detectPixelPlatformPayment(url).catch((error) => {
         console.error(`Error detecting features for ${url}:`, error);
-        return {
-          pixels: [],
-          platforms: [],
-          payments: [],
-        };
+        return { pixels: [], platforms: [], payments: [], isComplete: false };
       }),
     ),
   );
+  console.log("Multiple URL detection complete.");
   return Object.fromEntries(urls.map((url, index) => [url, results[index]]));
 }
 
-// Function to manually close the browser if it's open
 export async function closeBrowser() {
   if (browserInstance) {
-    try {
-      await browserInstance.close();
-    } catch (error) {
-      console.error("Error closing browser:", error);
-    } finally {
-      browserInstance = null;
-    }
+    console.log("Closing browser instance...");
+    await browserInstance
+      .close()
+      .catch((error) => console.warn("Error closing browser:", error));
+    browserInstance = null;
+    console.log("Browser instance closed.");
   }
 }
 
-// Usage examples (commented out)
-{
-  /*
-  // For a single URL
-  const features = await detectFeatures('https://example.com', true, true, true, 2000);
-  console.log(features);
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+  // Optionally, you could close the browser here if it's a critical error
+  // closeBrowser().catch(console.error);
+});
 
-  // For multiple URLs
-  const multipleResults = await detectFeaturesMultiple(
-    ['https://example1.com', 'https://example2.com'],
-    true, // use Puppeteer
-    true, // keep browser open
-    true, // use cache
-    2000  // dynamic timeout
-  );
-  console.log(multipleResults);
+// Usage example (commented out)
+/*
+(async () => {
+  try {
+    const features = await detectPixelPlatformPayment('https://example.com');
+    console.log(features);
 
-  // To manually close the browser when you're done
-  await closeBrowser();
-  */
-}
+    const multipleResults = await detectFeaturesMultiple(['https://example1.com', 'https://example2.com']);
+    console.log(multipleResults);
+  } catch (error) {
+    console.error("Error in main execution:", error);
+  } finally {
+    await closeBrowser();
+  }
+})();
+*/

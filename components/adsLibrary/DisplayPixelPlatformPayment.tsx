@@ -53,6 +53,7 @@ const icons: Record<string, string> = {
   Criteo: "/icons/criteo.svg",
   Taboola: "/icons/taboola.svg",
   Outbrain: "/icons/outbrain.svg",
+  ABTasty: "/icons/abtasty.svg",
   // Platforms
   Shopify: "/icons/shopify.svg",
   WooCommerce: "/icons/woocommerce.svg",
@@ -127,13 +128,7 @@ export default function DisplayPixelPlatformPayment({
     setIsLoading(true);
     setShowButton(false);
     try {
-      const result = await detectPixelPlatformPayment(
-        url,
-        usePuppeteer,
-        keepBrowserOpen,
-        useCache,
-        dynamicTimeout,
-      );
+      const result = await detectPixelPlatformPayment(url);
       setDetectedFeatures(result);
       setError(null);
     } catch (err) {
