@@ -4,6 +4,13 @@
 import { createHash } from "crypto";
 import * as puppeteer from "puppeteer";
 
+import {
+  paymentDetectors,
+  platformDetectors,
+  TrackingDetector,
+  trackingPixelDetectors,
+} from "@/lib/Scraping-Detector-Patters";
+
 // Optimized settings for balancing speed and data collection
 
 const DEFAULT_SETTINGS = {
@@ -35,190 +42,6 @@ interface DetectionResult {
   payments: string[];
   isComplete: boolean;
 }
-// ... ( detector patterns)
-
-interface TrackingDetector {
-  name: string;
-  patterns: string[];
-}
-
-interface DetectionResult {
-  pixels: string[];
-  platforms: string[];
-  payments: string[];
-}
-
-// pixels detectos
-const trackingPixelDetectors: TrackingDetector[] = [
-  {
-    name: "Meta",
-    patterns: [
-      "connect.facebook.net",
-      "facebook-jssdk",
-      "facebook.com/tr",
-      "instagram.com/embed.js",
-      "facebook.com/plugins",
-    ],
-  },
-  {
-    name: "Snapchat",
-    patterns: ["sc-static.net/scevent.min.js", "tr6.snapchat.com"],
-  },
-  {
-    name: "Google",
-    patterns: [
-      "google-analytics.com/analytics.js",
-      "googletagmanager.com/gtag/js",
-      "googleadservices.com/pagead/conversion",
-      "google.com/ads/ga-audiences",
-      "google-analytics",
-      "googleadservices",
-    ],
-  },
-  {
-    name: "LinkedIn",
-    patterns: [
-      "snap.licdn.com/li.lms-analytics/insight.min.js",
-      "platform.linkedin.com",
-    ],
-  },
-  {
-    name: "Twitter",
-    patterns: ["static.ads-twitter.com/uwt.js", "platform.twitter.com"],
-  },
-  {
-    name: "TikTok",
-    patterns: ["analytics.tiktok.com", "tiktok.com/i18n", "analytics.tiktok"],
-  },
-  {
-    name: "Pinterest",
-    patterns: ["pintrk", "assets.pinterest.com", "ct.pinterest.com"],
-  },
-  {
-    name: "Amazon",
-    patterns: ["amazon-adsystem.com", "assoc-amazon.com"],
-  },
-  {
-    name: "Microsoft",
-    patterns: ["clarity.ms", "bat.bing.com"],
-  },
-  {
-    name: "Adobe",
-    patterns: ["demdex.net", "omtrdc.net"],
-  },
-  {
-    name: "Criteo",
-    patterns: ["static.criteo.net"],
-  },
-  {
-    name: "Taboola",
-    patterns: ["cdn.taboola.com"],
-  },
-  {
-    name: "Outbrain",
-    patterns: ["outbrain.com/outbrain.js", "tr.outbrain.com", "outbrain.com"],
-  },
-  {
-    name: "ABTasty",
-    patterns: ["abtasty.com"],
-  },
-];
-// platform detectors
-const platformDetectors: TrackingDetector[] = [
-  {
-    name: "Shopify",
-    patterns: [
-      "cdn.shopify.com",
-      "shopify.com/s/files",
-      "myshopify.com",
-      "shopifycdn",
-      "shopify",
-    ],
-  },
-  {
-    name: "WooCommerce",
-    patterns: ["woocommerce", "wp-content/plugins/woocommerce"],
-  },
-  {
-    name: "Wix",
-    patterns: ["static.wixstatic.com", "wix.com"],
-  },
-  {
-    name: "BigCommerce",
-    patterns: ["bigcommerce.com", "bigcommercecdn.com"],
-  },
-  {
-    name: "Magento",
-    patterns: ["static.magento.com", "mage/cookies.js"],
-  },
-  {
-    name: "PrestaShop",
-    patterns: ["prestashop", "prestashop.com"],
-  },
-  {
-    name: "OpenCart",
-    patterns: ["opencart", "catalog/view/javascript/jquery/"],
-  },
-  {
-    name: "Squarespace",
-    patterns: ["squarespace.com", "static1.squarespace.com"],
-  },
-  {
-    name: "Shopware",
-    patterns: ["shopware", "shopware.com"],
-  },
-  {
-    name: "YouCan",
-    patterns: ["youcan.shop", "youcanassets.com"],
-  },
-  {
-    name: "Shoppy",
-    patterns: ["shoppy.gg", "cdn.shoppy.gg"],
-  },
-];
-// payment method detectors
-const paymentDetectors: TrackingDetector[] = [
-  {
-    name: "Stripe",
-    patterns: ["js.stripe.com", "stripe.com"],
-  },
-  {
-    name: "PayPal",
-    patterns: ["paypal.com/sdk", "paypalobjects.com"],
-  },
-  {
-    name: "Google Pay",
-    patterns: ["pay.google.com", "googleapis.com/pay"],
-  },
-  {
-    name: "Apple Pay",
-    patterns: ["apple-pay-gateway", "apple.com/apple-pay"],
-  },
-  {
-    name: "Amazon Pay",
-    patterns: ["static-na.payments-amazon.com", "amazonpay"],
-  },
-  {
-    name: "Square",
-    patterns: ["squareup.com", "square.com"],
-  },
-  {
-    name: "Klarna",
-    patterns: ["klarna.com", "klarnaservices.com"],
-  },
-  {
-    name: "Affirm",
-    patterns: ["affirm.com", "cdn1.affirm.com"],
-  },
-  {
-    name: "Afterpay",
-    patterns: ["afterpay.com", "static.afterpay.com"],
-  },
-  {
-    name: "Venmo",
-    patterns: ["venmo.com", "venmo.min.js"],
-  },
-];
 
 const cache: Map<string, { result: DetectionResult; timestamp: number }> =
   new Map();
@@ -247,7 +70,7 @@ async function getBrowser(): Promise<puppeteer.Browser> {
 }
 
 async function fetchWithPuppeteer(url: string): Promise<FetchResult> {
-  console.log(`⛏️ Fetching data for URL: ${url}`);
+  //console.log(`⛏️ Fetching data for URL: ${url}`);
   const browser = await getBrowser();
   const page = await browser.newPage();
 
@@ -383,7 +206,7 @@ export async function detectPixelPlatformPayment(
     const detectedFeatures = detectFeatures(result);
 
     cache.set(cacheKey, { result: detectedFeatures, timestamp: now });
-    console.log("⛏️ Detection complete and result cached");
+    //console.log("⛏️ Detection complete and result cached");
 
     return detectedFeatures;
   } catch (error) {

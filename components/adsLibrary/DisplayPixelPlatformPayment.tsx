@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { isNonTrackableWebsite } from "@/lib/nonTrackableWebsites";
+import { icons } from "@/lib/Scraping-Detector-Patters";
 import {
   Tooltip,
   TooltipContent,
@@ -37,47 +38,6 @@ interface DetectionResult {
   platforms: string[];
   payments: string[];
 }
-
-const icons: Record<string, string> = {
-  // Pixels
-  Meta: "/icons/meta.svg",
-  Snapchat: "/icons/snapchat.svg",
-  Google: "/icons/google.svg",
-  LinkedIn: "/icons/linkedin.svg",
-  Twitter: "/icons/twitter.svg",
-  TikTok: "/icons/tiktok.svg",
-  Pinterest: "/icons/pinterest.svg",
-  Amazon: "/icons/amazon.svg",
-  Microsoft: "/icons/microsoft.svg",
-  Adobe: "/icons/adobe.svg",
-  Criteo: "/icons/criteo.svg",
-  Taboola: "/icons/taboola.svg",
-  Outbrain: "/icons/outbrain.svg",
-  ABTasty: "/icons/abtasty.svg",
-  // Platforms
-  Shopify: "/icons/shopify.svg",
-  WooCommerce: "/icons/woocommerce.svg",
-  Wix: "/icons/wix.svg",
-  BigCommerce: "/icons/bigcommerce.svg",
-  Magento: "/icons/magento.svg",
-  PrestaShop: "/icons/prestashop.svg",
-  OpenCart: "/icons/opencart.svg",
-  Squarespace: "/icons/squarespace.svg",
-  Shopware: "/icons/shopware.svg",
-  YouCan: "/icons/youcan.png",
-  Shoppy: "/icons/shoppy.svg",
-  // Payments
-  Stripe: "/icons/stripe.svg",
-  PayPal: "/icons/paypal.svg",
-  GooglePay: "/icons/googlepay.svg",
-  ApplePay: "/icons/applepay.svg",
-  AmazonPay: "/icons/amazonpay.svg",
-  Square: "/icons/square.svg",
-  Klarna: "/icons/klarna.svg",
-  Affirm: "/icons/affirm.svg",
-  Afterpay: "/icons/afterpay.svg",
-  Venmo: "/icons/venmo.svg",
-};
 
 export default function DisplayPixelPlatformPayment({
   url,
