@@ -9,7 +9,7 @@ import {
   platformDetectors,
   TrackingDetector,
   trackingPixelDetectors,
-} from "@/lib/Scraping-Detector-Patters";
+} from "@/lib/Scrape_Detectorpatterns_NonTrackableWebsites";
 
 // Optimized settings for balancing speed and data collection
 
@@ -207,6 +207,7 @@ export async function detectPixelPlatformPayment(
 
     cache.set(cacheKey, { result: detectedFeatures, timestamp: now });
     //console.log("⛏️ Detection complete and result cached");
+    console.log("⛏️⛏️⛏️", detectedFeatures);
 
     return detectedFeatures;
   } catch (error) {

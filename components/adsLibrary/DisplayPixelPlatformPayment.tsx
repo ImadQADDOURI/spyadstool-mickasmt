@@ -14,8 +14,12 @@ import {
   XCircle,
 } from "lucide-react";
 
-import { isNonTrackableWebsite } from "@/lib/nonTrackableWebsites";
-import { icons } from "@/lib/Scraping-Detector-Patters";
+import {
+  isNonTrackableWebsite,
+  paymentDetectors,
+  platformDetectors,
+  trackingPixelDetectors,
+} from "@/lib/Scrape_Detectorpatterns_NonTrackableWebsites";
 import {
   Tooltip,
   TooltipContent,
@@ -178,28 +182,35 @@ export default function DisplayPixelPlatformPayment({
         </div>
       ) : (
         <div className="flex flex-row gap-2">
-          {features.map((feature, index) => (
-            <div key={index} className="group relative flex items-center">
-              {icons[feature] ? (
-                <div className="relative">
-                  <Image
-                    src={icons[feature]}
-                    alt={feature}
-                    width={24}
-                    height={24}
-                    className="transition-transform group-hover:scale-110"
-                  />
-                  <span className="absolute left-1/2 top-1/2 z-10 min-w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
-                    {feature}
-                  </span>
-                </div>
-              ) : (
-                <div className="mr-2 h-4 w-4 rounded-full bg-gray-200">
-                  <span>{feature}</span>
-                </div>
-              )}
-            </div>
-          ))}
+          {features.map((featureName, index) => {
+            const feature = [
+              ...trackingPixelDetectors,
+              ...platformDetectors,
+              ...paymentDetectors,
+            ].find((d) => d.name === featureName);
+            return (
+              <div key={index} className="group relative flex items-center">
+                {feature && feature.icon ? (
+                  <div className="relative">
+                    <Image
+                      src={feature.icon}
+                      alt={featureName}
+                      width={24}
+                      height={24}
+                      className="transition-transform group-hover:scale-110"
+                    />
+                    <span className=" absolute left-1/2 z-10 min-w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+                      {featureName}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="mr-2 h-4 w-4 rounded-full bg-gray-200">
+                    <span>{featureName}</span>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
