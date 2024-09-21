@@ -1,0 +1,267 @@
+curl 'https://www.facebook.com/api/graphql/' \
+-H 'accept: */*' \
+-H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+-H 'content-type: application/x-www-form-urlencoded' \
+-H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=672x935' \
+-H 'origin: https://www.facebook.com' \
+-H 'priority: u=1, i' \
+-H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all&source=nav-header' \
+-H 'sec-ch-prefers-color-scheme: light' \
+-H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+-H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+-H 'sec-ch-ua-mobile: ?0' \
+-H 'sec-ch-ua-model: ""' \
+-H 'sec-ch-ua-platform: "Windows"' \
+-H 'sec-ch-ua-platform-version: "15.0.0"' \
+-H 'sec-fetch-dest: empty' \
+-H 'sec-fetch-mode: cors' \
+-H 'sec-fetch-site: same-origin' \
+-H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+-H 'x-asbd-id: 129477' \
+-H 'x-fb-friendly-name: useAdLibraryTypeaheadSuggestionDataSourceQuery' \
+-H 'x-fb-lsd: AVqy31NLRXs' \
+--data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=1r&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016694340&__s=b72ksy%3Aacglpu%3Alj4r7d&__hsi=7417037990527946704&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gFk_aRINflzkF4lGJybXDi59GVazpAmvykiBhEiyCqEiWwWxiq6oaoky5y8a829wkohxmiaG0B8G1ewtA0z8GEK0Jo6Wdwqoao7Si0dcw0gLC0sK02OnzEgw04fYg07dZ00p39Qaw2DE1EUG0a0w5sw&__comet_req=1&lsd=AVqy31NLRXs&jazoest=2924&__spin_r=1016694340&__spin_b=trunk&__spin_t=1726913729&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=useAdLibraryTypeaheadSuggestionDataSourceQuery&variables=%7B%22queryString%22%3A%22cat%22%2C%22isMobile%22%3Afalse%2C%22country%22%3A%22MA%22%2C%22adType%22%3A%22ALL%22%7D&server_timestamps=true&doc_id=7801302506625362'
+
+*/
+
+
+
+{
+  "data": {
+    "ad_library_main": {
+      "typeahead_suggestions": {
+        "keyword_results": [],
+        "page_results": [
+          {
+            "page_id": "145632722140414",
+            "category": "Site web d\u2019actualit\u00e9s",
+            "image_uri": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.30808-1/255296508_5265592680144367_2999047552422377966_n.png?stp=dst-png_s100x100&_nc_cat=100&ccb=1-7&_nc_sid=c9219a&_nc_ohc=x6EnojbH18EQ7kNvgE0Dbvq&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYBa3ySA0KuXIqklBukBJ3v6V5YWWZ2ECMdvsVWRJYTFYg&oe=66F46B27",
+            "likes": 9822279,
+            "verification": "BLUE_VERIFIED",
+            "name": "Catraca Livre",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "catracalivre",
+            "ig_followers": 1308604,
+            "ig_verification": true,
+            "page_alias": "CatracaLivre",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "709637542397479",
+            "category": "Personnalit\u00e9 publique",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/456268406_1048572013292167_4296528863691740319_n.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=diMYK3xdlnkQ7kNvgEKkIYM&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCqSgZF0kjc7ix_7BM56NaynmpEwCtdZ4bHu0Of8X7syg&oe=66F45573",
+            "likes": 8598026,
+            "verification": "BLUE_VERIFIED",
+            "name": "C\u00e1tia Damasceno",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "catiadamasceno",
+            "ig_followers": 12647849,
+            "ig_verification": true,
+            "page_alias": "mulheresbemresolvidas",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "11279153466",
+            "category": "Compagnie a\u00e9rienne",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/449435807_887200853448266_5913923712583718952_n.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=Wqc4g0Zj4-UQ7kNvgHfjrQm&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYAcec3OY_v6YfQ3MkVTRuA1CrmM56yMHaj7j3ptd1VPNQ&oe=66F4711C",
+            "likes": 2075133,
+            "verification": "BLUE_VERIFIED",
+            "name": "Cathay Pacific",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "cathaypacific",
+            "ig_followers": 759663,
+            "ig_verification": true,
+            "page_alias": "cathaypacific",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "385022441542202",
+            "category": "Organisation religieuse",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/374269512_685711793593547_5686611853789425061_n.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=kztg2IoyChkQ7kNvgHpRYtz&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCZmzefpD625iE09tqGsK8Isc2h1XeG2Z4xeDA9e8ArKw&oe=66F4667F",
+            "likes": 2441007,
+            "verification": "NOT_VERIFIED",
+            "name": "Catholic Fundamentalism",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "catholic_fundamentalism",
+            "ig_followers": 610,
+            "ig_verification": false,
+            "page_alias": "catholicfundamentalism",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "134450246716954",
+            "category": "Organisation gouvernementale",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/329692628_747166279939368_4718026099188832143_n.jpg?stp=dst-jpg_s100x100&_nc_cat=107&ccb=1-7&_nc_sid=c9219a&_nc_ohc=OE8ZkVu2J-8Q7kNvgH1ICAz&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYBBL1-JRkxpuCo5ePFTpYfQsd9cdFgH4TwH7YJKEz-AaQ&oe=66F488C0",
+            "likes": 396311,
+            "verification": "BLUE_VERIFIED",
+            "name": "Governo do Estado de Santa Catarina",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "governosc",
+            "ig_followers": 369225,
+            "ig_verification": true,
+            "page_alias": "governosc",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "522527324534895",
+            "category": "Coach personnel",
+            "image_uri": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.30808-1/309383014_466958405466427_4476804968673901882_n.jpg?stp=dst-jpg_s100x100&_nc_cat=100&ccb=1-7&_nc_sid=c9219a&_nc_ohc=7SEwypOO96UQ7kNvgHDKrM_&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYDXG8DD1MDLjeKs5JS8DKrHxWwBf4NmN2WHELX-kcMTRA&oe=66F48478",
+            "likes": 298479,
+            "verification": "BLUE_VERIFIED",
+            "name": "Catch Him And Keep Him",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "catchhimandkeephim",
+            "ig_followers": 8841,
+            "ig_verification": false,
+            "page_alias": "CatchHimKeepHim",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "435475646488178",
+            "category": "Personnalit\u00e9 publique",
+            "image_uri": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.30808-1/347795828_207289602163657_6904143982302129684_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=c9219a&_nc_ohc=ktSFfH3uCBoQ7kNvgFYhcHp&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCcRkV4sez-rjq4UW6IMZpNWK-4N78cD-MawDmYpimU6A&oe=66F47D6B",
+            "likes": 7598687,
+            "verification": "NOT_VERIFIED",
+            "name": "The Official Grumpy Cat",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "realgrumpycat",
+            "ig_followers": 2648121,
+            "ig_verification": true,
+            "page_alias": "TheOfficialGrumpyCat",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "135878984885",
+            "category": "Cha\u00eene de t\u00e9l\u00e9vision",
+            "image_uri": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.30808-1/398059952_891830348977165_2073575396380929762_n.jpg?stp=dst-jpg_s100x100&_nc_cat=102&ccb=1-7&_nc_sid=c9219a&_nc_ohc=nqN_owM8o7wQ7kNvgEFSf1-&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCVScSQ7Nbr_EOT_sK8AttJZfDF3CCWe6sQHRcbSuirXg&oe=66F45570",
+            "likes": 640270,
+            "verification": "BLUE_VERIFIED",
+            "name": "3Cat",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "som3cat",
+            "ig_followers": 461338,
+            "ig_verification": true,
+            "page_alias": "som3Cat",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "158340507536335",
+            "category": "Site web",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/391572426_699093648917111_6390424190908165439_n.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=FqPJ7LKeFLMQ7kNvgHi0eIs&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYC4FQ0fD-AxKCKuqbLBtHncWZG2z9nf0G1reXiCYhMDWg&oe=66F46695",
+            "likes": 1167678,
+            "verification": "BLUE_VERIFIED",
+            "name": "Catawiki",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "catawiki",
+            "ig_followers": 212258,
+            "ig_verification": true,
+            "page_alias": "Catawiki",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "964926116915133",
+            "category": "Outils/\u00e9quipement",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/371483987_304289842250278_1027907984030657553_n.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=ov6IOR7UEO8Q7kNvgGWkMZ1&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCaUK-3XrvJtKa_DD3U12NCgxMis6Rmlfi9jLZKTUdvmw&oe=66F47323",
+            "likes": 236500,
+            "verification": "BLUE_VERIFIED",
+            "name": "Cat Construction Europe, Middle East & Africa",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "catconstructionemea",
+            "ig_followers": 47300,
+            "ig_verification": true,
+            "page_alias": "CatConstructionEMEA",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "641948702550925",
+            "category": "Organisation gouvernementale",
+            "image_uri": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/415556006_775120827987547_1651620938865171725_n.jpg?stp=dst-jpg_s100x100&_nc_cat=104&ccb=1-7&_nc_sid=c9219a&_nc_ohc=p5OXBhSMgdwQ7kNvgG1S3Rr&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYAPlHqGjvW_A8JpwAi8heAcOY46qyKXj4o1nGcF3wkXOA&oe=66F45C4D",
+            "likes": 136766,
+            "verification": "BLUE_VERIFIED",
+            "name": "Catamarca Gobierno",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "gobcatamarca",
+            "ig_followers": 31163,
+            "ig_verification": true,
+            "page_alias": "Catamarca.Gob",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "1691495441157029",
+            "category": "Personnalit\u00e9 politique",
+            "image_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/458650153_1062903121867241_7947414668843974827_n.jpg?stp=dst-jpg_p100x100&_nc_cat=107&ccb=1-7&_nc_sid=c9219a&_nc_ohc=F6OkwVl4Mu4Q7kNvgEFFT14&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCHlYwIsUytfnpxcclPVM3vASCX_gPtU7jJq3bc6_buYQ&oe=66F47EE1",
+            "likes": 133500,
+            "verification": "BLUE_VERIFIED",
+            "name": "Cathy Myers",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "cathymyerswi",
+            "ig_followers": 247,
+            "ig_verification": false,
+            "page_alias": "CathyMyers4Assembly",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "153967071280480",
+            "category": null,
+            "image_uri": "https://www.facebook.com/www.facebook.com",
+            "likes": null,
+            "verification": "NOT_VERIFIED",
+            "name": "Daniel Eisenman: The Freedom Catalyst",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": null,
+            "ig_followers": null,
+            "ig_verification": null,
+            "page_alias": null,
+            "page_is_deleted": true
+          },
+          {
+            "page_id": "238480707147",
+            "category": "Styliste",
+            "image_uri": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.30808-1/343931992_928029445253483_1268345934132028626_n.jpg?stp=dst-jpg_s100x100&_nc_cat=109&ccb=1-7&_nc_sid=c9219a&_nc_ohc=kd8N3D1_qLAQ7kNvgHjmU2o&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYD1Og0yw7BcHhJ_D-k2n1giqB2eH3_h-sk3EWsiqTc5_A&oe=66F4587A",
+            "likes": 590052,
+            "verification": "NOT_VERIFIED",
+            "name": "Catalin Botezatu Official Store",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "cbexclusive.ro",
+            "ig_followers": 702,
+            "ig_verification": false,
+            "page_alias": "CBstore",
+            "page_is_deleted": false
+          },
+          {
+            "page_id": "208371683037269",
+            "category": "Agence m\u00e9dia",
+            "image_uri": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/289000863_1196184440922650_6744513147209503253_n.jpg?stp=dst-jpg_s100x100&_nc_cat=104&ccb=1-7&_nc_sid=c9219a&_nc_ohc=FeV08QeJS7cQ7kNvgEZmaft&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AIAFrX1goBE-632d9Gq9WUQ&oh=00_AYCRn8XtKIduLtaxZ_u6VdoD86TXFywRm89oHatJNILmpw&oe=66F46486",
+            "likes": 99442,
+            "verification": "BLUE_VERIFIED",
+            "name": "NBCU Catalyst",
+            "country": null,
+            "entity_type": "PERSON_PROFILE",
+            "ig_username": "nbcucatalyst",
+            "ig_followers": 1609,
+            "ig_verification": false,
+            "page_alias": "nbcucatalyst",
+            "page_is_deleted": false
+          }
+        ],
+        "location_results": [],
+        "exact_phrase_results": "\"cat\""
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}

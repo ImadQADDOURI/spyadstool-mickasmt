@@ -1,0 +1,398 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=601x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&media_type=all&q=mouse&search_type=keyword_unordered&source=nav-header' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryAdCollationDetailsQuery' \
+  -H 'x-fb-lsd: AVqy31NLiL4' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=d&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016694340&__s=n9zz9t%3Aacglpu%3Aya31yi&__hsi=7417048744893127858&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gFk_aRINflzkF4lGJybXDi59GVazpAmvykiBhEiyCqEiWwWxiq6oaoky5y8a829wkohxmiaG0B8G1ewtA0z8GEK0Jo6Wdwqoao7Si0dcw0gLC0sK02OnzEgw04fYg07dZ00p39Qaw2DE1EUG0a0w5sw&__comet_req=1&lsd=AVqy31NLiL4&jazoest=2872&__spin_r=1016694340&__spin_b=trunk&__spin_t=1726916233&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryAdCollationDetailsQuery&variables=%7B%22collationGroupID%22%3A%22472146142481101%22%2C%22forwardCursor%22%3Anull%2C%22backwardCursor%22%3Anull%2C%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22ALL%22%2C%22bylines%22%3A%5B%5D%2C%22countries%22%3Anull%2C%22location%22%3Anull%2C%22potentialReach%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22regions%22%3A%5B%5D%2C%22sessionID%22%3A%220d35a4f8-3beb-4cdb-a466-8c307d96ae9c%22%2C%22startDate%22%3Anull%7D&server_timestamps=true&doc_id=8918149204878948'
+
+
+  */
+{
+  "data": {
+    "ad_library_main": {
+      "collation_results": {
+        "ad_cards": [
+          {
+            "ad_archive_id": "2035400793582264",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "472146142481101",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726815600,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": false,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "602563393163238",
+            "page_is_deleted": false,
+            "page_name": "Mous",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": { "text": "{{product.brand}}" },
+              "branded_content": null,
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.mous.co",
+              "cards": [
+                {
+                  "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                  "caption": "www.mous.co",
+                  "cta_text": "Learn More",
+                  "cta_type": "LEARN_MORE",
+                  "image_crops": [],
+                  "link_description": "Choose your Case",
+                  "link_url": "https://row.mous.co/",
+                  "original_image_url": null,
+                  "resized_image_url": null,
+                  "watermarked_resized_image_url": null,
+                  "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                  "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460329012_2035400830248927_2100341535514064490_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qDFuPXY_zB0Q7kNvgEO8jug&_nc_ht=video.ffez1-2.fna&oh=00_AYAtWHCfmAfa6D3p8Ua0fX9cInx1J1ul0FAiH32e5faz1w&oe=66F48DD3",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460627912_8270597789688494_5598819003637627483_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0um0jDr8R3sQ7kNvgFoYAAu&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBK_a47Bnh_5wzURMGGrZh9-KwvLE7W4F5X2HqeupvLow&oe=66F467EE",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&oh=00_AYAfDXw56dyXtfskPQ4nbP1i4yGhHKTqV0T-Liaw-6Pf7A&oe=66F473CD",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                },
+                {
+                  "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                  "caption": "www.mous.co",
+                  "cta_text": "Learn More",
+                  "cta_type": "LEARN_MORE",
+                  "image_crops": [],
+                  "link_description": "Choose your Case",
+                  "link_url": "https://row.mous.co/",
+                  "original_image_url": null,
+                  "resized_image_url": null,
+                  "watermarked_resized_image_url": null,
+                  "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                  "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460285389_2035400826915594_5999520121208618815_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=W7rprbaWknsQ7kNvgGETcXL&_nc_ht=video.ffez1-2.fna&oh=00_AYCwoW1lk8glWVcBmVYWWsjpmf1GsGBK9AnzEPRxynCDtQ&oe=66F47C15",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460652059_1595142801348440_4030240840323086535_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=XfkIqLTtMvgQ7kNvgEanTcl&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCCq3_5dZj3w1j4cUvJBl2E2iYRUjp0Qw8V0Qfg2RIdGQ&oe=66F4888D",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&oh=00_AYAfDXw56dyXtfskPQ4nbP1i4yGhHKTqV0T-Liaw-6Pf7A&oe=66F473CD",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "cta_text": "En savoir plus",
+              "cta_type": "LEARN_MORE",
+              "country_iso_code": null,
+              "current_page_name": "Mous",
+              "disclaimer_label": null,
+              "display_format": "DCO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": "{{product.description}}",
+              "link_url": "https://row.mous.co/",
+              "page_categories": ["Product/service"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "602563393163238",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 169439,
+              "page_name": "Mous",
+              "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460647030_1025612659352755_6006711547489761849_n.jpg?stp=dst-jpg_s60x60&_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yUtZ3kpS2eQQ7kNvgEDSATU&_nc_ht=scontent.ffez2-2.fna&oh=00_AYACUHkU1ctkz173uQ3SQ8vsYvXQ_hg4wu-sG1UTzYYdzg&oe=66F474A1",
+              "page_profile_uri": "https://www.facebook.com/mous/",
+              "root_reshared_post": null,
+              "title": "{{product.name}}",
+              "videos": [],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "2644405652415019",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "472146142481101",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726815600,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "602563393163238",
+            "page_is_deleted": false,
+            "page_name": "Mous",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": { "text": "{{product.brand}}" },
+              "branded_content": null,
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.mous.co",
+              "cards": [
+                {
+                  "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                  "caption": "www.mous.co",
+                  "cta_text": "Learn More",
+                  "cta_type": "LEARN_MORE",
+                  "image_crops": [],
+                  "link_description": "Choose your Case",
+                  "link_url": "https://eu.mous.co/",
+                  "original_image_url": null,
+                  "resized_image_url": null,
+                  "watermarked_resized_image_url": null,
+                  "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                  "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460835771_2644405732415011_8543919581045901033_n.?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FWih0sXjncwQ7kNvgEcJh37&_nc_ht=video.ffez1-1.fna&oh=00_AYBoUqi2scb6nh3KSS3hVtA9xwuxQcRXBzsqrtAX5Ib27g&oe=66F48BC3",
+                  "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460527106_1039826000969450_6830799751711361969_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=shauluDqZrAQ7kNvgHbug9y&_nc_ht=scontent.ffez1-1.fna&oh=00_AYDSjl503vOl2YLOzGdIgRKI34T-QsrHk8TAYQpSqskizg&oe=66F46AE2",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&oh=00_AYAfDXw56dyXtfskPQ4nbP1i4yGhHKTqV0T-Liaw-6Pf7A&oe=66F473CD",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                },
+                {
+                  "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                  "caption": "www.mous.co",
+                  "cta_text": "Learn More",
+                  "cta_type": "LEARN_MORE",
+                  "image_crops": [],
+                  "link_description": "Choose your Case",
+                  "link_url": "https://eu.mous.co/",
+                  "original_image_url": null,
+                  "resized_image_url": null,
+                  "watermarked_resized_image_url": null,
+                  "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                  "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460835773_2644405729081678_7583591963174718970_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=e74e8J_V8kgQ7kNvgHNDq3k&_nc_ht=video.ffez1-2.fna&oh=00_AYC4B7YBd-ukHGocharVYLoGrUk5-ve4MDdzGgXqC3D5pA&oe=66F472D1",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460588098_1058111655940440_3132896704520373607_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8tyg-MoRvQUQ7kNvgET2zGR&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDJOrRZ23MzVrELvRo9u1YuJqKW--SmqyLhNipOPCmHzg&oe=66F48C73",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&oh=00_AYAfDXw56dyXtfskPQ4nbP1i4yGhHKTqV0T-Liaw-6Pf7A&oe=66F473CD",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "cta_text": "En savoir plus",
+              "cta_type": "LEARN_MORE",
+              "country_iso_code": null,
+              "current_page_name": "Mous",
+              "disclaimer_label": null,
+              "display_format": "DCO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": "{{product.description}}",
+              "link_url": "https://eu.mous.co/",
+              "page_categories": ["Product/service"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "602563393163238",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 169439,
+              "page_name": "Mous",
+              "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460720137_360696873787231_7211137697962281561_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=dB3Cy3KwOGUQ7kNvgF2YqzI&_nc_ht=scontent.ffez1-1.fna&oh=00_AYDPofxADzCuqlskpokiactse2cAb18Yaxs009juJEVL_A&oe=66F45DA5",
+              "page_profile_uri": "https://www.facebook.com/mous/",
+              "root_reshared_post": null,
+              "title": "{{product.name}}",
+              "videos": [],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "511116371731922",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "472146142481101",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726815600,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": false,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "602563393163238",
+            "page_is_deleted": false,
+            "page_name": "Mous",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": { "text": "{{product.brand}}" },
+              "branded_content": null,
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.mous.co",
+              "cards": [
+                {
+                  "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                  "caption": "www.mous.co",
+                  "cta_text": "Learn More",
+                  "cta_type": "LEARN_MORE",
+                  "image_crops": [],
+                  "link_description": "Choose your Case",
+                  "link_url": "https://us.mous.co/",
+                  "original_image_url": null,
+                  "resized_image_url": null,
+                  "watermarked_resized_image_url": null,
+                  "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                  "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460262501_511116425065250_4369131556185512915_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=DCZaCwHwV7sQ7kNvgFxRHYo&_nc_ht=video.ffez2-1.fna&oh=00_AYAafsBfhF2klnTykcjOqyG7yLiJTDUTB_8rfzXxjrkhjw&oe=66F47973",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460713553_317509761424396_3484574739886058662_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=bljvdSPzQJUQ7kNvgG-WPRC&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBO8h_E2DrqzMtG4jJZ0KAykIF4PqKl-Ntno-Vss8T-mQ&oe=66F46683",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&oh=00_AYAfDXw56dyXtfskPQ4nbP1i4yGhHKTqV0T-Liaw-6Pf7A&oe=66F473CD",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                },
+                {
+                  "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                  "caption": "www.mous.co",
+                  "cta_text": "Learn More",
+                  "cta_type": "LEARN_MORE",
+                  "image_crops": [],
+                  "link_description": "Choose your Case",
+                  "link_url": "https://us.mous.co/",
+                  "original_image_url": null,
+                  "resized_image_url": null,
+                  "watermarked_resized_image_url": null,
+                  "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                  "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460287239_511116421731917_7464472767309483239_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6huzPa8ofroQ7kNvgHiXjIz&_nc_ht=video.ffez2-1.fna&oh=00_AYBAufqbYY3PkpPz86qUhY_JrDdJsIM4f9DHoDt6odwFtg&oe=66F46475",
+                  "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460727686_3905748646417778_3655182297675212173_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OPe0Q1UcR7MQ7kNvgHdxdLI&_nc_ht=scontent.ffez2-2.fna&oh=00_AYD0_SOEArRWu-ceIdajGIgYGHb94cSPfoacWxFVQNSGCQ&oe=66F46E59",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&oh=00_AYAfDXw56dyXtfskPQ4nbP1i4yGhHKTqV0T-Liaw-6Pf7A&oe=66F473CD",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "cta_text": "En savoir plus",
+              "cta_type": "LEARN_MORE",
+              "country_iso_code": null,
+              "current_page_name": "Mous",
+              "disclaimer_label": null,
+              "display_format": "DCO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": "{{product.description}}",
+              "link_url": "https://us.mous.co/",
+              "page_categories": ["Product/service"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "602563393163238",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 169439,
+              "page_name": "Mous",
+              "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460483897_803206338423123_72921369720934168_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MJWFo9R6RDkQ7kNvgGe8-bW&_nc_ht=scontent.ffez2-2.fna&oh=00_AYB7Zh4ffdlkGnbPr-7FViO67XHDkhFHIrpEICZnfDs2nw&oe=66F49135",
+              "page_profile_uri": "https://www.facebook.com/mous/",
+              "root_reshared_post": null,
+              "title": "{{product.name}}",
+              "videos": [],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          }
+        ],
+        "forward_cursor": null,
+        "backward_cursor": null,
+        "total_count": 3,
+        "is_complete": true
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}

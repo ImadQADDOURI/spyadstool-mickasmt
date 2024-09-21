@@ -1,0 +1,46 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=601x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?ad_type=all&country=ALL&view_all_page_id=602563393163238' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryPageHoverCardQuery' \
+  -H 'x-fb-lsd: AVqy31NLgBA' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=2&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016695050&__s=68gdd9%3Aacglpu%3Ahebnt7&__hsi=7417051713123338642&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKU28xaaws8nwhE34yE1mUdEGdw46wbLwrU6Ci2G0z85C1Iwqo1uo7u1rw&__csr=gFk_aRINfnzrAhmGS8LKt8kCHAGdChp-9hal6xaapGxbG3G59EpwFxi8m8wEw8C1hx65p8GE2kyE4W1Sg2cyGyU2RwrES1FwFwvp80QO01acw04Z4g07dZ00p39Qaw2DE1EUG0a0w&__comet_req=1&lsd=AVqy31NLgBA&jazoest=2873&__spin_r=1016695050&__spin_b=trunk&__spin_t=1726916924&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22602563393163238%22%7D&server_timestamps=true&doc_id=6453683764688391'
+
+
+  */
+
+{
+  "data": {
+    "page": {
+      "name": "Mous",
+      "is_delegate_page_with_linked_primary_profile": false,
+      "verification_status": "BLUE_VERIFIED",
+      "category_name": "Produit/service",
+      "profile_picture_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/339089435_130630973198173_446323171319890209_n.jpg?stp=dst-jpg_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=0bacbc&_nc_ohc=W00Ax2Y5Q4kQ7kNvgFQAd2J&_nc_ht=scontent.ffez2-2.fna&_nc_gid=Axjh0BU3NFOl7MEi2kwL-iL&oh=00_AYD6MtUJnxnD5wtKXepfBO6NEAHimVftIxTkiUonx3wkZg&oe=66F469F7",
+      "page_likers": { "count": 169439 },
+      "websites": ["http://bit.ly/MousCaseFB"],
+      "url": "https://facebook.com/mous",
+      "best_description": {
+        "text": "Live Without Limits. \nhttps://mous.co/collections/all-kits"
+      },
+      "id": "602563393163238"
+    }
+  },
+  "extensions": { "is_final": true }
+}

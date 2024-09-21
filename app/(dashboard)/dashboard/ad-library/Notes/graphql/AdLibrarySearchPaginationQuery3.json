@@ -1,0 +1,2979 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=672x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&media_type=all&q=cat&search_type=keyword_unordered&source=nav-header' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibrarySearchPaginationQuery' \
+  -H 'x-fb-lsd: AVqy31NLRXs' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=3y&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016694340&__s=1qhgyj%3Aacglpu%3Alj4r7d&__hsi=7417037990527946704&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gFk_aRINflzkF4lGJybXDi59GVazpAmvykiBhEiyCqEiWwWxiq6oaoky5y8a829wkohxmiaG0B8G1ewtA0z8GEK0Jo6Wdwqoao7Si0dcw0gLC0sK02OnzEgw04fYg07dZ00p39Qaw2DE1EUG0a0w5sw&__comet_req=1&lsd=AVqy31NLRXs&jazoest=2924&__spin_r=1016694340&__spin_b=trunk&__spin_t=1726913729&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibrarySearchPaginationQuery&variables=%7B%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22ALL%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%5D%2C%22countries%22%3A%5B%22MA%22%5D%2C%22cursor%22%3A%22AQHRPRLCHHVvJKutIuT47oNfNH09hCYJcyVoxf5rIjc_-I0Hzke7_WQvULla76JEjY3P%22%2C%22excludedIDs%22%3A%5B%5D%2C%22first%22%3A30%2C%22location%22%3Anull%2C%22mediaType%22%3A%22ALL%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22queryString%22%3A%22cat%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3A%22KEYWORD_UNORDERED%22%2C%22sessionID%22%3A%223f156780-a547-4e64-8bcb-69402d0ce274%22%2C%22sortData%22%3Anull%2C%22source%22%3A%22NAV_HEADER%22%2C%22startDate%22%3Anull%2C%22v%22%3A%227218b1%22%2C%22viewAllPageID%22%3A%220%22%7D&server_timestamps=true&doc_id=8022477101123416'
+  */
+
+  
+{
+  "data": {
+    "ad_library_main": {
+      "search_results_connection": {
+        "count": 1612,
+        "edges": [
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "839225345027294",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 2,
+                  "collation_id": "1037162884581156",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460732042_7893404124116326_7282052277912035532_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kixi1M3EzlcQ7kNvgFdp9Ly&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDrs1WJ5u33KQ4GnoUbxMj1t4T2ToJcPjRfhai2m3zYVA&oe=66F48016",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460481810_839225398360622_7784670035533441504_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=TBisKPkTQjMQ7kNvgFFgjL4&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYASlMHVRgeUvSwAfeIUfb1YWr0bUo8wgbNHDklqpvqqsA&oe=66F46F21",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460396706_1067686761665481_7703139999263877847_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4fLCeDnHucMQ7kNvgGxjF_z&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBYdC7---SAJFNqW9IBdylQ-_dOUTd7D8RrhXcnkF8oPA&oe=66F475DD",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459845695_500135106211824_981820163054725114_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZrIPPJs6uasQ7kNvgHI-rv9&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDw5qBaPUDT67SZr1BSWmmWhrCJIb6oGGs4uZ2Bbo143A&oe=66F46B5E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "3636447630000997",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "1037162884581156",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460893418_1602487203643076_4883495586259596660_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=dhnZ1IOkqjcQ7kNvgFf3hi8&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDuIaVG-_KxT5QRXWCA0H_JBWtKxegjWihZD-6MmfjzTQ&oe=66F45B15",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460483506_3636447686667658_131811904921072034_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=-ssBOVUd4wIQ7kNvgGbUNpx&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCqpUKSQFnJADSLMfwYLjPnTOE6aoTqj4WXvP5dbMXNiQ&oe=66F48183",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460721331_912735697555322_841979222299110863_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FFaWbLZxlQEQ7kNvgGI7XlY&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYASTXHEXxD_yNW8ualsC7mOR6lXeudOKQKgbI2ghJ1oVg&oe=66F470CD",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459845695_500135106211824_981820163054725114_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZrIPPJs6uasQ7kNvgHI-rv9&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDw5qBaPUDT67SZr1BSWmmWhrCJIb6oGGs4uZ2Bbo143A&oe=66F46B5E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "839458448175698",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": null,
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460461055_952257619996244_2418672214010074971_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=dj9_BfrtrTEQ7kNvgEvE9C5&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBnpq7Cq8u_9Aa41saRYyE1C7chu-f91QUurfKwedaasw&oe=66F478A6",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460355280_839458604842349_3184243316854190181_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UGiX7cWqWCIQ7kNvgFBbtFt&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBg71C6ekyGBbf67NOKaM-VFVw0isow7qWfQ21_DpD-6A&oe=66F48401",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460202730_1805703603677900_3020147051645549018_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=udTKM5AUgygQ7kNvgHDTkOO&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDdMl9VE_BXN8cgAjq5KG_7WooyB9BcC_nBVWVqfcsV6A&oe=66F48C43",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460270616_873132847869639_1826557334183632918_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=or1go075L9AQ7kNvgGUtb8N&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYARLLN10aio-vRSYMsRxgWerl3ytvcZAltwfzUjgC3ilw&oe=66F4660D",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1226715555231206",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": null,
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459747326_2398453150489634_5182506219557965954_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OI0rnULFEi8Q7kNvgF9tYyz&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCU7FreuyguuGiybHlKcPoHWCW3QDgYY5DS9Gq4GvUgqA&oe=66F48934",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459790727_1226715605231201_990402122798933571_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=S70UUICXFdgQ7kNvgGPLzBA&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAJinffemKzV2qDsWDHEPdfRocpuYdgPYwCy0OL6RLWeQ&oe=66F46B9E",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460211029_1048800980128123_3888533391717640456_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NC8bW0Vm-8EQ7kNvgHhjYKE&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBNW4PJjt4vO35aM46cLHjQHtSFVfn2_afJ9p7rLbvFBA&oe=66F45A0A",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459845695_500135106211824_981820163054725114_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZrIPPJs6uasQ7kNvgHI-rv9&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDw5qBaPUDT67SZr1BSWmmWhrCJIb6oGGs4uZ2Bbo143A&oe=66F46B5E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1231811684520024",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 2,
+                  "collation_id": "1039027857711938",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459872277_1226522281698495_7212071536749910626_n.jpg?stp=dst-jpg_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kmCd7ZJ5XxkQ7kNvgHhWjZs&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBXJpi0m4sv9X7BeZUNArQQIpbMM0jWiXIsjp9X0lujow&oe=66F4594E",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460459446_388353344311236_340249675135376494_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2dHGvLsTf1gQ7kNvgGiM1ch&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYD0iZ8guJCSW8n0MooUoseXyx8cXfS5RzE9PmctZ0oYQw&oe=66F470AC",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/10000000_3843391375937891_6235526958436784120_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Uqfd2cv8pRoQ7kNvgHa_Oto&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDbJF6dwl95fEGcABgWFsjfWmG7Rgb_55lACmsbXhRBAA&oe=66F48D33",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "8048792451912892",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "1039027857711938",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460625797_456346374117817_2918401556051315828_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=37C793GRCVYQ7kNvgEbnM5K&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAyM4ME6xd10TsABNUof12ofITSMgh-h9hygoh_zYtOOg&oe=66F476A9",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460846132_506554715686467_8035573024727175714_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Q1baIaJa7jAQ7kNvgGOmZMx&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBbL20vxvgKqbz3g2dY2HIe4pzxP3rzjBSR5dkSm_LURQ&oe=66F457F5",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/10000000_3843391375937891_6235526958436784120_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Uqfd2cv8pRoQ7kNvgHa_Oto&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDbJF6dwl95fEGcABgWFsjfWmG7Rgb_55lACmsbXhRBAA&oe=66F48D33",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1474973133194736",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": null,
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460822139_1584981015704488_9072301175210472455_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=00tRIrZE0SIQ7kNvgG_eUqy&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDw6yP8DiXc2azwC9VoQXTAs0zDZSOA9oVldLFxLvsfKw&oe=66F4783E",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460195109_1474973186528064_5430509034862942368_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=7SEN2_-axY4Q7kNvgFM_Cwj&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBBpLM2PU7yjLZNbgShVmW2wU1ud7HB4Qty7uLoQhIqmA&oe=66F4772D",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460726567_1039325984150988_5053471315534535219_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NJCM_RVcTd4Q7kNvgGZZj1n&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB9wEQSjctaKSTOVhgVRs85Vbo88ZH3f6DK1xBzTgEzNw&oe=66F48241",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459796199_3759332224334235_3938248964039100752_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NeWtoRElf-sQ7kNvgH_FT5e&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCtK4Bcoja91L_UQG2zdzb8bxMPcgQ5wrQksJ71Po9IwA&oe=66F47C20",
+                        "watermarked_video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/o1/v/t2/f2/m69/AQO5qSqhaA2GkxzjHJVYGeMMzx1dv05jSzQFgFGoUGmPxVj2on05zupRCmhRX3DzgCE_PCJxSLazygGOFtay6C7Y.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ht=video.ffez2-2.fna.fbcdn.net&_nc_cat=111&strext=1&vs=235a4bb7d47a62ab&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HT05SZHhzQ216cUFuZmdDQUlEZmxNWEJwbWxFYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dJNEtjaHZaUkw2ekY5MERBRDY5cEJQWFBadHBickZxQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJpS06sefovMBFQIoAkMzGAt2dHNfcHJldmlldxwXQGkSHKwIMScYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnBm9lcF9oZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlB3VubXV0ZWQTb2VtX3JvaV9yZWFjaF9jb3VudAYyMjIxNTURb2VtX2lzX2V4cGVyaW1lbnQADG9lbV92aWRlb19pZBAxMDU1MDY1NTY5NDQwODc1Em9lbV92aWRlb19hc3NldF9pZA8zOTQxMzMzODM1MjUwMDEVb2VtX3ZpZGVvX3Jlc291cmNlX2lkDzUzNDk1MTAwMjcyMTU0NhxvZW1fc291cmNlX3ZpZGVvX2VuY29kaW5nX2lkEDE5NjQ0NDgyMjczMTE5NjIOdnRzX3JlcXVlc3RfaWQAJQIcACWOAhsIiAFzBDMxNjgCY2QKMjAyNC0wOS0xOQNyY2IGMjIyMTAwA2FwcAZWaWTDqW8CY3QUQURfTElCUkFSWV9XQVRFUk1BUksTb3JpZ2luYWxfZHVyYXRpb25fcwoyMDAuNTczOTkxAWYCYWQCdHMVcHJvZ3Jlc3NpdmVfZW5jb2RpbmdzAA&ccb=9-4&oh=00_AYDbhhdMzGJtHNAe-Kbac_UrU5-3b682u6FY7_WlG0lkwg&oe=66F06EDA&_nc_sid=1d576d&_nc_rid=144601670161448&_nc_store_type=1",
+                        "watermarked_video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460441571_1276768060426451_1814389072791139892_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=55d0d3&efg=eyJybHIiOjY4OSwicmxhIjoxNDQwLCJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCIsInZpZGVvX2lkIjoxMDU1MDY1NTY5NDQwODc1fQ\u00253D\u00253D&_nc_ohc=SVsZNYUQNfcQ7kNvgGZOSlR&rl=689&vabr=383&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDIj5yHVmbnHmDMp0KEROeH8D9XUosXCMImLhMejLerDA&oe=66F46647"
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1610265453037092",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 2,
+                  "collation_id": "872615461159042",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/459751525_1650308859081780_5407352292284874586_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fWh4xSBbkeQQ7kNvgED7wZL&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB5yNIplsRBDU4b9Nv-GSLvpyLGyEbOgDtgYBaT5cEJjQ&oe=66F46109",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460174406_1610265483037089_6386184501158532699_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=nIzphHSa4qUQ7kNvgEVk4hU&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBRq7su8icpLJQvCygi2gL6KNbjHOrBsoLY49EjuodwVA&oe=66F46797",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/459866496_551918060591837_91110051925967563_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=RFyz-atKKUAQ7kNvgH9nrJf&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBxHpei4hDP5d0UlVEl91krP_XnM6DcBh2ioqmjpLb4KQ&oe=66F48F73",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459796199_3759332224334235_3938248964039100752_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NeWtoRElf-sQ7kNvgH_FT5e&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCtK4Bcoja91L_UQG2zdzb8bxMPcgQ5wrQksJ71Po9IwA&oe=66F47C20",
+                        "watermarked_video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/o1/v/t2/f2/m69/AQOqGMkwuuFqdMDyN_vr_dsr-n2ML33_5dMlXXCyIMpK1JFQxN89CpEdkOxSkq6gMztGHoXwF7crjYWVc7cKQYS2.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ht=video.ffez2-2.fna.fbcdn.net&_nc_cat=109&strext=1&vs=59384abd5328a56&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSWNGZGh1VDlfU1ppUUlDQUpVSk5PdHgwNE5qYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dCQXhjeHVtWUw0UEltRUVBTEMwaHk3R2FQSXJickZxQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJr7amLjlg_QBFQIoAkMzGAt2dHNfcHJldmlldxwXQGkSHKwIMScYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnBm9lcF9oZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlB3VubXV0ZWQTb2VtX3JvaV9yZWFjaF9jb3VudAYyMjIxNTURb2VtX2lzX2V4cGVyaW1lbnQADG9lbV92aWRlb19pZA83NDE3MjcxNDE0MjA2ODESb2VtX3ZpZGVvX2Fzc2V0X2lkDzQ1MDM3OTUzMDY3MTEzMhVvZW1fdmlkZW9fcmVzb3VyY2VfaWQPNTM2NjI2ODI4ODc1NDIzHG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQPODgyNzU5NTkwNDU1NDI4DnZ0c19yZXF1ZXN0X2lkACUCHAAljgIbCIgBcwQ4Mzg2AmNkCjIwMjQtMDktMTkDcmNiBjIyMjEwMANhcHAGVmlkw6lvAmN0FEFEX0xJQlJBUllfV0FURVJNQVJLE29yaWdpbmFsX2R1cmF0aW9uX3MKMjAwLjU3Mzk5MQFmAmFkAnRzFXByb2dyZXNzaXZlX2VuY29kaW5ncwA&ccb=9-4&oh=00_AYA5mVNBtFtftQNfElTETHCakl9NAyov75AT6oW87kmtww&oe=66F091A8&_nc_sid=1d576d&_nc_rid=609354421568933&_nc_store_type=1",
+                        "watermarked_video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460153431_906065908063737_7967062883126960550_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=55d0d3&efg=eyJybHIiOjY4OSwicmxhIjoxNDQwLCJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCIsInZpZGVvX2lkIjo3NDE3MjcxNDE0MjA2ODF9&_nc_ohc=ko0lI-6yyLEQ7kNvgH2Azq3&rl=689&vabr=383&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBhousRFHAwfJq-xRMwFByfzgQRxl24jBwoUvX2SyjybA&oe=66F4580F"
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "1624466161468761",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "872615461159042",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udd25\ud83d\udd25Desperate to save her dying mother, Cindy Parks strikes a deal with her boss\u2019s daughter, Nikki Jenkins: Pretend to be Nikki and give her virginity to billionaire Charles Kane. Nikki uses the scheme to trick Charles into marrying her but when she gets sick, Cindy is once again forced to play dress up and step in as a replacement bride.\n\ud83d\udc47Download ReelShort TV to watch more series"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460008492_924083442894145_4832677149575381729_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aXqksfJuKxsQ7kNvgEhjyJ0&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA5nwR91qucnXn5nF2gUMktM0XMbOsJUWx4F1QKaMENPg&oe=66F466B0",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460163328_1624466198135424_4373828961910901029_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=a9FdizpK2K4Q7kNvgGXu0qt&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCJ5cLQFZ2p5uT0mUKl5035E2VauigQ5GMWGztzHWhNNw&oe=66F463D7",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460380997_533045796082859_5214291489095781423_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=TUY9Q-SE4u8Q7kNvgFWof_b&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB-Hx1U4TQlQLEg5P4ygfCyQ7UIv1PGmehMgmIIFQ1HJg&oe=66F48661",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459796199_3759332224334235_3938248964039100752_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NeWtoRElf-sQ7kNvgH_FT5e&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCtK4Bcoja91L_UQG2zdzb8bxMPcgQ5wrQksJ71Po9IwA&oe=66F47C20",
+                        "watermarked_video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/o1/v/t2/f2/m69/AQM0P_nIDbyIqHGOL6PQ3jxvmYVaJX2nUDRaSc9_R58g9SphNsBJgPyYaAcTga_z-dnI8KBZhO9DXZWoN8HFq4Zd.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ht=video.ffez2-2.fna.fbcdn.net&_nc_cat=103&strext=1&vs=bf4f1870c79ca48&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HUF90YUJ1WGlQVWdBWG9GQU44ZU5RTTBzZWNrYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dBcDVhaHNPYTBpUnE2RUxBTkxVODZsaWcyWU9ickZxQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJuK0gZHy2fkBFQIoAkMzGAt2dHNfcHJldmlldxwXQGkSHKwIMScYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnBm9lcF9oZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlB3VubXV0ZWQTb2VtX3JvaV9yZWFjaF9jb3VudAYyMjIxNTURb2VtX2lzX2V4cGVyaW1lbnQADG9lbV92aWRlb19pZBA4MTU4ODY1OTQwODc1NDMzEm9lbV92aWRlb19hc3NldF9pZBAxMjExNjAyOTY2NzUwMjE0FW9lbV92aWRlb19yZXNvdXJjZV9pZA81NDkxMDExMTc2NDgxNzccb2VtX3NvdXJjZV92aWRlb19lbmNvZGluZ19pZBAxMTU3NDg2NzgyMDE1NzUzDnZ0c19yZXF1ZXN0X2lkACUCHAAljgIbCIgBcwQ4OTM1AmNkCjIwMjQtMDktMTkDcmNiBjIyMjEwMANhcHAGVmlkw6lvAmN0FEFEX0xJQlJBUllfV0FURVJNQVJLE29yaWdpbmFsX2R1cmF0aW9uX3MKMjAwLjU3Mzk5MQFmAmFkAnRzFXByb2dyZXNzaXZlX2VuY29kaW5ncwA&ccb=9-4&oh=00_AYCQ-vbJFvc0DPv2qG3bh83iV8PtD4NNYGKCpZhn3AJ59g&oe=66F0793E&_nc_sid=1d576d&_nc_rid=118162682548596&_nc_store_type=1",
+                        "watermarked_video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460833855_1265002851162906_1221468813367710532_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=55d0d3&efg=eyJybHIiOjY4OSwicmxhIjoxNDQwLCJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCIsInZpZGVvX2lkIjo4MTU4ODY1OTQwODc1NDMzfQ\u00253D\u00253D&_nc_ohc=A2AXRRmAG_wQ7kNvgHOTTWm&rl=689&vabr=383&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYArm0qsKtwTqmVezowktIZTHUacFXdKbU0vycgBBs2ueg&oe=66F4583C"
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "540252621879920",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": null,
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "457958557396569",
+                  "page_is_deleted": false,
+                  "page_name": "Huy\u1ec1n Trang Perfume",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\u01afu \u0110\u00e3i Duy Nh\u1ea5t H\u00f4m Nay.Em Thanh L\u00fd 70\u0025 l\u00f4 lelabo 13.33 thu h\u1ed3i \u00edt v\u1ed1n tr\u1ea3 ti\u1ec1n m\u1eb7t b\u1eb1ng v\u00e0 nh\u00e2n vi\u00ean gi\u00e1 s\u1ed1c ch\u01b0a t\u1eebng c\u00f3 ch\u1ec9 #290k/100ml.( \u0110\u1eb7c bi\u1ec7t 2 chai ch\u1ec9 #420k mi\u1ec5n ship) S\u1ed1 l\u01b0\u1ee3ng c\u00f3 h\u1ea1n\n\u2705 Mua 2 chai 100ml 13+33 chai freeship\nKh\u00e1ch n\u00e0o mu\u1ed1n S\u1edf h\u1eefu ngay nc hoa x\u00e1ch tay chu\u1ea9n H\u00e3ng h\u00e0ng AUTH th\u00ec inbox em ngay nh\u00e9.\n\u2705 bao ki\u1ec5m tra check m\u00e3 v\u1ea1ch , x\u1ecbt th\u1eed,ki\u1ec5m tra ngu\u1ed3n g\u1ed1c , xu\u1ea5t x\u1ee9. L\u01b0u h\u01b0\u01a1ng tr\u00ean da h\u01a1n 14 ti\u1ebfng \u0111\u1ed3ng h\u1ed3, l\u01b0u h\u01b0\u01a1ng tr\u00ean v\u00e3i 2-3 ng\u00e0y\n\u2705\u0110\u01b0\u1ee3c ki\u1ec3m tra h\u00e0ng tr\u01b0\u1edbc khi thanh to\u00e1n n\u00ean kh\u00f4ng lo \u1ea1\nH\u00e0ng chu\u1ea9n H\u00e3ng shop cho test t\u1ea5t t\u1ea7n t\u1eadt\n\u0111\u1ecba ch\u1ec9 :\u0110i\u0323a chi\u0309 : 725 \u0110i\u1ec7n Bi\u00ean Ph\u1ee7, H\u00e0 Kh\u00ea, Thanh Kh\u00ea, \u0110\u00e0 N\u1eb5ng\n\u0110\u1eb7t h\u00e0ng : ib shop \u0111\u1ec3 \u0111\u01b0\u1ee3c ch\u1ed1t nhanh\nHotline: 0397.795.786"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": null,
+                    "cards": [],
+                    "cta_text": "Envoyer un message",
+                    "cta_type": "MESSAGE_PAGE",
+                    "country_iso_code": null,
+                    "current_page_name": "Huy\u1ec1n Trang Perfume",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": null,
+                    "page_categories": ["Pharmacy"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "457958557396569",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 2,
+                    "page_name": "Huy\u1ec1n Trang Perfume",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460624166_517554564317832_4266129864476421571_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=RKcI7dTzLqQQ7kNvgHr8mWa&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCDeg812wCJQlTDoMlGz0PxJD37HJM9WWpbsHDHnQpalg&oe=66F463AB",
+                    "page_profile_uri": "https://www.facebook.com/61566455631062/",
+                    "root_reshared_post": null,
+                    "title": "Gi\u1ea3m 70\u0025 ( S\u1eafp H\u1ebft H\u00e0ng )",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460200391_540252641879918_1026292301519434124_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yjVsZpevzpgQ7kNvgG3av_J&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCNDobdZjdbKCwCIFjwvBoq8O71oZaXjWHBB2K7ONpHQA&oe=66F485CC",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460726959_1686201238833908_4914401444083819403_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vfgI73GYC7MQ7kNvgFfxaR8&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAFHJbmlvi_7FbpmWDD0Aozb8UZ9NM73zTEaAB2Q3i2Xw&oe=66F48A94",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460481373_1372013637519028_9108678095315053733_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Cde7ey7bylAQ7kNvgHPs8MI&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBOyvFmDu0uLgsWZzyjZLD1XDGnXIDuBrluTe3_60iscQ&oe=66F45F7D",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1029006678701647",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "413474978429979",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "309519098918179",
+                  "page_is_deleted": false,
+                  "page_name": "Summarizer.ai",
+                  "political_countries": [],
+                  "publisher_platform": ["INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "How I survived uni without this app, bruh? \ud83d\ude2c\n\nI used to listen and take notes at the same time. And you \u2014 don\u2019t make the same mistake! Install Summarizer, turn on the in-built recorder, and it\u2019ll automatically convert the audio into text making a key-points summary. Link in bio \ud83e\udd2b\n\n#PodcastsMadeEasy #TimeSaver #BoostProductivity"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "instagram.com",
+                    "cards": [
+                      {
+                        "body": " ",
+                        "caption": "instagram.com",
+                        "cta_text": "Visit Instagram Profile",
+                        "cta_type": "VIEW_INSTAGRAM_PROFILE",
+                        "image_crops": [],
+                        "link_description": " ",
+                        "link_url": "http://instagram.com/summapp.io",
+                        "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460721143_1038845671040324_5172026975671366184_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Zb5GRSokoBYQ7kNvgEzOv-1&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDD6Fp1I_fchHJ527OAV-r7IFOQk8ZRndWhyH7XJhQuzA&oe=66F46B19",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459846968_1449845122385504_3374983045970300460_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Z_IiID_CRFMQ7kNvgG20r-d&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAkSOkwOCTFQamvOVxt3OwYkiR1wHySzQyyz9b8z5Ql1w&oe=66F47C2F",
+                        "watermarked_resized_image_url": "",
+                        "title": " ",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": " ",
+                        "caption": "instagram.com",
+                        "cta_text": "Visit Instagram Profile",
+                        "cta_type": "VIEW_INSTAGRAM_PROFILE",
+                        "image_crops": [],
+                        "link_description": " ",
+                        "link_url": "http://instagram.com/summapp.io",
+                        "original_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460643674_930724732201070_3441995812702290995_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Lq1FlpUEoqYQ7kNvgHXCsT4&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAdNjM2aOoPc0HYmw2WDJm7SyfWNYDN3smcCry9lw7mfA&oe=66F488A4",
+                        "resized_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460846597_543325118097095_8301223490335187794_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=mGySFIuHOoAQ7kNvgE9KxpR&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBQAPIe0Q34aN02FOnvaXQFPir_cJmgMqjNxn_Zt-TNqg&oe=66F48692",
+                        "watermarked_resized_image_url": "",
+                        "title": " ",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": " ",
+                        "caption": "instagram.com",
+                        "cta_text": "Visit Instagram Profile",
+                        "cta_type": "VIEW_INSTAGRAM_PROFILE",
+                        "image_crops": [],
+                        "link_description": " ",
+                        "link_url": "http://instagram.com/summapp.io",
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460526563_1671000427075158_3751807404699477669_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FCMxfr52cvoQ7kNvgHkM5Yy&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAuARgQ8tI27ATVU6ppg2BT5eqQ0CjBhBOBaiNuh_B0pg&oe=66F48B34",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459788510_1579026003032572_1626942948629443093_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=R8Lv6nN3640Q7kNvgHASdkh&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAvYmxcgcWak0hhyLrG34HNfRVxEmmQT05Bm9IETHCpSA&oe=66F45940",
+                        "watermarked_resized_image_url": "",
+                        "title": " ",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": " ",
+                        "caption": "instagram.com",
+                        "cta_text": "Visit Instagram Profile",
+                        "cta_type": "VIEW_INSTAGRAM_PROFILE",
+                        "image_crops": [],
+                        "link_description": " ",
+                        "link_url": "http://instagram.com/summapp.io",
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460370458_511463404936106_3146187224719638380_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=09JOybSrlWgQ7kNvgEIB5rX&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDuI6AnNoxGMwIifFLVt8MogpXHZOoOn_i_HoJHauAy1w&oe=66F476F2",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460720139_1273267660336530_334127239069686266_n.jpg?stp=dst-jpg_s600x600&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=eu5Jo9R5shkQ7kNvgHKDze5&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCSJNqFytcrFJaj3Fy69Tv6n2uwA8DKUcQLQH1w_d24cQ&oe=66F4761F",
+                        "watermarked_resized_image_url": "",
+                        "title": " ",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      }
+                    ],
+                    "cta_text": "Voir le profil Instagram",
+                    "cta_type": "VIEW_INSTAGRAM_PROFILE",
+                    "country_iso_code": null,
+                    "current_page_name": "Summarizer.ai",
+                    "disclaimer_label": null,
+                    "display_format": "CAROUSEL",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://instagram.com/summapp.io",
+                    "page_categories": ["App page"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "309519098918179",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 0,
+                    "page_name": "Summarizer.ai",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460720767_1569629277311606_6511345409433728978_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IkhxZN0S3V4Q7kNvgFfeDL_&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB3Y67R3-ZnF5OhK9kujdoEazLXrnF5RWtRslZmptSehw&oe=66F46B1A",
+                    "page_profile_uri": "https://www.facebook.com/61560540832365/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1283411999704917",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "916287163858189",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "325752733962958",
+                  "page_is_deleted": false,
+                  "page_name": "Seincriterion007",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udc3e Good news for cat owners: not only can it be a climbing frame and scratching post for cats, but it also effectively protects furniture! \ud83d\udecb\ufe0f\u2728GET IT\ud83d\udc49https://t.site/3TAKegS"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.seincriterion.com",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Seincriterion007",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://www.seincriterion.com/products/f4?variant=71803",
+                    "page_categories": ["Business"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "325752733962958",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 2,
+                    "page_name": "Seincriterion007",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/459926996_2641767852693405_4394201066805670195_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=nnaNugHZ3YQQ7kNvgHkWeAv&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBaB2cIL-pdQUwjFEf1lS_370C6YqeUzaX3UlFdUtACyg&oe=66F4620D",
+                    "page_profile_uri": "https://www.facebook.com/61561266731350/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460150888_1283412036371580_1123421508485465793_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=JMvwEaBNsAgQ7kNvgGngAOi&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC19FbCvhIjcNmopJSApWY6d7zvJu4jN8vBipAFd6kbqg&oe=66F464F4",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460730821_546781867922661_1851547008525349260_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kY2AtdLw0q8Q7kNvgEQpmg_&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCHgCr7JiRbhJvpogCL__p_JyrWK8ZfUD2pAOWJXQ1jng&oe=66F4859A",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460146559_1579228032668829_2788717663499107457_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ujzLbFYLYuYQ7kNvgFV1vgg&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCLjd-autVJw_qmZBSjIIM3k_XqGp7ZrGzfUmCr3jhdrw&oe=66F46072",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "3854721771475870",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "512060291434154",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "390631815003474",
+                  "page_is_deleted": false,
+                  "page_name": "Locations Africa",
+                  "political_countries": [],
+                  "publisher_platform": ["INSTAGRAM"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Do you even think about how GREEN your set is? Do you have an ENVIRONMENT FRIENDLY approach to your set? How many plastic bottles do you know get thrown away? Something to think about\u2026. \ud83e\udd14\ud83e\udd14\nRegister to attend our conference on filming location in Africa. \nwww.locationsafrica.com or click on the link in the bio."
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "locationsafrica.com",
+                    "cards": [
+                      {
+                        "body": " ",
+                        "caption": "locationsafrica.com",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": " ",
+                        "link_url": "http://www.locationsafrica.com/",
+                        "original_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460833549_528036326544978_6366606596740698135_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pYBX6LdwWLMQ7kNvgEHyJcu&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDoi9AfqVb0S7S0ZQmgecpA0aDldIsYW7zbLan7OBCnsw&oe=66F4751D",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460841301_1632431067321934_481616557168521399_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EFucpgI6EloQ7kNvgFmxOJX&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC1iv0WF10R13ylLNo-IznZDOq4k3ZE1xQaYd_4CydSNw&oe=66F4803C",
+                        "watermarked_resized_image_url": "",
+                        "title": " ",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": " ",
+                        "caption": "locationsafrica.com",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": " ",
+                        "link_url": "http://www.locationsafrica.com/",
+                        "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460739168_1222067332168820_13027602787854817_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=M4m-By6I9TIQ7kNvgEciXVC&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAS7VgGHURLOBmh4y0OBvKeC6nYpqYzCz_3xHhhOWXX2A&oe=66F48B65",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460627474_1624449978105455_1517044530779485804_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_Vbvz_6EWP4Q7kNvgH_VqhR&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAUwOprAFf7EfTcURvn3EBZORRQySsEwF7t_HE5vRETzw&oe=66F4778D",
+                        "watermarked_resized_image_url": "",
+                        "title": " ",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Locations Africa",
+                    "disclaimer_label": null,
+                    "display_format": "CAROUSEL",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.locationsafrica.com/",
+                    "page_categories": ["News & media website"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "390631815003474",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 173,
+                    "page_name": "Locations Africa",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460652605_527920236394469_8806259806656149587_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=gAKDxFWIeTcQ7kNvgERtO6B&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAWGfaDYlBllYLaPHiP0FWJ_zDC4_4H2BofuM8hRtpVEA&oe=66F478E1",
+                    "page_profile_uri": "https://www.facebook.com/locationsafricaOfficial/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "448286448245922",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": null,
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "457958557396569",
+                  "page_is_deleted": false,
+                  "page_name": "Huy\u1ec1n Trang Perfume",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\u01afu \u0110\u00e3i Duy Nh\u1ea5t H\u00f4m Nay.Em Thanh L\u00fd 70\u0025 l\u00f4 lelabo 13.33 thu h\u1ed3i \u00edt v\u1ed1n tr\u1ea3 ti\u1ec1n m\u1eb7t b\u1eb1ng v\u00e0 nh\u00e2n vi\u00ean gi\u00e1 s\u1ed1c ch\u01b0a t\u1eebng c\u00f3 ch\u1ec9 #290k/100ml.( \u0110\u1eb7c bi\u1ec7t 2 chai ch\u1ec9 #420k mi\u1ec5n ship) S\u1ed1 l\u01b0\u1ee3ng c\u00f3 h\u1ea1n\n\u2705 Mua 2 chai 100ml 13+33 chai freeship\nKh\u00e1ch n\u00e0o mu\u1ed1n S\u1edf h\u1eefu ngay nc hoa x\u00e1ch tay chu\u1ea9n H\u00e3ng h\u00e0ng AUTH th\u00ec inbox em ngay nh\u00e9.\n\u2705 bao ki\u1ec5m tra check m\u00e3 v\u1ea1ch , x\u1ecbt th\u1eed,ki\u1ec5m tra ngu\u1ed3n g\u1ed1c , xu\u1ea5t x\u1ee9. L\u01b0u h\u01b0\u01a1ng tr\u00ean da h\u01a1n 14 ti\u1ebfng \u0111\u1ed3ng h\u1ed3, l\u01b0u h\u01b0\u01a1ng tr\u00ean v\u00e3i 2-3 ng\u00e0y\n\u2705\u0110\u01b0\u1ee3c ki\u1ec3m tra h\u00e0ng tr\u01b0\u1edbc khi thanh to\u00e1n n\u00ean kh\u00f4ng lo \u1ea1\nH\u00e0ng chu\u1ea9n H\u00e3ng shop cho test t\u1ea5t t\u1ea7n t\u1eadt\n\u0111\u1ecba ch\u1ec9 :\u0110i\u0323a chi\u0309 : 725 \u0110i\u1ec7n Bi\u00ean Ph\u1ee7, H\u00e0 Kh\u00ea, Thanh Kh\u00ea, \u0110\u00e0 N\u1eb5ng\n\u0110\u1eb7t h\u00e0ng : ib shop \u0111\u1ec3 \u0111\u01b0\u1ee3c ch\u1ed1t nhanh\nHotline: 0397.795.786"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": null,
+                    "cards": [],
+                    "cta_text": "Envoyer un message",
+                    "cta_type": "MESSAGE_PAGE",
+                    "country_iso_code": null,
+                    "current_page_name": "Huy\u1ec1n Trang Perfume",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": null,
+                    "page_categories": ["Pharmacy"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "457958557396569",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 2,
+                    "page_name": "Huy\u1ec1n Trang Perfume",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460803110_1303174767356617_8797296173531060005_n.jpg?stp=dst-jpg_s60x60&_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xcw1OGUfNK4Q7kNvgFMcRvZ&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCKD0XNFEgShLDklURleoMTG1W4rbkmyzIS4o5IYGAlNg&oe=66F458A3",
+                    "page_profile_uri": "https://www.facebook.com/61566455631062/",
+                    "root_reshared_post": null,
+                    "title": "Gi\u1ea3m 70\u0025 ( S\u1eafp H\u1ebft H\u00e0ng )",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460659875_448286481579252_4074588191428934203_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=56jKuTHI0_oQ7kNvgFq15F3&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBxT__2qVqBnAxD_cUgZYfp9I12NCoPrTtpQS4y1ZjRSQ&oe=66F45E3C",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460915010_7598535276913211_9060146256792137721_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fvBqxsuulwkQ7kNvgHDKx8L&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCLuKlEki9422HMeOtkhH-oJv3t3HbJ8NxUhl8J2Rd2xA&oe=66F48A45",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460209179_972957197936463_9106565315357455666_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=tzs21gU_kJYQ7kNvgHrnBA-&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBwwJX6XTaWBAhoDmbmX2IJjw7F6-O1fhCULgWQJZEy-A&oe=66F4744A",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1283405966372187",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "542089038507741",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Du wirst gezwungen, dich als jemand anderes zu verkleiden und deine Jungfr\u00e4ulichkeit an einen Milliard\u00e4r zu verh\u00f6kern!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "play.google.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://play.google.com/store/apps/details?id=com.newleaf.app.android.victor",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460657580_1577474283164530_594731185280746904_n.jpg?stp=dst-jpg_s60x60&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=P8I9TbJ3lXQQ7kNvgEX-X8k&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAT7msRxVjBABPBwNaXgL57PlmPGjcYjBWzjLLNiryueQ&oe=66F4717D",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "Klicken Sie hier, um die vollst\u00e4ndige Folge anzusehen",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460632688_421453634288401_9175050765164011384_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=zQZjE3mtWpcQ7kNvgF-ZeYk&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCSH28ddDfKnz-CTZNEvprowwF31hrtLg_WqpuQhwjJHQ&oe=66F47FFF",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/10000000_855001529699180_8552607003520088178_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_OcYrhOVaigQ7kNvgGjW-mK&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDWa08mm1C12HNW3n7iC5Kq0B4d70FWZULNOm7Coj6A_w&oe=66F475A6",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1056023769463753",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 5,
+                  "collation_id": "435513358850032",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "324327210774338",
+                  "page_is_deleted": false,
+                  "page_name": "100M Install of 2024",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Alert! Anti-Theft Phone Alarm Activates Instantly."
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "play.google.com",
+                    "cards": [],
+                    "cta_text": "Installer",
+                    "cta_type": "INSTALL_MOBILE_APP",
+                    "country_iso_code": null,
+                    "current_page_name": "100M Install of 2024",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://play.google.com/store/apps/details?id=com.donottouch.antitheftalarm.alarm.phonesecurity.donot",
+                    "page_categories": ["Business Center"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "324327210774338",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 48,
+                    "page_name": "100M Install of 2024",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/457618012_4008604649419188_8833738173352944446_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=eIKpKu9COTwQ7kNvgGsmQH-&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBdbJurztgPCtVVJ_lsEkchub9mtPPgcyDGk0nMlCNfJQ&oe=66F47D75",
+                    "page_profile_uri": "https://www.facebook.com/61563433896773/",
+                    "root_reshared_post": null,
+                    "title": "Anti Theft & Don't Touch Phone",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/457247505_478389195084527_4447893239997278888_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=G2silMt6x-kQ7kNvgGFFBpV&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC8QlxJlbpg25ZeFr0gz3xOvedhs1B8hkQTVo2rrzi1Pg&oe=66F48185",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/457591926_1106799057521955_7251226999144045974_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pp6EWc3Wb6YQ7kNvgENAR1K&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA1tGCVvg5EhBXef0xI7cOF1ozDgbfvd1R_F8snTeW7ww&oe=66F48582",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/457054403_544285734610058_6168500958928223865_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pf3N7_oSuyMQ7kNvgHa7MGK&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAnfLH4XfJs1ClYPq-y57XPyoBLyiqN2iYu1KPLIJ7eWg&oe=66F48D6E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "401922639350063",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "435513358850032",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "324327210774338",
+                  "page_is_deleted": false,
+                  "page_name": "100M Install of 2024",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Alert! Anti-Theft Phone Alarm Activates Instantly."
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "play.google.com",
+                    "cards": [],
+                    "cta_text": "Installer",
+                    "cta_type": "INSTALL_MOBILE_APP",
+                    "country_iso_code": null,
+                    "current_page_name": "100M Install of 2024",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://play.google.com/store/apps/details?id=com.donottouch.antitheftalarm.alarm.phonesecurity.donot",
+                    "page_categories": ["Business Center"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "324327210774338",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 48,
+                    "page_name": "100M Install of 2024",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/457874190_519601540562637_7609260481809196734_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Ret-OH2--YEQ7kNvgHwR8rZ&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB2NNIhsGQD2eLPTlx9AL6TblabSUsORzZmrucUOn-y5Q&oe=66F45E45",
+                    "page_profile_uri": "https://www.facebook.com/61563433896773/",
+                    "root_reshared_post": null,
+                    "title": "Anti Theft & Don't Touch Phone",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/457690855_1277618599869449_6105187972383659606_n.?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GzHLHSkrB80Q7kNvgEfihvM&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBcZbPG8PcDqpnX3f5OMaQQlKIsvvjWLwUsyc2ge5Uy1g&oe=66F465E1",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/458099010_498716319537322_3938317173247858803_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=uBJrzSLiC_cQ7kNvgEtlwKD&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBKQeVOq1nHJ8TNE14fIxDecmJx5d8RTs_DZq8-C7TgFA&oe=66F48E16",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/457054403_544285734610058_6168500958928223865_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pf3N7_oSuyMQ7kNvgHa7MGK&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAnfLH4XfJs1ClYPq-y57XPyoBLyiqN2iYu1KPLIJ7eWg&oe=66F48D6E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "509071578404773",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "838481801809980",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Du wirst gezwungen, dich als jemand anderes zu verkleiden und deine Jungfr\u00e4ulichkeit an einen Milliard\u00e4r zu verh\u00f6kern!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "play.google.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://play.google.com/store/apps/details?id=com.newleaf.app.android.victor",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460638482_500236642827068_3913000838362709276_n.jpg?stp=dst-jpg_s60x60&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xnGNmTMqtLcQ7kNvgGoQ3Fp&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAWr9jHlPFWVHmd_tHbdqBBDlZ8YMALxRBA_chTmnwiqA&oe=66F47D2F",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "Klicken Sie hier, um die vollst\u00e4ndige Folge anzusehen",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460718171_865192665577997_5242806488351827458_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=x-cWR385F3sQ7kNvgF26hpL&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBfN4J1hsTEEC_npHJMVwl4QHIZJEPhJFgLHzjcLFuL2Q&oe=66F47549",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/10000000_1054794602303259_5771776433380233204_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=zMtqvWK0hZMQ7kNvgHPXrsH&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB2s1AFU4b_wn-G9B9JBNddMySLm20ObzG9TuD9T4AqKw&oe=66F45A05",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "452333924511653",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 3,
+                  "collation_id": "1018025206765927",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=223\u0025253A891565\u0025253A18623&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460501902_855729383317358_156458922831972145_n.jpg?stp=dst-jpg_s60x60&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1AY4UHhYmqIQ7kNvgEfDxJZ&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAkDZ9zdGsGLCuMokGm1UWUeVMY1U3Wo5JWxjpEdlk_Bw&oe=66F48584",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460213005_452333974511648_2637228907923434191_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HR3q58DIoyAQ7kNvgHC7HEY&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCVYf3GiLpn1eBVdHwC6fhNK4d7Q6m0TINsAzx78WnhAA&oe=66F47E56",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460426162_1215873679611595_6981991867395250309_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=tx_--lx6x2oQ7kNvgEIymIf&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAxnmcZsAAGv65rd1JSmx0rzR5KGup3PzJdimKLrcvxzw&oe=66F45AEF",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459949605_453235127744622_1182129779980109798_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=hkeahQZyZMwQ7kNvgEvThCy&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAngzEadKAhWbHwYuEEvMKd7Aq1eJGsMZygxlDISg9WPw&oe=66F45C5D",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "1208174180430828",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "1018025206765927",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460717611_1064593405177841_6252040346557048107_n.jpg?stp=dst-jpg_s60x60&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=17vqF1B_VXsQ7kNvgH5EXB4&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYD08LISY-dq_r2W__pS6PrISLH9HBygMao4Oi_1yUBnXw&oe=66F47040",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460325380_1208174217097491_7094819904383181721_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HeT2sS7_CTkQ7kNvgECqGqK&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBDW9theUzS59Ycan-LeEnA8MU4ZAPiHNqJoJb1hl0aSA&oe=66F4835B",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460821867_492653006869155_2254732784445677440_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NfsHGySPgA0Q7kNvgHfop8W&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBoTf17mD4OBtIeMcmAR2U2v9CGRsGZn4S3TQtmQQsVXA&oe=66F48159",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459949605_453235127744622_1182129779980109798_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=hkeahQZyZMwQ7kNvgEvThCy&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAngzEadKAhWbHwYuEEvMKd7Aq1eJGsMZygxlDISg9WPw&oe=66F45C5D",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "1275006433878036",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "1018025206765927",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460626687_815863570722551_1813538147595233178_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cZ5fvGpuq6cQ7kNvgG7Xu8a&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAB5IRpRcN0d_PpoxymH4QeCgOmIwKBRnYA115dPC4-fA&oe=66F487A2",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460154890_1275006480544698_3475455355192059890_n.?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WFZfQJ_vRDoQ7kNvgFP9dnG&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA3Qtu2LQ85AA1d3YtoDfZY4Z30Dc0l_p66tothG0mbeA&oe=66F46E83",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460652657_1611522126076592_3870659758182421915_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=t_uXHt6p-kMQ7kNvgHLF6R_&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAZPpWy6hAeKk_x7bChEfehEwU22wt8a0-2Yj9vPzpovg&oe=66F46F0F",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459949605_453235127744622_1182129779980109798_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=hkeahQZyZMwQ7kNvgEvThCy&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAngzEadKAhWbHwYuEEvMKd7Aq1eJGsMZygxlDISg9WPw&oe=66F45C5D",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "437072582722210",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 2,
+                  "collation_id": "1044073880764277",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=223\u0025253A891565\u0025253A18623&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460835322_888128019346490_7599182675096545075_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=inLU_cm2Zv0Q7kNvgG5VjAw&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA5f3yUJQwBijgSTBVtqyvDHUnovRzlxB8RJ4Ot3_oBSA&oe=66F45F9F",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460761842_832773619008569_2683896484269773169_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cWxQetgfLRsQ7kNvgH2SE2r&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDBjtjqUf8NMkmRKsN-it3Db8DUWOfrqXHJHQqgHKAdQA&oe=66F476B6",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/10000000_485036057734103_822729210152705640_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Lwx-yfm0NHEQ7kNvgHTAJHo&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA0Ca6pp0NEHUDNrzQOBcOYjAr6qMYPE695hfQy6vHR-g&oe=66F4817B",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "932237705396617",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "1044073880764277",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460803110_408843265652057_8670483721201793530_n.jpg?stp=dst-jpg_s60x60&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xLObgYyPwX8Q7kNvgHvOQCn&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYD9W7B1y1bEBU8509qb2pr8mcSROAEoxYDdKpivbOppHA&oe=66F48887",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460728599_1201629537716869_1687398529870785324_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=88w5zr4CX4IQ7kNvgFMH3UI&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAsb3B8SyXBDEX4MK63BGIc1vpL7GMDMFTHfXz0OFAnJA&oe=66F47034",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/10000000_485036057734103_822729210152705640_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Lwx-yfm0NHEQ7kNvgHTAJHo&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA0Ca6pp0NEHUDNrzQOBcOYjAr6qMYPE695hfQy6vHR-g&oe=66F4817B",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "512539681640467",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1450554142275111",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "134732293046602",
+                  "page_is_deleted": false,
+                  "page_name": "ETSY.Poplawillow",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "\ud83d\udc3eClean Your Cat's Litter Like a Breeze! Get Yours Now & Keep Your Floor Tidy. #DualStructureLitterMat #CatHappiness #KeepYourFloorClean"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.poplawillow.com",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "ETSY.Poplawillow",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://www.poplawillow.com/products/non-slip-cat-litter-mat-4-2-2",
+                    "page_categories": ["Business"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "134732293046602",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 1315,
+                    "page_name": "ETSY.Poplawillow",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460220679_2205459896495768_6594382457065843459_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=U-MDyoFywqgQ7kNvgFYiO1f&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBP8IHTFejUmvtBkz005s6jVXD9UgDWYNK2FIFlBCsHEg&oe=66F47566",
+                    "page_profile_uri": "https://www.facebook.com/61550972253958/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460461086_1471413240206105_224802297261031838_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9q_ktwz2a_kQ7kNvgGuxb4h&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBMr8pk84QwnYk9NmAYkOhTcrviH3kfX_N_5fZ49ccy6g&oe=66F45FB3",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460665914_1182275423026457_6264070607699380578_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=dKwt9CQwHPEQ7kNvgFRLI1i&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCHv0s2GHjJWhYAC_ONVGV5Rn2qAmQ-eV7tBIcdjOhViQ&oe=66F45BA4",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1038570934485437",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1977163256030205",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460848173_1892819657868946_2232250038608185679_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=nQ0GtO9Z58UQ7kNvgEIS4Nt&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC0ITM-XPVq-LboylPjDLJ1aFjZC2donQBsktE0mkT1Xg&oe=66F47F87",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460145456_1038570967818767_3095163077546494541_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=LU2Qfo2PksYQ7kNvgFXQoBm&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDCnHBbrToNENlqv60M_X6c1baBLoeK-vlmwE0eT-6dgw&oe=66F48A7B",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460624112_475500085482914_572872000091677981_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=n8rdja2m21oQ7kNvgEzQbfo&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAONaNKg9XC3Ac0NU4EP69MgqGfXbNq7PbbCpj1Zyhr1Q&oe=66F45D09",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460488117_1071586344506326_7134530364876572769_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WgNYwgmL6aMQ7kNvgGMlmxW&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDFzoiQo0aqg-STO-S9x6I_yO-8w37PdICD3RYGoBDfTQ&oe=66F465E7",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "439612499232578",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1240262104055502",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460660490_541268004986562_1030556533840195767_n.jpg?stp=dst-jpg_s60x60&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fw2OMJSSZjoQ7kNvgExK7F6&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDKm-29PtzZeaAln68ORxi_JaqU0Crn_CRXq_wUO8uOoQ&oe=66F46965",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460414011_439612575899237_2706919613418312808_n.?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ClS6AXleQ_QQ7kNvgFZ9XQ8&_nc_ht=video.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYB5NPUwfpVQUoxKUJ_ObIeKi-PozmhafYo6LbpZefUe6w&oe=66F46BD8",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460613320_1236607484039120_5888673903862559916_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=-3R8LHoThDEQ7kNvgEg95Q0&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC26RTSRYt_PjSj4gqSQA6xufYtE77Eo3ORgmX9uAmH8g&oe=66F47375",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460136260_852849846953682_1562605305421351640_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Z4V6IaKJ-hgQ7kNvgFHmPSh&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDgU_MTUtILZ6NCAQvmelz4leVq8yaRHD0svTTw-Typ3w&oe=66F47825",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1192781565348868",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "541131291696305",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Du wirst gezwungen, dich als jemand anderes zu verkleiden und deine Jungfr\u00e4ulichkeit an einen Milliard\u00e4r zu verh\u00f6kern!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "play.google.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://play.google.com/store/apps/details?id=com.newleaf.app.android.victor",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459823463_803164535228667_9180573143745251639_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=LgaUinXGOLgQ7kNvgGZZHlU&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBwW8AcJ6GHUGj2jsYO1My0URezq7T6NLXR3ev5ZX6jIw&oe=66F47B2B",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "Klicken Sie hier, um die vollst\u00e4ndige Folge anzusehen",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460894058_2312113912453365_8019010987467695731_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=gUobeXzuTkQQ7kNvgGU5g80&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYD4vEVQBQCN0nXLQEqpMWcWrJZnlBO9V9gb4jEHRoArIw&oe=66F47523",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460196542_1236942417721223_5499865777549047780_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ziwPGayA_XYQ7kNvgGsHLGI&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC7W0EffdQ8Fo14fJUj_oj55Cc-mCKM4x0ZVV_bMd88NQ&oe=66F46951",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "26566353786341624",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "8245088912240116",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "104166679290552",
+                  "page_is_deleted": false,
+                  "page_name": "Reelshort-Video stories",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Du wirst gezwungen, dich als jemand anderes zu verkleiden und deine Jungfr\u00e4ulichkeit an einen Milliard\u00e4r zu verh\u00f6kern!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "play.google.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Reelshort-Video stories",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://play.google.com/store/apps/details?id=com.newleaf.app.android.victor",
+                    "page_categories": ["Movie"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "104166679290552",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 151846,
+                    "page_name": "Reelshort-Video stories",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460662248_514272168205752_2301121007977369732_n.jpg?stp=dst-jpg_s60x60&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=a1SYlDHpB8wQ7kNvgH95xmq&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCCh31WKom0kYumd8GxnBdnoMxy8QsEn8_PRrgvqYr-1Q&oe=66F47606",
+                    "page_profile_uri": "https://www.facebook.com/100090841033078/",
+                    "root_reshared_post": null,
+                    "title": "Klicken Sie hier, um die vollst\u00e4ndige Folge anzusehen",
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460318972_26566355009674835_6533769258916498941_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=7X09bwUqabQQ7kNvgHoHDMm&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCSP5xbGrvHsr9f-rH0RkSYvgtwfI-YU3N5BTEtISObjQ&oe=66F461C4",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460624705_1037776727826359_2700534428600607799_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Oble_6OIF9wQ7kNvgEqBPud&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCpxoJ5zk-a67gchOGa3ygL-tfZfdGV-jV0clgU8ZCEfw&oe=66F462CC",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460360684_8286266178105907_748582337203745305_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=SjAskvVRCpUQ7kNvgFFBXNY&_nc_ht=video.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYC838nv_eV8HBrmCI7InGVHaHAdDQwHKO2a6xzx1Nmyeg&oe=66F483BA",
+                        "watermarked_video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/o1/v/t2/f2/m69/AQNTDrbP-XuKAzaQcZ0iFi9CCypovy6OTkFjqtpn4rhObye56nc8jT10BUZO8fcHZDHd9X3wO9qpgHVj6zMxZKLM.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ht=video.ffez2-2.fna.fbcdn.net&_nc_cat=101&strext=1&vs=cd65f3177eef8fa&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HTElrZFJ1UHNGOFJMam9EQU1mbVRLVVprS2w5Ym1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dHN2xieHY5a05zVW9rMEVBTlJWRVpnRkVfZC1ickZxQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJvbuo9n5zpkDFQIoAkMzGAt2dHNfcHJldmlldxwXQGyCHKwIMScYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnBm9lcF9oZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlB3VubXV0ZWQTb2VtX3JvaV9yZWFjaF9jb3VudAYyMjIxODgRb2VtX2lzX2V4cGVyaW1lbnQADG9lbV92aWRlb19pZBAxMjAyMTI2MDIxMDcyNzIyEm9lbV92aWRlb19hc3NldF9pZBAxNzUwODQ5OTU1NDU0MDk1FW9lbV92aWRlb19yZXNvdXJjZV9pZA85MDA3NTY4NzUyNzkyOTEcb2VtX3NvdXJjZV92aWRlb19lbmNvZGluZ19pZBAyNDkyNzQ5MzI0MjY0NTA1DnZ0c19yZXF1ZXN0X2lkACUCHAAljgIbCIgBcwQ3Njg5AmNkCjIwMjQtMDktMjADcmNiBjIyMjEwMANhcHAGVmlkw6lvAmN0FEFEX0xJQlJBUllfV0FURVJNQVJLE29yaWdpbmFsX2R1cmF0aW9uX3MKMjI4LjA2NjY2NwFmAmFkAnRzFXByb2dyZXNzaXZlX2VuY29kaW5ncwA&ccb=9-4&oh=00_AYANMbcaUzlIRqjQ1cTDPGxP0zIJ41MhBMXJ14kSD4zsZA&oe=66F09B10&_nc_sid=1d576d&_nc_rid=409545489345981&_nc_store_type=1",
+                        "watermarked_video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460486757_428428079786986_6260978337631767029_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=55d0d3&efg=eyJybHIiOjY1OCwicmxhIjoxNTY1LCJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCIsInZpZGVvX2lkIjoxMjAyMTI2MDIxMDcyNzIyfQ\u00253D\u00253D&_nc_ohc=rC4M32q50PEQ7kNvgFgVvRq&rl=658&vabr=366&_nc_ht=video.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDV1zoSI3Ppc9PK4c4z2oa8uDhAGKqZC_1SnbzViSxnYQ&oe=66F4619A"
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1722239935192742",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "521640277135235",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "238460612688224",
+                  "page_is_deleted": false,
+                  "page_name": "DailyDrama",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK", "INSTAGRAM", "MESSENGER"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "You\u2019re forced to dress up as someone else and trade your virginity to a billionaire!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "w2a.reelshort.com",
+                    "cards": [],
+                    "cta_text": "Autres vid\u00e9os",
+                    "cta_type": "WATCH_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "DailyDrama",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "https://w2a.reelshort.com/reelshort/booksAdvPageV2/?book_id=66d768a0bc767102400f59ce&chapterId=vbf26ysy3e&chapterIndex=1&mediaType=fb&px=25247865436\u0025253A1813&push_type=2&book_type=1&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}",
+                    "page_categories": ["TV show"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "238460612688224",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 7951,
+                    "page_name": "DailyDrama",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460712341_536848908796480_4778880489284379560_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=s2e1dCmfR8wQ7kNvgG7LgHA&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYD8-LFJAE3n4GnA69s8QyRPGH0fRmN9ztKtAG_JmeEuhA&oe=66F4595D",
+                    "page_profile_uri": "https://www.facebook.com/61556925569725/",
+                    "root_reshared_post": null,
+                    "title": "\ud83d\udc47Download ReelShort TV to watch more series\ud83e\udd70",
+                    "videos": [
+                      {
+                        "video_hd_url": "",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460721877_519723831010451_2284800099486245029_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=mG3LYJTJrQQQ7kNvgGjY1e3&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCZggXrzo756bwcxQE53q9m8nERo8P5scsdpkAS84VvFQ&oe=66F46973",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460199027_509938468448004_3502418339153641360_n.mp4?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0MoaFjW7pVwQ7kNvgFu8rzP&_nc_ht=video.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAlCIw9Mi31HgtroU9xkkv2ug9SoDAskmydslvWg571JQ&oe=66F468A4",
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1060065545054318",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "830881869204059",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "106598354707294",
+                  "page_is_deleted": false,
+                  "page_name": "Studio S\u0142onecznik",
+                  "political_countries": [],
+                  "publisher_platform": ["FACEBOOK"],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Koci\u0119ta na szczycie g\u00f3ry Taishan. Czy one ca\u0142y czas tutaj mieszkaj\u0105? A mo\u017ce codziennie wspinaj\u0105 si\u0119 na g\u00f3r\u0119 o wysoko\u015bci ponad 1500 metr\u00f3w?\n#MountTai #shandong #cat #kot #kitty"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": null,
+                    "cards": [],
+                    "cta_text": null,
+                    "cta_type": null,
+                    "country_iso_code": null,
+                    "current_page_name": "Studio S\u0142onecznik",
+                    "disclaimer_label": null,
+                    "display_format": "MULTI_IMAGES",
+                    "event": null,
+                    "images": [
+                      {
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460670901_806458281559779_5131982059291321960_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=no2bHkEIlxoQ7kNvgHGlrbL&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDVn_fosolY_XyyixGaXu-ZiT2gHkhvB197MwL6OnNsoQ&oe=66F47AE5",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460049433_1217593429283585_5838549399773386754_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iMIrnM9mc9IQ7kNvgGyOJOe&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAeb9WSAY571Q5ZYH2UCyh09w0K0_ZZyfdmMPYqQ7rKqQ&oe=66F4808C",
+                        "watermarked_resized_image_url": "",
+                        "image_crops": []
+                      },
+                      {
+                        "original_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460226446_1314546006596454_5825972397659896394_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=zNaw_Mj8ZqQQ7kNvgGaL9BD&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCluNWH2292yZh_ecyV7yR4fZMl00u4sxspREEZwo1nag&oe=66F48403",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460588338_1235193171264132_7308702378885405962_n.jpg?stp=dst-jpg_s600x600&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qQKSWeE4hQQQ7kNvgHk8uSH&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAaQRXaD51ipzWyHxCMv-jlwA3TuXXpThHCZRyUGKEEAw&oe=66F46AE5",
+                        "watermarked_resized_image_url": "",
+                        "image_crops": []
+                      },
+                      {
+                        "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460714908_493439300203404_2069359567441537545_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=u_tWTwvWjpcQ7kNvgE9qyjL&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYDm79gHcU2cG7cnDpbCrRY0PwzQlaw04KXCqEXtB-nixw&oe=66F46A82",
+                        "resized_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460720314_1196280748320003_5170441676830102753_n.jpg?stp=dst-jpg_s600x600&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3YFBbE1oNzIQ7kNvgGKYW9h&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYA_PXQmEvBqCpd1o4GCHDmorEV1YAM4ZYw2_NdYKUKWXQ&oe=66F46B22",
+                        "watermarked_resized_image_url": "",
+                        "image_crops": []
+                      },
+                      {
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460620650_1083280947140846_4240573851174032323_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B3QUuewpfVMQ7kNvgGdJAsL&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCJyRGAZHxXZwmJpgzBGCEVQqS5Ziuet9FyUUFBL_XNvA&oe=66F45977",
+                        "resized_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460729917_1481209152583193_6842350434991933541_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pm8unbFMC-MQ7kNvgEJzDbW&_nc_ht=scontent.ffez1-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYBWbiR7L-vywNHlNH2uLzvqWo8Fp-7t9mYiuggf3XaKOg&oe=66F46732",
+                        "watermarked_resized_image_url": "",
+                        "image_crops": []
+                      },
+                      {
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460350263_915949177040534_2996115226892732866_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=YSGZMIp6oCUQ7kNvgEm9oFF&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCY6PlKLtcf5VLTOssbXHSpgnNYe_8Lt228B9ESjjs47A&oe=66F47D38",
+                        "resized_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460720496_1380988529525053_357936621149152301_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HC4go0gYr4MQ7kNvgGnvnEF&_nc_ht=scontent.ffez1-1.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCRiUb30yu983P433fhHVs93rbGdjy0FBFxiav5ytI7Eg&oe=66F48A52",
+                        "watermarked_resized_image_url": "",
+                        "image_crops": []
+                      },
+                      {
+                        "original_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460730053_1637949016751449_3639236013802436610_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=k3RkzFNnRrIQ7kNvgF4Gv5J&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAjU6J30vfuzuw7tJsfiQkjvNIhk8wgVeQUmLPaGMvBbA&oe=66F47E66",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/459769041_1603120297217177_6493709894857752184_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2W7SONFR0YIQ7kNvgHyOVKZ&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYAWqbDzlrgIrM3PIYj5n0iTIeP0FamGjwf-UBL2CRy4-A&oe=66F46F89",
+                        "watermarked_resized_image_url": "",
+                        "image_crops": []
+                      }
+                    ],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": null,
+                    "page_categories": ["Personal blog"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "106598354707294",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 69858,
+                    "page_name": "Studio S\u0142onecznik",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460291443_945553577381107_3078347963147402076_n.jpg?stp=dst-jpg_s60x60&_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=H5IUO2ZSVOQQ7kNvgEMbO4q&_nc_ht=scontent.ffez2-2.fna&_nc_gid=ABO3QIc2SHVRsUEdXFh4wag&oh=00_AYCkAIBF9ozyR6JedQnjMXg2S2hjXyuFoUfeKOcPfdS79g&oe=66F48A26",
+                    "page_profile_uri": "https://www.facebook.com/100064281752556/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": "M\u00e9dia contr\u00f4l\u00e9 par l\u2019\u00c9tat dans le pays suivant\u00a0: Chine"
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          }
+        ],
+        "page_info": {
+          "end_cursor": "AQHR6AdbycyiW1UDA7A0cz7kn8lYuiEDG9ss2ehH8ovJrR49a_uYmvGcwZkMUzQD6M4mXWzwV7eJ1R5u1xv3z_UIQ9AsghXEvzx_nxhTEkcwRSoEjmUIyADsO0BRSASnktrVZm_3IxiIYSdYcBVIHHrcJMvmQJPfcqesr8McQxwWA5t0dqn5pvQ_L-r5Uq5C6GuHe207l1SgLAA-JzGVU13_3TrTml-AzE9RolPwc2Zql7DVxcWR5emDN8dh6TotXYci9C9YTbCNaMY-D31c3-eQjymI-qqPLo9Y1Z172ampOiK6nAvYIkLWasHVxVKdwuD-IJeE2TfCfFEMqtMdVp5Z7dqWGakOOebvnS4aUqLTqQAIHPOhPl5WTH2rU3UfiLe7Xxc_GOwB3D2LS34KQh39rca9HA0Z6v1D7UjfxhhwTuEr2JDjAeWJU80ISZqvLDDWMRV76MPErK_wFDbqk-8jVoODTRkJQvEPeeMufpbfDjc0LP8IKEz-0TkLFIFcCn3Mtubhx01LynoDhU0Ka4xtRVQu-rdn5Bk59ppNZ_xXEkqb41zSN9GeFS3qziOMRhHAJF9WYj2q8Ou0xynWkeFEgkMNirpdUXfZ4qZlynRsykROA0P7nG7N-ZR2SRtlwJrFtjV6iO19NdqjH8TxvdbaG4n2e4Vha8shLiCH2mQPBuXJ1a9WyAB2eAjuwEf4DVA3Ufvz6odIrNlUs3fmgtzEHlDt6uNxvgMXgkaODHehm2ytlxaJskN82A2rCkOL8QTs3GcKWH7t72YBGj3YPKiPrvxfNp6PIe5QM11wLSjtVpT68bWnbgQP0rT7SNbFi0iqNBdt6cDjiqhWE3eJ5OBvfu5H--eV872TabBgtaA_YeshmbsIJy3NFGRsfq7rba-IztYTNWG_rdCjPCMAuI_6W2b0a34zvtSlhEfCCTer5Oo0zNTzvQjcaBtON4grUphEC7sHtp_IYC8QOqZGVAReC7SozTvKlpj1zPr6GjO-8GbflhKPLTKFR2f7nuV9ArQNIdmyqFdc_oTg5IYdoKOYNs3jp0OvMka52tXUBbPmbT0_745ppVyrK0oqiYLIpdqduT26FF6MhPLuSqfl1pyZ2GlNtyYBy4pECf230gn3Kf7-j5rS6r6-sm15FkXCBWU8",
+          "has_next_page": true
+        }
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}

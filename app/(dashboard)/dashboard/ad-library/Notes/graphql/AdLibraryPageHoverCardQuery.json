@@ -1,0 +1,45 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=672x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=political_and_issue_ads&country=MA&media_type=all&source=nav-header' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryPageHoverCardQuery' \
+  -H 'x-fb-lsd: AVqy31NLRXs' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=20&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016694340&__s=4oz6iz%3Aacglpu%3Alj4r7d&__hsi=7417037990527946704&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gFk_aRINflzkF4lGJybXDi59GVazpAmvykiBhEiyCqEiWwWxiq6oaoky5y8a829wkohxmiaG0B8G1ewtA0z8GEK0Jo6Wdwqoao7Si0dcw0gLC0sK02OnzEgw04fYg07dZ00p39Qaw2DE1EUG0a0w5sw&__comet_req=1&lsd=AVqy31NLRXs&jazoest=2924&__spin_r=1016694340&__spin_b=trunk&__spin_t=1726913729&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22183189888213579%22%7D&server_timestamps=true&doc_id=6453683764688391'
+
+  */
+
+{
+  "data": {
+    "page": {
+      "name": "Nichan - \u0646\u0640\u0640\u064a\u0640\u0640\u0634\u0640\u0640\u0627\u0646",
+      "is_delegate_page_with_linked_primary_profile": false,
+      "verification_status": "NOT_VERIFIED",
+      "category_name": "Site web d\u2019actualit\u00e9s",
+      "profile_picture_uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/409738399_369704032123453_8759332174264240981_n.jpg?stp=dst-jpg_s200x200&_nc_cat=108&ccb=1-7&_nc_sid=0bacbc&_nc_ohc=7B_3F182kokQ7kNvgE6glQS&_nc_ht=scontent.ffez2-2.fna&_nc_gid=Azp1ikAfqcDrgO_Io0RKwfg&oh=00_AYDd55KYh39pIJXMHKUq2fj0_vgkeWDXzdvOpVwuGpZlSg&oe=66F46CD3",
+      "page_likers": { "count": 221564 },
+      "websites": ["http://www.nichan.ma/"],
+      "url": "https://facebook.com/SiteNichan",
+      "best_description": {
+        "text": "Nichan.ma .. \u0646\u0640\u0640\u064a\u0640\u0634\u0640\u0640\u0640\u0627\u0646"
+      },
+      "id": "183189888213579"
+    }
+  },
+  "extensions": { "is_final": true }
+}

@@ -10,6 +10,13 @@ import {
 } from "@/app/actions/buildFbAdsLibOPTIONS";
 import { buildFbAdsLibUrl } from "@/app/actions/buildFbAdsLibUrl";
 
+class FacebookBlockError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "FacebookBlockError";
+  }
+}
+
 export const searchAds = async (filters: FilterParams): Promise<any> => {
   try {
     // Build the URL with the given filters
@@ -43,21 +50,29 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
 
     // Parse the cleaned JSON string
     const data = JSON.parse(cleanedText);
-    // console.log(
-    //   "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ cleanedText:",
-    //   cleanedText,
-    // );
 
-    // data && console.log("🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ data:", data);
+    // Check if the response indicates a Facebook block
+    if (
+      data.error === 3252001 ||
+      (data.errorSummary && data.errorSummary.includes("Temporarily Blocked"))
+    ) {
+      throw new FacebookBlockError(
+        "You've been temporarily blocked by Facebook. Please try again later.",
+      );
+    }
 
     data.payload.totalCount &&
       console.log(
         "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ ADs Found :",
-        // data.payload.totalCount,
+        data.payload.totalCount,
       );
 
     return data;
   } catch (error) {
+    if (error instanceof FacebookBlockError) {
+      // Re-throw the custom error to be handled by the client
+      throw error;
+    }
     console.error("🚀🚀🚀🚀 ~ searchAds ~ Error fetching data:", error.message);
     throw new Error("Failed to fetch data from Facebook Ads Library");
   }

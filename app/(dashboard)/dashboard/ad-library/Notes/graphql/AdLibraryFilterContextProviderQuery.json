@@ -1,0 +1,212 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=672x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&media_type=all&q=cat&search_type=keyword_unordered&source=nav-header' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryFilterContextProviderQuery' \
+  -H 'x-fb-lsd: AVqy31NLRXs' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=7m&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016694340&__s=u2m013%3Aacglpu%3Alj4r7d&__hsi=7417037990527946704&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gFk_aRINflzkF4lGJybXDi59GVazpAmvykiBhEiyCqEiWwWxiq6oaoky5y8a829wkohxmiaG0B8G1ewtA0z8GEK0Jo6Wdwqoao7Si0dcw0gLC0sK02OnzEgw04fYg07dZ00p39Qaw2DE1EUG0a0w5sw&__comet_req=1&lsd=AVqy31NLRXs&jazoest=2924&__spin_r=1016694340&__spin_b=trunk&__spin_t=1726913729&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryFilterContextProviderQuery&variables=%7B%22adType%22%3A%22ALL%22%2C%22country%22%3A%22ALL%22%2C%22searchType%22%3A%22KEYWORD_UNORDERED%22%2C%22location%22%3Anull%2C%22queryString%22%3A%22mouse%22%2C%22source%22%3A%22NAV_HEADER%22%2C%22sessionId%22%3A%223f156780-a547-4e64-8bcb-69402d0ce274%22%2C%22viewAllPageId%22%3Anull%7D&server_timestamps=true&doc_id=6645028345583352'
+
+  */
+
+{
+  "data": {
+    "ad_library_main": {
+      "dynamic_filter_options": {
+        "content_languages": [
+          { "count": 10, "key": "en", "display_name": "Anglais" },
+          { "count": 1, "key": "ar", "display_name": "Arabe" },
+          { "count": 1, "key": "my", "display_name": "Birmane" },
+          { "count": 1, "key": "es", "display_name": "Espagnol" },
+          { "count": 1, "key": "fr", "display_name": "Fran\u00e7ais" },
+          { "count": 1, "key": "id", "display_name": "Indon\u00e9sien" },
+          { "count": 1, "key": "km", "display_name": "Khmer" },
+          { "count": 1, "key": "th", "display_name": "Tha\u00ef" }
+        ],
+        "disclaimers": [],
+        "pages": [
+          {
+            "count": 1,
+            "key": "103647048190342",
+            "display_name": "Aljohn Navato"
+          },
+          {
+            "count": 1,
+            "key": "574719173053575",
+            "display_name": "Allan J. Vargas"
+          },
+          {
+            "count": 1,
+            "key": "458277700692017",
+            "display_name": "ASBET-Aviator Crash1"
+          },
+          { "count": 1, "key": "232254695096", "display_name": "Asianic" },
+          { "count": 1, "key": "1663547990632055", "display_name": "Babushka" },
+          {
+            "count": 1,
+            "key": "1289129381221829",
+            "display_name": "Bookmad Bookshelf"
+          },
+          { "count": 1, "key": "107703608295190", "display_name": "Bro" },
+          {
+            "count": 1,
+            "key": "221475864386688",
+            "display_name": "Classy MISSY AE 2.0"
+          },
+          {
+            "count": 1,
+            "key": "100498552822154",
+            "display_name": "Cursos para emprender"
+          },
+          {
+            "count": 1,
+            "key": "107990577454446",
+            "display_name": "Cyber Electronic Center Limited"
+          },
+          {
+            "count": 1,
+            "key": "106855168533432",
+            "display_name": "DIGI Smart Home"
+          },
+          {
+            "count": 1,
+            "key": "587959644633219",
+            "display_name": "GoldenComputer"
+          },
+          {
+            "count": 1,
+            "key": "1513461148934571",
+            "display_name": "Grains Furniture"
+          },
+          {
+            "count": 1,
+            "key": "193744401824",
+            "display_name": "Homemate Co Ltd"
+          },
+          {
+            "count": 1,
+            "key": "111949731369183",
+            "display_name": "HTOO Computer & Mobile Sale and Services Center"
+          },
+          {
+            "count": 1,
+            "key": "102818522318936",
+            "display_name": "HTOO Computer & Mobile-Thingangyun Lay Daungkan"
+          },
+          {
+            "count": 1,
+            "key": "499281250221795",
+            "display_name": "Inin Kidsshop \u0e40\u0e2a\u0e37\u0e49\u0e2d\u0e1c\u0e49\u0e32\u0e40\u0e14\u0e47\u0e01\u0e04\u0e38\u0e13\u0e20\u0e32\u0e1e\u0e14\u0e35 \u0e23\u0e32\u0e04\u0e32\u0e1b\u0e23\u0e30\u0e2b\u0e22\u0e31\u0e14"
+          },
+          {
+            "count": 1,
+            "key": "594956677339649",
+            "display_name": "JT's Discount House"
+          },
+          {
+            "count": 1,
+            "key": "129133993622636",
+            "display_name": "Karrim Entertainment"
+          },
+          {
+            "count": 1,
+            "key": "247916965063179",
+            "display_name": "kredit plus Gorontalo "
+          },
+          { "count": 1, "key": "105302251223243", "display_name": "L & L RTW" },
+          { "count": 1, "key": "96895859870", "display_name": "Logitech G" },
+          {
+            "count": 1,
+            "key": "1832290933709310",
+            "display_name": "MEPOP.Style \u0e40\u0e2a\u0e37\u0e49\u0e2d\u0e1c\u0e49\u0e32\u0e41\u0e1f\u0e0a\u0e31\u0e48\u0e19"
+          },
+          {
+            "count": 1,
+            "key": "101075328359296",
+            "display_name": "Mictech onlineshop"
+          },
+          {
+            "count": 1,
+            "key": "229315291662085",
+            "display_name": "Raj Suryawanshi"
+          },
+          {
+            "count": 1,
+            "key": "298844019970570",
+            "display_name": "Romantic Love"
+          },
+          { "count": 1, "key": "103219685846470", "display_name": "Shoptemu" },
+          {
+            "count": 1,
+            "key": "102012699430580",
+            "display_name": "Sky Utopia"
+          },
+          {
+            "count": 1,
+            "key": "103847007837505",
+            "display_name": "Smart Kids Wear"
+          },
+          { "count": 1, "key": "106080532469659", "display_name": "Soulmaty" },
+          {
+            "count": 1,
+            "key": "111294730255529",
+            "display_name": "SRSQ S\u00faper Rifas y Sorteos Queretaro"
+          },
+          {
+            "count": 1,
+            "key": "190474080809271",
+            "display_name": "Sweify shop"
+          },
+          {
+            "count": 1,
+            "key": "110394451851506",
+            "display_name": "Taman Cendana"
+          },
+          { "count": 1, "key": "177739912093447", "display_name": "top_pc_uy" },
+          { "count": 1, "key": "104880812551173", "display_name": "Unibyte" },
+          {
+            "count": 1,
+            "key": "109551884985957",
+            "display_name": "Venicia Mall"
+          },
+          { "count": 1, "key": "100351039356150", "display_name": "wiieo.com" },
+          {
+            "count": 1,
+            "key": "111609234497508",
+            "display_name": "\u00a1El Rinc\u00f3n  Del  Juguete GT"
+          },
+          {
+            "count": 1,
+            "key": "325686590886620",
+            "display_name": "\u0e23\u0e49\u0e32\u0e19\u0e01\u0e32\u0e07\u0e40\u0e01\u0e07\u0e22\u0e35\u0e19\u0e2a\u0e4c\u0e2a\u0e44\u0e15\u0e25\u0e4c\u0e40\u0e01\u0e32\u0e2b\u0e25\u0e35 \u0e08\u0e31\u0e14\u0e2a\u0e48\u0e07\u0e1f\u0e23\u0e35 EMS \u0e17\u0e31\u0e48\u0e27\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22"
+          },
+          {
+            "count": 1,
+            "key": "125305002201476",
+            "display_name": "\u0e40\u0e2a\u0e37\u0e49\u0e2d\u0e44\u0e0b\u0e23\u0e4c\u0e43\u0e2b\u0e0d\u0e48by Tik \u0e23\u0e32\u0e04\u0e32\u0e16\u0e39\u0e01"
+          }
+        ],
+        "reached_regions": [],
+        "countries": [],
+        "cities": [],
+        "targeted_regions": []
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}

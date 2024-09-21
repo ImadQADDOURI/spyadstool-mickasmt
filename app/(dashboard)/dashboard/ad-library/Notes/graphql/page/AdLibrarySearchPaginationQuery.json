@@ -1,0 +1,3369 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=601x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&media_type=all&search_type=page&view_all_page_id=602563393163238' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibrarySearchPaginationQuery' \
+  -H 'x-fb-lsd: AVqy31NLgBA' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=h&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016695050&__s=h7mp7c%3Aacglpu%3Ahebnt7&__hsi=7417051713123338642&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gFk_aRINflzkF4lGJybXDi59GVazpAmvykiBhEiyCqEiWwWxiq6oaoky5y8a829wkohxmiaG0B8G1ewtA0z8GEK0Jo6Wdwqoao7Si0dcw0gLC0sK02OnzEgw04fYg07dZ00p39Qaw2DE1EUG0a0w5sw&__comet_req=1&lsd=AVqy31NLgBA&jazoest=2873&__spin_r=1016695050&__spin_b=trunk&__spin_t=1726916924&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibrarySearchPaginationQuery&variables=%7B%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22ALL%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3Anull%2C%22countries%22%3A%5B%22ALL%22%5D%2C%22cursor%22%3A%22AQHRcbL35kOZB3k1ZkVnc8vKTRR5GblNrFy4KxgiGv5ffJ_stE6kuWziroOxBL0JIrN8%22%2C%22excludedIDs%22%3Anull%2C%22first%22%3A30%2C%22location%22%3Anull%2C%22mediaType%22%3A%22all%22%2C%22pageIDs%22%3Anull%2C%22potentialReachInput%22%3Anull%2C%22publisherPlatforms%22%3Anull%2C%22queryString%22%3A%22%22%2C%22regions%22%3Anull%2C%22searchType%22%3Anull%2C%22sessionID%22%3Anull%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3Anull%2C%22v%22%3A%22f67402%22%2C%22viewAllPageID%22%3A%22602563393163238%22%7D&server_timestamps=true&doc_id=8022477101123416'
+
+
+  */
+
+{
+  "data": {
+    "ad_library_main": {
+      "search_results_connection": {
+        "count": 382,
+        "edges": [
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1078816973754928",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "3738180813115858",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460461107_1078817017088257_5916103767893388674_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=27bUfdXGQygQ7kNvgFKC8sm&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDuUs1V4JaIrrFJvG2C7DWbK7l9dcSAlld8kmVJPxhiVw&oe=66F4923C",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460937714_893493602665841_3910788003498574124_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Jw1yWTPbTJMQ7kNvgHv_V3i&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA7OmY5C7zkI-RMCgUggdGKgRSKXhNEVRXkeFuO9_7u9Q&oe=66F47F62",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460645557_1589146308307548_3762913576407610656_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OduPVRBo4wcQ7kNvgE_X2NX&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYASeoViCny2HENadzzuGz6Y6o0cmG58ghDPAd4HQj9EuA&oe=66F4731E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460325728_1078817020421590_1851234014531118752_n.?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=oUT_MDwVP9YQ7kNvgH12qhP&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCponh6ypt1_d5gOUpscB-sntuLKyhspqDdmXXCWMNQTQ&oe=66F48161",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/459813335_925471009616889_7899164310016977447_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=tDUk5LlymmwQ7kNvgFJH8VW&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDsJzbTHwIrYmoWkhTiKaaHLBl-Z2PGksNa-H1oarFjmw&oe=66F47507",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460645557_1589146308307548_3762913576407610656_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OduPVRBo4wcQ7kNvgE_X2NX&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYASeoViCny2HENadzzuGz6Y6o0cmG58ghDPAd4HQj9EuA&oe=66F4731E",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460515250_1190582432000437_5826402993205344046_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_aid=0&_nc_ohc=-iD9tQHuRVoQ7kNvgGPbueO&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBJj2jOTpH98k1-0NM1qPJFtvJ6jTtOVKSLF-bPJnvGSA&oe=66F47CB3",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1962749404186266",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "847855487488235",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726902000,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460147780_1962749497519590_8101588592620405542_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xvQM1XkenM8Q7kNvgGlhY-s&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYB5db0xnj8dvPTOEyCfUdNR-8PqJTWW0p9l1hvhW-4IyQ&oe=66F486E7",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460831430_490342243873211_762347410925681136_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ldIzyGiUbrAQ7kNvgGxcLTY&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCLoG-_KzB5DsTvcL2qLHlllgQSOz_xzaWLuRw5ba-UXA&oe=66F48CFD",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460326972_1031574628435819_6395286402246398242_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9JOCGtMgdd8Q7kNvgEMu3SM&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA7kORc8vbw4ThQtkBuO0kn-F-upVw-g_oM13aMNnnsWA&oe=66F47F8F",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460199021_1962749494186257_6128552898703637809_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8RZPxE8JyEkQ7kNvgFg7j8Q&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAJy8GLhKzzHHlKzo5595bdeC55wkcuPs_R5lDqx8BsXQ&oe=66F46D9F",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460721945_2004446136740393_3080627755558003647_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9b8bAdTCXkQQ7kNvgET3lQl&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBxyBh5cvlbpGjUScNXcLVcUhoj8KJCEAJAHs93TYK2YA&oe=66F47B18",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460326972_1031574628435819_6395286402246398242_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9JOCGtMgdd8Q7kNvgEMu3SM&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA7kORc8vbw4ThQtkBuO0kn-F-upVw-g_oM13aMNnnsWA&oe=66F47F8F",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460772577_929853785672835_9199987087533560915_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Y-cKcCVfXYgQ7kNvgELFaDz&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDv2pze2Ow6fC6wV1RX-xysS1grioHDFBC-gpMMJgyqPQ&oe=66F490A8",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "389964327482981",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "520694160550096",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460461249_389964440816303_2393162427645198184_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1NDgCt0Kf68Q7kNvgGMyaF3&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCefnMjOsu_hKmdulMqoWxlrY059TgpfzZ0cS7vP0J0Ew&oe=66F485B3",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460872303_426951440398247_6110106504184738210_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2_i3v08mm5cQ7kNvgGbIge8&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBuL5VAAqVeGA5fxIK6sTwjXcUbxxxN1IP8qolAS_C9zw&oe=66F4622D",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYByQUqLtwh4jeQPh_UGAU8rfGv4w40kLa6DMq4ZyZRX5g&oe=66F473CD",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460466493_389964437482970_2182453763099046707_n.?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=s2y7NJ8-4OwQ7kNvgECXAM2&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBe21ENZGLEzofpnnFRtxIL_vp4Yni3QXmlKAugLtEVAw&oe=66F46902",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460631077_1265365004620768_7704995885420327021_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WJ37fzipBFEQ7kNvgFv9KVe&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCDvdMW8Ipo3WFgHLnUtqS6Vsm7b2pnwLCiG3SL4qPQVQ&oe=66F48EF2",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460491784_1471395840232794_8344406427571837984_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ayLfyvzrWdwQ7kNvgEG8Cg6&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYByQUqLtwh4jeQPh_UGAU8rfGv4w40kLa6DMq4ZyZRX5g&oe=66F473CD",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460831567_890258752985425_6912538086860353970_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ceaWlJlxhe4Q7kNvgHLpSdE&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAuOxUZ7EgTIcOvGFHppEcebhScOrH1TNPPmxwqFwHk8g&oe=66F4928A",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1169888467427485",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "1274364540228302",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460330123_1169888557427476_6503195705178388301_n.?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=itwfJGi_Of4Q7kNvgE6EY--&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBlil2dPXEFrko2v-zF1NRnu815klSwY0buCi9DGPbCTQ&oe=66F46A2F",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460868667_1290041795694386_5599755150578596598_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3v8tZwkJJfYQ7kNvgGyFdec&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDfsO6prjgE4K2QnkJuohFtRamcoC0dLOq3TV-u5aqcGg&oe=66F4786D",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/459216840_485673280960817_2658458283091441454_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cMn4TejtvvMQ7kNvgHanBte&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAwFpZdvXIKt5B8z_CjyQ-ngBdp-pGIfWu8zJJCfdvu7Q&oe=66F48FDE",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460275479_1169888550760810_88205038576598724_n.?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=CWN_i1zvdDAQ7kNvgFlwVmj&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA_zUxBFNIAyxT7nspN5-2XNPtSslyLyP5vgkNMwuVBRw&oe=66F47211",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460797897_1015940243603355_2268253365008493201_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Qu3lgYTriVoQ7kNvgGcTdnM&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCSLTFnPP3PrXs_Jo8evK3TE-jr8QzspRXNB5wd0sFIug&oe=66F46E51",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/458977140_525956673419982_7192324217800205712_n.mp4?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6-fQRRqNc0oQ7kNvgHc2TJk&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAkzKqA3KVFP3ix-U15nw9gkTtYJp3CWCuTmAPmYnWMag&oe=66F46E60",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460657557_502753375890599_8197340209097370904_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IvdPSfpyKbgQ7kNvgG-FZ6K&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYB781ql4RmdWOl3MykORZJX10x7-LC_2c22d9JKfKnXbQ&oe=66F488B6",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "396299746848674",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "507504175469854",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460323851_396299836848665_8381815838734745_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=b2ApxP9XTK8Q7kNvgG3k24X&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBntbfO91skeQAfAGPqGL3RJCcOZM983aNmdsdlMHlB6w&oe=66F46437",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460390329_1846794625809209_4241122528014175155_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=LoPBxqUe4y8Q7kNvgHUXi4e&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBvioqgZQKvjOAW9eALihk0-dzdximG-RMCO28us6ZPmA&oe=66F49286",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460321417_1692228171573456_4381091814164800149_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IPoruBwiJ1AQ7kNvgE6JpL3&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAvXSbvo2C5ztw40wb748FKkIG0QGHfwSKfThXmr-5bmQ&oe=66F4872B",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460163509_396299840181998_8349822387291470249_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=j9msOcXAx9oQ7kNvgHc_SPd&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC5GO4pVkVxxn5talcx0zSTz1954-Fx0LacfrRt2D6m7g&oe=66F49304",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460255196_860363732477817_6473298042302310924_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8d7A0KadCnAQ7kNvgESkDe2&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDwc1Lu5dXPSF_IzGGwKKTZf-6AnGbyF2WihzPz5eo5xQ&oe=66F465B0",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460321417_1692228171573456_4381091814164800149_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IPoruBwiJ1AQ7kNvgE6JpL3&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAvXSbvo2C5ztw40wb748FKkIG0QGHfwSKfThXmr-5bmQ&oe=66F4872B",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460495053_1053962206458049_7906128514535838283_n.jpg?stp=dst-jpg_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vK5pqJN6uogQ7kNvgHIxoHn&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBdSQL0ofqY7Np1jJV8wks0GMqMyBepFM2cx10g69UlZA&oe=66F48E4F",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1925653684585852",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "1543479566560357",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726902000,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460326468_1925653764585844_6379012784685871399_n.?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=PpLX3kbZ5jIQ7kNvgFfpDVe&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBijBnVKfQYdTOYpSZkrsrXJU9gJX5cxAIR4quIqrD77g&oe=66F48C32",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/459830473_946262887248670_3928187417768536313_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZwQ-W2ZK8hYQ7kNvgHvE1Nz&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDfmx18OPWzinUIsOffn1bA_UErqQv_4ONOI86oTPKWeA&oe=66F47BBC",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460342150_1081286846898474_384130596574772272_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MWad3AKjjGgQ7kNvgGgb7VK&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBI_cRCMX6nfzyQOHyUGJwQOR77vbyQZe54ejrmtyEM5w&oe=66F476C4",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460215746_1925653767919177_6605752042846412628_n.?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=m_IhtrRBDqMQ7kNvgFfJV_6&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCLhh26gdVfZKoNHdYtSNcppgPQOIlFFaVObqFtIdU7CQ&oe=66F495CB",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460662267_3818801048333079_2293495312212192561_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=E4tK5oKrxJMQ7kNvgECL5dv&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDzxIkqDzXyjEkzA7cN8wRDS7ydw0Ev5ju8huJ7h_T09Q&oe=66F4807C",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460342150_1081286846898474_384130596574772272_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MWad3AKjjGgQ7kNvgGgb7VK&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBI_cRCMX6nfzyQOHyUGJwQOR77vbyQZe54ejrmtyEM5w&oe=66F476C4",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460382043_1619322799016123_9122766475908095003_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rXdgHp3-wKkQ7kNvgEPi81T&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDcLBeaihH7LMxRqHyrfY1Hr9oPIoTsXm3Ox3oddmQTKw&oe=66F47CF0",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "3817000595285336",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 8,
+                  "collation_id": "1270598357411865",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726902000,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460330125_3817000631951999_1794423055845996466_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Y0EDIsp0v7MQ7kNvgF9R1Ks&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAZB7oBotPAq_jUybhtxh95Bw_GTpNCP83BJgx6b3xbNw&oe=66F485DB",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460410526_886713986723465_2422602384102592142_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=DmU6OFG_r8AQ7kNvgHU5sSm&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAnnlKSJNrTEe687eCA7lUjIRNecOQy4ihRkPYgdEJHvg&oe=66F47522",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460374073_1003211898218508_2886137260935118925_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=RMsLxKW0QUIQ7kNvgG2YsbH&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBK-aXEOoP_apsbWDUakbSXBhAKZTBDm2T3Z7RnxEb2lw&oe=66F46240",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "iPhone 16 is HERE \ud83d\udcf1 \n\nProtect it with Mous: extreme durability and MagSafe\u00ae compatibility in a range of designs.",
+                        "caption": "www.mous.co",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Order Now",
+                        "link_url": "https://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": "Mous MagSafe\u00ae compatible iPhone 16 cases",
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460326740_3817000635285332_5677107873202530811_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=XqljmZaaI14Q7kNvgH7vml5&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCyzHHHIxchnYT2fqjWmMyZsBAmC-0HxjoKjBurKtv9gQ&oe=66F468AC",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460727630_1215774979739716_6350718396323124791_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=nYHcSXGwlMoQ7kNvgHSobiN&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDhowD169GFYH4jJW5rzcnBDIwDa3xkE7Ah53VSlGlkvw&oe=66F48E28",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460374073_1003211898218508_2886137260935118925_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=RMsLxKW0QUIQ7kNvgG2YsbH&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBK-aXEOoP_apsbWDUakbSXBhAKZTBDm2T3Z7RnxEb2lw&oe=66F46240",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460648281_873847788030548_1453545736259923055_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cLdRzLY4YkgQ7kNvgGQNIuD&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCzsO2-62hSSprq5c8AUin5U_qDFk5QQui3DFKztlhf-A&oe=66F487AD",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "387963234351172",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "487099837469326",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 25 out of 40 complete! 15 more to go \ud83d\udc40 We met another Mous fan today, and it\u2019s been incredible interacting with the community\u2014the driving force behind where Mous is today. Next stop: Apple Cardiff!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460842527_497014976458268_8716827905083291446_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=-YG7JBLQ2SkQ7kNvgHNARh_&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC53T3Go5F9ia3NI3vtkUD67_vznb_8ek7bijGMJBqRMQ&oe=66F4917C",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460224521_387963267684502_2448067655985856998_n.?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=nk7ZWvq-M3cQ7kNvgHvpmjW&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCUmqHM1Cfm0nsVdOJNKDzoLtK4sxI6J5Z4RyjOOvX_5Q&oe=66F47DAF",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460710397_917483523579541_2217312810276792871_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=RJ1yW1oHtHcQ7kNvgG9XOIU&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDS5lXP6oAnY-iTBO7KxhrGuujbciUWRVqGajStmMWG4g&oe=66F467F6",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460673037_498846946283119_7335165041164922560_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=eQXu9B7tO5kQ7kNvgFV56nB&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAJAhS1K_6X5zallfHvWYGQc5B5I0rjbV8zzP3c1OQ5VQ&oe=66F46DF0",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "889913055807096",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "589683623777751",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 18 out of 40 complete! 22 more to go \ud83d\udc40 \nNext stop: Apple Lakeside!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460510113_3865726540337064_2476192235150868420_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=VavuEvIdQdUQ7kNvgFwAaJY&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCxm1uhDdkcbfXMEFYJUKWOPsAcdDz96dWI5PULY9Rg7w&oe=66F4933E",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460319622_889913079140427_967367156343355063_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5LXqtEK9Uq0Q7kNvgFIpGVW&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBUyHu08Nl0OQKNLCZwKIP1z2EDEyRfJGZXJDgrlp6L4A&oe=66F467D9",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460647278_450141864705780_2673141991559766569_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=nzhOWlRjuiwQ7kNvgGz3zKG&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAIoc-KQfet4YfTfsyfoYypHhrF1_U1I_3doxygSUudGw&oe=66F4864B",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460466505_772777381549317_8545306571843056114_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Fz29f103g2sQ7kNvgFWqi4n&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDwF4WxCDPKJ0A0Md-ZhB8Ep55FSt_XRJCsTB1J_93ucQ&oe=66F47447",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1173577570367821",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "921757783330352",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 26 out of 40 complete! 14 more to go\ud83d\udc40 \nNext store: Apple Bath"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460827838_838414548416536_3504902472614689357_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=DHqxdvqhWj4Q7kNvgHLxoKj&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDP2nZMCKZDuiEsWOHRNtYbBmhfR3eiN9-EATr3Bmbd3Q&oe=66F490FE",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460143037_1173577610367817_2787321676083177942_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aA_eNLE7ZN8Q7kNvgHf_JSd&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBnSJVMOQiyXzD_KXOqtgZS2h1PKb_yAqfEIT_AKsWL7Q&oe=66F47DF5",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460724657_1064375588622900_3373320403461427870_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=th0xq5utTDgQ7kNvgFXXTab&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCCoffdtmd7C88nFF0RFRBqNXR2rLck2uvD2NP7CMly1Q&oe=66F48903",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460155988_369651859575857_2543634384520915059_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0JLANIMJRWsQ7kNvgFRum8H&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDxsVCQYdswloLpNBv7hiAjoN0pRicgU3zECWoOEAUp7w&oe=66F49836",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1271431074033334",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "515776641149651",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 13 out of 40, 27 more to go\ud83d\udc40\nThe next stop: Birmingham (Touchwood Solihull)\n\n#iphone16pro #iphone16"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460717785_8235850016502111_3133316336742529904_n.jpg?stp=dst-jpg_s60x60&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IIpEszVoC9YQ7kNvgFt5hTY&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAr69KI3NHp8qiVcQm124NJWZejvzV89Nc1ThaFZZ2Bow&oe=66F496E1",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460268892_1271431107366664_2291208018722178426_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ErvojR-Ml0kQ7kNvgF3Lzq-&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBnBT_CF5if5EQxftNYxUA197r1PW9orCCSz2bWwuRCJg&oe=66F47137",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460609040_3790943247817486_6764144456053408991_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=n812HaSSLD0Q7kNvgFXQXvL&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC98fYawZt6L_-HRktEOIE9aWB-G-UqFNsit3Wl0vO24Q&oe=66F48950",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460308227_1910942079374665_7715926453584885620_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Cki8NbybQ0UQ7kNvgF6pXnz&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBONeA_2BltbMkxEKgU82Qx-0x8lLW9ThdPg2on-uWAgA&oe=66F47703",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "536022092237024",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "881215340242553",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 31 out of 40 complete! 9 more to go\ud83d\udc40\nNext store: Apple Reading"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460656546_1065220941978056_4206394124268818895_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sXzRwiDls7EQ7kNvgFATbhH&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCvlp-IElVqnEFPzIzJQ3Q2aKV2yhR7YIX5RNEIg_lCgg&oe=66F483D9",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460331220_536022115570355_4216473697383104122_n.?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pR4ncjZ206oQ7kNvgF74vX8&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDws6HrQ70SYDTxrOy-7_JcHumfLT-qJ4_RpiJ2Q9MSYA&oe=66F49601",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460841832_3906224989661554_7070945140843659475_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qwwnyuTdrtYQ7kNvgH__zZ5&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBg2nz867iqHnsH9KVyYTuuAWcs6LkHnGgIonhtheK2mQ&oe=66F47C70",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460844319_529518242904482_6699982495098485114_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=08jiIVGOOSAQ7kNvgEWcocg&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAWzwSH-5mdWygN6GU5i8CpbgSsCCZxX8FEOsfUscaPXA&oe=66F47CB1",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "885982662955599",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "3870799706578486",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 30 out of 40 complete! 10 more to go\ud83d\udc40\nNext store: Apple Reading"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460445543_1980825725690331_7358571068629748368_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=7-R3dSDu6hUQ7kNvgEn5dF0&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAX9d9_7WBDJcxNxvNLKOXfJji7jb1Hic5TenygXClOag&oe=66F4730D",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460465346_885982696288929_5262976170285848492_n.?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6BDmXiwM6voQ7kNvgF0uGwc&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDiabnEvzmZIYON2tAxewupDqP2cKqsOLMH-zG9WFXL9g&oe=66F48558",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460721552_540473278361215_2310042204310447975_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=P6qv2s-k3w8Q7kNvgEiH-lJ&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDvCDIbxyXqzDPrMI_j5sNwtIZwyu2QNtskbvcFEPT-yA&oe=66F48C17",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460484041_3834281820225247_4611717315444285523_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=824pXImfagYQ7kNvgH9ldqi&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC9UOoKgtAeGf0bXZ6FkU_wnkh2wWG7rgvhIpqY64pR7Q&oe=66F47146",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1295697284904545",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "397364583405137",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 17 out of 40, 23 more to go\ud83d\udc40\nThe next store: Norwich"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460806860_1221781182299473_700001715804670678_n.jpg?stp=dst-jpg_s60x60&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kwiLHseBcw8Q7kNvgF8B4-R&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBdty8nwDJhnhmnBiYQeeAs2YEMxRyFDdw9BK8C_YzSRw&oe=66F48273",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460450805_1295697311571209_6409431583331647215_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GvTfgNF2hyQQ7kNvgFUrHAc&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBcTcxqErnv9lmltElfQ8Gu0-BPJBJoD4D8D07_RXREFA&oe=66F49200",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460578167_1041487480758081_8163874100211364375_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1g33uKX7R_IQ7kNvgH8re1l&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBB3rmYupp7PdYZKYc_4a2SPRlo31pkaR85qkkbHpc3-g&oe=66F48749",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460325732_1243812073414777_3399466040396834004_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vcZZwgkXTIEQ7kNvgGZDJWT&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBs8MlpyvokevrYrO9Of7krZ9DUCKwFiTD6uAIqdX3yUA&oe=66F4964F",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "867451978667961",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1258922231822814",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 26 out of 40 complete! 14 more to go\ud83d\udc40\nNext store: Apple Bristol ( Cribbs Causeway )"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460265733_3730112060572087_1462053878474852365_n.jpg?stp=dst-jpg_s60x60&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Qi3HofsQRGMQ7kNvgEstnyq&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDweTiNGGkNoCg01NUNerjoA1Q06FHR-f4qxPUm2U1Wxg&oe=66F483BB",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460160035_867452032001289_5618060905336678451_n.?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OvM31uoOksEQ7kNvgF-n6PO&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCrsto4ayRqc2AjiySHUT2jn894eu6QuyrNsoKY0b3VAQ&oe=66F47B81",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460495733_1090720192621078_2835311435763071878_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iSiP2nHSyY8Q7kNvgGSnnIn&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAHVh_h5D3f_PKVNlUmyBv84ADVdZb7Zi4Wb0ur2Cc1Cw&oe=66F4823A",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460396367_3837915403111349_3828421873722778413_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=k5bpxvEeebYQ7kNvgHND9Nb&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCPKQHdpPcTGQV8v_5S5AfsOmY9IFXsbJkDZYV0jQwZxw&oe=66F486F9",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "906955734662195",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "753943453494560",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 22 out of 40 complete! 18 more to go\ud83d\udc40\nNext stop: Apple Southampton!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460822271_4294157057392319_8014787204419682961_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=d4acO9WYg8oQ7kNvgEMgFg6&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBQSgRHVVriqhtIZOXOuy9QXz6hIkPs93JNsGHUGzRCCw&oe=66F46DAF",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460334440_906955767995525_4393405006135139427_n.?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GEq7eCRFApkQ7kNvgErLDxV&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAjHWni5mO7q3cnsPF32T_safBHHrbtzI3zI-oXa8BOhQ&oe=66F483FF",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460737819_520553637526197_1132757170504224770_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xANNbfK-Q10Q7kNvgFsg4Fh&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAnaNbUxp2j7_A3HjhtLkuQm-o8r95oNceGoc3nnY5wvw&oe=66F46255",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460279395_2173419516372857_8192581774526336121_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5f7b6hExjhEQ7kNvgGSiRrj&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAqtWSACI3x6n_P8Riv6diyGYhsYAaviv6DTD09bqfzlA&oe=66F4684C",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1076832220760629",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "921045009835761",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "We are visiting every Apple Store in the UK and doing our iconic Mous throw. This is store 24 out of 40, 16 more to go...\nNext stop: Apple Plymouth, which we\u2019ll do tomorrow early in the morning!"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459410323_528138006370383_3186790927936990024_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lmlL3PMJvPMQ7kNvgGwUOff&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAazK2osQIJKDoVZy3iu_gkvNwgjfwRhEKFMg41IQ70sQ&oe=66F4668E",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460180170_1076832300760621_2911475433414638497_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=-BZ4NVws2m4Q7kNvgGSHLDi&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC_-vshRs8rrtFUMnLUxm-kG_Ex8Cxjq5QmKWamHvvpuA&oe=66F46928",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/459831846_1047664283408197_1511674651505338981_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZJzI7u4Hg9AQ7kNvgG_Gfsv&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYB4zkI9ATFKh5-6AaEmwWGTZxqPFp_qSMS_bgNyaEkgEA&oe=66F4901B",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460325162_2228265344213587_208832299736640079_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ODpBC9T8uyoQ7kNvgEeeyG6&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCumLXwhILjL3ISU6j6uyjOWvMg4f-GeBh5N5R93PN3rQ&oe=66F489E6",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "436355918894438",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "365692396614928",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 16 out of 40, 24 more to go\ud83d\udc40\nThe next stop: Cambridge"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460722432_1230740064908693_8582222289482455540_n.jpg?stp=dst-jpg_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kwR2jsyOpS4Q7kNvgESw-Ui&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAMPUNWNbxf87kck8yHUPMUYOsQTMZexOUyhQumTmyeow&oe=66F47B6E",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460365703_436355968894433_2380287287254396414_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KdnJe6aKETUQ7kNvgHpCdD7&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBEb03BjuLiQfXwWNH9l10B3y3ALX3hLhx97hlplWYYcA&oe=66F48B87",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460742145_1079287990292433_7932462334574641812_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=uVPz3WwNYQ8Q7kNvgHJUBxd&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCYlnhrNHz5GoXY9nyaTJD7L61nv298xIR8Q261RSekhQ&oe=66F47A24",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460369809_832868598917212_2998401096563186974_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4rSquX_1urMQ7kNvgFITqYL&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDEFWwNA1UJRSrDXKg8XxzOKm9WRV83zFN64X4dOkWY4g&oe=66F49776",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "908373127868723",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1239937907159964",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Apple Store 29 out of 40 complete! 11 more to go\ud83d\udc40\nNext store: Apple Basingstoke"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459815289_544535128011759_6397405796572991232_n.jpg?stp=dst-jpg_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EHJCRaHX-wsQ7kNvgElLEKy&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC8rSAZxDf_v3gS6_U5K1Q5dPDD6xAN4Kn8l1eiyH58WA&oe=66F46446",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460482815_908373164535386_1231340980460031061_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=m8u_zvxlzAwQ7kNvgFhA4qr&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAwD5Wn_fUcXnM5aL08VibZwNoUL0uzw__SbkdHyGBuCQ&oe=66F476E3",
+                        "video_preview_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/459850837_1581950139368600_6448757044432578902_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1bXYDFJGbvAQ7kNvgEjdwjW&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAY-Mc1TrYmliCAub_V5RVSSZxGjudc_lFtwLUthwbgRQ&oe=66F46D7D",
+                        "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460477320_457242240666626_5540541487290513440_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IVBWd8ZDN18Q7kNvgGv4NEN&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCkL3t33UfFsFYgsxpuGCvKRWDJopN2sYb3IwE9nsLoxg&oe=66F4666D",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1233075501087901",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1728096624689843",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726902000,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 15 out of 40, 25 more to go\ud83d\udc40\nThe next stop: Milton Keynes"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460722423_842666717635471_5858556739756375571_n.jpg?stp=dst-jpg_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KCj9N1NXHEMQ7kNvgGlTJNF&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYASjdICA9_pW_H95MBUGI2ZA7ihXJq3JUxxFsMTO565Bg&oe=66F47FE6",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460327885_1233075521087899_3237984355147100794_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FH8QZgPN32IQ7kNvgEZ8evp&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDJeur4f-OdrnMM7u86nai2UgqWPtPIDva22hQd6PQ7UA&oe=66F46BC3",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460617409_758025546413032_6654482988211688971_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8UKRHfqKPC4Q7kNvgHKuHqE&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYByZFc3GI3wjsdYOM5tHa61m9tNvPkj8l05yW2kGVV-zA&oe=66F49022",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460325784_375590755485250_3618012286091875404_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=7iRV5XJz2IkQ7kNvgFXPWYD&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYD5CHIu5Lu69DGPiATh5GcxeL1me9qFt4PLjm6T2nWQaw&oe=66F4775A",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1497086640928196",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "905747988065031",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "We are visiting every Apple Store in the UK and doing our iconic Mous Throw. This is store 23 out of 40, 17 more to go\u2026\nNext stop: Apple Exeter"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460526856_850056827195594_6685884539338302077_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=JdrbL723F-UQ7kNvgHEf9OD&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBTWrO_DVuMgvuA1y79h0Yd0X1qAjuMxY7tNSvIayKApQ&oe=66F496E1",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460201549_1497086667594860_2137685720611246209_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2UwWkyRmXDkQ7kNvgFeF3Xr&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDr28o2kfWp0EQnprFZFwFE4F_jXDX8w1aoKu8xFkq1jg&oe=66F4742E",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/459876146_553506140354714_6819974664018334654_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4dvvYmP-T1wQ7kNvgHdZ2w2&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAU-3xF6NmVTIJLNPpeW2KZtyUUtRrDFObWFk5pufmJGg&oe=66F46D30",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460331529_8531894493529292_4260638729631260364_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=mCCP-biNMKQQ7kNvgHpu6A8&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCFgTA39St2FaIAobBKYlxQQYuG6bgqF8fgnXxn0xJZdg&oe=66F470B3",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726815600,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1033511385121803",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "461428020206783",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 12 out of 40, 28 more to go\ud83d\udc40\nThe next stop: Birmingham\n\n#iphone16 #iphone16pro"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [
+                      {
+                        "body": "Throw 12 out of 40, 28 more to go\ud83d\udc40\nThe next stop: Birmingham\n\n#iphone16 #iphone16pro",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/459949612_1033511415121800_7188733104504986348_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6Q2qkwZKGpsQ7kNvgHCUtZT&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA4a20wnv-ZZtz5YHP9-q66pUBI946ulW85Vpuc3HqDrg&oe=66F465DD",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460139816_1114200770164750_5154641954400170101_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=VCsCqYuEMB8Q7kNvgEgWtiJ&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYASMLAfqG9UCYh988lvVmL1cLOcPd-SoIo6Me2cpxfktw&oe=66F468DA",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460009662_1711100596306286_8078641088245630052_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Dc6TPtG30xwQ7kNvgE10EYO&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDF0d_n6IKgqgvdN538VOaQ97GYfR7Qo_Z0kIFcg7FO6A&oe=66F480C5",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "Throw 12 out of 40, 28 more to go\ud83d\udc40\nThe next stop: Birmingham\n\n#iphone16 #iphone16pro",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/459825722_1033511418455133_7345381751563703906_n.?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Vi-LeWA47R4Q7kNvgH9SB8L&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDVEk3hSFgjmO-adrFLE76_jayH0eV08oDi36E6zcsb_A&oe=66F47A5C",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460408482_877584554317251_5917626412416016320_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cX9G0nA9t5YQ7kNvgHl-BKM&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA7UqpdZzPKNozscQ5QUxKXkTZtf_tyit2A0nxSJY69tg&oe=66F48537",
+                        "video_sd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460009662_1711100596306286_8078641088245630052_n.mp4?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Dc6TPtG30xwQ7kNvgE10EYO&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDF0d_n6IKgqgvdN538VOaQ97GYfR7Qo_Z0kIFcg7FO6A&oe=66F480C5",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460279109_1895036321005411_5290164207888407379_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Er8848vp3H8Q7kNvgGgR17n&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCvL_Zm78beyRU2jWGUkrvrERyk3MR93HQkj_fjEtx1vg&oe=66F48BEA",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "510212018286234",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1064891508589738",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 9 out of 40, 31 more to go\ud83d\udc40 We\u2019ll start tomorrow at 8am in Manchester (New Cannon Street Mall)."
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460326965_394441376819562_2458330929076023878_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0RzW2xZGwMwQ7kNvgE7jG2V&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCjGyTfFwi-IW1yWTZ-wEFfmEXwyUUWUfUQ-35GJiiW6A&oe=66F47D4D",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460432832_510212031619566_7049330118261029279_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=mQ3U9MFdn4QQ7kNvgFTLCCK&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCcFUQMVUNvVGTCh8V1rCxSgGNqb-sGKpKrWG41vm5lrg&oe=66F48A36",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460230309_1507809123945935_3744270568569555371_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fnrotzOcd7AQ7kNvgEJGaxX&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYALktKtb2F_rcB6JFeCQjMYd7L12OmVEJ1mis2lLmV20A&oe=66F49176",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460368790_831844285789844_926738552277208034_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qvLkPLeu3IgQ7kNvgEsYmHK&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBInxS3vdZzkABEl4b0J8ZuteXEv4Wn0ChTTQhpc1wdKw&oe=66F47840",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "816013233739048",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "534262139004826",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 11 out of 40, 29 more to go\ud83d\udc40\nNext stop: Liverpool!\n\n#iphone16 #iphone16pro"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460393320_548478974300821_5753647643374974999_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_GKWa7bLDP8Q7kNvgFbAydj&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDoUY_lFZ-FJ6a8m5OieE0OHCOmuyNu38oEKMr6u2EcCA&oe=66F4862E",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460174399_1499564933998464_4096216052260556717_n.?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=CGgLUIaI54AQ7kNvgFwQ3Lq&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBhLpbZ-rRh_p0yQh4BMy54WVzemscgB6PskBfZgEnHLA&oe=66F46767",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459957808_876900017295556_1163497311912343314_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GbbbvsZbXswQ7kNvgGWhhYz&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYB5k0xv5EyF8KcTav-p7UOQWBMAIZQT37XfaTuAriVnAA&oe=66F49352",
+                        "video_sd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460314953_827742116232203_3277802640555016794_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1pRPoYPib58Q7kNvgHAb-Em&_nc_ht=video.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAn1TazfCQ9vJl-D5qmW0VA_FyM5Np2QDRX2Wna0D93sA&oe=66F4870A",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1593673791183038",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "2505928942935252",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 8 out of 40, 32 more to go\ud83d\udc40\nThe last store for today is Sheffield, it closes in 26 minutes, will we make it or not?"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "uk.mous.co",
+                    "cards": [
+                      {
+                        "body": "Throw 8 out of 40, 32 more to go\ud83d\udc40\nThe last store for today is Sheffield, it closes in 26 minutes, will we make it or not?",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460166425_1593673847849699_6186304473705081365_n.?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=h2JeZXdTO1sQ7kNvgEWiDmF&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAWrQf1BjvDWPumdnm8WJKwmuo4UoBtkoUtB66cy4hUjw&oe=66F480A7",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460040853_1650677212454779_3700394878648772922_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FFyVaOulWkAQ7kNvgFtiMSv&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA_RFEG8Wc0ZBVVy45gvEOmNvPh-llLVpqQBVEIoHr3aA&oe=66F495FF",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459958535_424438547419332_6433081790441922329_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9aN_LK6bHqwQ7kNvgHRoI2S&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYD96XIvwBjiqTiykg61ZAycqmVSnI_lgoXy0N0CdpE4IQ&oe=66F489EC",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "Throw 8 out of 40, 32 more to go\ud83d\udc40\nThe last store for today is Sheffield, it closes in 26 minutes, will we make it or not?",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://uk.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459865038_1593673851183032_6132276328610991657_n.?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6CtFKjH6WAMQ7kNvgGwKifx&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCIIsIsS7RwY1K-YRjsYI9QwpXDT5l127TohFqdiuKqKw&oe=66F46336",
+                        "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460027207_489434417309684_5902527280996686928_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_T7WL97S5Q8Q7kNvgGko71E&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYA748N8L3hohK9Ml2gyO7I3Jt5LiX2P-07lIcfBZFUvHg&oe=66F484E3",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459958535_424438547419332_6433081790441922329_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9aN_LK6bHqwQ7kNvgHRoI2S&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYD96XIvwBjiqTiykg61ZAycqmVSnI_lgoXy0N0CdpE4IQ&oe=66F489EC",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://uk.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460532953_8364341590326221_8672866351570237918_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Iqr2apb35JsQ7kNvgGHRCZv&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC-Xwjopuw7cv4QdWOiKPoN2pUSOwMGTWBZC9hBi7hfdw&oe=66F46D6B",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "547030324485978",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 2,
+                  "collation_id": "3213798935418307",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 4 out of 40, 36 more to go\ud83d\udc40 The next store is in Edinburgh"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "Throw 4 out of 40, 36 more to go\ud83d\udc40 The next store is in Edinburgh",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://www.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/459989592_547030347819309_3329781025594476395_n.?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=F0u75-h03IIQ7kNvgE5hdv4&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCpF4rQkC5a-uS3pKXcgme6LpHsBGU1msgT88vVe3AT6g&oe=66F465CF",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460209564_741947664725765_3701005877589228657_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pQaTaYhIe1sQ7kNvgGe6T1a&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBUQYPb2Zm3sV7WyT7z3pnki3kAbgWkbzg4vpzq5gCReQ&oe=66F4938D",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460321118_1504538380431567_3090072234141003112_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B0DjmTSUkoQQ7kNvgH25I_-&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCB7KnuJbUIYpOeQKz6tWaTc1NoMK1iN0Fc3QPd95OaAw&oe=66F47078",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "Throw 4 out of 40, 36 more to go\ud83d\udc40 The next store is in Edinburgh",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://www.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460143932_547030344485976_3567947085785024342_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pPn65PdBu6kQ7kNvgGQzIc3&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBJvrmkp91Ud8Fo1R5AoLg0V96BcwV6Pp0Q2w99ncAprg&oe=66F485DE",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460340441_464961929878517_2852306816921451394_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vhA_Gz-oBdcQ7kNvgFZOqSp&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBTXnN1mBZxUs-ENlCgHi0KRHxA9C5J9Gez5Hw_Jowt9A&oe=66F488A2",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460321118_1504538380431567_3090072234141003112_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B0DjmTSUkoQQ7kNvgH25I_-&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCB7KnuJbUIYpOeQKz6tWaTc1NoMK1iN0Fc3QPd95OaAw&oe=66F47078",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460373074_1721287558704134_6929792369021517959_n.jpg?stp=dst-jpg_s60x60&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_VALhNiryP0Q7kNvgGyO_Yo&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYB24rM1tvyu90FQPsGU8KAHPPvDYbsUF55zNQ4pE_8ZMA&oe=66F4937E",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                },
+                {
+                  "ad_archive_id": "548247807546898",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": null,
+                  "collation_id": "3213798935418307",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 4 out of 40, 36 more to go\ud83d\udc40 The next store is in Edinburgh"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "Throw 4 out of 40, 36 more to go\ud83d\udc40 The next store is in Edinburgh",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://www.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459756037_548247847546894_7165130951070019524_n.?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FBWrzsp1SBQQ7kNvgEISHqX&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAEcD0u3_V-IbW3oqOJTWPckaWWP8MnjJOH3BUrCo2gbA&oe=66F46CBE",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460022916_475289915502823_6621774416602325923_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Bm1jpsb_8DIQ7kNvgGTh98o&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBZ6kllgbhUKa4bEI4uhMfsAjo-hyJ8qLjk_e8WEgJ3_w&oe=66F48C50",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460321118_1504538380431567_3090072234141003112_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B0DjmTSUkoQQ7kNvgH25I_-&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCB7KnuJbUIYpOeQKz6tWaTc1NoMK1iN0Fc3QPd95OaAw&oe=66F47078",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "Throw 4 out of 40, 36 more to go\ud83d\udc40 The next store is in Edinburgh",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://www.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460325180_548247850880227_1314158109793563159_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iNd1J_oMuRwQ7kNvgG9Grqv&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBWGvPurolM-3vFrzpH_6jnODpBQnvrxQwftFJE3SMY-w&oe=66F4759A",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/459918944_1592931967963892_4986943846819928572_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=R1hWQPLVnD4Q7kNvgGBmWZ2&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYB9dDbl5hYFeejVZqt83aNe3yDYQVEmJ9nK9KleRTE13g&oe=66F461F3",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460321118_1504538380431567_3090072234141003112_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B0DjmTSUkoQQ7kNvgH25I_-&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCB7KnuJbUIYpOeQKz6tWaTc1NoMK1iN0Fc3QPd95OaAw&oe=66F47078",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460123221_8424061197632529_5321079653090589351_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QexZHK6tcmgQ7kNvgH5vFQ_&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDm7E9yT02PxxC0oK80dcR3pzdpBwD-b_2OZhIlIQ__tQ&oe=66F48C4D",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "518411267463328",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "529440989780682",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 6 out of 40, 34 more to go\ud83d\udc40\nThe next store is in Newcastle (Metrocentre)\n\n#iphone16Pro #iphone16"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [
+                      {
+                        "body": "Throw 6 out of 40, 34 more to go\ud83d\udc40\nThe next store is in Newcastle (Metrocentre)\n\n#iphone16Pro #iphone16",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://www.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460277432_518411290796659_3729786189403571125_n.?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3-S8tsVb4lkQ7kNvgFr0Uqg&_nc_ht=video.ffez1-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYC7nQdG2F5olFSxWGwOPj1WSQJUOJzZiXINJeLOAZR9OQ&oe=66F47E95",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460090471_1225328795285203_4897518832530980023_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fHqm9GldBosQ7kNvgEug1_j&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYChaqARBKhi-7fhm5bc-vo7hDnccfH4K8JNiVC7D4XZuw&oe=66F48212",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459999002_1059200228928578_398476649299971742_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Z7Pjy7D9zB0Q7kNvgEXczqF&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDB2kUXRsjKwQO08jj_EkNt_YzbcD_E9IFC4-u2n5ZcNQ&oe=66F488A4",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      },
+                      {
+                        "body": "Throw 6 out of 40, 34 more to go\ud83d\udc40\nThe next store is in Newcastle (Metrocentre)\n\n#iphone16Pro #iphone16",
+                        "caption": "",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "The Only Case You'll Ever Need. Protective iPhone, Samsung, Google Pixel, AirPods Cases & Essential Device Accessories.",
+                        "link_url": "http://www.mous.co/",
+                        "original_image_url": null,
+                        "resized_image_url": null,
+                        "watermarked_resized_image_url": null,
+                        "title": null,
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460200623_518411287463326_2259820822320664030_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lyoY3rkW2CYQ7kNvgEtCIXe&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDKlyNJ_MC-DyoV-FG_Yvd-L8N-sMUqh5LFuftpdju4mQ&oe=66F46992",
+                        "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460095126_1248462746331339_7574432040240368301_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NcPSvgocacoQ7kNvgGa3XMu&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAholAW70TnbA52OdM1C3Oll7fHER9ZIUz8sSeBuNKcJg&oe=66F495CD",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/459999002_1059200228928578_398476649299971742_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Z7Pjy7D9zB0Q7kNvgEXczqF&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDB2kUXRsjKwQO08jj_EkNt_YzbcD_E9IFC4-u2n5ZcNQ&oe=66F488A4",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460422823_2553406151526435_713486662649344492_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rW6ntTEBBtAQ7kNvgHdK956&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYBz1hB6g5dYG1xzKjWTYYcU7rtz4Pis7FcQLZe-xt25-A&oe=66F497AF",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726556400,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1289796239058335",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "1049735756248478",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Throw 2 out of 40, 38 more to go\ud83d\udc40 The next store is in the Center of Glasgow #40storeschallenge #iphone16 #iphone16pro"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460142919_430531270041658_5803291684337229037_n.jpg?stp=dst-jpg_s60x60&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MNWHVlJt67MQ7kNvgHKMiRf&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDXaX6BNzSeG_cO6QzFyoSq_FFGDLJGkEhnZKd2-7Ay8A&oe=66F48F78",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459744063_834113175566708_267742761039704718_n.?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OGDfC_9ZcSQQ7kNvgG_HvzZ&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDjZrMCOnKORGJSmG0jDIYJaelDE7GGiZtiPYyt9goQAA&oe=66F4654B",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460236043_3409146612715301_6369338116967756039_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=r-aExHzIcqAQ7kNvgEE5qHX&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAhtzFqN8Slko5J88yUthJsta5xC5hzVIKe34ZIRVeEbg&oe=66F496A7",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460350482_2591037931081561_4266363588359930061_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=jX18o8Enfw4Q7kNvgFnNklm&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAC_nLM6Gz6qEsYu4YLe3YjPD88cHEVGoPwuNvR9iawWA&oe=66F477B0",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726470000,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1695644477849793",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "545512811253845",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1726815600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": false,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "602563393163238",
+                  "page_is_deleted": false,
+                  "page_name": "Mous",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "The challenge has officially started and we are off to a good start. Throw 1 out of 40, 39 more to go \ud83d\udc40 #40storeschallenge #iphone16 #iphone16pro"
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "www.mous.co",
+                    "cards": [],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "Mous",
+                    "disclaimer_label": null,
+                    "display_format": "VIDEO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.mous.co/",
+                    "page_categories": ["Product/service"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "602563393163238",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 169441,
+                    "page_name": "Mous",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/459735971_2269302126736990_9180864962188475736_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=g-juAbf0TsQQ7kNvgE2sTuO&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDffjgurfjO34HwkVxQ0q-ksDXZZy-7kdOpGIw5tVxxBA&oe=66F48219",
+                    "page_profile_uri": "https://www.facebook.com/mous/",
+                    "root_reshared_post": null,
+                    "title": null,
+                    "videos": [
+                      {
+                        "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459745773_1695644507849790_938033551806543107_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HT3OnbnirpcQ7kNvgFEVGD3&_nc_ht=video.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYDzL4b9kGijGUY19WgB5K4LXLq4TBTz8-k4CeGIRrIeJQ&oe=66F47064",
+                        "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/459691650_462316803452384_1637317978326439109_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lF24bTBaq-YQ7kNvgG35sMG&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYCBH-7kB9nFHmOA5NwXo3otEbNfvLkIRewFar68J1SfpQ&oe=66F49180",
+                        "video_sd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460360497_1695644514516456_7785018804796204482_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=l6NZpLRpbf0Q7kNvgGTh3Xs&_nc_ht=video.ffez2-2.fna&_nc_gid=AWmlbQCvHyvULerxkWM-qHW&oh=00_AYAuPHpbPFDlI_wDzAHovyp1BRVrLSJeAgCPdjkE4EeTOg&oe=66F4731B",
+                        "watermarked_video_hd_url": "",
+                        "watermarked_video_sd_url": ""
+                      }
+                    ],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1726470000,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          }
+        ],
+        "page_info": {
+          "end_cursor": "AQHRdglxTldAZDU4lFFYEt_qM8_HwHXCM1A12LDCQ4O2_iIhmW9bn4KiezAJZX8ksSfI",
+          "has_next_page": true
+        }
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}
