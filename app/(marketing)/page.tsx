@@ -18,9 +18,6 @@ export default async function IndexPage() {
     <>
       <HeroLanding />
       <div className="container mx-auto p-4">
-        <h1 className="mb-4 text-2xl font-bold">
-          Facebook Api Test, Ads Search
-        </h1>
         <FacebookAdsComponent />
       </div>
       <div>

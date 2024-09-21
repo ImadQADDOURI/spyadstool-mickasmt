@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
 
@@ -8,7 +10,7 @@ import { fetchFacebookAds } from "@/app/actions/facebookApiTest";
 
 export default function FacebookAdsComponent() {
   const [queryString, setQueryString] = useState("");
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState<any>(null);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { theme } = useTheme();
@@ -17,7 +19,7 @@ export default function FacebookAdsComponent() {
     e.preventDefault();
     setIsLoading(true);
     setError("");
-    setResult("");
+    setResult(null);
 
     try {
       const response = await fetchFacebookAds({ queryString });
@@ -66,7 +68,7 @@ export default function FacebookAdsComponent() {
                   : "bg-gray-100 text-gray-800"
               }`}
             >
-              {result}
+              {JSON.stringify(result, null, 2)}
             </pre>
           </div>
         )}
