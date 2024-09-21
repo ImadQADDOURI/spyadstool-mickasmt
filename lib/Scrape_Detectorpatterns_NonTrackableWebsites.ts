@@ -432,38 +432,144 @@ export const paymentDetectors: TrackingDetector[] = [
  * by providing appropriate feedback for these websites.
  */
 export const nonTrackableWebsites = [
+  // Social Media
   "facebook.com",
   "fb.com",
   "fb.me",
+  "messenger.com",
   "whatsapp.com",
+  "web.whatsapp.com",
   "instagram.com",
+  "www.instagram.com",
   "twitter.com",
+  "t.co",
+  "x.com",
   "linkedin.com",
+  "lnkd.in",
   "youtube.com",
+  "youtu.be",
   "tiktok.com",
+  "vm.tiktok.com",
   "snapchat.com",
   "pinterest.com",
+  "pin.it",
   "reddit.com",
+  "redd.it",
   "tumblr.com",
   "quora.com",
+  "vk.com",
+  "weibo.com",
+  "line.me",
+  "telegram.org",
+  "t.me",
+
+  // Professional Networks
   "github.com",
+  "githubusercontent.com",
   "stackoverflow.com",
+  "stackexchange.com",
+  "gitlab.com",
+  "bitbucket.org",
+
+  // Content Platforms
   "medium.com",
+  "wordpress.com",
+  "wp.com",
+  "blogger.com",
+  "blogspot.com",
+  "substack.com",
+
+  // Knowledge Bases
   "wikipedia.org",
+  "wikimedia.org",
+  "wikihow.com",
+  "quizlet.com",
+
+  // Search Engines
   "google.com",
+  "goo.gl",
   "bing.com",
   "yahoo.com",
+  "yho.com",
   "duckduckgo.com",
+  "baidu.com",
+  "yandex.com",
+  "ya.ru",
+
+  // E-commerce and Entertainment
   "amazon.com",
+  "amzn.to",
   "netflix.com",
+  "nflx.it",
   "spotify.com",
+  "spoti.fi",
   "apple.com",
   "microsoft.com",
+  "msft.it",
   "twitch.tv",
   "vimeo.com",
+  "hulu.com",
+  "disneyplus.com",
+  "ebay.com",
+  "aliexpress.com",
+  "booking.com",
+  "airbnb.com",
+
+  // Productivity and Communication
   "slack.com",
   "discord.com",
+  "discord.gg",
   "zoom.us",
+  "teams.microsoft.com",
+  "meet.google.com",
+  "dropbox.com",
+  "db.tt",
+  "box.com",
+  "drive.google.com",
+  "onedrive.live.com",
+  "evernote.com",
+  "notion.so",
+
+  // News and Media
+  "nytimes.com",
+  "wsj.com",
+  "bbc.com",
+  "bbc.co.uk",
+  "cnn.com",
+  "forbes.com",
+  "reuters.com",
+
+  // Email Services
+  "gmail.com",
+  "outlook.com",
+  "yahoo.mail.com",
+  "protonmail.com",
+
+  // Educational Platforms
+  "coursera.org",
+  "edx.org",
+  "udemy.com",
+  "khanacademy.org",
+
+  // File Sharing
+  "wetransfer.com",
+  "mediafire.com",
+  "mega.nz",
+
+  // Gaming Platforms
+  "steampowered.com",
+  "steamcommunity.com",
+  "epicgames.com",
+  "ea.com",
+  "blizzard.com",
+
+  // Miscellaneous
+  "w3.org",
+  "archive.org",
+  "imdb.com",
+  "yelp.com",
+  "tripadvisor.com",
+  "weather.com",
 ];
 
 export const isNonTrackableWebsite = (url: string): boolean => {
