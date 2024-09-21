@@ -35,7 +35,6 @@ import { SaveAdButton } from "./AdsCollections/SaveAdButton";
 import DisplayPixelPlatformPayment from "./DisplayPixelPlatformPayment";
 import ExpandableText from "./expandableText";
 import PageNameWithPopover from "./PageNameWithPopover";
-import TrackingPixelDetector from "./TrackingPixelDetector";
 
 interface AdCardProps {
   ad: Ad;
@@ -296,15 +295,6 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           <span className="mr-2">Platforms</span>
           {renderPlatformIcons()}
         </div>
-
-        {/* <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
-          <span className="mr-2">Pixels</span>
-          <TrackingPixelDetector
-            url={snapshot.link_url}
-            usePuppeteer={true}
-            autoDetect={false} // prop to control automatic detection
-          />
-        </div> */}
 
         <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <DisplayPixelPlatformPayment
