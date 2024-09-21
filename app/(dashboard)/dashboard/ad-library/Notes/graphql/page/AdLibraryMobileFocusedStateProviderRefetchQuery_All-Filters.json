@@ -1,0 +1,228 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; ps_l=1; ps_n=1; wd=1241x991' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&media_type=all&search_type=page&view_all_page_id=124455470867' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryMobileFocusedStateProviderRefetchQuery' \
+  -H 'x-fb-lsd: AVqy31NLkEo' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=18&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016696029&__s=970vz2%3Aes4gz7%3Au117i3&__hsi=7417088082931968094&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gJcBHJhnh8CAigKt8CiRCWAuWvAH_BqBKjCxaqmuHohx6u4ElwExK9z9EW2aU8EuwzwnU9rx2bxS0N89ob85K222S17x26o2CwVG1UwsUy1Cw3xo048dw7bw0IBVopw04fYg07dyq01A3hFU0Gi0q2u09Zw5pw&__comet_req=1&lsd=AVqy31NLkEo&jazoest=2926&__spin_r=1016696029&__spin_b=trunk&__spin_t=1726925392&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryMobileFocusedStateProviderRefetchQuery&variables=%7B%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22ALL%22%2C%22audienceTimeframe%22%3A%22LAST_7_DAYS%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%22de%22%2C%22en%22%2C%22fr%22%2C%22it%22%5D%2C%22countries%22%3A%5B%22ALL%22%5D%2C%22country%22%3A%22ALL%22%2C%22excludedIDs%22%3A%5B%5D%2C%22fetchPageInfo%22%3Atrue%2C%22fetchSharedDisclaimers%22%3Atrue%2C%22location%22%3Anull%2C%22mediaType%22%3A%22IMAGE%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%22FACEBOOK%22%2C%22INSTAGRAM%22%2C%22AUDIENCE_NETWORK%22%2C%22MESSENGER%22%5D%2C%22queryString%22%3A%22%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3A%22PAGE%22%2C%22sessionID%22%3A%220bbe7e94-b936-4c5f-964a-36e22570034c%22%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3A%7B%22min%22%3A%222018-05-07%22%2C%22max%22%3A%222024-09-22%22%7D%2C%22v%22%3A%221209cc%22%2C%22viewAllPageID%22%3A%22124455470867%22%7D&server_timestamps=true&doc_id=7630761763694875'
+
+  */
+
+{
+    "data": {
+      "page": {
+        "name": "World's Best Cat Litter",
+        "id": "124455470867",
+        "url": "https://facebook.com/worldsbestcatlitter"
+      },
+      "ad_library_page_info": {
+        "page_info": {
+          "page_name": "World's Best Cat Litter",
+          "page_is_deleted": false,
+          "page_is_actioned": false,
+          "page_is_restricted": false,
+          "profile_photo": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/425008213_778848640935830_5188387011772106952_n.jpg?stp=cp6_dst-jpg_s148x148&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=Ryd0ZbrqamgQ7kNvgEjOLyx&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAWKaGWqqkyj82ehWRxm55QooamoqMEEIZTaPOVli3l6A&oe=66F48FF5"
+        }
+      },
+      "viewer": {
+        "actor": {
+          "__typename": "LoggedOutUser",
+          "profile_picture": {
+            "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDy0_meGwVwVZMdq1qZa4bPuDFhZvOm7OgPHg55sa9zWg&oe=67163296"
+          },
+          "id": "0"
+        }
+      },
+      "ad_library_user": null,
+      "ad_library_system_status": {
+        "system_status": {
+          "status": "SOME_DISRUPTIONS",
+          "active_issues": [
+            { "product": "Ad Library Report", "status": "SOME_DISRUPTIONS" }
+          ]
+        }
+      }
+    },
+    "extensions": {
+      "prefetch_uris_v2": [
+        {
+          "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDy0_meGwVwVZMdq1qZa4bPuDFhZvOm7OgPHg55sa9zWg&oe=67163296",
+          "label": null
+        }
+      ],
+      "is_final": false
+    }
+  }
+
+  {
+    "label": "AdLibraryMobileFocusedStateProvider_fragment$defer$AdLibraryV2SearchResultsContainer_1YpNv2",
+    "path": [],
+    "data": {
+      "ad_library_system_status": {
+        "system_status": {
+          "status": "SOME_DISRUPTIONS",
+          "active_issues": [
+            { "product": "Ad Library Report", "status": "SOME_DISRUPTIONS" }
+          ]
+        }
+      },
+      "ad_library_page_info": {
+        "page_info": {
+          "page_is_deleted": false,
+          "related_pages": [],
+          "has_blank_ads": false,
+          "hidden_ads": 0,
+          "page_profile_uri": "https://www.facebook.com/worldsbestcatlitter/",
+          "page_name": "World's Best Cat Litter",
+          "page_id": "124455470867",
+          "page_verification": "NOT_VERIFIED",
+          "entity_type": "PERSON_PROFILE",
+          "page_alias": "worldsbestcatlitter",
+          "likes": 488404,
+          "page_category": "Produits pour animaux",
+          "ig_verification": false,
+          "ig_username": "worldsbestcatlitter",
+          "ig_followers": 21838
+        }
+      },
+      "page": {
+        "name": "World's Best Cat Litter",
+        "id": "124455470867",
+        "about": {
+          "text": "Naturally safe cat litters that harness the long-lasting power of corn. "
+        },
+        "is_delegate_page_with_linked_primary_profile": false,
+        "confirmed_page_owner": { "name": null, "information": null, "id": null },
+        "pages_transparency_info": {
+          "history_items": [
+            { "event_time": 1383079912, "item_type": "NAME_CHANGE" },
+            { "event_time": 1250621815, "item_type": "CREATION" }
+          ],
+          "state_media_country_label": null,
+          "id": "dHJhbnNwYXJlbmN5OjEyNDQ1NTQ3MDg2Nw==",
+          "admin_locations": {
+            "admin_country_counts": [
+              {
+                "count": 24,
+                "country": { "iso_name": "United States", "id": "109078688522" }
+              },
+              {
+                "count": 7,
+                "country": { "iso_name": "Spain", "id": "119422531140" }
+              },
+              {
+                "count": 2,
+                "country": { "iso_name": "France", "id": "95406052401" }
+              },
+              {
+                "count": 2,
+                "country": { "iso_name": "Germany", "id": "91890339762" }
+              },
+              {
+                "count": 1,
+                "country": { "iso_name": "Egypt", "id": "105539829144" }
+              },
+              {
+                "count": 1,
+                "country": { "iso_name": "Italy", "id": "92597621657" }
+              },
+              {
+                "count": 1,
+                "country": { "iso_name": "Netherlands", "id": "92510804409" }
+              },
+              {
+                "count": 1,
+                "country": { "iso_name": "Portugal", "id": "100188412135" }
+              }
+            ]
+          }
+        },
+        "ad_library_page_targeting_insight": {
+          "ad_library_page_has_siep_ads": false,
+          "ad_library_page_targeting_summary": {
+            "detailed_spend": [],
+            "ds": "2024-09-18",
+            "main_currency": "",
+            "total_num_ads": 0,
+            "total_spend_formatted": "0",
+            "is_30_day_available": true,
+            "is_90_day_available": true
+          },
+          "ad_library_page_targeting_gender": [],
+          "ad_library_page_targeting_language": [],
+          "ad_library_page_targeting_location": [],
+          "ad_library_page_targeting_age": [],
+          "ad_library_page_targeting_custom_audience": [],
+          "ad_library_page_targeting_lookalike_audience": [],
+          "ad_library_page_targeting_detailed": []
+        }
+      },
+      "ad_library_user": null,
+      "audience_page_info": {
+        "page_info": {
+          "page_has_any_siep_ads": false,
+          "page_name": "World's Best Cat Litter"
+        }
+      },
+      "ad_library_main": {
+        "search_results_connection": {
+          "count": 0,
+          "edges": [],
+          "page_info": { "end_cursor": "", "has_next_page": false }
+        }
+      }
+    },
+    "extensions": {
+      "prefetch_uris_v2": [
+        {
+          "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDy0_meGwVwVZMdq1qZa4bPuDFhZvOm7OgPHg55sa9zWg&oe=67163296",
+          "label": null
+        }
+      ],
+      "is_final": false
+    }
+  }
+
+  {
+    "label": "AdLibraryPageAboutTab$defer$AdLibraryPageDisclaimerCard_7fGdj",
+    "path": [],
+    "data": {
+      "page": {
+        "shared_disclaimer_info": { "shared_disclaimer_pages": [] },
+        "id": "124455470867"
+      },
+      "ad_library_page_info": {
+        "page_spend": {
+          "current_week": null,
+          "lifetime_by_disclaimer": [],
+          "weekly_by_disclaimer": []
+        }
+      }
+    },
+    "extensions": {
+      "prefetch_uris_v2": [
+        {
+          "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDy0_meGwVwVZMdq1qZa4bPuDFhZvOm7OgPHg55sa9zWg&oe=67163296",
+          "label": null
+        }
+      ],
+      "is_final": true
+    }
+  }
+  

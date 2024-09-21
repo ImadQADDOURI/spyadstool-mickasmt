@@ -1,0 +1,619 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; ps_l=1; ps_n=1; wd=622x935' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&media_type=all&search_type=page&view_all_page_id=314703186089' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryMobileFocusedStateProviderRefetchQuery' \
+  -H 'x-fb-lsd: AVqy31NLUbU' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=5&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016696588&__s=5darym%3Ambpmpk%3Akhg7rt&__hsi=7417147611434792557&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gJcBHJhnh8CAigKt8CiRCWAuWvAH_BqBKjCxaqmuHohx6u4ElwExK9z9EW2aU8EuwzwnU9rx2bxS0N89ob85K222S17x26o2CwVG1UwsUy1Cw3xo048dw7bw0IBVopw04fYg07dyq01A3hFU0Gi0q2u09Zw5pw&__comet_req=1&lsd=AVqy31NLUbU&jazoest=2907&__spin_r=1016696588&__spin_b=trunk&__spin_t=1726939252&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryMobileFocusedStateProviderRefetchQuery&variables=%7B%22activeStatus%22%3A%22ALL%22%2C%22adType%22%3A%22ALL%22%2C%22audienceTimeframe%22%3A%22LAST_7_DAYS%22%2C%22bylines%22%3A%5B%5D%2C%22collationToken%22%3Anull%2C%22contentLanguages%22%3A%5B%5D%2C%22countries%22%3A%5B%22MA%22%5D%2C%22country%22%3A%22MA%22%2C%22excludedIDs%22%3A%5B%5D%2C%22fetchPageInfo%22%3Atrue%2C%22fetchSharedDisclaimers%22%3Atrue%2C%22location%22%3Anull%2C%22mediaType%22%3A%22ALL%22%2C%22pageIDs%22%3A%5B%5D%2C%22potentialReachInput%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22queryString%22%3A%22%22%2C%22regions%22%3A%5B%5D%2C%22searchType%22%3A%22PAGE%22%2C%22sessionID%22%3A%2280ec91d6-b13e-42a8-8dc8-f37138d5c526%22%2C%22sortData%22%3Anull%2C%22source%22%3Anull%2C%22startDate%22%3Anull%2C%22v%22%3A%22b6210c%22%2C%22viewAllPageID%22%3A%22314703186089%22%7D&server_timestamps=true&doc_id=7630761763694875'
+
+
+  */
+
+{
+    "data": {
+      "page": {
+        "name": "N\u00f6jesfabriken",
+        "id": "314703186089",
+        "url": "https://facebook.com/nojesfabriken"
+      },
+      "ad_library_page_info": {
+        "page_info": {
+          "page_name": "N\u00f6jesfabriken",
+          "page_is_deleted": false,
+          "page_is_actioned": false,
+          "page_is_restricted": false,
+          "profile_photo": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.30808-1/385758144_705533544948632_466542610273612193_n.jpg?stp=dst-jpg_s148x148&_nc_cat=111&ccb=1-7&_nc_sid=c9219a&_nc_ohc=0nnm19PFSpoQ7kNvgHeScTF&_nc_ht=scontent.ffez1-2.fna&oh=00_AYDMmCHs-OnFrOhhzUIMbnNQUBNraXk8Wq_jRNEUIIHskw&oe=66F4CF89"
+        }
+      },
+      "viewer": {
+        "actor": {
+          "__typename": "LoggedOutUser",
+          "profile_picture": {
+            "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDjahncB-Js4A0pI0ED4jjo4yYdRS2B_6LFbEQMHIXJeA&oe=67166AD6"
+          },
+          "id": "0"
+        }
+      },
+      "ad_library_user": null,
+      "ad_library_system_status": {
+        "system_status": {
+          "status": "SOME_DISRUPTIONS",
+          "active_issues": [
+            { "product": "Ad Library Report", "status": "SOME_DISRUPTIONS" }
+          ]
+        }
+      }
+    },
+    "extensions": {
+      "prefetch_uris_v2": [
+        {
+          "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDjahncB-Js4A0pI0ED4jjo4yYdRS2B_6LFbEQMHIXJeA&oe=67166AD6",
+          "label": null
+        }
+      ],
+      "is_final": false
+    }
+  }
+
+
+{
+  "label": "AdLibraryMobileFocusedStateProvider_fragment$defer$AdLibraryV2SearchResultsContainer_1YpNv2",
+  "path": [],
+  "data": {
+    "ad_library_system_status": {
+      "system_status": {
+        "status": "SOME_DISRUPTIONS",
+        "active_issues": [
+          { "product": "Ad Library Report", "status": "SOME_DISRUPTIONS" }
+        ]
+      }
+    },
+    "ad_library_page_info": {
+      "page_info": {
+        "page_is_deleted": false,
+        "related_pages": [],
+        "has_blank_ads": false,
+        "hidden_ads": 0,
+        "page_profile_uri": "https://www.facebook.com/nojesfabriken/",
+        "page_name": "N\u00f6jesfabriken",
+        "page_id": "314703186089",
+        "page_verification": "NOT_VERIFIED",
+        "entity_type": "PERSON_PROFILE",
+        "page_alias": "nojesfabriken",
+        "likes": 31780,
+        "page_category": "Danse et bo\u00eete de nuit",
+        "ig_verification": false,
+        "ig_username": "nojesfabriken",
+        "ig_followers": 9284
+      }
+    },
+    "page": {
+      "name": "N\u00f6jesfabriken",
+      "id": "314703186089",
+      "about": {
+        "text": "N\u00f6jesfabriken \u00e4r ett hus f\u00f6r alla. Fyra livescener, nattklubb Verket, Bar och Restaurang, Modern Dart"
+      },
+      "is_delegate_page_with_linked_primary_profile": false,
+      "confirmed_page_owner": null,
+      "pages_transparency_info": {
+        "history_items": [
+          { "event_time": 1266417513, "item_type": "CREATION" }
+        ],
+        "state_media_country_label": null,
+        "id": "dHJhbnNwYXJlbmN5OjMxNDcwMzE4NjA4OQ==",
+        "admin_locations": {
+          "admin_country_counts": [
+            {
+              "count": 6,
+              "country": { "iso_name": "Sweden", "id": "88217238801" }
+            }
+          ]
+        }
+      },
+      "ad_library_page_targeting_insight": {
+        "ad_library_page_has_siep_ads": false,
+        "ad_library_page_targeting_summary": {
+          "detailed_spend": [],
+          "ds": "2024-09-18",
+          "main_currency": "",
+          "total_num_ads": 0,
+          "total_spend_formatted": "0",
+          "is_30_day_available": true,
+          "is_90_day_available": true
+        },
+        "ad_library_page_targeting_gender": [],
+        "ad_library_page_targeting_language": [],
+        "ad_library_page_targeting_location": [],
+        "ad_library_page_targeting_age": [],
+        "ad_library_page_targeting_custom_audience": [],
+        "ad_library_page_targeting_lookalike_audience": [],
+        "ad_library_page_targeting_detailed": []
+      }
+    },
+    "ad_library_user": null,
+    "audience_page_info": {
+      "page_info": {
+        "page_has_any_siep_ads": false,
+        "page_name": "N\u00f6jesfabriken"
+      }
+    },
+    "ad_library_main": {
+      "search_results_connection": {
+        "count": 2,
+        "edges": [
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1107161546953389",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "443631458357600",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1706601600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": true,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "314703186089",
+                  "page_is_deleted": false,
+                  "page_name": "N\u00f6jesfabriken",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": { "text": "{{product.brand}}" },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "nojesfabriken.se",
+                    "cards": [
+                      {
+                        "body": "",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "Missa inte dubbeln med The Wannadies & Eagle-Eye Cherry",
+                        "link_url": "https://secure.tickster.com/bf24ffktl8eg84v",
+                        "original_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/420182689_301072349106180_1756475044222216479_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B-5HVU5ZQ7YQ7kNvgGccY3d&_nc_ht=scontent.ffez2-2.fna&oh=00_AYCD1dkc5w_NddjTrgifYIo2R3NyKcdpwSX3IRk_r1NGKA&oe=66F4D541",
+                        "resized_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/420157466_326295513711744_3736561046275798742_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kysi-f-VmfEQ7kNvgHsiXgT&_nc_ht=scontent.ffez1-1.fna&oh=00_AYADmGpGIRkvfWVKmb73MSTOIUcCiDlJTW2YrYDfuPfm2g&oe=66F4D23E",
+                        "watermarked_resized_image_url": "",
+                        "title": "En Biljett - Tv\u00e5 konserter",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "Missa inte dubbeln med The Wannadies & Eagle-Eye Cherry",
+                        "link_url": "https://secure.tickster.com/bf24ffktl8eg84v",
+                        "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/420153319_908794383821819_4277977951962930698_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=eAKClJQb6icQ7kNvgEuWfhd&_nc_ht=scontent.ffez1-1.fna&oh=00_AYBU5wK5wij3hlvNxdfascU9qBjdiQ6p3p67qvZpdANpIA&oe=66F4CAA0",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/420179763_2122687214733932_6562296393136508931_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3s1U-QxuvgQQ7kNvgE1nJvB&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAKQTkvLqm_W9NaKXoluIIKhp1DT-CJ8sk_bJ0FYn1qAw&oe=66F4DE98",
+                        "watermarked_resized_image_url": "",
+                        "title": "En Biljett - Tv\u00e5 konserter",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Shop Now",
+                        "cta_type": "SHOP_NOW",
+                        "image_crops": [],
+                        "link_description": "Missa inte dubbeln med The Wannadies & Eagle-Eye Cherry",
+                        "link_url": "https://secure.tickster.com/bf24ffktl8eg84v",
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/420150035_1121570328742015_7027614649579121353_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_mWtS9wuFo4Q7kNvgGlniYI&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDgISCZWulg5ZnnyZLtYWC8ZhFbiRJrKvywzZ7qZDmb1g&oe=66F4E704",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/420156726_1567009777170935_6583100640136169494_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WE5hXmM0krsQ7kNvgHsox18&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAlMO0KBXP8yf-HTE4g0LeImyVd1LxsIIB6c_zynabdtA&oe=66F4ED2A",
+                        "watermarked_resized_image_url": "",
+                        "title": "En Biljett - Tv\u00e5 konserter",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      }
+                    ],
+                    "cta_text": "Acheter",
+                    "cta_type": "SHOP_NOW",
+                    "country_iso_code": null,
+                    "current_page_name": "N\u00f6jesfabriken",
+                    "disclaimer_label": null,
+                    "display_format": "DCO",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": "{{product.description}}",
+                    "link_url": "https://secure.tickster.com/bf24ffktl8eg84v",
+                    "page_categories": ["Nightclub", "Music Venue", "Bar"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "314703186089",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 30980,
+                    "page_name": "N\u00f6jesfabriken",
+                    "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/420148403_25131442339803094_2365945621028786354_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0cw9ejQet2wQ7kNvgHMg1Gv&_nc_ht=scontent.ffez2-2.fna&oh=00_AYC817a0G7eQYyk0IGD-OA6jpqMLhy8vdh7lwU66j-VpNA&oe=66F4D268",
+                    "page_profile_uri": "https://www.facebook.com/nojesfabriken/",
+                    "root_reshared_post": null,
+                    "title": "{{product.name}}",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1706083200,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          },
+          {
+            "node": {
+              "collated_results": [
+                {
+                  "ad_archive_id": "1329535191079690",
+                  "ad_id": null,
+                  "archive_types": [],
+                  "categories": ["UNKNOWN"],
+                  "collation_count": 1,
+                  "collation_id": "695793612674711",
+                  "contains_digital_created_media": false,
+                  "contains_sensitive_content": false,
+                  "currency": "",
+                  "end_date": 1706601600,
+                  "entity_type": "PERSON_PROFILE",
+                  "fev_info": null,
+                  "finserv_ad_data": {
+                    "is_deemed_finserv": false,
+                    "is_limited_delivery": false
+                  },
+                  "gated_type": "ELIGIBLE",
+                  "has_user_reported": false,
+                  "hidden_safety_data": false,
+                  "hide_data_status": "NONE",
+                  "impressions_with_index": {
+                    "impressions_text": null,
+                    "impressions_index": -1
+                  },
+                  "is_aaa_eligible": true,
+                  "is_active": false,
+                  "is_profile_page": false,
+                  "menu_items": [],
+                  "page_id": "314703186089",
+                  "page_is_deleted": false,
+                  "page_name": "N\u00f6jesfabriken",
+                  "political_countries": [],
+                  "publisher_platform": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "AUDIENCE_NETWORK",
+                    "MESSENGER"
+                  ],
+                  "reach_estimate": null,
+                  "report_count": null,
+                  "snapshot": {
+                    "body": {
+                      "text": "Lite h\u00e5rdare och lite roligare. 10 kv\u00e4llar det \u00e4r sv\u00e5rt att vara utan."
+                    },
+                    "branded_content": null,
+                    "brazil_tax_id": null,
+                    "byline": null,
+                    "caption": "nojesfabriken.se",
+                    "cards": [
+                      {
+                        "body": "Live 10 februari",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 10 februari",
+                        "link_url": "https://www.nojesfabriken.se/event/u-d-o-frozen-crown/",
+                        "original_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/422118182_2645649262282830_1478431291250255355_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=V7sG4muLzLsQ7kNvgF4itPD&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBqtFQCt6tutL0cOFdqafTuSpYT6fdF3u5Pe3S06ipOYA&oe=66F4CC97",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/421327271_1031272281277867_8845015660463262461_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=81KltJMQ0CQQ7kNvgH4p_Ti&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBHKU_dJcJOD7rPRgh_u_pSmOCPXF4wDpTmeh0_tgCMFg&oe=66F4D1C7",
+                        "watermarked_resized_image_url": "",
+                        "title": "U.D.O + Frozen Crown",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 17 februari",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 17 februari",
+                        "link_url": "https://www.nojesfabriken.se/event/mimikry-varlden-brinner/",
+                        "original_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/421264377_1039097080527707_148502989412479575_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FKWO4nXgCI8Q7kNvgEBwHDd&_nc_ht=scontent.ffez1-2.fna&oh=00_AYAUwQZ1HiuMtTSC0wV0povjcUU7tRFUTJXxiPjnJX0qoA&oe=66F4C0BB",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421346806_1028704011573276_4667967723668774471_n.jpg?stp=dst-jpg_s600x600&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=igQrwe6v8yUQ7kNvgHL8yPm&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCuMeic-WFHEqoBS5L1XvGyGaDIH19OIZSXV97zKCaiLw&oe=66F4E504",
+                        "watermarked_resized_image_url": "",
+                        "title": "Mimikry + V\u00e4rlden Brinner",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 23 februari",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 23 februari",
+                        "link_url": "https://www.nojesfabriken.se/event/thundermother-strom/",
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421326345_1038058720756501_7456277175200820913_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sG1XhQFWngEQ7kNvgFeqWyh&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCaRASjgosI3h8Vmhp_JjXZn92JttCnkt635kQ4mVuqlQ&oe=66F4C8B2",
+                        "resized_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/421272605_412158861328235_602138932778688666_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Di4v25k65kQQ7kNvgGxDA9B&_nc_ht=scontent.ffez1-2.fna&oh=00_AYDHEZylK9vUsFg2GT-LfYeDT01buocg4iVVPIdaDbxNvA&oe=66F4CB68",
+                        "watermarked_resized_image_url": "",
+                        "title": "Thundermother + Str\u00f6m",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 1 mars",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 1 mars",
+                        "link_url": "https://www.nojesfabriken.se/event/millencolin-no-fun-at-all-satanic-surfers/",
+                        "original_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/421233797_350695024454700_5851733582428533435_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=graTdWF-1NkQ7kNvgGG7rC3&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBXQqr-Hw6mkVjTDZsk-XxXvEB9rPpI35c4blNHgYMvvQ&oe=66F4BD82",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/421424796_1540741510018273_9113739729240776033_n.jpg?stp=dst-jpg_s600x600&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2ruEi0xDb5UQ7kNvgGvp9vZ&_nc_ht=scontent.ffez2-2.fna&oh=00_AYD-f2JSpQDnw-9mgQDbt-dQRPreBm_DBF9zuBRB_KV6cg&oe=66F4C4E0",
+                        "watermarked_resized_image_url": "",
+                        "title": "Millecollin + No Fun At All + Satanic Surfers",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 9 mars",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 9 mars",
+                        "link_url": "https://www.nojesfabriken.se/event/the-baboon-show-the-dahmers/",
+                        "original_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/421415312_1539355993288329_4415824097832223773_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ybfShwVbib0Q7kNvgGP9hp0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBdP4wr6UVIcjW0HBobC_f9_8Cs9PFQPG5df6ZDdu_MQg&oe=66F4E8C1",
+                        "resized_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/421246411_1459314341284017_628379268591800740_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=YFZV75_j1RoQ7kNvgEm3LVj&_nc_ht=scontent.ffez1-2.fna&oh=00_AYC4mba5jTr8hgU1nGHtVC1cKOHoZS7zyVuTYy9E7B1hbQ&oe=66F4CD63",
+                        "watermarked_resized_image_url": "",
+                        "title": "The Baboon Show + The Dahmers",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 9 mars",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 9 mars",
+                        "link_url": "https://www.nojesfabriken.se/event/takida/",
+                        "original_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421415001_1164542357861376_8272429189762072935_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pwnSSJcIQdEQ7kNvgFVWXBj&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDn9OjhQRX4GvzpbJVMg838cDq75-gO5cY30575mxf-Kw&oe=66F4DF51",
+                        "resized_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/422111815_1061253838480518_4158424080415621858_n.jpg?stp=dst-jpg_s600x600&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=buCI0mW9qB0Q7kNvgFonr0j&_nc_ht=scontent.ffez1-2.fna&oh=00_AYAFvS4n3mSzU_onUUpXrXOSJ__-oRg8UdtkNefY2y0dmA&oe=66F4EBBE",
+                        "watermarked_resized_image_url": "",
+                        "title": "tAKiDA",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 16 mars",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 16 mars",
+                        "link_url": "https://www.nojesfabriken.se/event/danko-jones/",
+                        "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/421244226_761772355307657_4587363132356106775_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ARhSMTE1jTwQ7kNvgHSR-N0&_nc_ht=scontent.ffez1-1.fna&oh=00_AYBwTV9WcrkMWoL9b-BmiNIjBuDPceOSZKF4Inj8KTTqJQ&oe=66F4C3A8",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421276014_852997003262778_7951573961693570515_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iXc2x0P2d2cQ7kNvgFNEzI0&_nc_ht=scontent.ffez2-1.fna&oh=00_AYB9ucuVKbD4kj10IhO9nm93XuEI08jGA3tzZQTx0M7eYQ&oe=66F4D5DE",
+                        "watermarked_resized_image_url": "",
+                        "title": "Danko Jones",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 16 mars",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 16 mars",
+                        "link_url": "https://www.nojesfabriken.se/event/the-boys-cat-and-the-underdogs/",
+                        "original_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/421751971_789341166362266_6760782726551387617_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=-_1zA7NCbYQQ7kNvgEfSD1c&_nc_ht=scontent.ffez1-1.fna&oh=00_AYBd04nqy2Q3BWmPbaifMhl1UrSi_BugrWllWZUtNE6EcQ&oe=66F4BF37",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421711515_914416210066270_6199901675595089824_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=M2MDkC6FRTAQ7kNvgFoL4a4&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDfdRC6NLYtm3dc95OVzy3TVVTZ1x0MVIGweHRw5bgZLQ&oe=66F4CE8A",
+                        "watermarked_resized_image_url": "",
+                        "title": "The Boys + Cat & The Underdogs",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 29 mars",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 29 mars",
+                        "link_url": "https://www.nojesfabriken.se/event/orbit-culture/",
+                        "original_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/422118434_1405915330024806_7308703757721022044_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=if386O2YDqsQ7kNvgEZBIu5&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAagsju6Xie85Kf6EV6WuXO5Hb8Ea4xPbtssrqGD9Vnrw&oe=66F4E525",
+                        "resized_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421414377_876457157550066_1792639097052269034_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4rvJ4ERxyKYQ7kNvgFMmu9_&_nc_ht=scontent.ffez2-1.fna&oh=00_AYDfn2ESlINm_hf0NeRMr_MPRB7CJFG-LQSj9TMHWR-0wg&oe=66F4E06C",
+                        "watermarked_resized_image_url": "",
+                        "title": "Orbit Culture + Support",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      },
+                      {
+                        "body": "Live 27 april och 18 maj",
+                        "caption": "nojesfabriken.se",
+                        "cta_text": "Learn More",
+                        "cta_type": "LEARN_MORE",
+                        "image_crops": [],
+                        "link_description": "Live 27 april och 18 maj",
+                        "link_url": "http://www.nojesfabriken.se/nojeskalendern",
+                        "original_image_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/422118639_916266156346489_6973107923500535584_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_bQijDWAWHcQ7kNvgEHYOzo&_nc_ht=scontent.ffez1-2.fna&oh=00_AYBXG5sCaskUw3EffWs9YUuDBpMtdDMrtN7UVoAMNDPiPQ&oe=66F4B717",
+                        "resized_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/421345035_743020237747794_3355769845302245317_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=uIHxbxZOmfYQ7kNvgGNoMvt&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBrQ4VjQvVUwWGC0SQ2qazRojmfUw6Tl5urgLnLbTP9BQ&oe=66F4EB87",
+                        "watermarked_resized_image_url": "",
+                        "title": "The Good The Bad and The Zugly + Oslo Ess (27/4) Witch Club Satan 18 maj",
+                        "video_hd_url": null,
+                        "video_preview_image_url": null,
+                        "video_sd_url": null,
+                        "watermarked_video_hd_url": null,
+                        "watermarked_video_sd_url": null
+                      }
+                    ],
+                    "cta_text": "En savoir plus",
+                    "cta_type": "LEARN_MORE",
+                    "country_iso_code": null,
+                    "current_page_name": "N\u00f6jesfabriken",
+                    "disclaimer_label": null,
+                    "display_format": "CAROUSEL",
+                    "event": null,
+                    "images": [],
+                    "is_reshared": false,
+                    "link_description": null,
+                    "link_url": "http://www.nojesfabriken.se/nojeskalendern",
+                    "page_categories": ["Nightclub", "Music Venue", "Bar"],
+                    "page_entity_type": "PERSON_PROFILE",
+                    "page_id": "314703186089",
+                    "page_is_deleted": false,
+                    "page_is_profile_page": false,
+                    "page_like_count": 30980,
+                    "page_name": "N\u00f6jesfabriken",
+                    "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/421415014_237601542639669_4217058932439657330_n.jpg?stp=dst-jpg_s60x60&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=OxXlXYByntQQ7kNvgGWbJUH&_nc_ht=scontent.ffez2-1.fna&oh=00_AYASRMccZ5OfPQSNzpeGQ5VFjZkzKYI2J8HEM-HUrrCOLg&oe=66F4D5CE",
+                    "page_profile_uri": "https://www.facebook.com/nojesfabriken/",
+                    "root_reshared_post": null,
+                    "title": "N\u00f6jesfabriken",
+                    "videos": [],
+                    "additional_info": null,
+                    "ec_certificates": [],
+                    "extra_images": [],
+                    "extra_links": [],
+                    "extra_texts": [],
+                    "extra_videos": []
+                  },
+                  "spend": null,
+                  "start_date": 1706083200,
+                  "state_media_run_label": null
+                }
+              ],
+              "__typename": "CollatedSearchResults"
+            },
+            "cursor": null
+          }
+        ],
+        "page_info": { "end_cursor": "", "has_next_page": false }
+      }
+    }
+  },
+  "extensions": {
+    "prefetch_uris_v2": [
+      {
+        "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDjahncB-Js4A0pI0ED4jjo4yYdRS2B_6LFbEQMHIXJeA&oe=67166AD6",
+        "label": null
+      }
+    ],
+    "is_final": false
+  }
+}
+
+{
+    "label": "AdLibraryPageAboutTab$defer$AdLibraryPageDisclaimerCard_7fGdj",
+    "path": [],
+    "data": {
+      "page": {
+        "shared_disclaimer_info": { "shared_disclaimer_pages": [] },
+        "id": "314703186089"
+      },
+      "ad_library_page_info": {
+        "page_spend": {
+          "current_week": null,
+          "lifetime_by_disclaimer": [],
+          "weekly_by_disclaimer": []
+        }
+      }
+    },
+    "extensions": {
+      "prefetch_uris_v2": [
+        {
+          "uri": "https://scontent.ffez2-2.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=vmRQ1l1lBCkQ7kNvgGP5Lo0&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDjahncB-Js4A0pI0ED4jjo4yYdRS2B_6LFbEQMHIXJeA&oe=67166AD6",
+          "label": null
+        }
+      ],
+      "is_final": true
+    }
+  }

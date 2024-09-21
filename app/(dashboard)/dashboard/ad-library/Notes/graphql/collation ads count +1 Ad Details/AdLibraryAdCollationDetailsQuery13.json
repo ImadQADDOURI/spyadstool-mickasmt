@@ -1,0 +1,1025 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; ps_l=1; ps_n=1; wd=1179x991' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&media_type=all&q=mouse&search_type=keyword_unordered' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.139", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryAdCollationDetailsQuery' \
+  -H 'x-fb-lsd: AVqy31NLu1s' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=bf&__hs=19987.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016696588&__s=5wpray%3Aes4gz7%3An6d7hy&__hsi=7417139618684934187&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gJcBHJhnh8CAigKt8CiRCWAuWvAH_BqBKjCxaqmuHohx6u4ElwExK9z9EW2aU8EuwzwnU9rx2bxS0N89ob85K222S17x26o2CwVG1UwsUy1Cw3xo048dw7bw0IBVopw04fYg07dyq01A3hFU0Gi0q2u09Zw5pw&__comet_req=1&lsd=AVqy31NLu1s&jazoest=2920&__spin_r=1016696588&__spin_b=trunk&__spin_t=1726937391&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryAdCollationDetailsQuery&variables=%7B%22collationGroupID%22%3A%221247580993346891%22%2C%22forwardCursor%22%3A%22AQHRCjoodxjbLH_QtAde_Uu5Sj0jIh6uVZeda8U8746joFVFis5awZugEoSGGtXSF9LH%22%2C%22backwardCursor%22%3A%22AQHRlXOtim7ZGRAWDlT_ZkSrgY7JX5x-YtrOYCMecV0IIwG8Ts6SeMYQfIA2_GcFXs9n%22%2C%22activeStatus%22%3A%22ACTIVE%22%2C%22adType%22%3A%22ALL%22%2C%22bylines%22%3A%5B%5D%2C%22countries%22%3Anull%2C%22location%22%3Anull%2C%22potentialReach%22%3A%5B%5D%2C%22publisherPlatforms%22%3A%5B%5D%2C%22regions%22%3A%5B%5D%2C%22sessionID%22%3A%22ca227fe6-a7d7-431f-a8a2-94d2e69d7da8%22%2C%22startDate%22%3Anull%7D&server_timestamps=true&doc_id=8918149204878948'
+
+  */
+{
+  "data": {
+    "ad_library_main": {
+      "collation_results": {
+        "ad_cards": [
+          {
+            "ad_archive_id": "1593203294963772",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726815600,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": false,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460761302_3971424713139760_240077745455679482_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rt0J_6KTDUwQ7kNvgGkhF5a&_nc_ht=scontent.ffez1-1.fna&oh=00_AYCtUx3fpc4SNPiID5aPfh1VoVDUdD4ZXZ3-vEZ94b8FCA&oe=66F4C0D3",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/az-en/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=14~en~AZN&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008214897&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460429145_490545287121673_7805335543853615545_n.jpg?stp=dst-jpg_s60x60&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=VcWvgsGbNFQQ7kNvgHQ5Wjr&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAw9YwP7tJ1ijmXMMI0QN4SkkzoZcCVgHGGLe1fxsy4ZQ&oe=66F4E7B6",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460665906_1593203324963769_2094228008415312830_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KBRCr2ZIgAUQ7kNvgF1r9A3&_nc_ht=video.ffez2-1.fna&oh=00_AYAYT4t0xQ5f88Hh9CkKp-itejto58VUDERNWp5CcUJQ8w&oe=66F4DF25",
+                  "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460488836_1598998073983260_4118367600619212160_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1buMn043YEMQ7kNvgEk7zhU&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBkJN_YkirEFv1fW0-C3d6I9vl4TaZw9XYHjdWSEDTNRg&oe=66F4C09E",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "486570994277349",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460722762_520625657325734_7263338783469308954_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wDGjdPfHCpoQ7kNvgHmHXif&_nc_ht=scontent.ffez1-2.fna&oh=00_AYDlntrGhsKIPFyceTeM4oyI685rTiKYrE-8qgCdGS16rQ&oe=66F4E1BF",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/at/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=13~de~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008213420&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/460530399_26717474947896705_5238675738590064654_n.jpg?stp=dst-jpg_s60x60&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=DzRfvzX4XMkQ7kNvgHrVhC7&_nc_ht=scontent.ffez1-2.fna&oh=00_AYBCZ31b3DeSTHSaVGqEbhfJtEX2znGKKnESM6MuhZoe_Q&oe=66F4CDEE",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460155164_529629779760061_3272233447499125897_n.?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=B7iOnSojXcUQ7kNvgGV-Z3t&_nc_ht=video.ffez1-1.fna&oh=00_AYCkLyEa6Y6LqzG4DQ5wvRlMvi6ui_8eXvcQYHgNo4U2ng&oe=66F4C1C0",
+                  "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460806458_2456592344676001_5138406001039701942_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yIMMoxqlepwQ7kNvgEzP82b&_nc_ht=scontent.ffez2-2.fna&oh=00_AYABiS2RrTgdKAr3W1zmkuDmAY4YrgZm5lZvXn5iHykZfA&oe=66F4D984",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "1205659547427891",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/459755575_857348153044539_7118400077907582537_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MLFi4xUKLc0Q7kNvgF60-KF&_nc_ht=scontent.ffez1-1.fna&oh=00_AYBRNa6PPQ0IpampLZciufckbj22mpmbrsGtcm7fN72ipQ&oe=66F4E431",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/at/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=13~de~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008211044&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/459521357_1202056090847729_270748519423743549_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4oYRJkSUxGEQ7kNvgExPG4R&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBeW4uz7ZW0ERGA05YtEVCEL38boh-nhgDTrgFpWhyYJA&oe=66F4C0AD",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460675054_1205659614094551_3254492752944362546_n.?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=R-EqYFarrM4Q7kNvgGu9AGX&_nc_ht=video.ffez2-2.fna&oh=00_AYCcQsgnyjzpWio4dKrHHJu8ixYUSrpi9TByB0ukd04ibA&oe=66F4CE7C",
+                  "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460442890_8799160370096344_7952058363941420223_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5-404GVff68Q7kNvgFaZ651&_nc_ht=scontent.ffez1-1.fna&oh=00_AYAnwwPRC1iWx81VbGtqRlH7JxlEwpCU_z4DZNmrR8PPsQ&oe=66F4D344",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "881448836853150",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": false,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460849452_332025936599589_583772656171932815_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Pg1N_Aj0r50Q7kNvgH5caXI&_nc_ht=scontent.ffez1-1.fna&oh=00_AYCy98pq1buSuLzwXq7EfRi4bd3TRfOBAgkD47Z0yDm23A&oe=66F4B919",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/uk/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=210~en~GBP&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008206107&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460803834_1247193672948466_6922038147079374849_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UU1XtpHVMHoQ7kNvgFMUPEo&_nc_ht=scontent.ffez2-2.fna&oh=00_AYDGSaSOQfyeGkvYiaU2W9wGIJb24BP3DvmMyVVIjlZQMQ&oe=66F4C0E0",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460885405_881448870186480_6984859510630118301_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lD3HbzmmKwEQ7kNvgHui8B_&_nc_ht=video.ffez2-1.fna&oh=00_AYBTwoga7mRQC-J4rvaZjQsjGnxCGpLK9N-xFhhHjdnAuA&oe=66F4C4EC",
+                  "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460802617_721441090159003_4136559156928596116_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8ob4XZi4xTEQ7kNvgFvQRNQ&_nc_ht=scontent.ffez1-1.fna&oh=00_AYC7YStEA8K0DmxBYguRAcKp0XZJ0dgGWeqT3gKsLiHnOw&oe=66F4B1A9",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "1044929363935725",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": false,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460473465_897202535652455_5284709606250584480_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9VbML3ACp_UQ7kNvgGZxAhW&_nc_ht=scontent.ffez2-2.fna&oh=00_AYASTn12lYLoJsRnOAIOYzU4L1IpMXdSyFxz-tWlZWuXtA&oe=66F4CB8B",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "play.google.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460658996_491972873723339_3855164619490638320_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=29oQldz5tPIQ7kNvgESZGq9&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBw05AJVc1DrSORQ5QR3F3otkDgmKBr5gJkTWPSAfVJ0Q&oe=66F4DC1E",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460282110_1044929407269054_3170332200183189184_n.?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Fu25s8ummNAQ7kNvgHrdT3z&_nc_ht=video.ffez1-1.fna&oh=00_AYC0gZx1YDjQLzcqB_1l9RtBwHMaeKSFKrO07mnFgpV-nQ&oe=66F4D514",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460432168_1503740700257956_985527942017935510_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=L8AawFhozzUQ7kNvgFG2ADM&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAF1TNon0TEdjZTg1G-NTRXLNU8eDpSejMGR3ADUrznng&oe=66F4B288",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "1238049640951842",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460724636_840443248250010_3853747768241654889_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IY1LSnidAPQQ7kNvgHKbYzm&_nc_ht=scontent.ffez2-2.fna&oh=00_AYC_jffVjzRR5wQsWnqBvKC7LUal0pWj5ikF2yGZwQyUNw&oe=66F4C93A",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/ie/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=96~en~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008201060&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460666226_2342711692748422_3950169862343117054_n.jpg?stp=dst-jpg_s60x60&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9iglqHPxsKUQ7kNvgECEjd7&_nc_ht=scontent.ffez2-1.fna&oh=00_AYA1bAKi7zgePCOxpRGu_iYPYec_O4WoD-G9ZF9LWm0PtQ&oe=66F4DB1D",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/460267980_1238049667618506_8350414199306537407_n.?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=PqDU1kEyIGcQ7kNvgH5Nca8&_nc_ht=video.ffez1-1.fna&oh=00_AYBEfCcEXB-ToRY-aBcOWQybvZHFheBa_otk9WQpMmfHaA&oe=66F4C5CE",
+                  "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460862720_2133795087002250_7895998273792936445_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=j0jZQv4-ibkQ7kNvgEmw4cL&_nc_ht=scontent.ffez1-1.fna&oh=00_AYDSShkvFHXNf2yAN7LtqcSjNcitdhzAdKkSzMKfp-aPBA&oe=66F4B26B",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "503627719102391",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726815600,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": ["FACEBOOK", "INSTAGRAM"],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460357882_1253288605855906_6897500214305400202_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=SMu9CtHyz_AQ7kNvgHWGFtk&_nc_ht=scontent.ffez1-1.fna&oh=00_AYD4yNEH_l2gHVamVQzc0u0kIIas90LENUyvXBz4wLU_KQ&oe=66F4D489",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/be/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=20~en~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008201027&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460613785_401862739629340_5294393825278109426_n.jpg?stp=dst-jpg_s60x60&_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=jw-BIQvsx0wQ7kNvgGtsPqK&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAZG9fdhdz_Jo_9Z7IKPXeJ_oU1eq1QNRZbkUwLvQQ-3A&oe=66F4C617",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460144835_503627755769054_8677141829613270353_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pNg6pWHKA0MQ7kNvgGcYT5h&_nc_ht=video.ffez2-2.fna&oh=00_AYCwhbBTvHPmXO0QCs1qSplghwEaT_03CZFgFdnUF50KJg&oe=66F4D5DD",
+                  "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460629302_499222469533826_6025178296575713070_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8TGl_Ou7naUQ7kNvgHOgSZP&_nc_ht=scontent.ffez2-2.fna&oh=00_AYCRfLt8C-El2Tth8Q8nr0dAcX8i4qHl8Qt-wf8bxneXiw&oe=66F4B8DF",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "430148050182193",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460835318_427880566509057_5092038283768667458_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Q57xhowvWp0Q7kNvgGtmXOa&_nc_ht=scontent.ffez2-1.fna&oh=00_AYCC67UANsJrqZzKe1v9DCjsayz7p5sBRWMuf4rLt1Xhlw&oe=66F4C0E2",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/de/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=76~de~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008200652&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460814894_821741449983387_6453563853000912000_n.jpg?stp=dst-jpg_s60x60&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kLbruFc6jYoQ7kNvgG_ML9l&_nc_ht=scontent.ffez1-1.fna&oh=00_AYD2jzVp96nPzz7aZ5CRdrIJCkX_oM2a2MQ3XDJFXTZPwg&oe=66F4BD9B",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez1-2.fna.fbcdn.net/v/t42.1790-2/460428997_430148116848853_8724019020567819084_n.?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IKynMnwQzL4Q7kNvgFYGxjX&_nc_ht=video.ffez1-2.fna&oh=00_AYCeZSikuKmNjtvZc8ZvvyZWa6dDJ3z2cwrmKbTX5rCvpA&oe=66F4C189",
+                  "video_preview_image_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460609774_886228980082553_6124295432680867178_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=tJyFqX-n1WUQ7kNvgEM2ZSq&_nc_ht=scontent.ffez1-1.fna&oh=00_AYD1TO17szpzKShXli0TeS-xBilZgh14bn4rHc1JL9bWWw&oe=66F4BA4C",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "2012546222512055",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": ["INSTAGRAM"],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460662695_944882594335445_993447586287343159_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FKKt2AKz3LoQ7kNvgGxQnZe&_nc_ht=scontent.ffez2-2.fna&oh=00_AYAqVTUmxx8IOVKpJiYoSPP1Qx9d0_MUEIimYvhKnkcmxw&oe=66F4B19A",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/de/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=76~de~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008200551&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460827210_966286395513523_8148938939533237003_n.jpg?stp=dst-jpg_s60x60&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=d_LqgZofzrEQ7kNvgHBecJg&_nc_ht=scontent.ffez1-1.fna&oh=00_AYCgkrV8jup8fgYDzySC9Lp-Iuk8HIcYBblELf0_KS9_WQ&oe=66F4D576",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460331212_2012546272512050_1144166696255439766_n.?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wsdkqRX3QDQQ7kNvgGe7p3p&_nc_ht=video.ffez2-1.fna&oh=00_AYDeiwO6AstU0SvJLDssaQCs08vG1tNQMoRCVeCJdU_dbQ&oe=66F4C8B7",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460728573_1090798545734900_9083081678070480718_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MxPVjWwKrUQQ7kNvgFYn_rQ&_nc_ht=scontent.ffez2-1.fna&oh=00_AYC0RbniM81pNjkUvVPoVHxz74QV11Il1zQKYU1occ9B_Q&oe=66F4D9F0",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          },
+          {
+            "ad_archive_id": "442421152144615",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": true,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460827554_1217598732620144_4601687819149194946_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wZfSXRjFc_YQ7kNvgGIs3E-&_nc_ht=scontent.ffez2-2.fna&oh=00_AYB7IJ2AxeeNyPp6i-8hKsBT4gzgGh6A5rJFa6ChEw0uXQ&oe=66F4D564",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/de/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=76~de~EUR&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008199197&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460834867_1507637543964857_6619788243127679427_n.jpg?stp=dst-jpg_s60x60&_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZewpFWPR5B8Q7kNvgG-JB5o&_nc_ht=scontent.ffez1-1.fna&oh=00_AYB-WceYoiK_QxomLa9Hx-q01L12Quc52D22eI9cOk9hMQ&oe=66F4BE16",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/460364702_442421232144607_6275640745328403691_n.?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5Hw1C26rbJ8Q7kNvgHw_FS4&_nc_ht=video.ffez2-2.fna&oh=00_AYACEyBRc8V7ORT45U8wT0P1fn3yRDKo-HXjRUjN9A57SA&oe=66F4CADA",
+                  "video_preview_image_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460721573_377983778714269_4792865901593631178_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qOrW9vytzi8Q7kNvgFYcH6E&_nc_ht=scontent.ffez2-1.fna&oh=00_AYBU1wv73-9W7FUZdR2Zj7TpF5uWwMQ4bNNJl7nCRQzbAw&oe=66F4D939",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&oh=00_AYDanvQcwe92vx50mUV9mLeoHWM5hVDxPoOAzA_dWt7BFg&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726815600,
+            "state_media_run_label": null
+          }
+        ],
+        "forward_cursor": "AQHRDrW4ObXFZrx9sSEdH6s_O2ptL0VAswFnk1ARs0lJvLLXr54F_2SpQAhP4YD7vuF3",
+        "backward_cursor": "AQHRjpd0REtFS2Izt15BABUdccWUWtaAArrc1CnZgtHSjzvO6nzWrBNx46_QlHUi5tYr",
+        "total_count": 74,
+        "is_complete": false
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}
