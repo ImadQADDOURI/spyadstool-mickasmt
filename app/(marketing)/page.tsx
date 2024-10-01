@@ -2,7 +2,8 @@ import { Suspense } from "react";
 
 import { infos } from "@/config/landing";
 import AdsLibrary from "@/components/adsLibrary/AdsLibrary";
-import FacebookAdsComponent from "@/components/adsLibrary/facebookApiTest";
+import EnhancedFlexibleFacebookAdsComponent from "@/components/adsLibrary/facebookApiTest";
+import MetaGraphQLTester from "@/components/adsLibrary/MetaGraphQLTester";
 import { BentoGrid } from "@/components/sections/bentogrid";
 import { Features } from "@/components/sections/features";
 import { HeroLanding } from "@/components/sections/hero-landing";
@@ -18,7 +19,11 @@ export default async function IndexPage() {
     <>
       <HeroLanding />
       <div className="container mx-auto p-4">
-        <FacebookAdsComponent />
+        <MetaGraphQLTester />
+      </div>
+
+      <div className="container mx-auto p-4">
+        <EnhancedFlexibleFacebookAdsComponent />
       </div>
       <div>
         <Suspense fallback={<div>Loading...</div>}>

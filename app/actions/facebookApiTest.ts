@@ -24,6 +24,8 @@ export async function fetchFacebookAds(input: z.infer<typeof InputSchema>) {
     ),
   };
 
+  console.log("⚙️⚙️⚙️⚙️", options);
+
   try {
     const response = await fetch(
       "https://www.facebook.com/api/graphql/",

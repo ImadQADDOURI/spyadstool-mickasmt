@@ -1,0 +1,2938 @@
+[
+  {
+    "url": "https://www.facebook.com/ads/library/?id=560819949718377",
+    "method": "GET",
+    "headers": {
+      "accept-language": "en-US",
+      "upgrade-insecure-requests": "1",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+    },
+    "timestamp": "2024-10-01T06:23:29.480Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "text/css,*/*;q=0.1"
+    },
+    "timestamp": "2024-10-01T06:23:30.194Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/tN6JDuFHMcs.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.195Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3igys4/yJ/l/en_GB/k_fX3emq271445cEvlzdaxKltLEbzH_KDJ8Pr5P-SdciTNgGUnUwl52jER2-apYMhq8A0Aru9zrE1vOc1GY6dvvd0x_M_suDD5jqUYRDHrAra-ifeo1is6hE39ttOtxeAjqXV0dIZFh-puEgq4XZ0uxLK8PWsCifSIF72DxtVMrzimBugxqUqU5AStCPJKLafwr_2_YrAB5iY9wPxqPtcVP9oXeRusx7Ki60q9E2Stx0P1iT23cgYC_sQ2jhZGddGd7d7nA67GMjQATso9Uur1L7MTVUddCTU_BL3ElhSPbteoMrmQIg6wnuClOdiCYERz6pNGhHp8.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.196Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iYLL4/yj/l/en_GB/qEOeHJ1lnWr7oxHCf2S8YEtL6B5GwHJzI99a9VdzGQRJm6hDYpKLg7JdNf4hLXwlTy9UgUhUmmDyURZik7zqknCrq5T8Xw5mxH2b-yS-DXd5NVNA9XC5_Bxqkon0UuxC75F1MJLwoHxAuR5YoOkcpo7-31Ix-iigRGwnVDTKQXoqzmxkOwcW6k1wDNgcF0x-QSE-CSebxYTYVo6OtraqL8yCHvLbY9i8SEswjIwVjhEmWtexg2o43V_lX68EuubvXiw-VZ8qtBz4joOt5k3YfAJUDhJC44VuyMkZjqFQuuPy6Qxc1LnZ2s9tZFN_DFGgYYd75UhjGD.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.198Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iB244/yl/l/en_GB/Jj1cB_io0DT3GUMGpYaVzCoclCGfb5wod9zaAhF1GRVmIc7xFoXfrH1xDiqynudifMS1kUC8YBVuhOKoH1Ny0U7TcbpVm3R9yqJvpnuT_THlPUbCzUykkZ7_qr3e52uXg57jXjWWOGSMW8iYTTKuJD9oL7_Dzk8la6q8ZaLR5ukUIXhi6U_EIKBYVSEvh43DHDC7bhmJTCkJ2ZtBxy7e07e28I0I7bZeE6SA13iNf4eg9aaAFTp1zvzaUwxfaULR3GMI39JkXmkTXpdxY519-S6eJpcKdVJ-e0NmeL3T34ZO_n98FhdtV6vzl6VLYmiiPJd6KGzqeF.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.199Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i3VL4/yW/l/en_GB/VwttXw0pzbOaGpLJW0K2NLT78oQzeOcwuRrHeuX4mhtMf7DqPl5o-eRaZINTObhyK8Snfk88c0h4ARz3vd1JAJjZM5fJn5JKuggN8qszoflVFeAqXEFBm47S6whz7CtLuXxOvqDnMMPN02p1VnU_ElPKhu02lATPhQBHAR7-3mbl06_FuZFiPmGUxWsLkz8OGksejRWfYAR1-eMr9_6SJhPCnRJ8NgmpOtQyZlRuwJVXlYhzi07EHWNEHS0dVlrzJSxeZ4knPVLWdlVWGq77oIDc9Qbk7J9KEN3INWQ5AVKmrGXpoNw-wZr_0Fy9A9U2Lrvn-Alqz5.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.200Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iIWU4/yn/l/en_GB/TkTvkCE5_iTjLtBcbPXqZ-ohH_XZCeZBOPIEXPhHcGoujugzl2REEcrQWE9BhzwwRt0VZ2fo2OfEXVxRiy8ktw-69dI2neHPlt1crTiH6ETNhU_Kc17RNPwPtTIL_1ZLqyzr0T7yqEYQs85HxNs24SHhJjHhON7SYRBlGBqo1k-9C80zH9rdrD5sYh9Zrl9DRier_ew3yuSwmm5i4g-AbxQI5zjBgOQs6yqJh4sJ2SeCEvNU0TnJCS2poSjbPLPv-777WqtTS9m_A5UhGEAo-Qsg67lQtClRdqQWit7fGYy6RFVQvBLpyJgh6xNFmwJ6sGRNTC1EdS.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.200Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3isEP4/y7/l/en_GB/52R1WWti3rbwahetYWj2RXGtOR9YH2SGjxcrs4DSpVqQxdIW_ijlEZrIiRqyQ_wA5zq6_oysYzN9nSgZ7eiU29fyRXfCbMoRdLrL84DYQ2eYEJIF9XhTmEVlfVT5cu-EfcWXh8_Sm0iIX4u7ZE8w3XZIw7sMwPclAKiq-Y-cPxTAS5su78x3YqX-IpZARZ4dsX0rs1t31DxAB55MCcrGFmV0MhvCge3H0Dyi2tAkY3uyUGr0Lk0lN1B275lwErnTBQ860vSnTp32rxiQaAD7RaSQvxv7K6eQlMGnDSywSxeSNPS84ovpHq0M3Zz4naOxMkHKwF55bI.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.201Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iVxg4/yG/l/en_GB/mqvsUqRQolCU6DBN8kGp-Yb9tYAryN9-_ZXt_NrFJta5RWtSfignZfsr4SZsZI39YAgTMoF7SbBN_T57bX8VXMPWP3dYSLQmtvv9PTi5JUB_jiy0P6A9LZJh8UPLS7LIUckW8KFeeXSp8ahPvkFrJzYX-eWxAns81y9pOt_XEDSogS4dHesCAvfAf548y46igVHKgY1J7vqkPq31o2NQD25L7y4qPD5FdTjCcNz1H3nk6T9VmNmwq2f1Rc8vvu4w1PnuTIaMfii6mcjzAH2xfu9-329QERB56oHFPf7hUeiXFvY8MiLNpe581xufSjSmde-tcwzRnL.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.202Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3ih9r4/yg/l/en_GB/_LZpF5QDJZDEnmmS-lz0ev1c1IrqNaNO454dsTJRti_zqDKtH-UfTj39SHEQyr9DsPbkp_Z4-rpixbvn8fQaNv4m-X-1jE-ji_OSDDwqt9PdXfWhjtuonofA_Vi-yp_AACiQ7nOxYHeB-FGZiLOv-bRlAl9Dc83rlP9npSYzJSkbm2E2gbyaPfPQ6EvX8vQeCKXZyYQgDiKJpuLbHj2kpJvozg45rtBsV9wYIYGtEe1kBKRWgWlc0uGVIwKwp2bx1kU1VCMgiDYDE9mWPnjQ3bUMb_sKFecGkYiqBc3I20VpGVpWWbcF0KVaBtN_ID5SuIpQn5BxIL.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.203Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y0/r/EAT7j4qdqgEt8tlxtXfydI_FwKCQ5cCDEoKLQWbSer8dzao_10s3BdtxA_mSL2OTtX776nuZyGLJLzwprkDuG8cgKkpzGHIWRyF5fuh8OjL1-9xOdtWh9W1SMocHRAiwhHpTTD1mBmOPahf6Nqe12aDbfK0yFNE5mcACFwkHy5bQsu7_xxJjq52ueLlgEO7wYVlG1svjiYxCuF1zKq_iSWY19l-b2sGyd_37Uj0TPTo7KtVtLU_DRYFayWnuAjp03ENXDH-qN_iBHsBqD1l5CDHsb9GTclOH8v7DFM91ndoVTZkV4WzGH1hznrq386tOFNb1Yk33Ji.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.204Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iqzX4/yJ/l/en_GB/lhG9xK33Gazvjc-EsY4eGRIlcTl3UgiTLpEjGTNLNSd-MhR_3TkMHxkP9dH7nT8m69nNSt3WK4SMsYgonJujjl8pGdehr2F0ySmcJ2mC_55DyVqksDqHNBZUUKEtqoaiCXAbvglXG2lvA2clNWsdgTAHJRXR8Jo_HlTVROlnW8Fo3c54ykXriJ9a6_c8pzboXqPqmVSMVwbwN4C9mGuTTlyDWPA7TNXWTfI4w-m0sufcf7zQQlQk72Kzznst9PdZIrq6QkGtESTuGK087pwDWJVvBze0vPMMdkslY4TyMdk5PnnbidyWNEGHx1WsFd58V9_6hADtPe.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.205Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/NUO_qMEygGdU_Xg_nUIQp8LFpVjnyLimwD8N_h8C3i-sgc7D8ljaKywlDZXVnCsZ0XPxEnUOWkWvliNt3QRXOlHQs9E2yXIaC-lORyuy4_mE8zKeMwiAqe9AwvFzUWn3gpUDaQJpXFcJmnDjdnc7qoMBeu7rXMuTSGZHQ6Gq9kJajNnqK-bdLN3ah1HDiTLsjJf8Rdw4nf8DgP_6JGeiuOBohiECHVw_BGLXVj-wP0p1497-zeu-6FMpx-Qee5ct9xPfj6FOJyUsaW9b_kJxZ4BKt-kqAhLClEYpmjdB-XAZtFuhotjhOfBRuamPOAc4bPq-X9Rtlh.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.208Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i2CM4/yB/l/en_GB/2W44ColOkJkZuaSu_-M7wI_-VNBXgdTi1SMWemN_L5UgSdTu8p1ORemYcfDZJXwmwDOFcl78pkSYKyiJU9sk1o7KitkKfUKbo22mSB2lmKUQxkfT4SEvIRrtuBBA4NUzoS0wVSrqiNBLfEyHZbRMZ-DEEQMqBbGo6Syl03Uaz5TZebbyL5kP41uS9AIKaAha0kTgvG1z4QJZkVE-GtPIZg15fZsx8LQ--7DdT4767rtuDBYFLamRK2Vgf3lQhDqimAhAIw3XeAdROxzc0zrlo2ewHSwOoxVRhzwmuqjycKA5tUyMtHkLufS25N4PnLoHEkD4V_yQ1I.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.209Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iZCG4/y4/l/en_GB/Llzxa86gnLwNVkyP6pRgBQJslTCoMhS8KRMn3J0evTdMaieSo8A45qBBPA_2GeHBK8VY--86o1uXeDVMO4gbzF7DWQ-Md9EuoYCdZYc_IgfiQ606b9PJbCqV_FxhzK607yUWNn8vvr8-t_NHFt4TJLEewrekqy3nQR8YwjzYxmqGujlmeX1pPD5KjfSCkabwF2SZAE7vQWGvw8vAtlGXL6hNFn8Y6HBxVcrUHjLCFjpehSTaRQfV6r0CNzlcY7KLzr7jSBjH88IZOJC_dNqGtNJkHylylzwDrOZ-gBe4qisAJWvS1i2PpM9EqUZHqlBbbfTi7PkmKc.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.211Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3izZr4/yD/l/en_GB/QaNDgybJlDZlaAFuaSsPJqKmQs9LblJEXW9uUsx1BMw7WnkF6dwNvhWRQJS99Ab8JxFPYI53SgtcQY1ZmbKNsW6NSGWh0pMeHZzxVlR3UuK0f-LoSQhSj31vMFC4oobdS3Re_YoDlp9NBAPM_O9kbu1_MTUDjqemd1JPViuLMRDJx7jqdZvweJVzLZYaUuj4oMjE_P9YGBY5wb8Oju7blNkLJOdwnmVdz0nkwqFttujKxObAOHZSdODzJgoWR9aF9vQmZ7tSg2WLg1Fg5qRosTLOI8efdngaanYneYOwlylYdjODyHU2dxTLZB-frpw9ZeA9PzxjeV.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.211Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1zc4/yy/l/en_GB/G-8vDU-8XL3FQEEU-9uCosPh4YV8dWSLV9K_Om4Ea9NCxTXoQuDbpervjnjsDnkD71dY93ff-ziK2FZNDE4KBOjS8xWAeaznsUc3kviCvyVjxrqM9-8KxVBJvgOdUUCElC_PiZBeoiwNdQaASjNIcS4ukiKBVjIIXoTwDjv3NjKnma32PnQNC7JnTB9plHzpj3bQJclWd4c6Y7kEzmUbsMXEyJz0Hz4wgJORuJRufibyIVFnjYH_2BjKzH-62sRw74S8K-fTGo7eBTV5NLRZfr7a_9LTnvNfC6rdLJcqLkB9aFo_t9jm5zFw_GLEi1OzH6MJ7uF5GT.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.213Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i11H4/yd/l/en_GB/6bNZr391Zpy8F5LkiOohC8dtxNgpOF-IUtrvllSgmiojwM1H6zhEp9fY5rwYdTXtBfLD6jTiMTS6MMxeztNE7_0c8TS4KHzXBng_Mo9yLh2sUUig9m1MYc2I7t6t0Ee1zJtBAiAYiXu_yillhMrQt-JD0HPgeqTOt4TWb-MSx2j3u12i85-3IPx4dbNCk3Yx1Zfvc56yFbhN_qaQ3RnveEWLK2sF1GbdwSd7vxyvTL4Co79bZt8hnyDaWbChiFaCQIadbj6QZo-Ubyi2Z_5PExTQDb-FFZNF7eqKzChcEnVA1o8cyJhQ2dfjgmy7OqfRxkHDGUf-BW.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.214Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iR3J4/yj/l/en_GB/ELB7xQe3KJPEyXuqtwpVuOTiz1g0Q19dBiAKwhscrkVlMr-IHSgrKztJJbdgV6_zK37uke7o61kB0ujPXpxqycK87yObCea8nRZV8ue6P4o1BTVpAr6dQoMljvh7e73FosAZGdmMt9NnKFlxeN-Ipoa7xHzLQiXL64I14IeMp-n85gUhd12vZEQe50iFjSiKgevIEHuNE_x2mRUy2KdI_A-qpLlb6Rf3nmoBhIlGNs3GbTyzbwKcaX_BHF4JphwgDA226swBMzrumJJsgEgvv02NhaAkGolvtZq5X3SbtHNst4y7Wxvr5nezJUNSbMyP0PNy6DcJWA.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.215Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iJel4/yJ/l/en_GB/c7nB3vC6RKhhoEem1jn6Yhziyb8bdegOZ.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.216Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iWWe4/yi/l/en_GB/2NEWHIqTx6vmOJPlwqHCJs3p4ifJ0J-wWvAlm_mmqtt0Uv5wthWUNh6S970wIPzyw2F79YUfFY4hWRK_irw19vzfTKvBidb-if1kiN8sIRUfn7LEs_k506rgHVo-PjWtLxP6QnK4QCnRex4uaArXVGgTw3xTEf03ONZU7uVBUPGlf62988FfJ0QNVpU8812eGxnGxqHKa9TwyMDGr2KW45SaLwT97yoMAb4Lzg9Km_mkGe0GrcMW4EMsGj45EqPsj3rotkbZoH4qZJDAqSdZM2qhw_242vS5byqpxobbsUC2ZrxkBZEnQsb8klssvb1NVfPUYa-JkM.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.217Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/7qbNCs-8wxL.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.218Z"
+  },
+  {
+    "url": "data:text/css; charset=utf-8,.orhKlDBu.orhKlDBu%7Bposition%3Aabsolute%7D.edpE.edpE%7Btop%3A3em%7D%23bootloader_CV9MtV6%7Bheight%3A42px%3B%7D",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:23:30.219Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZW52anNvbiIpO2lmKGRhdGFFbGVtZW50IT1udWxsKXt2YXIgY29weVZhcmlhYmxlcz1mdW5jdGlvbihhKXtmb3IodmFyIGIgaW4gdmFyaWFibGVzKWFbYl09dmFyaWFibGVzW2JdfSx2YXJpYWJsZXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCk7d2luZG93LnJlcXVpcmVMYXp5P3dpbmRvdy5yZXF1aXJlTGF6eShbIkVudiJdLGNvcHlWYXJpYWJsZXMpOih3aW5kb3cuRW52PXdpbmRvdy5FbnZ8fHt9LGNvcHlWYXJpYWJsZXMod2luZG93LkVudikpfQovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95TC9yL2RiZ3JNc25EMThwLmpzCg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:23:30.221Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9fYW5ub3RhdG9yPWZ1bmN0aW9uKGEpe3JldHVybiBhfSxfX2Rfc3R1Yj1bXSxfX2Q9ZnVuY3Rpb24oYSxiLGMsZCl7X19kX3N0dWIucHVzaChbYSxiLGMsZF0pfSxfX3JsX3N0dWI9W10scmVxdWlyZUxhenk9ZnVuY3Rpb24oKXtfX3JsX3N0dWIucHVzaChhcmd1bWVudHMpfTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveTIvci9jTWRfU1pvdjlFaS5qcwo=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:23:30.222Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9idGxkcj17fTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveUgvci9aTGNLT2JOdU8xYi5qcwo=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:23:30.222Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiX19lcW1jIik7aWYoZGF0YUVsZW1lbnQhPW51bGwpe3ZhciBwYXJhbXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCksdXJpPXBhcmFtcy51LGV2ZW50X2lkPXBhcmFtcy5lLHNjcmlwdF9wYXRoPXBhcmFtcy5zLHdlaWdodD1wYXJhbXMudyxmYl9kdHNnPXBhcmFtcy5mLGxzZD1wYXJhbXMubDtpZihuYXZpZ2F0b3Iuc2VuZEJlYWNvbil7dmFyIG1hcms9ZnVuY3Rpb24oYSxiKXt2YXIgYz1wJiZwLm5vdz9NYXRoLmZsb29yKHAubm93KCkpOk1hdGgubWF4KERhdGUubm93KCktc3RhcnQsMCk7YT0iZXZlbnRfaWQ9IitldmVudF9pZCsoYT09bnVsbD8iIjoiJm1hcmtlcl9pZD0iK2EpKyImbWFya2VyX3BhZ2VfdGltZT0iK2MrIiZzY3JpcHRfcGF0aD0iK2VuY29kZVVSSUNvbXBvbmVudChzY3JpcHRfcGF0aCkrIiZ3ZWlnaHQ9Iit3ZWlnaHQrKGI/IiZjbGllbnRfc3RhcnQ9MSI6IiIpKyhmYl9kdHNnPyImZmJfZHRzZz0iK2VuY29kZVVSSUNvbXBvbmVudChmYl9kdHNnKToiIikrKGxzZD8iJmxzZD0iK2VuY29kZVVSSUNvbXBvbmVudChsc2QpOiIiKTtjPW5ldyBCbG9iKFthXSx7dHlwZToiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkIn0pO25hdmlnYXRvci5zZW5kQmVhY29uKHVyaSxjKX0sc3RhcnQ9RGF0ZS5ub3coKSxwPXdpbmRvdy5wZXJmb3JtYW5jZTttYXJrKHdlaWdodD4wPyJDbGllbnRTY3JpcHRTdGFydCI6bnVsbCwhMCk7d2VpZ2h0PjAmJndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJiZWZvcmV1bmxvYWQiLGZ1bmN0aW9uKCl7bWFyaygiQ2xpZW50VW5sb2FkIiwhMSl9KX19Ci8vIyBzb3VyY2VVUkw9aHR0cHM6Ly9zdGF0aWMueHguZmJjZG4ubmV0L3JzcmMucGhwL3YzL3lvL3Ivck1qVVYzdGxnNS0uanMK",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:23:30.224Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/qm/?__a=1&__user=0&__comet_req=1&jazoest=21021",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?id=560819949718377",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:23:30.225Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCmZ1bmN0aW9uIHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl7cmV0dXJuIGEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmJvZHkmJmEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmhlYWR9ZnVuY3Rpb24gaXNUYWdTdXBwb3J0ZWQoYSl7cmV0dXJuIGEubm9kZU5hbWU9PT0iU0NSSVBUInx8YS5ub2RlTmFtZT09PSJMSU5LIiYmKChhPWdldE5vZGVEYXRhU2V0KGEpKT09bnVsbD92b2lkIDA6YS5hc3luY0Nzcyl9ZnVuY3Rpb24gZ2V0Tm9kZURhdGFTZXQoYSl7cmV0dXJuIShhLmRhdGFzZXQgaW5zdGFuY2VvZiB3aW5kb3cuRE9NU3RyaW5nTWFwKT9udWxsOmEuZGF0YXNldH1mdW5jdGlvbiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl7dmFyIGI7dHJ5e2lmKGEubm9kZVR5cGUhPT1Ob2RlLkVMRU1FTlRfTk9ERSlyZXR1cm59Y2F0Y2goYSl7cmV0dXJufWlmKHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl8fCFpc1RhZ1N1cHBvcnRlZChhKSlyZXR1cm47dmFyIGM9KGI9Z2V0Tm9kZURhdGFTZXQoYSkpPT1udWxsP3ZvaWQgMDpiLmJvb3Rsb2FkZXJIYXNoO2lmKGMhPW51bGwmJmMhPT0iIil7dmFyIGQ9bnVsbCxlPWZ1bmN0aW9uKCl7d2luZG93Ll9idGxkcltjXT0xLGQ9PW51bGw/dm9pZCAwOmQoKX07ZD1mdW5jdGlvbigpe2EucmVtb3ZlRXZlbnRMaXN0ZW5lcigibG9hZCIsZSksYS5yZW1vdmVFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9O2EuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsZSk7YS5hZGRFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9fShmdW5jdGlvbigpe0FycmF5LmZyb20oZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnc2NyaXB0LGxpbmtbZGF0YS1hc3luYy1jc3M9IjEiXScpKS5mb3JFYWNoKGZ1bmN0aW9uKGEpe3JldHVybiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl9KTt2YXIgYT1uZXcgTXV0YXRpb25PYnNlcnZlcihmdW5jdGlvbihhLGIpe2EuZm9yRWFjaChmdW5jdGlvbihhKXthLnR5cGU9PT0iY2hpbGRMaXN0IiYmQXJyYXkuZnJvbShhLmFkZGVkTm9kZXMpLmZvckVhY2goZnVuY3Rpb24oYSl7YWRkTG9hZEV2ZW50TGlzdGVuZXJzKGEpfSl9KX0pO2Eub2JzZXJ2ZShkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaHRtbCIpWzBdLHthdHRyaWJ1dGVzOiExLGNoaWxkTGlzdDohMCxzdWJ0cmVlOiEwfSl9KSgpOwovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95dS9yL2VtbUZmRnNUVXRELmpzCg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:23:30.226Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=PkJE7kFP6nEQ7kNvgG4azB-&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYArZ-71IjB3AYoHBB60U9elB3BOTqp87qpdC3ru2ei9Wg&oe=6722F116",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:30.477Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iVM74/yo/l/en_GB/BYR2GTVicyJ.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.996Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3idBq4/yp/l/en_GB/qeM2ZKzlwjc.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.998Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yu/r/4G_3S5tchhj.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:30.999Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iqcV4/y6/l/en_GB/t9T-e8XVUlYwJp52nvz1aeRq3l2jJMsZqDk0KKWYcplYuffd1_uhrrnb8F62L-tDMy.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.000Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1ZF4/yg/l/en_GB/Bw5xMKa3qjo.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.001Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/Rg2ccx3CrnY.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.001Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3is7h4/y3/l/en_GB/ZLGG4NKe5TP.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.003Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i9GV4/yj/l/en_GB/PPOgcQ6HUmg.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.003Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689082746216544&__jssesw=1&__req=1&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763815&__user=0&dpr=1&jazoest=21021&lsd=AVoYhwKs2lc&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryCFNNkfVJmcFo2nba",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?id=560819949718377",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "_js_datr=Z5X7ZpeC5aRseR12UTiy-yM_; wd=800x600",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "------WebKitFormBoundaryCFNNkfVJmcFo2nba\r\nContent-Disposition: form-data; name=\"ts\"\r\n\r\n1727763811236\r\n------WebKitFormBoundaryCFNNkfVJmcFo2nba\r\nContent-Disposition: form-data; name=\"q\"\r\n\r\n[{\"app_id\":\"541639493889025\",\"posts\":[[\"falco:bd_pdc_signals\",{\"e\":\"{\\\"asid\\\":\\\"c4ec8215-788e-42c9-afbf-8922ace7fda3\\\",\\\"ct\\\":1659080345,\\\"sjd\\\":\\\"PxM2SVEP0XL7G1NIZPTFtWCSpzuH8TB2b/V9B0HbPH1NkAx3BkTjWe7dLVVgzsbxryoKeVXYQwBfY9rgZ+GunaayXoF8KrBhsQN/I6RYX0Z4Rq+VYt0+srAzSuKkxX868OoGVzR/EqZfxEmlJKFp4EKrz+vCd7w7NdtrmMBaUNI=\\\",\\\"sid\\\":-1}\",\"r\":1,\"d\":\"$^|AcYg_zZn6bs7kzXA5D_Es2Z7d3SBnj8BZsWNt4AUJfUG3bmQkwtA03X9PPrlLVKnGySUAiUVkZhKol9Hagyfhy-FNWZlWpSlAg|fd.AcYR4woq3c1hDyp9yMsg3GQqy3pEREHI1RXTe5tkCVjNkuDo5i-SYzFUKg6VqHEmzp72HAlIrvYmHvgYWFVmSJgj\",\"s\":\"m8haix:56kkb6:0s8d6s\",\"t\":1727763816558.9,\"b\":[1,128]},1727763811235.9,0,538]],\"trigger\":\"falco:bd_pdc_signals\",\"user\":\"0\",\"webSessionId\":\"m8haix:56kkb6:0s8d6s\"}]\r\n------WebKitFormBoundaryCFNNkfVJmcFo2nba--\r\n",
+    "timestamp": "2024-10-01T06:23:31.256Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKs2lc",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=560819949718377",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "_js_datr=Z5X7ZpeC5aRseR12UTiy-yM_; wd=800x600",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=2&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__hsi=7420689082746216544&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5ElyFrwlogwCx25osAwuEee1Kx24E4-1cyXwOwBwa-6E6e2G4EiG14wa23m0w81u8-6U1QU3tg0dnBw1te02VymcwoE03pdg02SVw0gQ80l_808Oyo28w0yuw&__comet_req=1&lsd=AVoYhwKs2lc&jazoest=21021&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763815&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22137755902765130%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:23:31.410Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryFilterContextProviderQuery",
+      "x-fb-lsd": "AVoYhwKs2lc",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=560819949718377",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "_js_datr=Z5X7ZpeC5aRseR12UTiy-yM_; wd=800x600",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=3&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__hsi=7420689082746216544&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5ElyFrwlogwCx25osAwuEee1Kx24E4-1cyXwOwBwa-6E6e2G4EiG14wa23m0w81u8-6U1QU3tg0dnBw1te02VymcwoE03pdg02SVw0gQ80l_808Oyo28w0yuw&__comet_req=1&lsd=AVoYhwKs2lc&jazoest=21021&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763815&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryFilterContextProviderQuery&variables=%7B%22adType%22%3A%22ALL%22%2C%22country%22%3A%22MA%22%2C%22searchType%22%3A%22PAGE%22%2C%22location%22%3Anull%2C%22queryString%22%3Anull%2C%22source%22%3Anull%2C%22sessionId%22%3A%228340d26c-8948-4535-a9a1-cc7281d78c50%22%2C%22viewAllPageId%22%3A%22137755902765130%22%7D&server_timestamps=true&doc_id=6645028345583352",
+    "timestamp": "2024-10-01T06:23:31.411Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/QfOD9Lcf8OO.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:31.412Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/W2AboDws-pP.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:31.413Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/AQgXh4LALZ3.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:31.414Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/o8CuX5i6nae.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:31.414Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/lakvf-vbCaY.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:31.415Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yh/r/pXADmoqqN0T.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.415Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yH/r/c_1vdG88uNh.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.416Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yU/r/zSaFQ46AO2w.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:31.416Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/419723829_122117785334146284_3952411503170370407_n.jpg?stp=dst-jpg_s148x148&_nc_cat=101&ccb=1-7&_nc_sid=c9219a&_nc_ohc=BAvJB0OG1XYQ7kNvgHCCvhg&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCTn7AdbRC2TSj8IYlM5kSvpl6XWZl_DKBg4hV6LijdFg&oe=67017B4B",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.002Z"
+  },
+  {
+    "url": "https://scontent.xx.fbcdn.net/hads-ak-prn2/1487645_6012475414660_1439393861_n.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.003Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yh/r/pXADmoqqN0T.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.003Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yH/r/c_1vdG88uNh.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.005Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/yU/r/zSaFQ46AO2w.woff2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.007Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/CpFtBjsmTWC.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.323Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/CpFtBjsmTWC.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.341Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689082746216544&__jssesw=1&__req=4&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763815&__user=0&dpr=1&jazoest=21021&lsd=AVoYhwKs2lc&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryz6wcWHLWroCY3jKD",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:23:32.344Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKs2lc",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=5&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__hsi=7420689082746216544&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5ElyFrwlogwCx25osAwuEee1Kx24E4-1cyXwOwBwa-6E6e2G4EiG14wa23m0w81u8-6U1QU3tg0dnBw1te02VymcwoE03pdg02SVw0gQ80l_808Oyo28w0yuw&__comet_req=1&lsd=AVoYhwKs2lc&jazoest=21021&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763815&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A137755902765130%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:23:32.378Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461673669_1572444396964485_6836887948847606190_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IY-yjDDeno0Q7kNvgFZuM_F&_nc_ht=scontent.ffez1-2.fna&_nc_gid=Af3poDT1a8CHxWOqRPm3pAr&oh=00_AYBJ-E5RIQZ_OWBv2oi-K-7asIYdeGXVKx45X8yRc4RayA&oe=6701575D",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.378Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461611748_1055656606105214_7502834337077039949_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cott8qYOdO0Q7kNvgGlrClL&_nc_ht=scontent.ffez1-2.fna&_nc_gid=Af3poDT1a8CHxWOqRPm3pAr&oh=00_AYDcD8eSQlK2UqG3bwwXaO4HstZbqyABT4cvnN-BJ16EZA&oe=670150BC",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.390Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKs2lc",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=6&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__hsi=7420689082746216544&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5ElyFrwlogwCx25osAwuEee1Kx24E4-1cyXwOwBwa-6E6e2G4EiG14wa23m0w81u8-6U1QU3tg0dnBw1te02VymcwoE03pdg02SVw0gQ80l_808Oyo28w0yuw&__comet_req=1&lsd=AVoYhwKs2lc&jazoest=21021&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763815&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22137755902765130%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:23:32.414Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461673669_1572444396964485_6836887948847606190_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=IY-yjDDeno0Q7kNvgFZuM_F&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYDAUos-osmUfMGUiAlKJlnfz3MbLKDF8K5iMnI5BMWWPQ&oe=6701575D",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.414Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461611748_1055656606105214_7502834337077039949_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=cott8qYOdO0Q7kNvgGlrClL&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYBptrjkCmuKxBEmaVjZixA51kP3MqeKrPSGT0vGd1hBPA&oe=670150BC",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.424Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/461754975_2437217509805466_3531470306550526548_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=M1S69h_5EGIQ7kNvgFep_tv&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCeZ19fR75DBIosdmngyobynm1bgcxi1xqUyEkKjGauTg&oe=67015129",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.435Z"
+  },
+  {
+    "url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/461706278_8371857372861835_5003453501629919571_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GttHp1R59HkQ7kNvgHfjh_X&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYAWixwXCIy76ODZOBzhsK5an-vHWax3sdc0gmM1bqB6Zg&oe=67016F29",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.437Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/461659643_1052554686524756_7572612561501711185_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=23tK5_V2pSMQ7kNvgGdOMaD&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYBYKNV_BM_4oQLpkug5yoGuKRl_wxnVSxJJXRFIlMzysQ&oe=67014E07",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.438Z"
+  },
+  {
+    "url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/461678196_888841663128952_2472561872359331018_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WEQsajy44eIQ7kNvgETxsxL&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCs9cIrhaznxagGL6tTzwU_txpOMcUj89hGJ9QelQNXzw&oe=67017505",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.438Z"
+  },
+  {
+    "url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/461683550_846211904160462_8012878962880740219_n.jpg?stp=dst-jpg_s60x60&_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yM6bhac66qIQ7kNvgE2hHIR&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYDWgpDXTJAmUHDRi2O066JtJb80JaoQzcf-Kx0HYGXZgA&oe=6701655C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.445Z"
+  },
+  {
+    "url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/461398890_2024938564620338_2783021765594915101_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=C5pXPeE5Qm0Q7kNvgHVRFM-&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCqpLds-5oy-lgyfggk59EJx0y8t3UBK7kH9NbAPY1_jw&oe=670173E4",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.455Z"
+  },
+  {
+    "url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/461611769_846092107740252_3758053183925094631_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yBY_Dv8nJ10Q7kNvgFX1Rpx&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCWXDh5t-nfTXO_VT4QDqXh-M8Xn7rMd-KY6I6ymD8lxA&oe=67017043",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.456Z"
+  },
+  {
+    "url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/461769119_2219152078466201_1330686217612076589_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iY-vL7t4NbwQ7kNvgGG0jq_&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYAdYla9_S3FPOOe3s_qwegCnIHSE1Y7PYawt1wRjbYqdA&oe=67015469",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.467Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461684491_1057211419218813_4478525250406427866_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qrrkk94ZIcUQ7kNvgGcDt8F&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCqmxRQdf6hlzEzJLv14SfUwu20RL8KFPeODizbNdyQgg&oe=67015B9E",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.468Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461722925_1085790213168402_5526976527592244321_n.jpg?stp=dst-jpg_s600x600&_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rVL-yBUxr2UQ7kNvgFt8Zhs&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYBu8RtXiXRx-Qky2kTfykwA1ssYwjuzk7kwt6zRwdyvNw&oe=67014F93",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.469Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/455003574_1260535224935954_7178992818997675547_n.jpg?stp=dst-jpg_s60x60&_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=O6AG9pyfdigQ7kNvgG_Y6B-&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYDpeSZMa8Ix-YoNvcHSujf53d1bnq5Fohm0Zzq5oMuLtA&oe=67017A2D",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.505Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/WSQLzw-ax7p.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.611Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/dwNCRKTsz29.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.611Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/LTa7QIc_1Vj.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.612Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/455295650_506603941953245_4201895123129615968_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QPUPleFlbVsQ7kNvgG_4TMV&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCFS4jgHYbsmHAMvGN5n_pR6xPEP8OkYB6CH8jLt1ocVw&oe=670153C4",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:23:32.613Z"
+  },
+  {
+    "url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/433505282_1612113056274865_8195955400085082982_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wtFknh8UaX8Q7kNvgE5N-9e&_nc_ht=video.ffez2-1.fna&_nc_gid=Af3poDT1a8CHxWOqRPm3pAr&oh=00_AYAtqVTc3sTSF8EBwYokxG34jD80Ugv5-LBSPMLrNUTEEA&oe=6701709C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.734Z"
+  },
+  {
+    "url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/433505282_1612113056274865_8195955400085082982_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wtFknh8UaX8Q7kNvgE5N-9e&_nc_ht=video.ffez2-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYA5gAiZfi3r23DPF3VxdivjV3GGd5d0UF9lOMXVLLUVNg&oe=6701709C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.741Z"
+  },
+  {
+    "url": "https://video.ffez1-1.fna.fbcdn.net/v/t42.1790-2/434169665_386461647500891_5225510544542944075_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wLXp3O1P-KIQ7kNvgFSWbrg&_nc_ht=video.ffez1-1.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYBcvTM0KCWznXY0BY96hT4d17qXg9rtQovL5mlGTZN19A&oe=6701727A",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.753Z"
+  },
+  {
+    "url": "https://video.ffez2-2.fna.fbcdn.net/v/t42.1790-2/434191446_1342076009816643_4326875349373146760_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qxBg3_gNxSoQ7kNvgEEt0Vb&_nc_ht=video.ffez2-2.fna&_nc_gid=AvoHE6r8QgjzOUlvohPCf6j&oh=00_AYCAVJLBugHZU2K7SrzdIvIN6LXYI1bWqC4vYQFyPxpL2g&oe=67015329",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:23:32.753Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689082746216544&__jssesw=1&__req=7&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763815&__user=0&dpr=1&jazoest=21021&lsd=AVoYhwKs2lc&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarylPKAZH854lCF7civ",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:23:33.596Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689082746216544&__jssesw=1&__req=8&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763815&__user=0&dpr=1&jazoest=21021&lsd=AVoYhwKs2lc&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarynrzrRWXX8UKooHiQ",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:23:40.192Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689082746216544&__jssesw=1&__req=9&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763815&__user=0&dpr=1&jazoest=21021&lsd=AVoYhwKs2lc&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundary1juhcTHhGzza9vRY",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "------WebKitFormBoundary1juhcTHhGzza9vRY\r\nContent-Disposition: form-data; name=\"ts\"\r\n\r\n1727763841245\r\n------WebKitFormBoundary1juhcTHhGzza9vRY\r\nContent-Disposition: form-data; name=\"q\"\r\n\r\n[{\"app_id\":\"541639493889025\",\"posts\":[[\"falco:bd_pdc_signals\",{\"e\":\"{\\\"asid\\\":\\\"c4ec8215-788e-42c9-afbf-8922ace7fda3\\\",\\\"ct\\\":1659080345,\\\"sjd\\\":\\\"PxM2SVEP0XL7G1NIZPTFteYIRMcA5dj1YjcsPzs+JA0+Ladbv1JJEaYuhL45eI8wbhI/vghlGNUjbmA0clbwcOVIZsqv7B2LM2/C8GCYE4cgctQ9CUgkwxZd5z3fzf5YOdZjj2puGB82PuhuADWjcCaSGonVPaE0efhJl+OhWCo=\\\",\\\"sid\\\":-1}\",\"r\":1,\"d\":\"$^|AcYg_zZn6bs7kzXA5D_Es2Z7d3SBnj8BZsWNt4AUJfUG3bmQkwtA03X9PPrlLVKnGySUAiUVkZhKol9Hagyfhy-FNWZlWpSlAg|fd.AcYR4woq3c1hDyp9yMsg3GQqy3pEREHI1RXTe5tkCVjNkuDo5i-SYzFUKg6VqHEmzp72HAlIrvYmHvgYWFVmSJgj\",\"s\":\"m8haix:56kkb6:0s8d6s\",\"t\":1727763846570.7002,\"b\":[1,128]},1727763841244.6,0,541]],\"trigger\":\"falco:bd_pdc_signals\",\"user\":\"0\",\"webSessionId\":\"m8haix:56kkb6:0s8d6s\"}]\r\n------WebKitFormBoundary1juhcTHhGzza9vRY--\r\n",
+    "timestamp": "2024-10-01T06:24:01.250Z"
+  },
+  {
+    "url": "https://www.facebook.com/ads/library/?id=1052258586623100",
+    "method": "GET",
+    "headers": {
+      "accept-language": "en-US",
+      "upgrade-insecure-requests": "1",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "dpr": "1",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "viewport-width": "800",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_"
+    },
+    "timestamp": "2024-10-01T06:24:01.297Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/qm/?__a=1&__user=0&__comet_req=1&jazoest=21021",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:24:01.299Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689082746216544&__jssesw=1&__req=a&__rev=1016945397&__s=m8haix%3A56kkb6%3A0s8d6s&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763815&__user=0&dpr=1&jazoest=21021&lsd=AVoYhwKs2lc&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryQwCGsEoAyVpDfNMu",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=560819949718377&media_type=all&search_type=page&view_all_page_id=137755902765130",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:24:01.300Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yR/l/0,cross/vXBhCfCjBrtoNMsgi6k5yOQGGYRfin5CrjzhsG98UuenPRqtrYq7Eqq5EEkTzrjXatA8L537b4cpij_5hcqM_gwpv8oyzQ8Gucy_1-tvm7KkpMJGfTMRvK2xtwMKJtDYbxaThrAFSFoUquV83BzeW9UyB4KcDwJAGrpIe.css",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "text/css,*/*;q=0.1"
+    },
+    "timestamp": "2024-10-01T06:24:01.718Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/tN6JDuFHMcs.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:01.718Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3igys4/ya/l/en_GB/k_fX3emq271445cEvlzdaxKltLEbzH_KDJ8Pr5P-SdciTNgGUnUwl52jER2-apYMhqHUWG2oc-fHv8A0Aru9zrE1vOc1GY6dvvd0x_M_suDD5jqUYRDHrAra-ifeo1is6hE39ttOtxeAjqXV0dIZFh-puEgq4XZ0uxLK8DxtVMrzimBugxqUqU5AStCPJKLafwr_2_YrAB5iY9wPxqPtcVP9oXeRusx7Ki60q9E2Stx0P1iT23cgYC_sQ2jhZGddGd7d7nA67GMjQATso9Uur1L7MTVUddCTU_BL3ElhSPbteoMrmQIg6wnuClOdiCYERz6pNGhHp8.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:01.719Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iYLL4/yj/l/en_GB/qEOeHJ1lnWr7oxHCf2S8YEtL6B5GwHJzI99a9VdzGQRJm6hDYpKLg7JdNf4hLXwlTy9UgUhUmmDyURZik7zqknCrq5T8Xw5mxH2b-yS-DXd5NVNA9XC5_Bxqkon0UuxC75F1MJLwoHxAuR5YoOkcpo7-31Ix-iigRGwnVDTKQXoqzmxkOwcW6k1wDNgcF0x-QSE-CSebxYTYVo6OtraqL8yCHvLbY9i8SEswjIwVjhEmWtexg2o43V_lX68EuubvXiw-VZ8qtBz4joOt5k3YfAJUDhJC44VuyMkZjqFQuuPy6Qxc1LnZ2s9tZFN_DFGgYYd75UhjGD.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:01.719Z"
+  },
+  {
+    "url": "data:text/css; charset=utf-8,.orhKlDBu.orhKlDBu%7Bposition%3Aabsolute%7D.edpE.edpE%7Btop%3A3em%7D%23bootloader_CV9MtV6%7Bheight%3A42px%3B%7D",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:24:01.751Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZW52anNvbiIpO2lmKGRhdGFFbGVtZW50IT1udWxsKXt2YXIgY29weVZhcmlhYmxlcz1mdW5jdGlvbihhKXtmb3IodmFyIGIgaW4gdmFyaWFibGVzKWFbYl09dmFyaWFibGVzW2JdfSx2YXJpYWJsZXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCk7d2luZG93LnJlcXVpcmVMYXp5P3dpbmRvdy5yZXF1aXJlTGF6eShbIkVudiJdLGNvcHlWYXJpYWJsZXMpOih3aW5kb3cuRW52PXdpbmRvdy5FbnZ8fHt9LGNvcHlWYXJpYWJsZXMod2luZG93LkVudikpfQovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95TC9yL2RiZ3JNc25EMThwLmpzCg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:24:01.752Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9fYW5ub3RhdG9yPWZ1bmN0aW9uKGEpe3JldHVybiBhfSxfX2Rfc3R1Yj1bXSxfX2Q9ZnVuY3Rpb24oYSxiLGMsZCl7X19kX3N0dWIucHVzaChbYSxiLGMsZF0pfSxfX3JsX3N0dWI9W10scmVxdWlyZUxhenk9ZnVuY3Rpb24oKXtfX3JsX3N0dWIucHVzaChhcmd1bWVudHMpfTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveTIvci9jTWRfU1pvdjlFaS5qcwo=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:24:01.752Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9idGxkcj17fTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveUgvci9aTGNLT2JOdU8xYi5qcwo=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:24:01.753Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiX19lcW1jIik7aWYoZGF0YUVsZW1lbnQhPW51bGwpe3ZhciBwYXJhbXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCksdXJpPXBhcmFtcy51LGV2ZW50X2lkPXBhcmFtcy5lLHNjcmlwdF9wYXRoPXBhcmFtcy5zLHdlaWdodD1wYXJhbXMudyxmYl9kdHNnPXBhcmFtcy5mLGxzZD1wYXJhbXMubDtpZihuYXZpZ2F0b3Iuc2VuZEJlYWNvbil7dmFyIG1hcms9ZnVuY3Rpb24oYSxiKXt2YXIgYz1wJiZwLm5vdz9NYXRoLmZsb29yKHAubm93KCkpOk1hdGgubWF4KERhdGUubm93KCktc3RhcnQsMCk7YT0iZXZlbnRfaWQ9IitldmVudF9pZCsoYT09bnVsbD8iIjoiJm1hcmtlcl9pZD0iK2EpKyImbWFya2VyX3BhZ2VfdGltZT0iK2MrIiZzY3JpcHRfcGF0aD0iK2VuY29kZVVSSUNvbXBvbmVudChzY3JpcHRfcGF0aCkrIiZ3ZWlnaHQ9Iit3ZWlnaHQrKGI/IiZjbGllbnRfc3RhcnQ9MSI6IiIpKyhmYl9kdHNnPyImZmJfZHRzZz0iK2VuY29kZVVSSUNvbXBvbmVudChmYl9kdHNnKToiIikrKGxzZD8iJmxzZD0iK2VuY29kZVVSSUNvbXBvbmVudChsc2QpOiIiKTtjPW5ldyBCbG9iKFthXSx7dHlwZToiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkIn0pO25hdmlnYXRvci5zZW5kQmVhY29uKHVyaSxjKX0sc3RhcnQ9RGF0ZS5ub3coKSxwPXdpbmRvdy5wZXJmb3JtYW5jZTttYXJrKHdlaWdodD4wPyJDbGllbnRTY3JpcHRTdGFydCI6bnVsbCwhMCk7d2VpZ2h0PjAmJndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJiZWZvcmV1bmxvYWQiLGZ1bmN0aW9uKCl7bWFyaygiQ2xpZW50VW5sb2FkIiwhMSl9KX19Ci8vIyBzb3VyY2VVUkw9aHR0cHM6Ly9zdGF0aWMueHguZmJjZG4ubmV0L3JzcmMucGhwL3YzL3lvL3Ivck1qVVYzdGxnNS0uanMK",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:24:01.754Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/qm/?__a=1&__user=0&__comet_req=1&jazoest=2978",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?id=1052258586623100",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:24:01.757Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCmZ1bmN0aW9uIHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl7cmV0dXJuIGEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmJvZHkmJmEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmhlYWR9ZnVuY3Rpb24gaXNUYWdTdXBwb3J0ZWQoYSl7cmV0dXJuIGEubm9kZU5hbWU9PT0iU0NSSVBUInx8YS5ub2RlTmFtZT09PSJMSU5LIiYmKChhPWdldE5vZGVEYXRhU2V0KGEpKT09bnVsbD92b2lkIDA6YS5hc3luY0Nzcyl9ZnVuY3Rpb24gZ2V0Tm9kZURhdGFTZXQoYSl7cmV0dXJuIShhLmRhdGFzZXQgaW5zdGFuY2VvZiB3aW5kb3cuRE9NU3RyaW5nTWFwKT9udWxsOmEuZGF0YXNldH1mdW5jdGlvbiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl7dmFyIGI7dHJ5e2lmKGEubm9kZVR5cGUhPT1Ob2RlLkVMRU1FTlRfTk9ERSlyZXR1cm59Y2F0Y2goYSl7cmV0dXJufWlmKHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl8fCFpc1RhZ1N1cHBvcnRlZChhKSlyZXR1cm47dmFyIGM9KGI9Z2V0Tm9kZURhdGFTZXQoYSkpPT1udWxsP3ZvaWQgMDpiLmJvb3Rsb2FkZXJIYXNoO2lmKGMhPW51bGwmJmMhPT0iIil7dmFyIGQ9bnVsbCxlPWZ1bmN0aW9uKCl7d2luZG93Ll9idGxkcltjXT0xLGQ9PW51bGw/dm9pZCAwOmQoKX07ZD1mdW5jdGlvbigpe2EucmVtb3ZlRXZlbnRMaXN0ZW5lcigibG9hZCIsZSksYS5yZW1vdmVFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9O2EuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsZSk7YS5hZGRFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9fShmdW5jdGlvbigpe0FycmF5LmZyb20oZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnc2NyaXB0LGxpbmtbZGF0YS1hc3luYy1jc3M9IjEiXScpKS5mb3JFYWNoKGZ1bmN0aW9uKGEpe3JldHVybiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl9KTt2YXIgYT1uZXcgTXV0YXRpb25PYnNlcnZlcihmdW5jdGlvbihhLGIpe2EuZm9yRWFjaChmdW5jdGlvbihhKXthLnR5cGU9PT0iY2hpbGRMaXN0IiYmQXJyYXkuZnJvbShhLmFkZGVkTm9kZXMpLmZvckVhY2goZnVuY3Rpb24oYSl7YWRkTG9hZEV2ZW50TGlzdGVuZXJzKGEpfSl9KX0pO2Eub2JzZXJ2ZShkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaHRtbCIpWzBdLHthdHRyaWJ1dGVzOiExLGNoaWxkTGlzdDohMCxzdWJ0cmVlOiEwfSl9KSgpOwovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95dS9yL2VtbUZmRnNUVXRELmpzCg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:24:01.766Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689214088644398&__jssesw=1&__req=1&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763846&__user=0&dpr=1&jazoest=2978&lsd=AVoYhwKsNGA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarypqAOBSeQnJOg9A6J",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?id=1052258586623100",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "------WebKitFormBoundarypqAOBSeQnJOg9A6J\r\nContent-Disposition: form-data; name=\"ts\"\r\n\r\n1727763841951\r\n------WebKitFormBoundarypqAOBSeQnJOg9A6J\r\nContent-Disposition: form-data; name=\"q\"\r\n\r\n[{\"app_id\":\"541639493889025\",\"posts\":[[\"falco:ods_web_batch\",{\"e\":\"{\\\"batch\\\":{\\\"7173\\\":{\\\"entities.ff_js_web.bd_pdc_signals.541639493889025.0.C3\\\":{\\\"event.logged\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.info.upload_method.banzai.log_critical\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.info.banzai.log_critical.upload_processing\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.uploaded\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.captured\\\":{\\\"n\\\":1,\\\"d\\\":null}}}}}\",\"r\":1,\"d\":\"$^|AcYg_zZn6bs7kzXA5D_Es2Z7d3SBnj8BZsWNt4AUJfUG3bmQkwtA03X9PPrlLVKnGySUAiUVkZhKol9Hagyfhy-FNWZlWpSlAg|fd.AcYR4woq3c1hDyp9yMsg3GQqy3pEREHI1RXTe5tkCVjNkuDo5i-SYzFUKg6VqHEmzp72HAlIrvYmHvgYWFVmSJgj\",\"s\":\"m8haix:56kkb6:c0lu3g\",\"t\":1727763847003.6,\"b\":[1,136]},1727763841951.2,0,620]],\"trigger\":\"falco:ods_web_batch\",\"user\":\"0\",\"webSessionId\":\"m8haix:56kkb6:c0lu3g\"}]\r\n------WebKitFormBoundarypqAOBSeQnJOg9A6J--\r\n",
+    "timestamp": "2024-10-01T06:24:01.955Z"
+  },
+  {
+    "url": "https://scontent.xx.fbcdn.net/hads-ak-prn2/1487645_6012475414660_1439393861_n.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:01.956Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=PkJE7kFP6nEQ7kNvgG4azB-&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYDcNEO0ore_18VKoNFtzsO0pakOWToQw-boXN7Zyh7VrA&oe=6722F116",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:01.976Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsNGA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=1052258586623100",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=2&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__hsi=7420689214088644398&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKUbo5G4EG1Mxu16wciaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqBAV6nm9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00jdo012n400JKo04d205vO02cEC0y8&__comet_req=1&lsd=AVoYhwKsNGA&jazoest=2978&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763846&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22298910780567169%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:24:02.058Z"
+  },
+  {
+    "url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.30808-1/226632961_1279906909134213_1307607119694469256_n.jpg?stp=dst-jpg_s148x148&_nc_cat=108&ccb=1-7&_nc_sid=c9219a&_nc_ohc=rWkRU2dSlNIQ7kNvgFRlg0-&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYDk9D6Gy5rR-UPfPWfyb1fzAj_H-V8RUgxLZxMWcojfLQ&oe=67015D7C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.059Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsNGA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=1052258586623100",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=3&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__hsi=7420689214088644398&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKUbo5G4EG1Mxu16wciaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqBAV6nm9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00jdo012n400JKo04d205vO02cEC0y8&__comet_req=1&lsd=AVoYhwKsNGA&jazoest=2978&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763846&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22298910780567169%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:24:02.290Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryFilterContextProviderQuery",
+      "x-fb-lsd": "AVoYhwKsNGA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=1052258586623100",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=4&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__hsi=7420689214088644398&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKUbo5G4EG1Mxu16wciaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqBAV6nm9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00jdo012n400JKo04d205vO02cEC0y8&__comet_req=1&lsd=AVoYhwKsNGA&jazoest=2978&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763846&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryFilterContextProviderQuery&variables=%7B%22adType%22%3A%22ALL%22%2C%22country%22%3A%22MA%22%2C%22searchType%22%3A%22PAGE%22%2C%22location%22%3Anull%2C%22queryString%22%3Anull%2C%22source%22%3Anull%2C%22sessionId%22%3A%22faf7f85e-d6be-45e4-9523-5c41bb0a48d9%22%2C%22viewAllPageId%22%3A%22298910780567169%22%7D&server_timestamps=true&doc_id=6645028345583352",
+    "timestamp": "2024-10-01T06:24:02.291Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iVM74/yo/l/en_GB/BYR2GTVicyJ.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.319Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3idBq4/yp/l/en_GB/qeM2ZKzlwjc.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.320Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yu/r/4G_3S5tchhj.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.321Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iqcV4/y6/l/en_GB/t9T-e8XVUlYwJp52nvz1aeRq3l2jJMsZqDk0KKWYcplYuffd1_uhrrnb8F62L-tDMy.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.321Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1ZF4/yg/l/en_GB/Bw5xMKa3qjo.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.322Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/Rg2ccx3CrnY.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.323Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3is7h4/y3/l/en_GB/ZLGG4NKe5TP.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.325Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i9GV4/yj/l/en_GB/PPOgcQ6HUmg.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.326Z"
+  },
+  {
+    "url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/457017887_1211326003513806_8739120041500611490_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Gngpi2aC3HEQ7kNvgG7u9kI&_nc_ht=scontent.ffez2-2.fna&oh=00_AYBJOO59xcxElhmpKlYhZBI6ysL55qTJnXMSWdwTLzKaLw&oe=67015D58",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.558Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsNGA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=5&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__hsi=7420689214088644398&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00Rum05QU0bC9oO1yw0dAR00brC013gw1nYw0za9w8y029W&__comet_req=1&lsd=AVoYhwKsNGA&jazoest=2978&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763846&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A298910780567169%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:24:02.569Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/457027864_490725760329234_9161356588391838023_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=e1IjZC1CefIQ7kNvgE6G36k&_nc_ht=scontent.ffez2-1.fna&oh=00_AYAoVoaAh5QsBnS4DmlZKkMDbYatLcNaNeMyhF7Br6L4Zg&oe=6701672B",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.569Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsNGA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=6&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__hsi=7420689214088644398&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00Rum05QU0bC9oO1yw0dAR00brC013gw1nYw0za9w8y029W&__comet_req=1&lsd=AVoYhwKsNGA&jazoest=2978&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763846&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22298910780567169%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:24:02.607Z"
+  },
+  {
+    "url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/457017887_1211326003513806_8739120041500611490_n.jpg?stp=dst-jpg_s60x60&_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Gngpi2aC3HEQ7kNvgG7u9kI&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYBlKrm-IiaB-g3dCBG4LywB_PznxSMGdG7FgoVEcCMm9Q&oe=67015D58",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.608Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/457027864_490725760329234_9161356588391838023_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=e1IjZC1CefIQ7kNvgE6G36k&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYCVBuTGdeZJ31QRouMMiB5X3W9bAWk_h7DSd4Rib2cEHA&oe=6701672B",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.623Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/457097678_1043026130680496_6816069214662714003_n.jpg?stp=dst-jpg_s60x60&_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=7VdwX_O7A_4Q7kNvgFCwXJk&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYBASMImlTLRxRgAuTZzFTsdbZfiDwx1t72wrTz69XiWXw&oe=67015FD0",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.623Z"
+  },
+  {
+    "url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/456913050_1021099152663241_4305086917049057898_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=tS54UECG5r0Q7kNvgHdcDCh&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYDnPX13kNIkIpjKaY-yNnh1s1Y1_vIcplrRtLJy7w8UOA&oe=67016915",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:24:02.671Z"
+  },
+  {
+    "url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/439232671_949169726589262_4673220962051038480_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=VPx6uLbs8ycQ7kNvgHUTOy7&_nc_ht=video.ffez2-1.fna&oh=00_AYCDmWMpDhECSRYz_zss6akG0iZWjcM6zLN757Lb0O0Uyw&oe=6701702C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.679Z"
+  },
+  {
+    "url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/439232671_949169726589262_4673220962051038480_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=VPx6uLbs8ycQ7kNvgHUTOy7&_nc_ht=video.ffez2-1.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYCrkiuJqj5163D2iIgrJzoG5iWn-P-3otRo9JynmCaYxA&oe=6701702C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.680Z"
+  },
+  {
+    "url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/439294206_1479234909333454_8512371584412011147_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NWv_D6RYdboQ7kNvgFh1IWn&_nc_ht=video.ffez2-1.fna&_nc_gid=AzaSQ2fya1cG0oXVZvIfGsD&oh=00_AYDTgKXCPtWh9PnTwb1bRJCeqaNLsR8quBrx6-XHBpinrg&oe=670166E2",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:24:02.680Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689214088644398&__jssesw=1&__req=7&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763846&__user=0&dpr=1&jazoest=2978&lsd=AVoYhwKsNGA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundary3j9ty09hBEUgmr4E",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:24:02.944Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689214088644398&__jssesw=1&__req=8&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763846&__user=0&dpr=1&jazoest=2978&lsd=AVoYhwKsNGA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryL4OmqCgJR06MiYqI",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:24:10.948Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/webstorage/process_keys/?state=1",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "x-fb-lsd": "AVoYhwKsNGA",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "local_storage[_oz_bandwidthEstimate]=8&local_storage[Session]=20&local_storage[hb_timestamp]=13&local_storage[bdz_playback_state]=45&local_storage[_oz_bandwidthAndTTFBSamples]=15&local_storage[ares_last_signal_flush]=13&local_storage[banzai%3Alast_storage_flush]=13&local_storage[signal_flush_timestamp]=13&session_storage[TabId]=6&logtime=1&__aaid=0&__user=0&__a=1&__req=9&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=m8haix%3A56kkb6%3Ac0lu3g&__hsi=7420689214088644398&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00Rum05QU0bC9oO1yw0dAR00brC013gw1nYw0za9w8y029W&__comet_req=1&lsd=AVoYhwKsNGA&jazoest=2978&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763846&__jssesw=1",
+    "timestamp": "2024-10-01T06:24:32.415Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689214088644398&__jssesw=1&__req=a&__rev=1016945397&__s=cuizeh%3A56kkb6%3Ac0lu3g&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763846&__user=0&dpr=1&jazoest=2978&lsd=AVoYhwKsNGA&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarypoe4Grh6L7UQ7PAV",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:24:58.353Z"
+  },
+  {
+    "url": "https://www.facebook.com/ads/library/?id=1084140283146539",
+    "method": "GET",
+    "headers": {
+      "accept-language": "en-US",
+      "upgrade-insecure-requests": "1",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "dpr": "1",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "viewport-width": "800",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_"
+    },
+    "timestamp": "2024-10-01T06:25:00.221Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/qm/?__a=1&__user=0&__comet_req=1&jazoest=2978",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1052258586623100&media_type=all&search_type=page&view_all_page_id=298910780567169",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:25:00.222Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3ih9r4/ye/l/en_GB/_LZpF5QDJZDEnmmS-lz0ev1c1IrqNaNO454dsTJRti_zqDKtH-UfTj39SHEQyr9DsPbkp_Z4-rpixbvn8fQaNv4m-X-1jE-ji_OSDDwqt9PdXfWhjtuonofA_Vi-yp_AACiQ7nOxYHeB-FGZiLOv-bRlAl9Dc83rlP9npSYzJSkbm2E2gbyaPfPQ6EvX8vQeCKXZyYQgDiKJpuLbHj2kpJvozg45rtBsV9wYIYGtEe1kBKRWgWlc0uGVIwKwp2bx1kU1VCMgcGkYiqBc3I2iDYDE9mWPnjQ3bUMb_sKFe0VpGVpWWbcF0KVaBtN_ID5QaNDgybJlDZ.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.536Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/OFNb1Yk33JiLFpVjnyLimwU_Xg_nUIQp8gc7D8ljaKywD8N_h8C3i-slDZXVnCsZ0XPxEnUOWkWvliNt3QRXOlHQKeMwiAqe9AwORyuy4_mE8zs9E2yXIaC-lvFzUWn3gpUDaQJpXFcJmnDjdnc7qoMBeu7rXMuTSGZHQ6Gq9kJajNnqK-bdLN3ah1Hw4nf8DgP_6JDiTLsjJf8RdGeiuOBohiECHVw_BGLXVj-wP0p1497-zeu-6FMpx-Qee5ct9xPfj6FOJyUsaW9b_kJxZ4BKt-kqAhLClEYpmjdB-XAZtFuhotjhOfBRuamPOAc4bPq-X9Rtlh.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.536Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3izZr4/yN/l/en_GB/SuIpQn5BxILlaAFuaSsPJqKmQs9LblJEXWnkF6dwNvhWW9uUsx1BMw7RQJS99Ab8JxFPYI53SgtcQxVlR3UuK0f-Y1ZmbKNsW6NSGWh0pMeHZzFC4oobdS3ReLoSQhSj31vM_YoDlp9NBAPM_O9kbu1_MTUDjqemd1JPViuLMRDJx7jqaUuj4oMjE_PdZvweJVzLZY9YGBY5wb8Oju7blNkLJOdwnmVdz0nkwqFttujKxObAOHZSdODzJgoWR9aF9vQmZ7tSosTLOI8efdng2WLg1Fg5qRylYdjODyHU2gaanYneYOwldxTLZB-frpw9ZeA9PzxjeV.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.537Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i2CM4/yK/l/en_GB/2W44ColOkJkZuaSu_-M7wI_-VNBXgdTi1SMWemN_L5UgSdTu8p1ORemOFcl78pkSYKYcfDZJXwmwDitkKfUKbo22yiJU9sk1o7KmSB2lmKUQxkfT4SEvIRrtuBBA4NUzoS0wVSrqiNBLfEyHZbRMZ-DEEQMqBbGo6Syl03Uaz5TZebbyL5kP41uS9AIKaAha0kTgvG1z4QJZkVE-GtPIZg15fZsx8LQ--7DdT4767rtuDBYFLaDqimAhAIw3XmRK2Vgf3lQheAdROxzc0zrlo2ewHSwOoxKA5tUyMtHkLVRhzwmuqjycufS25N4PnLoHEkD4V_yQ1I.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.538Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iVxg4/y4/l/en_GB/mqvsUqRQolCU6DBN8kGp-Yb9tYAryN9-_ZXt_NrFJta5RWtSfignZfsr4SZsZI39YAgTMoF7SbBN_P3dYSLQmtvvT57bX8VXMPW9PTi5JUB_jiy0P6A9LZJh8UPLS7LIUckW8KFeeXSp8ahPvkFrJzYX-eWxAns81y9pOt_XEDSogS4dHesCAvfAf548y46igVHKgY1J7vqkPq31o2NQD25L7y4qPD5FdTjCcNz1H3nk6T9VmNmwq2f1Rc8vvu4w1PnuTIaMfii6mcjzAH2xfu9-329QERB56oHFPf7hUeiXFvY8MiLNpe581xufSjSmde-tcwzRnL.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.538Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iB244/yn/l/en_GB/Jj1cB_io0DT3GUMGpYaVzCoclCGfb5wod9zaAhF1GRVmIc7xFoXfrH1xDiqynudifMS1kUC8YBVuhOKoH1Ny0U7TcbpVm3R9yqJvpnuT_THlPUbCzUykkZ7_qr3e52uXg57jXjWWOGSMW8iYTTKuJD9oL7_Dzk8la6q8ZaLR5ukUIXhi6U_EIKBYVSEvh43DHDC7bhmJTCkJ2ZtBxy7e07e28I0I7bZeE6SA13iNf4eg9aaAFTp1zvzaUwxfaULR3GMI39JkXmkTXpdxY51J-e0NmeL3T39-S6eJpcKdV4ZO_n98FhdtV6vzl6VLYmiiPJd6KGzqeF.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.539Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i3VL4/yW/l/en_GB/VwttXw0pzbOaGpLJW0K2NLT78oQzeOcwuRrHeuX4mhtMf7DqPl5o-eRaZINTObhyK8Snfk88c0h4ARz3vd1JAJjZM5fJn5JKuggN8qszoflVFeAqXEFBm47S6whz7CtLuXxOvqDnMMPN02p1VnU_ElPKhu02lATPhQBHAR7-3mbl06_FuZFiPmGUxWsLkz8OGksejRWfYAR1-eMr9_6SJhPCnRJ8NgmpOtQyZlRuwJVXlYhzi07EHWNEHS0dVlrzJSxeZ4knPVLWdlVWGq77oIDc9Qbk7J9KEN3INWQ5AVKmrGXpoNw-wZr_0Fy9A9U2Lrvn-Alqz5.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.539Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iZCG4/ys/l/en_GB/Llzxa86gnLwNVkyP6pRgBQJslTCoMhS8KRMn3J0evTdMaieSo8A45qBBPA_2GeHBK8VY--86o1uXeDVMO4gbzF7DWQ-Md9EuoYCdZYc_IgfiQ606b9PJbCqV_FxhzK607yUWNn8vvr8-t_NHFt4TJLEewrekqy3nQR8YwjzYxmqGujlmeX1pPD5KjfSCkabwF2SZAE7vQWGvw8vAtlGXL6hNFn8Y6HBxVcrUHjLfV6r0CNzlcYCFjpehSTaRQ7KLzr7jSBjH88IZOJC_dNqGtNJkHylylzwDrOZ-gBe4qisAJWvS1i2PpM9EqUZHqlBbbfTi7PkmKc.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.540Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iIWU4/yn/l/en_GB/TkTvkCE5_iTjLtBcbPXqZ-ohH_XZCeZBOPIEXPhHcGoujugzl2REEcrQWE9BhzwwRt0VZ2fo2OfEXVxRiy8ktw-69dI2neHPlt1crTiH6ETNhU_Kc17RNPwPtTIL_1ZLqyzr0T7yqEYQs85HxNs24SHhJjHhON7SYRBlGBqo1k-9C80zH9rdrD5sYh9Zrl9DRier_ew3yuSwmm5i4g-AbxQI5zjBgOQs6yqJh4sJ2SeCEvNU0TnJCS2poSjbPLPv-777WqtTS9m_A5UhGEAo-Qsg67lQtClRdqQWit7fGYy6RFVQvBLpyJgh6xNFmwJ6sGRNTC1EdS.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.540Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3ixgX4/yn/l/en_GB/ELB7xQe3KJPEyXuqtwpVuOTiz1g0Q19dBMr-IHSgrKztiAKwhscrkVlJJbdgV6_zK37uke7o61kB0ujPXpxqycK87yObCea8nRZV8ue6P4o1BTVpAr6dQoMljvh7e73FosAZGdmMt9NnKFlxeN-Ipoa7xHzLQiXL64I14IeMp-n85gUhd12vZEQe50iFjSiKgevIEHuNE_x2mRUy2KdI_A-qpLlb6Rf3nmoBhIlGNs3GbTyzbwKcaX_BHF4JphwgDA226swBMzrumJJsgEgvv02NhaAkGolvtZq5X3Sbt5nezJUNSbMyHNst4y7WxvrP0PNy6DcJWA.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.540Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iqzX4/yJ/l/en_GB/lhG9xK33Gazvjc-EsY4eGRIlcTl3UgiTLpEjGTNLNSd-MhR_3TkMHxkP9dH7nT8m69nNSt3WK4SMsYgonJujjl8pGdehr2F0ySmcJ2mC_55DyVqksDqHNBZUUKEtqoaiCXAbvglXG2lvA2clNWsdgTAHJRXR8Jo_HlTVROlnW8Fo3c54ykXriJ9a6_c8pzboXqPqmVSMVwbwN4C9mGuTTlyDWPA7TNXWTfI4w-m0sufcf7zQQlQk72Kzznst9PdZIrq6QkGtESTuGK087pwDWJVvBze0vPMMdkslY4TyMdk5PnnbidyWNEGHx1WsFd58V9_6hADtPe.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.541Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iYLL4/yX/l/en_GB/qEOeHJ1lnWr7oxHCf2S8YEtL6B5GwHJzI99a9VdzGQRJm6hDYpKLg7J9UgUhUmmDyUdNf4hLXwlTyRZik7zqknCrq5T8Xw5mxH2b-yS-DXd5NVNA9XC5_Bxqkon0UuxC75F1MJLwoHxAuR5YoOkcpo7-31Ix-iigRGwnVDTKQXoqzmxkcF0x-QSE-CSOwcW6k1wDNgebxYTYVo6OtraqL8yCHvLbY9i8SEswjIwVjhEmWtexg2o43V_lX68EuubvXiw-VZ8qtBz4joOt5k3YfAJUDhJC44VuyMkZjqFQuuPy6Qxc1LnZ2s9tZFN_DFGgYYd75UhjGD.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.541Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1zc4/yS/l/en_GB/G-8vDU-8XL3FQEEU-9uCosPh4YV8dWSLV9K_Om4Ea9NCxTXoQuDbpervjnjsDnkD71FZNDE4KBOjSdY93ff-ziK28xWAeaznsUc3kviCvyVjxrqM9-8KxVBJvASjNIcS4ukiiZBeoiwNdQagOdUUCElC_PKBVjIIXoTwDjv3NjKnma32PnQNC7JnTB9lWd4c6Y7kEzplHzpj3bQJcmUbsMXEyJz0Hz4wgJORuJRufibyIVFnjYH_2BjKzH-62sRw74S8K-fTGo7eBTV5NLRZfr7a_9LTnvNfC6rdLJcqLkB9aFo_t9jmzH6MJ7uF5GT5zFw_GLEi1O.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.541Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3izCE4/yg/l/en_GB/52R1WWti3rbwahetYWj2RXGtOR9YH2SGjxcrs4DSpVqQxdIW_ijlEZrIiRqyQ_wA5zq6_oysYzN9nSgZ7eiU29fyRXfCbMoRdLrIF9XhTmEVlfL84DYQ2eYEJVT5cu-EfcWXh8_Sm0iIX4u7ZE8w3XZIw7sMwPclAKiq-Y-cPxTAS5su78x3YqX-IpZARZ4dsX0rs1t31DxAB55MCcrGFmV0MhvCge3H0Dyi2tA0lN1B275lwEkY3uyUGr0LkTp32rxiQaADrnTBQ860vSn7RaSQvxv7K6eQlMGnDSywSxeSNPS84ovpxMkHKwF55bIHq0M3Zz4naO.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.542Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/EAT7j4qdqgEt8tlxtXfydI_FwKCQ5cCDEoKLQWbSer8dzao_10s3BdtxA_mSL2OTtX776nuZyGLJLzwprkDuG8cgKkpzGHIWRyF5fuh8OjL1-9xOdtWh9W1SMocHRAiwhHpTTD1mBmOPahf6Nqe12aDbfK0yFNE5mcACFwkHy5bQsu7_xxJjq52ueLlvjiYxCuF1zKgEO7wYVlG1sq_iSWY19l-bTPTo7KtVtLU2sGyd_37Uj0_DRYFayWnuAjp03ENXDH-q5CDHsb9GTclN_iBHsBqD1lOH8v7DFM91ndoVTZkV4WzGH1hznrq386tNUO_qMEygGd.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.542Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iazB4/yq/l/en_GB/6bNZr391Zpy8F5LkiOohC8dtxNgpOF-IUtrvllSgmiojwM1H6zhEp9fY5rwYdTXtBfLD6jTiMTS6MMxeztNE7_0c8TS4KHzXBng_Mo9yLh2sUUig9m1MYc2I7t6t0Ee1zJtBAiAYiXu_yillhMrQt-JD0HPgeqTOt4TWb-MSx2j3u12i85-3IPx4dbNCk3Yx1Zfvc56yFbhN_qaQ3RnveEWLK2sF1GbdwSd7vxyvTL4Co79bZt8hnyDaWbChiFaCQIadbj6QZo-Ubyi2Z_5PExTQDb-FFZNF7eqKzChcE2dfjgmy7OqfnVA1o8cyJhQRxkHDGUf-BW.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.543Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iJel4/yJ/l/en_GB/c7nB3vC6RKhhoEem1jn6Yhziyb8bdegOZ.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.544Z"
+  },
+  {
+    "url": "data:text/css; charset=utf-8,.orhKlDBu.orhKlDBu%7Bposition%3Aabsolute%7D.edpE.edpE%7Btop%3A3em%7D%23bootloader_CV9MtV6%7Bheight%3A42px%3B%7D",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:25:00.545Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZW52anNvbiIpO2lmKGRhdGFFbGVtZW50IT1udWxsKXt2YXIgY29weVZhcmlhYmxlcz1mdW5jdGlvbihhKXtmb3IodmFyIGIgaW4gdmFyaWFibGVzKWFbYl09dmFyaWFibGVzW2JdfSx2YXJpYWJsZXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCk7d2luZG93LnJlcXVpcmVMYXp5P3dpbmRvdy5yZXF1aXJlTGF6eShbIkVudiJdLGNvcHlWYXJpYWJsZXMpOih3aW5kb3cuRW52PXdpbmRvdy5FbnZ8fHt9LGNvcHlWYXJpYWJsZXMod2luZG93LkVudikpfQovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95TC9yL2RiZ3JNc25EMThwLmpzCg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:25:00.546Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9fYW5ub3RhdG9yPWZ1bmN0aW9uKGEpe3JldHVybiBhfSxfX2Rfc3R1Yj1bXSxfX2Q9ZnVuY3Rpb24oYSxiLGMsZCl7X19kX3N0dWIucHVzaChbYSxiLGMsZF0pfSxfX3JsX3N0dWI9W10scmVxdWlyZUxhenk9ZnVuY3Rpb24oKXtfX3JsX3N0dWIucHVzaChhcmd1bWVudHMpfTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveTIvci9jTWRfU1pvdjlFaS5qcwo=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:25:00.547Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9idGxkcj17fTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy54eC5mYmNkbi5uZXQvcnNyYy5waHAvdjMveUgvci9aTGNLT2JOdU8xYi5qcwo=",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:25:00.548Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiX19lcW1jIik7aWYoZGF0YUVsZW1lbnQhPW51bGwpe3ZhciBwYXJhbXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCksdXJpPXBhcmFtcy51LGV2ZW50X2lkPXBhcmFtcy5lLHNjcmlwdF9wYXRoPXBhcmFtcy5zLHdlaWdodD1wYXJhbXMudyxmYl9kdHNnPXBhcmFtcy5mLGxzZD1wYXJhbXMubDtpZihuYXZpZ2F0b3Iuc2VuZEJlYWNvbil7dmFyIG1hcms9ZnVuY3Rpb24oYSxiKXt2YXIgYz1wJiZwLm5vdz9NYXRoLmZsb29yKHAubm93KCkpOk1hdGgubWF4KERhdGUubm93KCktc3RhcnQsMCk7YT0iZXZlbnRfaWQ9IitldmVudF9pZCsoYT09bnVsbD8iIjoiJm1hcmtlcl9pZD0iK2EpKyImbWFya2VyX3BhZ2VfdGltZT0iK2MrIiZzY3JpcHRfcGF0aD0iK2VuY29kZVVSSUNvbXBvbmVudChzY3JpcHRfcGF0aCkrIiZ3ZWlnaHQ9Iit3ZWlnaHQrKGI/IiZjbGllbnRfc3RhcnQ9MSI6IiIpKyhmYl9kdHNnPyImZmJfZHRzZz0iK2VuY29kZVVSSUNvbXBvbmVudChmYl9kdHNnKToiIikrKGxzZD8iJmxzZD0iK2VuY29kZVVSSUNvbXBvbmVudChsc2QpOiIiKTtjPW5ldyBCbG9iKFthXSx7dHlwZToiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkIn0pO25hdmlnYXRvci5zZW5kQmVhY29uKHVyaSxjKX0sc3RhcnQ9RGF0ZS5ub3coKSxwPXdpbmRvdy5wZXJmb3JtYW5jZTttYXJrKHdlaWdodD4wPyJDbGllbnRTY3JpcHRTdGFydCI6bnVsbCwhMCk7d2VpZ2h0PjAmJndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJiZWZvcmV1bmxvYWQiLGZ1bmN0aW9uKCl7bWFyaygiQ2xpZW50VW5sb2FkIiwhMSl9KX19Ci8vIyBzb3VyY2VVUkw9aHR0cHM6Ly9zdGF0aWMueHguZmJjZG4ubmV0L3JzcmMucGhwL3YzL3lvL3Ivck1qVVYzdGxnNS0uanMK",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:25:00.548Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/qm/?__a=1&__user=0&__comet_req=1&jazoest=21061",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "application/x-www-form-urlencoded",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?id=1084140283146539",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:25:00.549Z"
+  },
+  {
+    "url": "data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCmZ1bmN0aW9uIHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl7cmV0dXJuIGEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmJvZHkmJmEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmhlYWR9ZnVuY3Rpb24gaXNUYWdTdXBwb3J0ZWQoYSl7cmV0dXJuIGEubm9kZU5hbWU9PT0iU0NSSVBUInx8YS5ub2RlTmFtZT09PSJMSU5LIiYmKChhPWdldE5vZGVEYXRhU2V0KGEpKT09bnVsbD92b2lkIDA6YS5hc3luY0Nzcyl9ZnVuY3Rpb24gZ2V0Tm9kZURhdGFTZXQoYSl7cmV0dXJuIShhLmRhdGFzZXQgaW5zdGFuY2VvZiB3aW5kb3cuRE9NU3RyaW5nTWFwKT9udWxsOmEuZGF0YXNldH1mdW5jdGlvbiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl7dmFyIGI7dHJ5e2lmKGEubm9kZVR5cGUhPT1Ob2RlLkVMRU1FTlRfTk9ERSlyZXR1cm59Y2F0Y2goYSl7cmV0dXJufWlmKHBhcmVudElzTm90SGVhZE5vckJvZHkoYSl8fCFpc1RhZ1N1cHBvcnRlZChhKSlyZXR1cm47dmFyIGM9KGI9Z2V0Tm9kZURhdGFTZXQoYSkpPT1udWxsP3ZvaWQgMDpiLmJvb3Rsb2FkZXJIYXNoO2lmKGMhPW51bGwmJmMhPT0iIil7dmFyIGQ9bnVsbCxlPWZ1bmN0aW9uKCl7d2luZG93Ll9idGxkcltjXT0xLGQ9PW51bGw/dm9pZCAwOmQoKX07ZD1mdW5jdGlvbigpe2EucmVtb3ZlRXZlbnRMaXN0ZW5lcigibG9hZCIsZSksYS5yZW1vdmVFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9O2EuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsZSk7YS5hZGRFdmVudExpc3RlbmVyKCJlcnJvciIsZSl9fShmdW5jdGlvbigpe0FycmF5LmZyb20oZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnc2NyaXB0LGxpbmtbZGF0YS1hc3luYy1jc3M9IjEiXScpKS5mb3JFYWNoKGZ1bmN0aW9uKGEpe3JldHVybiBhZGRMb2FkRXZlbnRMaXN0ZW5lcnMoYSl9KTt2YXIgYT1uZXcgTXV0YXRpb25PYnNlcnZlcihmdW5jdGlvbihhLGIpe2EuZm9yRWFjaChmdW5jdGlvbihhKXthLnR5cGU9PT0iY2hpbGRMaXN0IiYmQXJyYXkuZnJvbShhLmFkZGVkTm9kZXMpLmZvckVhY2goZnVuY3Rpb24oYSl7YWRkTG9hZEV2ZW50TGlzdGVuZXJzKGEpfSl9KX0pO2Eub2JzZXJ2ZShkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaHRtbCIpWzBdLHthdHRyaWJ1dGVzOiExLGNoaWxkTGlzdDohMCxzdWJ0cmVlOiEwfSl9KSgpOwovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLnh4LmZiY2RuLm5ldC9yc3JjLnBocC92My95dS9yL2VtbUZmRnNUVXRELmpzCg==",
+    "method": "GET",
+    "headers": {
+      "referer": "",
+      "origin": "https://www.facebook.com",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    "timestamp": "2024-10-01T06:25:00.549Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689468376494099&__jssesw=1&__req=1&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763905&__user=0&dpr=1&jazoest=21061&lsd=AVoYhwKsPjo&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundary1XlB2NbGD8t9OkEB",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?id=1084140283146539",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "------WebKitFormBoundary1XlB2NbGD8t9OkEB\r\nContent-Disposition: form-data; name=\"ts\"\r\n\r\n1727763900645\r\n------WebKitFormBoundary1XlB2NbGD8t9OkEB\r\nContent-Disposition: form-data; name=\"q\"\r\n\r\n[{\"app_id\":\"541639493889025\",\"posts\":[[\"falco:ods_web_batch\",{\"e\":\"{\\\"batch\\\":{\\\"7173\\\":{\\\"entities.ff_js_web.web_time_spent_bit_array.541639493889025.0.C3\\\":{\\\"event.logged\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.info.upload_method.banzai.log_immediately\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.info.banzai.log_immediately.upload_processing\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.uploaded\\\":{\\\"n\\\":1,\\\"d\\\":null},\\\"event.captured\\\":{\\\"n\\\":1,\\\"d\\\":null}}}}}\",\"r\":1,\"d\":\"$^|AcYg_zZn6bs7kzXA5D_Es2Z7d3SBnj8BZsWNt4AUJfUG3bmQkwtA03X9PPrlLVKnGySUAiUVkZhKol9Hagyfhy-FNWZlWpSlAg|fd.AcYR4woq3c1hDyp9yMsg3GQqy3pEREHI1RXTe5tkCVjNkuDo5i-SYzFUKg6VqHEmzp72HAlIrvYmHvgYWFVmSJgj\",\"s\":\"cuizeh:56kkb6:nbmtwe\",\"t\":1727763905781.4502,\"b\":[1,136]},1727763900645.4,0,639]],\"trigger\":\"falco:ods_web_batch\",\"user\":\"0\",\"webSessionId\":\"cuizeh:56kkb6:nbmtwe\"}]\r\n------WebKitFormBoundary1XlB2NbGD8t9OkEB--\r\n",
+    "timestamp": "2024-10-01T06:25:00.650Z"
+  },
+  {
+    "url": "https://scontent.xx.fbcdn.net/hads-ak-prn2/1487645_6012475414660_1439393861_n.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:00.650Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c379.0.1290.1290a_cp0_dst-jpg_s50x50&_nc_cat=1&ccb=1-7&_nc_sid=2f7377&_nc_ohc=PkJE7kFP6nEQ7kNvgG4azB-&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ALJz28t-m8Br8QOj5Opbn55&oh=00_AYB0dZ9MwZtfT_6FPnYNwF00TDVrnjVBxi6-1XXJ4fXLAA&oe=6722F116",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:00.652Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsPjo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=1084140283146539",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=2&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__hsi=7420689468376494099&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKUbo5G4EG1Mxu16wciaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqBAV6nm9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00jdo012n400JKo04d205vO02cEC0y8&__comet_req=1&lsd=AVoYhwKsPjo&jazoest=21061&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763905&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22602563393163238%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:25:00.689Z"
+  },
+  {
+    "url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.30808-1/339089435_130630973198173_446323171319890209_n.jpg?stp=dst-jpg_s148x148&_nc_cat=1&ccb=1-7&_nc_sid=c9219a&_nc_ohc=pRs5DtZde9oQ7kNvgGIU7l6&_nc_ht=scontent.ffez2-1.fna&_nc_gid=ALJz28t-m8Br8QOj5Opbn55&oh=00_AYAi1Y07i18OLYHn-g6ekb_wd0vCqsMI2LOvC4GvzeSaqg&oe=670160B7",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:00.690Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryFilterContextProviderQuery",
+      "x-fb-lsd": "AVoYhwKsPjo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=1084140283146539",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=3&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__hsi=7420689468376494099&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKUbo5G4EG1Mxu16wciaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqBAV6nm9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00jdo012n400JKo04d205vO02cEC0y8&__comet_req=1&lsd=AVoYhwKsPjo&jazoest=21061&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763905&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryFilterContextProviderQuery&variables=%7B%22adType%22%3A%22ALL%22%2C%22country%22%3A%22MA%22%2C%22searchType%22%3A%22PAGE%22%2C%22location%22%3Anull%2C%22queryString%22%3Anull%2C%22source%22%3Anull%2C%22sessionId%22%3A%2249a664ba-8a93-4051-843f-d7f963ce345c%22%2C%22viewAllPageId%22%3A%22602563393163238%22%7D&server_timestamps=true&doc_id=6645028345583352",
+    "timestamp": "2024-10-01T06:25:00.797Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsPjo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?id=1084140283146539",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=4&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__hsi=7420689468376494099&__dyn=7xe6EiwgUCdwn8K2Wmh0MBwCwpUnwgU6C7UW3K4EowNwcy2q0_EtxG4o0B-qbwgE7R046xO2O1VwBwXwEwgo9o1vohwGwQwoEcE2ygao1aU6i588Egz898mwoHwrUcUjwGzE2VKUbo5G4EG1Mxu16wciaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqBAV6nm9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00jdo012n400JKo04d205vO02cEC0y8&__comet_req=1&lsd=AVoYhwKsPjo&jazoest=21061&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763905&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A%22602563393163238%22%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:25:00.912Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iVM74/yo/l/en_GB/BYR2GTVicyJ.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.941Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3idBq4/yp/l/en_GB/qeM2ZKzlwjc.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.941Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yu/r/4G_3S5tchhj.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.942Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3iqcV4/y6/l/en_GB/t9T-e8XVUlYwJp52nvz1aeRq3l2jJMsZqDk0KKWYcplYuffd1_uhrrnb8F62L-tDMy.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.942Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i1ZF4/yg/l/en_GB/Bw5xMKa3qjo.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.943Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/Rg2ccx3CrnY.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.943Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3is7h4/y3/l/en_GB/ZLGG4NKe5TP.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.944Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3i9GV4/yj/l/en_GB/PPOgcQ6HUmg.js",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:00.944Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsPjo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=5&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__hsi=7420689468376494099&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00Rum05QU0bC9oO1yw0dAR00brC013gw1nYw0za9w8y029W&__comet_req=1&lsd=AVoYhwKsPjo&jazoest=21061&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763905&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A602563393163238%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:25:01.148Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461701498_903712481628426_9067249978638903905_n.jpg?stp=dst-jpg_s60x60&_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=LKaCjwdfdSUQ7kNvgGr0OPs&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AaZ_3J-EQ8EM9eBjpzPvCCH&oh=00_AYAcqkBcDwOtazAO311iDv5d0_n5epp2OyOGzo6eRY9IQg&oe=6701556C",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:01.149Z"
+  },
+  {
+    "url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/461774742_8361772357263356_5932075991365156763_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=y4aCWEayaKgQ7kNvgG9__pK&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AaZ_3J-EQ8EM9eBjpzPvCCH&oh=00_AYB0hFvaT14nQ3kDOtQHSfzY-a2sYaRFyQrrIM0egsPnfg&oe=67017316",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:01.159Z"
+  },
+  {
+    "url": "https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/dwNCRKTsz29.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "origin": "https://www.facebook.com",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:01.193Z"
+  },
+  {
+    "url": "https://www.facebook.com/images/ads/politics/archive/empty-state_overfiltering_3x.png",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_"
+    },
+    "timestamp": "2024-10-01T06:25:01.194Z"
+  },
+  {
+    "url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/461795039_1678511619663095_545093609107503173_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UN9IR7e2J1MQ7kNvgEXSvna&_nc_ht=video.ffez2-1.fna&_nc_gid=AaZ_3J-EQ8EM9eBjpzPvCCH&oh=00_AYBLemnZdfzRTNdZ3grM_gwUy4RcM7ChJrw9i6S8UEx7ww&oe=67017398",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-encoding": "identity;q=1, *;q=0",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "referer": "https://www.facebook.com/",
+      "range": "bytes=0-",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*"
+    },
+    "timestamp": "2024-10-01T06:25:01.199Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689468376494099&__jssesw=1&__req=6&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763905&__user=0&dpr=1&jazoest=21061&lsd=AVoYhwKsPjo&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryVfXGKFbUzCl9dBLE",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:25:01.642Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryAdDetailsV2Query",
+      "x-fb-lsd": "AVoYhwKsPjo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=7&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__hsi=7420689468376494099&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00Rum05QU0bC9oO1yw0dAR00brC013gw1nYw0za9w8y029W&__comet_req=1&lsd=AVoYhwKsPjo&jazoest=21061&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763905&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryAdDetailsV2Query&variables=%7B%22adArchiveID%22%3A1084140283146539%2C%22pageID%22%3A602563393163238%2C%22country%22%3A%22MA%22%2C%22sessionID%22%3A%2249a664ba-8a93-4051-843f-d7f963ce345c%22%2C%22source%22%3Anull%2C%22isAdNonPolitical%22%3Atrue%2C%22isAdNotAAAEligible%22%3Afalse%7D&server_timestamps=true&doc_id=8422900291076880",
+    "timestamp": "2024-10-01T06:25:05.566Z"
+  },
+  {
+    "url": "https://www.facebook.com/api/graphql/",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "x-fb-friendly-name": "AdLibraryPageHoverCardQuery",
+      "x-fb-lsd": "AVoYhwKsPjo",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "x-asbd-id": "129477",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "postData": "av=0&__aaid=0&__user=0&__a=1&__req=8&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=GOOD&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__hsi=7420689468376494099&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=gDNq8z4nqLAV6_m9Al5rRmAJeqqQiAjh698-XzLICA4eqUyGLx-5EqBBK1lx22q48lxOi1WwUU6W48iwjU4ObK3a2m0HUqwoUaEixaE4i0E8do20w5UzUrw7jwdR00Rum05QU0bC9oO1yw0dAR00brC013gw1nYw0za9w8y029W&__comet_req=1&lsd=AVoYhwKsPjo&jazoest=21061&__spin_r=1016945397&__spin_b=trunk&__spin_t=1727763905&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryPageHoverCardQuery&variables=%7B%22pageID%22%3A602563393163238%7D&server_timestamps=true&doc_id=6453683764688391",
+    "timestamp": "2024-10-01T06:25:05.843Z"
+  },
+  {
+    "url": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.35426-6/461756632_3859111410998941_1265225522085355388_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KHVUMze_vbQQ7kNvgG0CC0V&_nc_ht=scontent.ffez1-2.fna&_nc_gid=AaZ_3J-EQ8EM9eBjpzPvCCH&oh=00_AYA-HbLTL2aUJhVAN0BnJIKWX9vBMWum4PXp_3glJiOubg&oe=67017D87",
+    "method": "GET",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "referer": "https://www.facebook.com/",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+    },
+    "timestamp": "2024-10-01T06:25:05.854Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689468376494099&__jssesw=1&__req=9&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763905&__user=0&dpr=1&jazoest=21061&lsd=AVoYhwKsPjo&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarydWlu3PWjvzOlhM0b",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:25:07.041Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689468376494099&__jssesw=1&__req=a&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763905&__user=0&dpr=1&jazoest=21061&lsd=AVoYhwKsPjo&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryEoECztN5xKQpaUKV",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:25:08.052Z"
+  },
+  {
+    "url": "https://www.facebook.com/ajax/bz?__a=1&__aaid=0&__ccg=GOOD&__comet_req=1&__hs=19997.HYP%3Acomet_plat_default_pkg.2.1..0.0&__hsi=7420689468376494099&__jssesw=1&__req=b&__rev=1016945397&__s=cuizeh%3A56kkb6%3Anbmtwe&__spin_b=trunk&__spin_r=1016945397&__spin_t=1727763905&__user=0&dpr=1&jazoest=21061&lsd=AVoYhwKsPjo&ph=C3",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\"",
+      "accept-language": "en-US",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryln9KOHhVHprZVFLz",
+      "sec-ch-ua-platform-version": "\"15.0.0\"",
+      "referer": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=MA&id=1084140283146539&media_type=all&search_type=page&view_all_page_id=602563393163238",
+      "sec-ch-ua-full-version-list": "\"Not/A)Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"126.0.6478.63\"",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-prefers-color-scheme": "light",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "accept": "*/*",
+      "cookie": "wd=800x600; datr=Z5X7ZpeC5aRseR12UTiy-yM_",
+      "origin": "https://www.facebook.com"
+    },
+    "timestamp": "2024-10-01T06:25:09.631Z"
+  }
+]

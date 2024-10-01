@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { fetchFacebookAds } from "@/app/actions/facebookApiTest";
 
@@ -69,12 +77,45 @@ const defaultParams = {
   doc_id: "8022477101123416",
 };
 
+const defaultVariables = {
+  activeStatus: "ACTIVE",
+  adType: "ALL",
+  bylines: [],
+  collationToken: null,
+  contentLanguages: [],
+  countries: ["MA"],
+  cursor:
+    "AQHR9Q-WwM5vA2vQlGHYyyots5r_VQ7VUzwkeciraERoxNE2N0v7ZbQlE7c6_xX8C9Dd",
+  excludedIDs: [],
+  first: 30,
+  location: null,
+  mediaType: "ALL",
+  pageIDs: [],
+  potentialReachInput: [],
+  publisherPlatforms: [],
+  queryString: "cat",
+  regions: [],
+  searchType: "KEYWORD_UNORDERED",
+  sessionID: "3f156780-a547-4e64-8bcb-69402d0ce274",
+  sortData: null,
+  source: "NAV_HEADER",
+  startDate: null,
+  v: "7218b1",
+  viewAllPageID: "0",
+};
+
 type ConfigItem = {
   value: string;
   enabled: boolean;
 };
 
-export default function FlexibleFacebookAdsComponent() {
+type VariableItem = {
+  key: string;
+  value: any;
+  enabled: boolean;
+};
+
+export default function EnhancedFlexibleFacebookAdsComponent() {
   const [headers, setHeaders] = useState<Record<string, ConfigItem>>(
     Object.entries(defaultHeaders).reduce(
       (acc, [key, value]) => {
@@ -88,11 +129,21 @@ export default function FlexibleFacebookAdsComponent() {
   const [params, setParams] = useState<Record<string, ConfigItem>>(
     Object.entries(defaultParams).reduce(
       (acc, [key, value]) => {
-        acc[key] = { value: String(value), enabled: true };
+        if (key !== "variables") {
+          acc[key] = { value: String(value), enabled: true };
+        }
         return acc;
       },
       {} as Record<string, ConfigItem>,
     ),
+  );
+
+  const [variables, setVariables] = useState<VariableItem[]>(
+    Object.entries(defaultVariables).map(([key, value]) => ({
+      key,
+      value: JSON.stringify(value),
+      enabled: true,
+    })),
   );
 
   const [result, setResult] = useState<any>(null);
@@ -125,6 +176,22 @@ export default function FlexibleFacebookAdsComponent() {
         },
         {} as Record<string, string>,
       );
+
+    const activeVariables = variables
+      .filter((item) => item.enabled)
+      .reduce(
+        (acc, item) => {
+          try {
+            acc[item.key] = JSON.parse(item.value);
+          } catch (e) {
+            acc[item.key] = item.value;
+          }
+          return acc;
+        },
+        {} as Record<string, any>,
+      );
+
+    activeParams.variables = JSON.stringify(activeVariables);
 
     try {
       const response = await fetchFacebookAds({
@@ -171,10 +238,60 @@ export default function FlexibleFacebookAdsComponent() {
     ));
   };
 
+  const addVariable = () => {
+    setVariables((prev) => [...prev, { key: "", value: "", enabled: true }]);
+  };
+
+  const removeVariable = (index: number) => {
+    setVariables((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const updateVariable = (
+    index: number,
+    field: keyof VariableItem,
+    value: any,
+  ) => {
+    setVariables((prev) =>
+      prev.map((item, i) => (i === index ? { ...item, [field]: value } : item)),
+    );
+  };
+
+  const resetToDefaults = () => {
+    setHeaders(
+      Object.entries(defaultHeaders).reduce(
+        (acc, [key, value]) => {
+          acc[key] = { value, enabled: true };
+          return acc;
+        },
+        {} as Record<string, ConfigItem>,
+      ),
+    );
+
+    setParams(
+      Object.entries(defaultParams).reduce(
+        (acc, [key, value]) => {
+          if (key !== "variables") {
+            acc[key] = { value: String(value), enabled: true };
+          }
+          return acc;
+        },
+        {} as Record<string, ConfigItem>,
+      ),
+    );
+
+    setVariables(
+      Object.entries(defaultVariables).map(([key, value]) => ({
+        key,
+        value: JSON.stringify(value),
+        enabled: true,
+      })),
+    );
+  };
+
   return (
     <Card className="mx-auto w-full max-w-4xl">
       <CardHeader>
-        <CardTitle>Flexible Facebook Ads Search</CardTitle>
+        <CardTitle>Enhanced Flexible Facebook Ads Search</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -182,6 +299,7 @@ export default function FlexibleFacebookAdsComponent() {
             <TabsList>
               <TabsTrigger value="headers">Headers</TabsTrigger>
               <TabsTrigger value="params">Parameters</TabsTrigger>
+              <TabsTrigger value="variables">Variables</TabsTrigger>
             </TabsList>
             <TabsContent value="headers" className="mt-4">
               {renderConfigItems(headers, setHeaders)}
@@ -189,10 +307,68 @@ export default function FlexibleFacebookAdsComponent() {
             <TabsContent value="params" className="mt-4">
               {renderConfigItems(params, setParams)}
             </TabsContent>
+            <TabsContent value="variables" className="mt-4">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-[50px]">Enabled</TableHead>
+                    <TableHead>Key</TableHead>
+                    <TableHead>Value</TableHead>
+                    <TableHead className="w-[100px]">Actions</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {variables.map((item, index) => (
+                    <TableRow key={index}>
+                      <TableCell>
+                        <Checkbox
+                          checked={item.enabled}
+                          onCheckedChange={(checked) =>
+                            updateVariable(index, "enabled", checked)
+                          }
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Input
+                          value={item.key}
+                          onChange={(e) =>
+                            updateVariable(index, "key", e.target.value)
+                          }
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Input
+                          value={item.value}
+                          onChange={(e) =>
+                            updateVariable(index, "value", e.target.value)
+                          }
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Button
+                          onClick={() => removeVariable(index)}
+                          variant="destructive"
+                        >
+                          Remove
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+              <Button onClick={addVariable} className="mt-2">
+                Add Variable
+              </Button>
+            </TabsContent>
           </Tabs>
-          <Button type="submit" disabled={isLoading} className="w-full">
-            {isLoading ? "Loading..." : "Search"}
-          </Button>
+          <div className="flex space-x-2">
+            <Button type="submit" disabled={isLoading} className="flex-1">
+              {isLoading ? "Loading..." : "Search"}
+            </Button>
+            <Button type="button" onClick={resetToDefaults} variant="outline">
+              Reset to Defaults
+            </Button>
+          </div>
         </form>
 
         {error && (

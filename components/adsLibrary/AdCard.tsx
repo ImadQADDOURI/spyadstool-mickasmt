@@ -261,6 +261,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
       <CardContent className="p-4">
         <div className="mb-2 flex  justify-between text-sm text-gray-700 dark:text-gray-100">
           <div>Library ID: {adArchiveID || "N/A"}</div>
+
           <SaveAdButton ad={ad} />
           <div className="m-0 flex flex-row">
             <Button variant="ghost" size="sm">
@@ -271,7 +272,7 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
             </Button>
           </div>
         </div>
-
+        <div>Collation ID: {ad.collationID || "N/A"}</div>
         <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
           <span
             className={`mr-2 inline-flex items-center rounded-full px-2 py-1 font-semibold ${isActive ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
