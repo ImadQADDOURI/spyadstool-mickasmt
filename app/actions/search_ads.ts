@@ -43,10 +43,10 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
     // Process the response to remove "for (;;);"
     const text = await response.text();
     const cleanedText = text.replace("for (;;);", "");
-    console.log(
-      "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ cleanedText:",
-      cleanedText,
-    );
+    // console.log(
+    //   "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ cleanedText:",
+    //   cleanedText,
+    // );
 
     // Parse the cleaned JSON string
     const data = JSON.parse(cleanedText);
@@ -63,7 +63,7 @@ export const searchAds = async (filters: FilterParams): Promise<any> => {
 
     data.payload.totalCount &&
       console.log(
-        "🚀🚀🚀🚀 ~ file: search_ads.ts:searchAds ~ ADs Found :",
+        "🚀🚀🚀🚀 ~ Search Ads ~ ADs Found :",
         data.payload.totalCount,
       );
 

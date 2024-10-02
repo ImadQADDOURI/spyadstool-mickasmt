@@ -1265,3 +1265,258 @@ Implement pagination or infinite scrolling for large collections of saved ads.
 ???Implement proper validation on the server-side for all incoming data.
 ???Add unit and integration tests to ensure the reliability of the component and server actions.
 ???Implement caching strategies to improve performance, especially for frequently accessed data like user collections. Extending the caching system to cover other frequently accessed data in your application.
+
+
+--------------------------------------------------------------------------------------------------
+
+now let's establish a component to configure multiple functions, where i use the metaGraphQLApi for multiple cases and extract the data from the returned results.
+lets start by implementing a function AdLibraryAdCollationDetailsQuery that takes as props the variables() then with the fb_api_req_friendly_name do a fetch with metaGraphQLApi(variables,  fb_api_req_friendly_name: "AdLibraryAdCollationDetailsQuery") ,
+the function AdLibraryAdCollationDetailsQuery shall return ( extracted ads, forward_cursor, total_count, is_complete ),extract nested ads in "ad_cards": [...]
+We'll implement this in a way that allows for easy extension to other query types in the future, reusability, flexibility, optimization, max performance.
+-------------------------------------
+here is an example of the returned json from metaGraphQLApi with AdLibraryAdCollationDetailsQuery  :
+{
+  "data": {
+    "ad_library_main": {
+      "collation_results": {https://play.google.com/store/apps/details?id=com.einnovation.temu
+        "ad_cards": [
+          {
+            "ad_archive_id": "1033647231881172",
+            "ad_id": null,
+            "archive_types": [],
+            "categories": ["UNKNOWN"],
+            "collation_count": null,
+            "collation_id": "1247580993346891",
+            "contains_digital_created_media": false,
+            "contains_sensitive_content": false,
+            "currency": "",
+            "end_date": 1726902000,
+            "entity_type": "PERSON_PROFILE",
+            "fev_info": null,
+            "finserv_ad_data": {
+              "is_deemed_finserv": false,
+              "is_limited_delivery": false
+            },
+            "gated_type": "ELIGIBLE",
+            "has_user_reported": false,
+            "hidden_safety_data": false,
+            "hide_data_status": "NONE",
+            "impressions_with_index": {
+              "impressions_text": null,
+              "impressions_index": -1
+            },
+            "is_aaa_eligible": false,
+            "is_active": true,
+            "is_profile_page": false,
+            "menu_items": [],
+            "page_id": "103219685846470",
+            "page_is_deleted": false,
+            "page_name": "Shoptemu",
+            "political_countries": [],
+            "publisher_platform": [
+              "FACEBOOK",
+              "INSTAGRAM",
+              "AUDIENCE_NETWORK",
+              "MESSENGER"
+            ],
+            "reach_estimate": null,
+            "report_count": null,
+            "snapshot": {
+              "body": {
+                "text": "Android 14 tablet for 61.74\u20ac ?! \ud83e\udd2f\ud83e\udd2f\ud83e\udd2f\n\nIf you are looking for a tablet that has everything you need right out of the box and won\u2019t break the bank?! \nGo check out this Teclast P30T on \u0040shoptemu #linkinbio\ud83d\udc46 \n\nUse my CODE: dmq9877 to get this tablet for a total price of: 61,74\u20ac ( limited to new Temu app users\uff09\u0040shoptemu_de\n\n#temu #temugermany #temudeutschland #peacockinsidetech #techtok #techreviewer"
+              },
+              "branded_content": {
+                "current_page_name": "Shoptemu",
+                "page_categories": ["Shopping"],
+                "page_id": "103219685846470",
+                "page_is_deleted": false,
+                "page_name": "Shoptemu",
+                "page_profile_pic_url": "https://scontent.ffez2-1.fna.fbcdn.net/v/t39.35426-6/460445655_1131436268546213_288161952024796291_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fMCtTI0paKoQ7kNvgG_1nVM&_nc_ht=scontent.ffez2-1.fna&_nc_gid=AcCzHSarRSjF4aKy1ZJM1V9&oh=00_AYBwvR2oKayCUb5VBBXo-9iEb6COOD8vlRyyGWuQyvmgwA&oe=66F4D6FC",
+                "page_profile_uri": "https://www.facebook.com/Temufindsonline/"
+              },
+              "brazil_tax_id": null,
+              "byline": null,
+              "caption": "www.temu.com",
+              "cards": [],
+              "cta_text": "Acheter",
+              "cta_type": "SHOP_NOW",
+              "country_iso_code": null,
+              "current_page_name": "Kevin Peacock",
+              "disclaimer_label": null,
+              "display_format": "VIDEO",
+              "event": null,
+              "images": [],
+              "is_reshared": false,
+              "link_description": null,
+              "link_url": "https://www.temu.com/ch-en/kuiper/uk1.html?subj=selkill-un&_bg_fs=1&_p_mat2_type=m2001&_p_jump_id=858&_x_vst_scene=adg&locale_override=192~en~CHF&_p_rfs=1&_x_ads_channel=kol_metabca&_x_ads_sub_channel=kol&_x_campaign=110057401-lc-0-st&_x_cid=4008551659kol_tiktok&_x_bg_adid=1008197525&_x_ads_set={{campaign.id}}&_x_ads_id={{adset.id}}&_x_ads_creative_id={{ad.id}}&_x_ns_source={{site_source_name}}&_x_ns_placement={{placement}}",
+              "page_categories": ["Public figure"],
+              "page_entity_type": "PERSON_PROFILE",
+              "page_id": "106259834098310",
+              "page_is_deleted": false,
+              "page_is_profile_page": false,
+              "page_like_count": 793,
+              "page_name": "Kevin Peacock",
+              "page_profile_picture_url": "https://scontent.ffez1-1.fna.fbcdn.net/v/t39.35426-6/460629284_530801039360193_1709689743015983928_n.jpg?stp=dst-jpg_s60x60&_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=zkvt4BDHSd4Q7kNvgEC0ZGL&_nc_ht=scontent.ffez1-1.fna&_nc_gid=AcCzHSarRSjF4aKy1ZJM1V9&oh=00_AYCGumS1eiV1knvMRZVxnqIDEcfHAgdvVi-jFNP5ziwPWg&oe=66F4D8C1",
+              "page_profile_uri": "https://www.facebook.com/peacockinsidetech/",
+              "root_reshared_post": null,
+              "title": null,
+              "videos": [
+                {
+                  "video_hd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/460155878_2269332840087203_3125245116458003828_n.?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=mq9B0Ab7NiQQ7kNvgFfva5o&_nc_ht=video.ffez2-1.fna&_nc_gid=AcCzHSarRSjF4aKy1ZJM1V9&oh=00_AYCMP-vVV4fyHd91KjZ1kWiLKXXV1gNwaHe60fkOLF1GOQ&oe=66F4D535",
+                  "video_preview_image_url": "https://scontent.ffez2-2.fna.fbcdn.net/v/t39.35426-6/460884247_1245900603502680_3210554680015910096_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=b5OfWXRzcsUQ7kNvgE9cPZ5&_nc_ht=scontent.ffez2-2.fna&_nc_gid=AcCzHSarRSjF4aKy1ZJM1V9&oh=00_AYDWM3C2xYgz3SsKpRaoi6aCZcX8-Tx2MSsbZPiqC8FpQA&oe=66F4DCAD",
+                  "video_sd_url": "https://video.ffez2-1.fna.fbcdn.net/v/t42.1790-2/459606675_2162998114075022_1171011919043502841_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9D59ytLxK9IQ7kNvgGIg-ff&_nc_ht=video.ffez2-1.fna&_nc_gid=AcCzHSarRSjF4aKy1ZJM1V9&oh=00_AYCvOYBzwh7719Gnyqpk8Eo4wxhAU77Sxfq3Vzbfx4CryA&oe=66F4CE12",
+                  "watermarked_video_hd_url": "",
+                  "watermarked_video_sd_url": ""
+                }
+              ],
+              "additional_info": null,
+              "ec_certificates": [],
+              "extra_images": [],
+              "extra_links": [],
+              "extra_texts": [],
+              "extra_videos": []
+            },
+            "spend": null,
+            "start_date": 1726902000,
+            "state_media_run_label": null
+          },
+          {...},
+          ...
+          {...},
+        ],
+        "forward_cursor": "AQHRm4oCYE1N_rFfZ5CrTlsA2-XRWHtdPnMRwKuBf8_fPVDFX73yV2RY82UX50u7ggTb",
+        "backward_cursor": null,
+        "total_count": 74,
+        "is_complete": false
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}
+
+------------------------
+here is the ad interface:
+import { AdGraphQL } from "@/types/ad";
+export interface AdGraphQL {
+  ad_archive_id: string;
+  ad_id: string | null;
+  archive_types: string[];
+  categories: string[];
+  collation_count: number | null;
+  collation_id: string | null;
+  contains_digital_created_media: boolean;
+  contains_sensitive_content: boolean;
+  currency: string;
+  end_date: number;
+  entity_type: string;
+  fev_info: any | null;
+  finserv_ad_data: {
+    is_deemed_finserv: boolean;
+    is_limited_delivery: boolean;
+  };
+  gated_type: string;
+  has_user_reported: boolean;
+  hidden_safety_data: boolean;
+  hide_data_status: string;
+  impressions_with_index: {
+    impressions_text: string | null;
+    impressions_index: number;
+  };
+  is_aaa_eligible: boolean;
+  is_active: boolean;
+  is_profile_page: boolean;
+  menu_items: any[];
+  page_id: string;
+  page_is_deleted: boolean;
+  page_name: string;
+  political_countries: string[];
+  publisher_platform: string[];
+  reach_estimate: any | null;
+  report_count: number | null;
+  snapshot: {
+    body: {
+      text: string;
+    };
+    branded_content: {
+      current_page_name: string;
+      page_categories: string[];
+      page_id: string;
+      page_is_deleted: boolean;
+      page_name: string;
+      page_profile_pic_url: string;
+      page_profile_uri: string;
+    } | null;
+    brazil_tax_id: string | null;
+    byline: string | null;
+    caption: string | null;
+    cards: Card[];
+    cta_text: string;
+    cta_type: string;
+    country_iso_code: string | null;
+    current_page_name: string;
+    disclaimer_label: string | null;
+    display_format: string;
+    event: any | null;
+    images: Image[];
+    is_reshared: boolean;
+    link_description: string | null;
+    link_url: string | null;
+    page_categories: string[];
+    page_entity_type: string;
+    page_id: string;
+    page_is_deleted: boolean;
+    page_is_profile_page: boolean;
+    page_like_count: number;
+    page_name: string;
+    page_profile_picture_url: string;
+    page_profile_uri: string;
+    root_reshared_post: any | null;
+    title: string | null;
+    videos: Video[];
+    additional_info: any | null;
+    ec_certificates: any[];
+    extra_images: any[];
+    extra_links: any[];
+    extra_texts: any[];
+    extra_videos: any[];
+  };
+  spend: any | null;
+  start_date: number;
+  state_media_run_label: string | null;
+}
+
+interface Card {
+  body?: string;
+  caption?: string;
+  cta_text?: string;
+  cta_type?: string;
+  image_crops?: any[];
+  link_description?: string | null;
+  link_url?: string;
+  original_image_url?: string | null;
+  resized_image_url?: string | null;
+  watermarked_resized_image_url?: string | null;
+  title?: string;
+  video_hd_url?: string;
+  video_preview_image_url?: string;
+  video_sd_url?: string;
+  watermarked_video_hd_url?: string;
+  watermarked_video_sd_url?: string;
+}
+
+interface Image {
+  original_image_url: string;
+  resized_image_url: string;
+  watermarked_resized_image_url: string;
+  image_crops: any[];
+}
+
+interface Video {
+  video_hd_url: string;
+  video_preview_image_url: string;
+  video_sd_url: string;
+  watermarked_video_hd_url: string;
+  watermarked_video_sd_url: string;
+}
+
+

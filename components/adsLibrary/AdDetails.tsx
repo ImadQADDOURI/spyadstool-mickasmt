@@ -7,6 +7,7 @@ import { Ad } from "@/types/ad";
 import { FilterParams } from "@/types/filterParams";
 import { fetchAdLibraryDetails } from "@/app/actions/fetchAdDetails";
 import { analyzeKeywords } from "@/app/actions/geminiAi";
+import { AdLibraryAdDetailsV2Query } from "@/app/actions/Meta-GraphQL-Queries";
 import { searchAds } from "@/app/actions/search_ads";
 
 import { Button } from "../ui/button";
@@ -111,11 +112,20 @@ export const AdDetails: React.FC<AdDetailsProps> = ({ ad, onClose }) => {
     console.log("🚀🚀🚀🚀 - ad.isAAAEligible", ad.isAAAEligible);
 
     try {
-      const result = await fetchAdLibraryDetails({
-        adArchiveID: ad.adArchiveID || "",
-        pageID: ad.pageID || "",
+      // const result = await fetchAdLibraryDetails({
+      //   adArchiveID: ad.adArchiveID || "",
+      //   pageID: ad.pageID || "",
+      //   isAdNotAAAEligible: !ad.isAAAEligible,
+      //   country: countries ? countries.split(",")[0] : "", // Use the first country if available, otherwise empty string
+      // });
+      const result = await AdLibraryAdDetailsV2Query({
+        adArchiveID: ad.adArchiveID,
+        pageID: ad.pageID,
+
+        country: "ALL",
+        source: "FB_LOGO",
+        // isAdNonPolitical: true,
         isAdNotAAAEligible: !ad.isAAAEligible,
-        country: countries ? countries.split(",")[0] : "", // Use the first country if available, otherwise empty string
       });
       setAdDetails(result);
     } catch (err) {

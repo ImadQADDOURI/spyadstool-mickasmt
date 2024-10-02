@@ -134,7 +134,8 @@ Ad: "${parsedText}"
       .text()
       .replace(/^```json\n|\n```$/g, "")
       .trim();
-    console.log("🤖🤖🤖🤖 Raw API Response:", responseText);
+    //console.log("🤖🤖🤖🤖 Raw API Response:", responseText);
+    console.log("🤖🤖🤖🤖 ~ Gemini API");
 
     return parseResponse(responseText);
   } catch (error) {

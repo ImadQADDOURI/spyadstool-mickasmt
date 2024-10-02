@@ -1,0 +1,71 @@
+curl 'https://www.facebook.com/api/graphql/' \
+  -H 'accept: */*' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'cookie: datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; ps_l=1; ps_n=1; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm-6o1.AWVT30lQgQI; usida=eyJ2ZXIiOjEsImlkIjoiQXNrbzM0cWlkajVvNyIsInRpbWUiOjE3Mjc3NjkxNjJ9; wd=702x937' \
+  -H 'origin: https://www.facebook.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&media_type=all&q=cat&search_type=keyword_unordered&source=fb-logo' \
+  -H 'sec-ch-prefers-color-scheme: light' \
+  -H 'sec-ch-ua: "Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"' \
+  -H 'sec-ch-ua-full-version-list: "Google Chrome";v="129.0.6668.70", "Not=A?Brand";v="8.0.0.0", "Chromium";v="129.0.6668.70"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-ch-ua-platform-version: "15.0.0"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36' \
+  -H 'x-asbd-id: 129477' \
+  -H 'x-fb-friendly-name: AdLibraryAdDetailsV2Query' \
+  -H 'x-fb-lsd: AVpeQ9b3wp0' \
+  --data-raw 'av=0&__aaid=0&__user=0&__a=1&__req=p&__hs=19998.HYP%3Acomet_plat_default_pkg.2.1..0.0&dpr=1&__ccg=EXCELLENT&__rev=1016981433&__s=fimvci%3At7m58c%3A0v3850&__hsi=7421061997449588941&__dyn=7xeUmxa13yoS1syUbFp432m2q1Dxu13wqovzEdF8ixy360CEbo9E3-xS6Ehw2nVEK12wvk0gq78b87C2m3K2y11wBz81s8hwGwQwoEcE7O2l0Fwqo31wp8kwyx2cwAxq1izXwrUcUjwGzE2VKUbo5G4EG1MUlwhE2Lxiaw5rwSyES0gq0K-1Lwqp8aE2cwmo6O1Fw5VwtU5K&__csr=iNBJsybbdl2bX8WBJLFHLy9DjGya9JkWF7CChknVHJd4Hx6ESfCUKUDG4omwh8brxq5VF85G1ywjorwj8y1hwh8aU8EeFobF84e1Cw866UoyGwkFawbq0Uo2mxW2e0vqUcUjw0G7w0AHo08sE0Sy0sbU01GjU05msw0i_w2jK0c7w7Jw&__comet_req=1&lsd=AVpeQ9b3wp0&jazoest=2930&__spin_r=1016981433&__spin_b=trunk&__spin_t=1727850641&__jssesw=1&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=AdLibraryAdDetailsV2Query&variables=%7B%22adArchiveID%22%3A%22451740291243640%22%2C%22pageID%22%3A%22432061063659239%22%2C%22country%22%3A%22ALL%22%2C%22sessionID%22%3A%220162a99e-6971-4fb4-8a57-97c681e3f534%22%2C%22source%22%3A%22FB_LOGO%22%2C%22isAdNonPolitical%22%3Atrue%2C%22isAdNotAAAEligible%22%3Afalse%7D&server_timestamps=true&doc_id=8422900291076880'
+  */
+
+{
+  "data": {
+    "ad_library_main": {
+      "ad_details": {
+        "advertiser": {
+          "page": {
+            "about": {
+              "text": "Chillest Cat out there\nCreating Vibes \ud83d\udcbf\ud83c\udfbc\ud83c\udf99\ufe0f\n\ud835\udc0c\ud835\udc2e\ud835\udc2c\ud835\udc22\ud835\udc1c \ud835\udc0b\ud835\udc1a\ud835\udc1b\ud835\udc1e\ud835\udc25 \ud83d\udcc0\n\ud835\udc02\ud835\udc2e\ud835\udc2b\ud835\udc1a\ud835\udc2d\ud835\udc28\ud835\udc2b \ud83c\udfa7\n\ud835\udc0f\ud835\udc2b\ud835\udc28\ud835\udc1d\ud835\udc2e\ud835\udc1c\ud835\udc1e\ud835\udc2b \ud83c\udfa4"
+            },
+            "is_delegate_page_with_linked_primary_profile": false,
+            "id": "254926645011861"
+          },
+          "ad_library_page_info": {
+            "page_spend": {
+              "current_week": null,
+              "lifetime_by_disclaimer": [],
+              "weekly_by_disclaimer": [],
+              "is_political_page": false
+            },
+            "page_info": {
+              "entity_type": "PERSON_PROFILE",
+              "ig_followers": 29669,
+              "ig_username": "chilledcatlofi",
+              "ig_verification": true,
+              "likes": 12457,
+              "page_alias": "chilledcatlofi",
+              "page_category": "Production",
+              "page_cover_photo": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.30808-6/327309368_1855656131468176_969142068143285257_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=957871&_nc_ohc=TbRV0CUQ7eUQ7kNvgErXsys&_nc_ht=scontent.ffez1-2.fna&_nc_gid=A610jJU9kSriWARjuFDtEmm&oh=00_AYDrijupS7enIdZ4eWdBdJa_JmdfIyiQLbaZOEAoScbnkg&oe=66F4705C",
+              "page_id": "254926645011861",
+              "page_is_deleted": false,
+              "page_is_restricted": false,
+              "page_name": "Chilled Cat Music",
+              "page_profile_uri": "https://www.facebook.com/chilledcatlofi/",
+              "page_verification": "BLUE_VERIFIED",
+              "profile_photo": "https://scontent.ffez1-2.fna.fbcdn.net/v/t39.30808-1/327309368_1855656131468176_969142068143285257_n.jpg?stp=dst-jpg_s148x148&_nc_cat=111&ccb=1-7&_nc_sid=c9219a&_nc_ohc=TbRV0CUQ7eUQ7kNvgErXsys&_nc_ht=scontent.ffez1-2.fna&_nc_gid=A610jJU9kSriWARjuFDtEmm&oh=00_AYDmhQKK5LJlwtVM9hzDCAG9OfsQvwc-6qFCLx77Enn6UQ&oe=66F47C1E",
+              "is_profile_page": false
+            }
+          }
+        },
+        "violation_types": [],
+        "verified_voice_context": null
+      }
+    }
+  },
+  "extensions": { "is_final": true }
+}
