@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { set } from "date-fns";
 
 import { AdGraphQL } from "@/types/ad";
 import {
   AdLibraryAdCollationDetailsQuery,
+  AdLibraryMobileFocusedStateProviderRefetchQuery,
   AdLibrarySearchPaginationQuery,
 } from "@/app/actions/Meta-GraphQL-Queries";
 
@@ -20,6 +22,9 @@ export const Test = () => {
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [collationID, setCollationID] = useState<string | null>(null);
   const [query, setQuery] = useState<string | null>(null);
+  const [pageInfo, setPageInfo] = useState<any>(null);
+  const [page, setPage] = useState<any>(null);
+  const [pageID, setPageID] = useState<any>(null);
 
   async function handleSearch() {
     const result = await AdLibraryAdCollationDetailsQuery({
@@ -78,29 +83,76 @@ export const Test = () => {
     setTotalCount(result.count);
   }
 
+  async function fetchPage() {
+    const result = await AdLibraryMobileFocusedStateProviderRefetchQuery({
+      activeStatus: "ALL",
+      adType: "ALL",
+      audienceTimeframe: "LAST_7_DAYS",
+      bylines: [],
+      //collationToken: "4c63fadb-145f-428f-9696-7e1824245ee8",
+      contentLanguages: [],
+      countries: ["ALL"],
+      country: "ALL",
+      excludedIDs: [],
+      fetchPageInfo: true,
+      fetchSharedDisclaimers: true,
+      location: null,
+      mediaType: "ALL",
+      pageIDs: [],
+      potentialReachInput: [],
+      publisherPlatforms: [],
+      queryString: "",
+      regions: [],
+      searchType: "PAGE",
+      sessionID: "d9c83232-8090-4de2-b3c5-b66c6cd7a137",
+      sortData: null,
+      source: null,
+      startDate: null,
+      v: "eab698",
+      viewAllPageID: pageID || "150008058381451",
+    });
+    setAds(result.ads);
+    setForwardCursor(result.end_cursor);
+    setIsResultComplete(result.has_next_page);
+    setTotalCount(result.count);
+    setPageInfo(result.page_info);
+    setPage(result.page);
+  }
+
   return (
     <div>
       <div>
-        <h1>AdLibraryAdCollationDetailsQuery</h1>
+        <h1></h1>
         <div className="mb-4 flex flex-row space-x-4">
           <Input
             className="w-50"
             type="text"
             onChange={(e) => setCollationID(e.target.value)}
           />
-          <Button onClick={handleSearch}>Search collation</Button>
-          <h1>AdLibrarySearchPaginationQuery</h1>
+          <Button onClick={handleSearch}>AdCollationDetailsQuery</Button>
+          <h1></h1>
           <Input
             className="w-50"
             type="text"
             onChange={(e) => setQuery(e.target.value)}
           />
-          <Button onClick={fetchAds}>Search ads</Button>
+          <Button onClick={fetchAds}>SearchPaginationQuery</Button>
+          <h1></h1>
+          <Input
+            className="w-50"
+            type="text"
+            onChange={(e) => setPageID(e.target.value)}
+          />
+          <Button onClick={fetchPage}>
+            MobileFocusedStateProviderRefetchQuery
+          </Button>
         </div>
 
         <div>{isComplete ? "true" : "false"}</div>
         <div>totalCount: {totalCount}</div>
         <div>forwardCursor: {forwardCursor}</div>
+        <div>pageInfo: {JSON.stringify(pageInfo)}</div>
+        <div>page: {JSON.stringify(page)}</div>
       </div>
       <div>
         <AdList_GraphQl ads={ads} />

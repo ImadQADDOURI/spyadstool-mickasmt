@@ -13,36 +13,6 @@ type MetaGraphQLApiProps = {
   fb_api_req_friendly_name?: string;
 };
 
-function parseJsonObjects(text: string): any[] {
-  const results: any[] = [];
-  let bracketCount = 0;
-  let currentObject = "";
-
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-
-    if (char === "{") {
-      bracketCount++;
-    } else if (char === "}") {
-      bracketCount--;
-    }
-
-    currentObject += char;
-
-    if (bracketCount === 0 && currentObject.trim() !== "") {
-      try {
-        const parsedObject = JSON.parse(currentObject);
-        results.push(parsedObject);
-        currentObject = "";
-      } catch (error) {
-        console.error("Error parsing JSON object:", error);
-      }
-    }
-  }
-
-  return results;
-}
-
 export async function metaGraphQLApi({
   variables,
   fb_api_req_friendly_name,
@@ -92,6 +62,35 @@ export async function metaGraphQLApi({
   }
 }
 
+function parseJsonObjects(text: string): any[] {
+  const results: any[] = [];
+  let bracketCount = 0;
+  let currentObject = "";
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+
+    if (char === "{") {
+      bracketCount++;
+    } else if (char === "}") {
+      bracketCount--;
+    }
+
+    currentObject += char;
+
+    if (bracketCount === 0 && currentObject.trim() !== "") {
+      try {
+        const parsedObject = JSON.parse(currentObject);
+        results.push(parsedObject);
+        currentObject = "";
+      } catch (error) {
+        console.error("Error parsing JSON object:", error);
+      }
+    }
+  }
+
+  return results;
+}
 {
   /* Meta GraphQL API Server Action Summary
   

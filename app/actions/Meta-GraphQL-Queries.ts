@@ -15,6 +15,14 @@ interface AdLibrarySearchPaginationQueryResult {
   end_cursor: string | null;
   has_next_page: boolean;
 }
+interface AdLibraryMobileFocusedStateProviderRefetchQueryResult {
+  count: number;
+  ads: AdGraphQL[];
+  end_cursor: string | null;
+  has_next_page: boolean;
+  page_info: any;
+  page: any;
+}
 
 // Function to fetch ad collation details
 // variables example: {"collationGroupID":"1247580993346891","forwardCursor":null,"backwardCursor":null,"activeStatus":"ALL","adType":"ALL","bylines":[],"countries":null,"location":null,"potentialReach":[],"publisherPlatforms":[],"regions":[],"sessionID":"ca227fe6-a7d7-431f-a8a2-94d2e69d7da8","startDate":null}
@@ -103,6 +111,56 @@ export async function AdLibrarySearchPaginationQuery(
     };
   } catch (error) {
     console.error("Error in AdLibrarySearchPaginationQuery:", error);
+    throw error;
+  }
+}
+
+// Function to fetch Page ID Info with Page Ads
+// variables example   0 Filters: {"activeStatus":"ALL","adType":"ALL","audienceTimeframe":"LAST_7_DAYS","bylines":[],"collationToken":"4c63fadb-145f-428f-9696-7e1824245ee8","contentLanguages":[],"countries":["ALL"],"country":"ALL","excludedIDs":[],"fetchPageInfo":true,"fetchSharedDisclaimers":true,"location":null,"mediaType":"ALL","pageIDs":[],"potentialReachInput":[],"publisherPlatforms":[],"queryString":"","regions":[],"searchType":"PAGE","sessionID":"d9c83232-8090-4de2-b3c5-b66c6cd7a137","sortData":null,"source":null,"startDate":null,"v":"eab698","viewAllPageID":"150008058381451"}
+// variables example All Filters: {"activeStatus":"ACTIVE","adType":"ALL","audienceTimeframe":"LAST_7_DAYS","bylines":[],"collationToken":"08609c11-12c6-401e-8bcb-2b56b333b9c5","contentLanguages":["en","fr"],"countries":["ALL"],"country":"ALL","excludedIDs":[],"fetchPageInfo":true,"fetchSharedDisclaimers":true,"location":null,"mediaType":"VIDEO","pageIDs":[],"potentialReachInput":[],"publisherPlatforms":["FACEBOOK","INSTAGRAM"],"queryString":"","regions":[],"searchType":"PAGE","sessionID":"d9c83232-8090-4de2-b3c5-b66c6cd7a137","sortData":null,"source":null,"startDate":{"min":"2018-05-07","max":"2024-10-05"},"v":"eab698","viewAllPageID":"150008058381451"}
+export async function AdLibraryMobileFocusedStateProviderRefetchQuery(
+  variables: Record<string, any>,
+): Promise<AdLibraryMobileFocusedStateProviderRefetchQueryResult> {
+  try {
+    const result = await metaGraphQLApi({
+      variables,
+      fb_api_req_friendly_name:
+        "AdLibraryMobileFocusedStateProviderRefetchQuery",
+    });
+
+    // Ensure we have the second JSON object
+    if (!Array.isArray(result) || result.length < 2) {
+      throw new Error("Unexpected response structure");
+    }
+
+    const data = result[1].data;
+
+    if (!data || !data.ad_library_main) {
+      throw new Error("Unexpected data structure in response");
+    }
+
+    const searchResultsConnection =
+      data.ad_library_main.search_results_connection;
+    const pageInfo = searchResultsConnection.page_info;
+
+    // Extract and flatten ads from all edges and their collated_results
+    const ads = searchResultsConnection.edges.flatMap((edge: any) =>
+      edge.node.collated_results.flatMap((result: AdGraphQL) => result),
+    );
+
+    return {
+      count: searchResultsConnection.count,
+      ads,
+      end_cursor: pageInfo.end_cursor,
+      has_next_page: pageInfo.has_next_page,
+      page_info: data.ad_library_page_info.page_info,
+      page: data.page,
+    };
+  } catch (error) {
+    console.error(
+      "Error in AdLibraryMobileFocusedStateProviderRefetchQuery:",
+      error,
+    );
     throw error;
   }
 }
