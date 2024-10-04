@@ -9,7 +9,7 @@ I am building a SaaS that allows users to search for, analyze, and manage ads. u
 Here's a description of the overall CSS styling, which you can use as a reference when building other components to maintain coherence:
 
 1. Colors:
-   - Primary: Purple to Pink gradient
+   - Primary: Purple 6566F1 to B977F8 gradient
    - Background: Light gray (light mode), Dark gray (dark mode)
    - Text: Dark gray (light mode), Light gray (dark mode)
 

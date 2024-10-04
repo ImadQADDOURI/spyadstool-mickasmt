@@ -1,23 +1,23 @@
 // app/lib/Meta-GraphQL-Queries.ts
 
-import { AdGraphQL } from "@/types/ad";
+import { AdData } from "@/types/ad";
 import { metaGraphQLApi } from "@/app/actions/Meta-GraphQL-Api";
 
 interface AdLibraryAdCollationDetailsQueryResult {
-  ads: AdGraphQL[];
+  ads: AdData[];
   forward_cursor: string | null;
   total_count: number;
   is_complete: boolean;
 }
 interface AdLibrarySearchPaginationQueryResult {
   count: number;
-  ads: AdGraphQL[];
+  ads: AdData[];
   end_cursor: string | null;
   has_next_page: boolean;
 }
 interface AdLibraryMobileFocusedStateProviderRefetchQueryResult {
   count: number;
-  ads: AdGraphQL[];
+  ads: AdData[];
   end_cursor: string | null;
   has_next_page: boolean;
   page_info: any;
@@ -145,7 +145,7 @@ export async function AdLibraryMobileFocusedStateProviderRefetchQuery(
 
     // Extract and flatten ads from all edges and their collated_results
     const ads = searchResultsConnection.edges.flatMap((edge: any) =>
-      edge.node.collated_results.flatMap((result: AdGraphQL) => result),
+      edge.node.collated_results.flatMap((result: AdData) => result),
     );
 
     return {

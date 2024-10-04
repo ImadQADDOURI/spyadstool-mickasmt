@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { set } from "date-fns";
 
-import { AdGraphQL } from "@/types/ad";
+import { AdData } from "@/types/ad";
 import {
   AdLibraryAdCollationDetailsQuery,
   AdLibraryMobileFocusedStateProviderRefetchQuery,
@@ -16,7 +16,7 @@ import { AdCard_GraphQl } from "./AdCard_GraphQl";
 import { AdList_GraphQl } from "./AdList_GraphQl";
 
 export const Test = () => {
-  const [ads, setAds] = useState<AdGraphQL[]>([]);
+  const [ads, setAds] = useState<AdData[]>([]);
   const [forwardCursor, setForwardCursor] = useState<string | null>(null);
   const [isComplete, setIsResultComplete] = useState(false);
   const [totalCount, setTotalCount] = useState<number | null>(null);

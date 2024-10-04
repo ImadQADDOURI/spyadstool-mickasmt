@@ -1,9 +1,9 @@
-import { AdGraphQL } from "@/types/ad";
+import { AdData } from "@/types/ad";
 
 import { Card, CardContent, CardFooter } from "../ui/card";
 
 interface AdCard_GraphQlProps {
-  ad: AdGraphQL;
+  ad: AdData;
 }
 
 export const AdCard_GraphQl: React.FC<AdCard_GraphQlProps> = ({ ad }) => {

@@ -1,9 +1,10 @@
-import { AdGraphQL } from "@/types/ad";
+import { AdData } from "@/types/ad";
 
-import { AdCard_GraphQl } from "./AdCard_GraphQl";
+//import { AdCard_GraphQl } from "./AdCard_GraphQl";
+import { AdPreviewCard } from "../adLibrary/AdPreviewCard";
 
 interface AdsListProps {
-  ads: AdGraphQL[];
+  ads: AdData[];
 }
 
 export const AdList_GraphQl: React.FC<AdsListProps> = ({ ads }) => {
@@ -14,7 +15,7 @@ export const AdList_GraphQl: React.FC<AdsListProps> = ({ ads }) => {
           ad, // to display only ads with collationCount > 0
         ) => (
           //ad.collation_count &&
-          <AdCard_GraphQl key={ad.ad_archive_id} ad={ad} />
+          <AdPreviewCard key={ad.ad_archive_id} ad={ad} />
         ),
       )}
     </div>

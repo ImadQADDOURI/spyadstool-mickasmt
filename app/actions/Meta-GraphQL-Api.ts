@@ -54,7 +54,7 @@ export async function metaGraphQLApi({
     if (parsedData.length === 0) {
       throw new Error("No valid JSON objects found in the response");
     }
-    console.log("🔧🔧🔧🔧 ~ Meta-GraphQL-Api ");
+    console.log("🔧🔧🔧🔧 ~ Meta-GraphQL-Api ", variables);
     return parsedData.length === 1 ? parsedData[0] : parsedData;
   } catch (error) {
     console.error("Error in metaGraphQLApi:", error);

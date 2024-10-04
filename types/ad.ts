@@ -138,7 +138,7 @@ export interface Ad {
   menuItems: any[];
 }
 
-export interface AdGraphQL {
+export interface AdData {
   ad_archive_id: string;
   ad_id: string | null;
   archive_types: string[];
@@ -190,7 +190,7 @@ export interface AdGraphQL {
     brazil_tax_id: string | null;
     byline: string | null;
     caption: string | null;
-    cards: Card[];
+    cards: Media[];
     cta_text: string;
     cta_type: string;
     country_iso_code: string | null;
@@ -198,7 +198,7 @@ export interface AdGraphQL {
     disclaimer_label: string | null;
     display_format: string;
     event: any | null;
-    images: Image[];
+    images: Media[];
     is_reshared: boolean;
     link_description: string | null;
     link_url: string | null;
@@ -213,7 +213,7 @@ export interface AdGraphQL {
     page_profile_uri: string;
     root_reshared_post: any | null;
     title: string | null;
-    videos: Video[];
+    videos: Media[];
     additional_info: any | null;
     ec_certificates: any[];
     extra_images: any[];
@@ -226,7 +226,7 @@ export interface AdGraphQL {
   state_media_run_label: string | null;
 }
 
-interface Card {
+interface Media {
   body?: string;
   caption?: string;
   cta_text?: string;
@@ -243,19 +243,4 @@ interface Card {
   video_sd_url?: string;
   watermarked_video_hd_url?: string;
   watermarked_video_sd_url?: string;
-}
-
-interface Image {
-  original_image_url: string;
-  resized_image_url: string;
-  watermarked_resized_image_url: string;
-  image_crops: any[];
-}
-
-interface Video {
-  video_hd_url: string;
-  video_preview_image_url: string;
-  video_sd_url: string;
-  watermarked_video_hd_url: string;
-  watermarked_video_sd_url: string;
 }
