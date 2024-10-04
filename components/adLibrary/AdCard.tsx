@@ -14,7 +14,6 @@ import {
 
 import { AdData } from "@/types/ad";
 
-import AudienceNetworkIcon from "../shared/AudienceNetworkIcon";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import {
@@ -30,15 +29,12 @@ import DisplayPixelPlatformPayment from "./microComponents/DisplayPixelPlatformP
 import ExpandableText from "./microComponents/expandableText";
 import PageNameWithPopover from "./PageNameWithPopover";
 
-interface AdPreviewCardProps {
+interface AdCardProps {
   ad: AdData;
   compact?: boolean;
 }
 
-export const AdPreviewCard: React.FC<AdPreviewCardProps> = ({
-  ad,
-  compact = false,
-}) => {
+export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
   const {
     ad_archive_id,
     start_date,
@@ -159,7 +155,15 @@ export const AdPreviewCard: React.FC<AdPreviewCardProps> = ({
       facebook: <Facebook className="h-5 w-5" color="#0866FF" />,
       instagram: <Instagram className="h-5 w-5" color="#D915DA" />,
       messenger: <MessageCircle className="h-5 w-5" color="#0084FF" />,
-      audience_network: <AudienceNetworkIcon className="h-5 w-5" />,
+      audience_network: (
+        <Image
+          src="/icons/audience_network_facebook.svg"
+          alt="Audience Network Facebook"
+          width={24}
+          height={24}
+          className="h-5 w-5 "
+        />
+      ),
     };
 
     return publisher_platform?.map((platform) => (

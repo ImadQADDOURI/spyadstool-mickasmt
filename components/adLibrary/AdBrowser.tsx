@@ -8,8 +8,7 @@ import { AdData } from "@/types/ad";
 import { AdLibrarySearchPaginationQuery } from "@/app/actions/Meta-GraphQL-Queries";
 
 import { Button } from "../ui/button";
-import { AdPreviewCard } from "./AdPreviewCard";
-import { AdPreviewCardGrid } from "./AdPreviewCardGrid";
+import { AdCardGrid } from "./AdCardGrid";
 import LoadingTrigger from "./microComponents/LoadingTrigger";
 import { ScrollButtons } from "./microComponents/ScrollButtons";
 import StickyWrapper from "./microComponents/StickyWrapper";
@@ -173,7 +172,7 @@ export const AdBrowser = () => {
         {/* Ads Grid */}
         {searchResults && searchResults.length > 0 ? (
           <div className="space-y-8">
-            <AdPreviewCardGrid ads={searchResults} />
+            <AdCardGrid ads={searchResults} />
             {hasNextPage && (
               <div className="flex flex-col items-center space-y-4">
                 <LoadingTrigger

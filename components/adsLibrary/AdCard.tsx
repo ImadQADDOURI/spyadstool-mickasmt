@@ -19,7 +19,6 @@ import {
 } from "lucide-react";
 
 import { Ad, MediaItem } from "@/types/ad";
-import AudienceNetworkIcon from "@/components/shared/AudienceNetworkIcon";
 
 import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter } from "../ui/card";
@@ -166,7 +165,15 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
       facebook: <Facebook className="h-5 w-5" color="#0866FF" />,
       instagram: <Instagram className="h-5 w-5" color="#D915DA" />,
       messenger: <MessageCircle className="h-5 w-5" color="#0084FF" />,
-      audience_network: <AudienceNetworkIcon className="h-5 w-5" />,
+      audience_network: (
+        <Image
+          src="/icons/audience_network_facebook.svg"
+          alt="Audience Network Facebook"
+          width={24}
+          height={24}
+          className="h-5 w-5"
+        />
+      ),
     };
 
     return publisherPlatform?.map((platform) => (
