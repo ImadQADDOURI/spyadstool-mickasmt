@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { getAdSearchVariables } from "@/utils/adSearchVariables";
 import { Loader2 } from "lucide-react";
 
 import { AdData } from "@/types/ad";
@@ -23,6 +24,7 @@ export const AdBrowser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [totalCount, setTotalCount] = useState<number | null>(null);
+  const [isInitialSearch, setIsInitialSearch] = useState(true);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
   const [endCursor, setEndCursor] = useState<string | null>(null);
   const [hasNextPage, setHasNextPage] = useState<boolean>(false);
@@ -32,53 +34,33 @@ export const AdBrowser = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const currentParams = new URLSearchParams(searchParams.toString());
-        const variables: Record<string, any> = {
-          activeStatus: currentParams.get("active_status") || "ALL",
-          adType: "ALL",
-          bylines: [],
-          collationToken: null,
-          contentLanguages:
-            currentParams.get("content_languages")?.split(",") || [],
-          countries: currentParams.get("countries")?.split(",") || ["ALL"],
-          cursor: useExistingParams ? endCursor : null,
-          excludedIDs: [],
-          first: 30,
-          location: null,
-          mediaType: currentParams.get("media_type") || "ALL",
-          pageIDs: [],
-          potentialReachInput: [],
-          publisherPlatforms:
-            currentParams.get("publisher_platforms")?.split(",") || [],
-          queryString: currentParams.get("q") || "",
-          regions: [],
-          searchType: "KEYWORD_UNORDERED",
-          sessionID: Math.random().toString(36).substring(7),
-          sortData: null,
-          source: "NAV_HEADER",
-          startDate:
-            currentParams.get("start_date") && currentParams.get("end_date")
-              ? {
-                  min: currentParams.get("start_date"),
-                  max: currentParams.get("end_date"),
-                }
-              : null,
-          v: "7218b1",
-          viewAllPageID: "0",
-        };
+        const variables = getAdSearchVariables(
+          searchParams,
+          useExistingParams ? endCursor : null,
+          //page_id,
+        );
+        // console.log("🚀🚀🚀🚀 ~ variables:", variables);
 
         const results = await AdLibrarySearchPaginationQuery(variables);
 
         if (useExistingParams && searchResults) {
           setSearchResults((prevResults) => [...prevResults!, ...results.ads]);
-          setRemainingCount(results.count);
         } else {
           setSearchResults(results.ads);
+        }
+
+        if (isInitialSearch) {
           setTotalCount(results.count);
+          setIsInitialSearch(false);
         }
 
         setEndCursor(results.end_cursor);
         setHasNextPage(results.has_next_page);
+
+        // Calculate remaining count
+        const newRemainingCount =
+          results.count - (searchResults?.length || 0) - results.ads.length;
+        setRemainingCount(newRemainingCount > 0 ? newRemainingCount : 0);
       } catch (error) {
         console.error("Error searching ads:", error);
         setError(
@@ -89,7 +71,7 @@ export const AdBrowser = () => {
         setIsLoading(false);
       }
     },
-    [searchParams, searchResults, endCursor],
+    [searchParams, searchResults, endCursor, isInitialSearch],
   );
 
   const handleLoadMore = useCallback(() => {
@@ -110,6 +92,7 @@ export const AdBrowser = () => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("q", query); // Use the passed query directly
       router.push(`?${params.toString()}`);
+      setIsInitialSearch(true); // handleSearch function reset isInitialSearch to true when a new search is initiated
       handleSearchAds();
     },
     [searchParams, router, handleSearchAds, searchQuery],
