@@ -24,7 +24,6 @@ export const AdBrowser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [totalCount, setTotalCount] = useState<number | null>(null);
-  const [isInitialSearch, setIsInitialSearch] = useState(true);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
   const [endCursor, setEndCursor] = useState<string | null>(null);
   const [hasNextPage, setHasNextPage] = useState<boolean>(false);
@@ -47,11 +46,7 @@ export const AdBrowser = () => {
           setSearchResults((prevResults) => [...prevResults!, ...results.ads]);
         } else {
           setSearchResults(results.ads);
-        }
-
-        if (isInitialSearch) {
-          setTotalCount(results.count);
-          setIsInitialSearch(false);
+          setTotalCount(results.count); // setTotalCount in the First Search Only
         }
 
         setEndCursor(results.end_cursor);
@@ -71,7 +66,7 @@ export const AdBrowser = () => {
         setIsLoading(false);
       }
     },
-    [searchParams, searchResults, endCursor, isInitialSearch],
+    [searchParams, searchResults, endCursor],
   );
 
   const handleLoadMore = useCallback(() => {
@@ -92,7 +87,6 @@ export const AdBrowser = () => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("q", query); // Use the passed query directly
       router.push(`?${params.toString()}`);
-      setIsInitialSearch(true); // handleSearch function reset isInitialSearch to true when a new search is initiated
       handleSearchAds();
     },
     [searchParams, router, handleSearchAds, searchQuery],
