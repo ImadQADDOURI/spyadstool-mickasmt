@@ -1,4 +1,3 @@
-// @/components/adsLibrary/language.tsx
 "use client";
 
 import * as React from "react";
@@ -58,6 +57,14 @@ export const Language: React.FC = () => {
     updateURL(newSelection);
   };
 
+  const handleDeselectAll = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    updateURL([]);
+  };
+
+  const visibleSelections = selectedLanguages.slice(0, 2);
+  const remainingCount = selectedLanguages.length - visibleSelections.length;
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -65,38 +72,61 @@ export const Language: React.FC = () => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between"
+          className="h-auto min-h-[2.5rem] w-full justify-between py-2"
         >
-          {selectedLanguages.length > 0 ? (
-            <div className="flex flex-wrap gap-1">
-              {selectedLanguages.map((code) => (
-                <Badge key={code} variant="secondary" className="mr-1">
-                  {languages.find((lang) => lang.code === code)?.code}
-                  <button
-                    className="ml-1 rounded-full outline-none ring-offset-background focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleRemove(code);
-                      }
-                    }}
-                    onMouseDown={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                    }}
-                    onClick={() => handleRemove(code)}
-                  >
-                    <X className="h-4 w-4 text-muted-foreground hover:text-foreground" />
-                  </button>
-                </Badge>
-              ))}
-            </div>
-          ) : (
-            "All Languages"
-          )}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <div className="mr-2 flex flex-wrap items-center gap-1">
+            {selectedLanguages.length > 0 ? (
+              <>
+                {visibleSelections.map((code) => {
+                  const language = languages.find((lang) => lang.code === code);
+                  return (
+                    <Badge key={code} variant="secondary" className="mr-1">
+                      {language?.code}
+                      <button
+                        className="ml-1 rounded-full outline-none ring-offset-background focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            handleRemove(code);
+                          }
+                        }}
+                        onMouseDown={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleRemove(code);
+                        }}
+                      >
+                        <X className="h-3 w-3 text-muted-foreground hover:text-foreground" />
+                      </button>
+                    </Badge>
+                  );
+                })}
+                {remainingCount > 0 && (
+                  <Badge variant="secondary">+{remainingCount}</Badge>
+                )}
+              </>
+            ) : (
+              <span className="text-muted-foreground">All Languages</span>
+            )}
+          </div>
+          <div className="ml-auto flex items-center gap-1">
+            {selectedLanguages.length > 0 && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-5 w-5 rounded-full p-0"
+                onClick={handleDeselectAll}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            )}
+            <ChevronsUpDown className="h-4 w-4 shrink-0 opacity-50" />
+          </div>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-full p-0">
+      <PopoverContent className="w-[200px] p-0">
         <Command>
           <CommandInput placeholder="Search languages..." />
           <CommandList>

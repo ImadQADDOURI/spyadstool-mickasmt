@@ -1,7 +1,7 @@
 // @/lib/countryCodesAlpha2Flag.ts
 
 export const countryCodesAlpha2Flag = [
-  { value: "ALL", label: "All Countries", icon: "/flags/un.svg" },
+  //{ value: "ALL", label: "All Countries", icon: "/flags/un.svg" },
   { value: "BR", label: "Brazil", icon: "/flags/br.svg" },
   { value: "IN", label: "India", icon: "/flags/in.svg" },
   { value: "GB", label: "United Kingdom", icon: "/flags/gb.svg" },
@@ -259,7 +259,7 @@ export const countryCodesAlpha2Flag = [
   {
     value: "SH",
     label: "Saint Helena, Ascension and Tristan da Cunha",
-    icon: "/flags/sh.svg",
+    icon: "/flags/sh-hl.svg",
   },
   { value: "MF", label: "Saint Martin", icon: "/flags/mf.svg" },
   { value: "PM", label: "Saint Pierre and Miquelon", icon: "/flags/pm.svg" },
@@ -276,7 +276,7 @@ export const countryCodesAlpha2Flag = [
   {
     value: "UM",
     label: "United States Minor Outlying Islands",
-    icon: "/flags/um.svg",
+    icon: "/flags/us.svg",
   },
   { value: "WF", label: "Wallis and Futuna", icon: "/flags/wf.svg" },
   { value: "EH", label: "Western Sahara", icon: "/flags/eh.svg" },

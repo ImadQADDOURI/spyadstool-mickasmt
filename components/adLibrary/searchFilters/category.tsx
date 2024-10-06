@@ -15,11 +15,11 @@ import {
 } from "@/components/ui/select";
 
 const categories = [
-  { value: "all", label: "All" },
-  { value: "credit_ads", label: " Credit Ads" },
-  { value: "employment_ads", label: "Employment Ads" },
-  { value: "housing_ads", label: "Housing Ads" },
-  { value: "political_and_issue_ads", label: "Political and Issue Ads" },
+  { value: "ALL", label: "All" },
+  { value: "CREDIT_ADS", label: " Credit Ads" },
+  { value: "EMPLOYMENT_ADS", label: "Employment Ads" },
+  { value: "HOUSING_ADS", label: "Housing Ads" },
+  { value: "POLITICAL_AND_ISSUE_ADS", label: "Political and Issue Ads" },
 ];
 
 export const Category: React.FC = React.memo(() => {

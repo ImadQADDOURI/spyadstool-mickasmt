@@ -21,8 +21,8 @@ import {
 } from "@/components/ui/popover";
 
 const statuses = [
-  { value: "active", label: "Active" },
-  { value: "inactive", label: "Inactive" },
+  { value: "ACTIVE", label: "Active" },
+  { value: "INACTIVE", label: "Inactive" },
 ];
 
 export const Status: React.FC = () => {

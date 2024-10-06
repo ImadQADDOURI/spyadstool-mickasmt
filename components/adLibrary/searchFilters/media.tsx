@@ -21,11 +21,11 @@ import {
 } from "@/components/ui/popover";
 
 const mediaTypes = [
-  { value: "image", label: "Images" },
-  { value: "meme", label: "Memes" },
-  { value: "image_and_meme", label: "Images and memes" },
-  { value: "video", label: "Videos" },
-  { value: "none", label: "No image or video" },
+  { value: "IMAGE", label: "Images" },
+  { value: "MEME", label: "Memes" },
+  { value: "IMAGE_AND_MEME", label: "Images and memes" },
+  { value: "VIDEO", label: "Videos" },
+  { value: "NONE", label: "No image or video" },
 ];
 
 export const Media: React.FC = () => {

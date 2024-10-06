@@ -21,8 +21,8 @@ import {
 } from "@/components/ui/popover";
 
 const searchTypes = [
-  { value: "keyword_unordered", label: "Keyword Unordered" },
-  { value: "keyword_exact_phrase", label: "Keyword Exact Phrase" },
+  { value: "KEYWORD_UNORDERED", label: "Keyword Unordered" },
+  { value: "KEYWORD_EXACT_PHRASE", label: "Keyword Exact Phrase" },
 ];
 
 export const SearchType: React.FC = () => {
