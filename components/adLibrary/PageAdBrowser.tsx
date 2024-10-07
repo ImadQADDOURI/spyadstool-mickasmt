@@ -1,53 +1,28 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   getAdLibraryMobileVariables,
   getAdSearchVariables,
 } from "@/utils/adSearchVariables";
-import parse from "html-react-parser";
-import {
-  Calendar,
-  Check,
-  Globe,
-  GlobeIcon,
-  Info,
-  Instagram,
-  Loader2,
-  ThumbsUp,
-  Users,
-} from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 import { AdData } from "@/types/ad";
-import { countryCodesAlpha2Flag } from "@/lib/countryCodesAlpha2Flag";
 import {
   AdLibraryMobileFocusedStateProviderRefetchQuery,
   AdLibrarySearchPaginationQuery,
 } from "@/app/actions/Meta-GraphQL-Queries";
 
 import { Button } from "../ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../ui/tooltip";
 import { AdCardGrid } from "./microComponents/AdCardGrid";
 import LoadingTrigger from "./microComponents/LoadingTrigger";
 import PageInfoSection from "./microComponents/PageInfoSection";
 import { ScrollButtons } from "./microComponents/ScrollButtons";
+import SearchResults from "./microComponents/SearchResults";
 import StickyWrapper from "./microComponents/StickyWrapper";
 import { SearchBar } from "./searchFilters/SearchBar";
 
-const InfoItem = ({ icon, label, value }) => (
-  <div className="flex items-center space-x-2">
-    {icon}
-    <span>{label}:</span>
-    <span className="font-semibold">{value}</span>
-  </div>
-);
 interface PageAdBrowserProps {
   pageId: string;
 }
@@ -63,10 +38,14 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [remainingCount, setRemainingCount] = useState<number | null>(null);
   const [pageInfo, setPageInfo] = useState<any | null>(null);
-
   const [page, setPage] = useState<any | null>(null);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(
+    null,
+  );
+  const [pageTotalAds, setPageTotalAds] = useState<number | null>(null);
   const [endCursor, setEndCursor] = useState<string | null>(null);
   const [hasNextPage, setHasNextPage] = useState<boolean>(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   const handleSearchAds = useCallback(
     async (useExistingParams = false) => {
@@ -74,22 +53,31 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
       setError(null);
       try {
         let results;
-        if (!searchResults || searchResults.length === 0) {
-          // First search
+        if (isInitialLoad) {
+          // First search on page load
           const variables = getAdLibraryMobileVariables(pageId);
           results =
             await AdLibraryMobileFocusedStateProviderRefetchQuery(variables);
           setPageInfo(results.page_info);
           setPage(results.page);
-          setTotalCount(results.count);
+          setProfilePictureUrl(
+            results.ads[0].snapshot.page_profile_picture_url,
+          );
+          setPageTotalAds(results.count);
+          setIsInitialLoad(false);
         } else {
-          // Pagination
+          // Subsequent searches or pagination
           const variables = getAdSearchVariables(
             searchParams,
             useExistingParams ? endCursor : null,
             pageId,
           );
           results = await AdLibrarySearchPaginationQuery(variables);
+        }
+
+        // Update total count on first search or when search params change
+        if (!useExistingParams) {
+          setTotalCount(results.count);
         }
 
         if (useExistingParams && searchResults) {
@@ -102,11 +90,12 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
         setHasNextPage(results.has_next_page);
 
         // Calculate remaining count
-        // only starting the subtraction of RemainingCount when results.count is less than 50001.
         const newRemainingCount =
           results.count >= 50001
             ? results.count
-            : results.count - (searchResults?.length || 0) - results.ads.length; //performs the normal subtraction
+            : results.count -
+              (useExistingParams ? searchResults!.length : 0) -
+              results.ads.length;
 
         setRemainingCount(newRemainingCount > 0 ? newRemainingCount : 0);
       } catch (error) {
@@ -119,7 +108,7 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
         setIsLoading(false);
       }
     },
-    [searchParams, searchResults, endCursor, pageId],
+    [searchParams, searchResults, endCursor, pageId, isInitialLoad],
   );
 
   const handleLoadMore = useCallback(() => {
@@ -134,7 +123,7 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("q", query);
       router.push(`?${params.toString()}`);
-      handleSearchAds();
+      handleSearchAds(false); // Force a new search with updated params
     },
     [searchParams, router, handleSearchAds, searchQuery],
   );
@@ -151,10 +140,8 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
         <PageInfoSection
           page={page}
           pageInfo={pageInfo}
-          profilePictureUrl={
-            searchResults && searchResults[0].snapshot.page_profile_picture_url
-          }
-          totalAds={totalCount || 0}
+          profilePictureUrl={profilePictureUrl}
+          totalAds={pageTotalAds || 0}
         />
       )}
 
@@ -170,79 +157,15 @@ export const PageAdBrowser = ({ pageId }: PageAdBrowserProps) => {
       </StickyWrapper>
 
       {/* Search Results */}
-      <div className="container mx-auto p-4">
-        {/* Loading indicator */}
-        {isLoading && (
-          <div className="flex justify-center py-12" aria-live="polite">
-            <div className="relative h-20 w-20">
-              <div className="absolute inset-0 animate-ping rounded-full bg-purple-400 opacity-75"></div>
-              <div className="relative flex h-full w-full items-center justify-center rounded-full bg-purple-500">
-                <Loader2 className="h-10 w-10 animate-spin text-white" />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {error && (
-          <div
-            className="mb-6 rounded-lg bg-red-100 p-4 text-red-700 dark:bg-red-900 dark:text-red-100"
-            role="alert"
-          >
-            {error}
-          </div>
-        )}
-
-        {totalCount !== null && (
-          <div className="mb-6 text-center">
-            <span
-              className="inline-block rounded-full bg-purple-100 px-6 py-3 text-lg font-bold text-purple-800 shadow-md dark:bg-purple-900 dark:text-purple-200"
-              aria-live="polite"
-            >
-              {totalCount > 50000 ? ">50,000" : "~" + totalCount} Ads Found
-            </span>
-          </div>
-        )}
-
-        {/* Ads Grid */}
-        {searchResults && searchResults.length > 0 ? (
-          <div className="space-y-8">
-            <AdCardGrid ads={searchResults} />
-            {hasNextPage && (
-              <div className="flex flex-col items-center space-y-4">
-                <LoadingTrigger
-                  onIntersect={handleLoadMore}
-                  isLoading={isLoading}
-                />
-                {!isLoading && (
-                  <Button
-                    onClick={handleLoadMore}
-                    className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-white shadow-md transition-all hover:from-purple-700 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-                  >
-                    Load More
-                  </Button>
-                )}
-                {remainingCount !== null && (
-                  <p
-                    className="text-lg text-gray-600 dark:text-gray-400"
-                    aria-live="polite"
-                  >
-                    {remainingCount} more ads available
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
-        ) : (
-          searchResults && (
-            <p
-              className="text-center text-lg text-gray-600 dark:text-gray-400"
-              role="status"
-            >
-              No ads found. Try adjusting your search criteria.
-            </p>
-          )
-        )}
-      </div>
+      <SearchResults
+        isLoading={isLoading}
+        error={error}
+        totalCount={totalCount}
+        searchResults={searchResults}
+        hasNextPage={hasNextPage}
+        remainingCount={remainingCount}
+        handleLoadMore={handleLoadMore}
+      />
 
       {/* Scroll buttons */}
       <ScrollButtons />

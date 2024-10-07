@@ -167,7 +167,7 @@ export const PageInfoSection: React.FC<PageInfoSectionProps> = ({
                             alt={countryInfo.label}
                             width={24}
                             height={24}
-                            className="-ml-1 rounded-sm first:ml-0"
+                            className="ml-1 rounded-sm first:ml-0"
                           />
                         ) : null;
                       })}
