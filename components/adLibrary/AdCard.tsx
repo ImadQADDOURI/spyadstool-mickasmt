@@ -27,7 +27,7 @@ import {
 import { SaveAdButton } from "./adCollections/SaveAdButton";
 import DisplayPixelPlatformPayment from "./microComponents/DisplayPixelPlatformPayment";
 import ExpandableText from "./microComponents/expandableText";
-import PageNameWithPopover from "./PageNameWithPopover";
+import PageNameWithPopover from "./microComponents/PageNameWithPopover";
 
 interface AdCardProps {
   ad: AdData;

@@ -2,7 +2,7 @@ import React from "react";
 
 import { AdData } from "@/types/ad";
 
-import { AdCard } from "./AdCard";
+import { AdCard } from "../AdCard";
 
 interface AdCardGridProps {
   ads: AdData[];

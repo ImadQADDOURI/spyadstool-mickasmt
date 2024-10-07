@@ -1,6 +1,7 @@
 // app/dashboard/ad-library/[pageId]/page.tsx
 import { Suspense } from "react";
-import PageAdsLibrary from "@/components/adsLibrary/PageAdsLibrary";
+
+import PageAdBrowser from "@/components/adLibrary/PageAdBrowser";
 
 interface PageProps {
   params: {
@@ -11,7 +12,7 @@ interface PageProps {
 export default function PageAdLibraryPage({ params }: PageProps) {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <PageAdsLibrary pageId={params.pageId} />
+      <PageAdBrowser pageId={params.pageId} />
     </Suspense>
   );
 }
