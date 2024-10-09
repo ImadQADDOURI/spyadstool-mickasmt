@@ -12,7 +12,7 @@ import {
   YAxis,
 } from "recharts";
 
-import { Ad } from "@/types/ad";
+import { AdData } from "@/types/ad";
 import {
   Card,
   CardContent,
@@ -24,7 +24,7 @@ import {
 import AnalyzeTrends from "./AnalyzeTrends";
 
 interface AnalyticsProps {
-  ads: Ad[];
+  ads: AdData[];
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
@@ -40,24 +40,24 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
     let activeCount = 0;
 
     ads.forEach((ad) => {
-      if (ad.startDate === undefined) return;
+      if (ad.start_date === undefined) return;
       // // display ads Dates
       // console.log(
       //   `Before : Start Date: ${new Date(ad.startDate * 1000).toLocaleDateString()}, End Date: ${ad.endDate ? new Date(ad.endDate * 1000).toLocaleDateString() : "Ongoing"}, Active: ${ad.isActive}`,
       // );
-      const startDate = new Date(ad.startDate * 1000);
+      const startDate = new Date(ad.start_date * 1000);
       let endDate: Date;
 
       if (
         // if endDate not a valid date use today as end date
-        ad.endDate === undefined ||
-        new Date(ad.endDate * 1000) < startDate ||
-        new Date(ad.endDate * 1000) >= tomorrow
+        ad.end_date === undefined ||
+        new Date(ad.end_date * 1000) < startDate ||
+        new Date(ad.end_date * 1000) >= tomorrow
       ) {
-        console.log("🚀🚀🚀🚀 !!! invalid end date !!!", ad.endDate);
+        console.log("🚀🚀🚀🚀 !!! invalid end date !!!", ad.end_date);
         endDate = today;
       } else {
-        endDate = new Date(ad.endDate * 1000);
+        endDate = new Date(ad.end_date * 1000);
       }
 
       //Populating the Data Map:For each day between the start and end date of an ad, we increment the count in our dataMap.This gives us a day-by-day count of how many ads were active on each date.
@@ -71,7 +71,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ ads }) => {
       }
 
       // Count current active ads,We increment activeCount for each ad that is currently active.
-      if (ad.isActive) {
+      if (ad.is_active) {
         activeCount++;
       }
     });

@@ -226,7 +226,7 @@ export interface AdData {
   state_media_run_label: string | null;
 }
 
-interface Media {
+export interface Media {
   body?: string;
   caption?: string;
   cta_text?: string;

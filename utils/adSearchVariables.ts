@@ -90,3 +90,42 @@ export const getAdLibraryMobileVariables = (pageId: string) => {
     viewAllPageID: pageId,
   };
 };
+
+export const getAdLibraryAdCollationVariables = (
+  collationID: string,
+  forwardCursor: string | null,
+  activeStatus: string,
+) => {
+  return {
+    collationGroupID: collationID,
+    forwardCursor: forwardCursor || null,
+    backwardCursor: null,
+    activeStatus: activeStatus || "ALL",
+    adType: "ALL",
+    bylines: [],
+    countries: null,
+    location: null,
+    potentialReach: [],
+    publisherPlatforms: [],
+    regions: [],
+    sessionID: "ca227fe6-a7d7-431f-a8a2-94d2e69d7da8",
+    startDate: null,
+  };
+};
+
+// variables example: {"adArchiveID":"451740291243640","pageID":"432061063659239","country":"ALL","sessionID":"0162a99e-6971-4fb4-8a57-97c681e3f534","source":"FB_LOGO","isAdNonPolitical":true,"isAdNotAAAEligible":false}
+export const getAdLibraryAdDetailsV2Variables = (
+  adArchiveID: string,
+  pageID: string,
+  isAdAAAEligible: boolean,
+) => {
+  return {
+    adArchiveID,
+    pageID,
+    country: "ALL",
+    sessionID: "0162a99e-6971-4fb4-8a57-97c681e3f534",
+    source: "FB_LOGO",
+    isAdNonPolitical: true,
+    isAdNotAAAEligible: !isAdAAAEligible || false,
+  };
+};

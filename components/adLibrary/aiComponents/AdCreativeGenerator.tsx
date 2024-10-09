@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
 
-import { Ad } from "@/types/ad";
+import { AdData } from "@/types/ad";
 import { aiSupportedLanguages } from "@/lib/AiSupportedLanguages";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -19,7 +19,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { generateAdCreative } from "@/app/actions/geminiAi";
+import { generateAdCreative } from "@/app/actions/geminiAiService";
 
 interface AdCreative {
   primaryText: string;
@@ -28,7 +28,7 @@ interface AdCreative {
   callToAction: string;
 }
 
-const AdCreativeGenerator: React.FC<{ ad: Ad }> = ({ ad }) => {
+const AdCreativeGenerator: React.FC<{ ad: AdData }> = ({ ad }) => {
   const [adCreative, setAdCreative] = useState<AdCreative | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

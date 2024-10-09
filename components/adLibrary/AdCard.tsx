@@ -23,8 +23,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-//import { AdDetails } from "./AdDetails";
 import { SaveAdButton } from "./adCollections/SaveAdButton";
+import { AdDetails } from "./AdDetails";
 import DisplayPixelPlatformPayment from "./microComponents/DisplayPixelPlatformPayment";
 import ExpandableText from "./microComponents/expandableText";
 import PageNameWithPopover from "./microComponents/PageNameWithPopover";
@@ -257,6 +257,14 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
             <Info className="ml-1 h-3 w-3 cursor-help" />
           </div>
         )}
+        <button
+          className="group relative mb-2 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800"
+          onClick={() => setShowAdDetails(true)}
+        >
+          <span className="relative w-full rounded-md bg-white px-5 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
+            See ad details
+          </span>
+        </button>
       </CardContent>
 
       <CardFooter className="bg-gray-50 p-4 dark:bg-gray-800">
@@ -289,7 +297,6 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
             </div>
           </div>
         )}
-
         {ad.is_aaa_eligible && (
           <div className="mb-2 flex items-center text-sm text-gray-700 dark:text-gray-100">
             <Image
@@ -306,16 +313,6 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
             </span>
           </div>
         )}
-
-        <button
-          className="group relative mb-2 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800"
-          onClick={() => setShowAdDetails(true)}
-        >
-          <span className="relative w-full rounded-md bg-white px-5 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
-            See ad details
-          </span>
-        </button>
-
         <div className="mb-2 flex items-center">
           {snapshot?.page_profile_picture_url && (
             <Image
@@ -331,14 +328,12 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
             <PageNameWithPopover snapshot={snapshot} />
           </div>
         </div>
-
         {snapshot?.body?.text &&
           snapshot?.body?.text !== "&#123;&#123;product.brand&#125;&#125;" && (
             <div className=" text-xs">
               <ExpandableText text={snapshot.body.text || ""} maxLength={50} />
             </div>
           )}
-
         {renderMedia()}
       </CardFooter>
       <CardFooter>
@@ -353,9 +348,9 @@ export const AdCard: React.FC<AdCardProps> = ({ ad, compact = false }) => {
           </a>
         )}
       </CardFooter>
-      {/* {showAdDetails && (
+      {showAdDetails && (
         <AdDetails ad={ad} onClose={() => setShowAdDetails(false)} />
-      )} */}
+      )}
     </Card>
   );
 };

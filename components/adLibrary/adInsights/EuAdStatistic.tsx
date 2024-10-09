@@ -1,10 +1,11 @@
 // components/adsLibrary/EuAdStatistic.tsx
 import React from "react";
+import { Info, Loader2 } from "lucide-react";
 
-import { countryCodesAlpha2 } from "@/lib/countryCodesAlpha2";
-import AgeBarChart from "@/components/adsLibrary/AgeBarChart";
-import CountryBarChart from "@/components/adsLibrary/CountryBarChart";
-import GenderPieChart from "@/components/adsLibrary/GenderPieChart";
+import { countryCodesAlpha2Flag } from "@/lib/countryCodesAlpha2Flag";
+import AgeBarChart from "@/components/adLibrary/adInsights/AgeBarChart";
+import CountryBarChart from "@/components/adLibrary/adInsights/CountryBarChart";
+import GenderPieChart from "@/components/adLibrary/adInsights/GenderPieChart";
 
 interface EuAdStatisticProps {
   data: any;
@@ -18,19 +19,35 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
   error,
 }) => {
   if (isLoading) {
-    return <div className="text-center">Loading Statistics...</div>;
+    return (
+      <div className="flex items-center justify-center py-8 text-gray-500 dark:text-gray-400">
+        <div className="mr-3 h-8 w-8 animate-spin rounded-full border-b-2 border-t-2 border-purple-500"></div>
+        Loading Statistics...
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="text-center text-red-500">{error}</div>;
+    return (
+      <div
+        className="rounded-lg bg-red-100 p-4 text-red-700 dark:bg-red-900 dark:text-red-300"
+        role="alert"
+      >
+        <p className="font-bold">Error</p>
+        <p>{error}</p>
+      </div>
+    );
   }
 
   const aaaInfo = data?.data?.ad_library_main?.ad_details?.aaa_info;
 
   if (!aaaInfo) {
-    return <div className="text-center">No Statistics available.</div>;
+    return (
+      <div className="rounded-lg bg-gray-100 p-4 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+        No Statistics available.
+      </div>
+    );
   }
-
   const {
     gender_audience,
     age_audience,
@@ -118,7 +135,7 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
   const countryBarChartData = sortedCountries.map(([countryCode, totals]) => ({
     countryCode,
     countryLabel:
-      countryCodesAlpha2.find((c) => c.value === countryCode)?.label ||
+      countryCodesAlpha2Flag.find((c) => c.value === countryCode)?.label ||
       countryCode,
     total: totals.total,
     male: totals.male,
@@ -127,71 +144,76 @@ export const EuAdStatistic: React.FC<EuAdStatisticProps> = ({
   }));
 
   return (
-    <div className="rounded-lg bg-white p-4 shadow-md dark:bg-gray-700">
-      <h3 className="mb-2 text-lg font-semibold">European Union Statistics</h3>
-      <div className="space-y-2">
-        <p>
-          <strong>Gender Audience:</strong> {gender_audience || "Not specified"}
-        </p>
-        <p>
-          <strong>Age Audience:</strong>{" "}
-          {age_audience
-            ? `${age_audience.min}-${age_audience.max}`
-            : "Not specified"}
-        </p>
-        <p>
-          <strong>EU Total Reach:</strong> {eu_total_reach.toLocaleString()}
-        </p>
-        {/* <div>
-          <strong>Total Audience by Gender:</strong>
-          <ul className="list-inside list-disc">
-            <li>Male: {totalMale.toLocaleString()}</li>
-            <li>Female: {totalFemale.toLocaleString()}</li>
-            <li>Unknown: {totalUnknown.toLocaleString()}</li>
-          </ul>
-        </div> */}
-        <GenderPieChart
-          men={totalMale}
-          women={totalFemale}
-          unknown={totalUnknown}
+    <div className="space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          European Union Statistics
+        </h3>
+        <Info className="h-5 w-5 text-gray-400 dark:text-gray-500" />
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <StatCard
+          title="Gender Audience"
+          value={gender_audience || "Not specified"}
         />
+        <StatCard
+          title="Age Audience"
+          value={
+            age_audience
+              ? `${age_audience.min}-${age_audience.max}`
+              : "Not specified"
+          }
+        />
+        <StatCard
+          title="EU Total Reach"
+          value={eu_total_reach.toLocaleString()}
+        />
+      </div>
 
-        {/* <div>
-          <strong>Audience by Age Range:</strong>
-          <ul className="list-inside list-disc">
-            {sortedAgeRanges.map(([ageRange, totals]) => (
-              <li key={ageRange}>
-                {ageRange}: {totals.total.toLocaleString()}
-                (M: {totals.male.toLocaleString()}, F:{" "}
-                {totals.female.toLocaleString()}, U:{" "}
-                {totals.unknown.toLocaleString()})
-              </li>
-            ))}
-          </ul>
-        </div> */}
-        <AgeBarChart data={ageBarChartData} />
+      <div className="space-y-6">
+        <ChartSection title="Gender Distribution">
+          <GenderPieChart
+            men={totalMale}
+            women={totalFemale}
+            unknown={totalUnknown}
+          />
+        </ChartSection>
 
-        {/* <div>
-          <strong>Audience by Country:</strong>
-          <ul className="list-inside list-disc">
-            {sortedCountries.map(([countryCode, totals]) => {
-              const countryLabel =
-                countryCodesAlpha2.find((c) => c.value === countryCode)
-                  ?.label || countryCode;
-              return (
-                <li key={countryCode}>
-                  {countryLabel}: {totals.total.toLocaleString()}
-                  (M: {totals.male.toLocaleString()}, F:{" "}
-                  {totals.female.toLocaleString()}, U:{" "}
-                  {totals.unknown.toLocaleString()})
-                </li>
-              );
-            })}
-          </ul>
-        </div> */}
+        <ChartSection title="Age Distribution">
+          <AgeBarChart data={ageBarChartData} />
+        </ChartSection>
 
-        <CountryBarChart data={countryBarChartData} />
+        <ChartSection title="Country Distribution">
+          <CountryBarChart data={countryBarChartData} />
+        </ChartSection>
       </div>
     </div>
   );
 };
+
+const StatCard: React.FC<{ title: string; value: string | number }> = ({
+  title,
+  value,
+}) => (
+  <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-700">
+    <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">
+      {title}
+    </h4>
+    <p className="mt-2 text-xl font-semibold text-gray-900 dark:text-gray-100">
+      {value}
+    </p>
+  </div>
+);
+
+const ChartSection: React.FC<{ title: string; children: React.ReactNode }> = ({
+  title,
+  children,
+}) => (
+  <div className="space-y-2">
+    <h4 className="text-lg font-medium text-gray-700 dark:text-gray-300">
+      {title}
+    </h4>
+    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-700">{children}</div>
+  </div>
+);
