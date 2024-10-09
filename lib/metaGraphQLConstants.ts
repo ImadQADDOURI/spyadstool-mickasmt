@@ -15,7 +15,7 @@ export const API_ENDPOINT = "https://www.facebook.com/api/graphql";
 
 export const defaultHeaders = {
   accept: "*/*",
-  "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+  "accept-language": "en-US,en;q=0.9,fr;q=0.8",
   "content-type": "application/x-www-form-urlencoded",
   cookie:
     "datr=OcriZmtZzOtqJKEUX9Zhukco; sb=upzuZjh-bKjXqMoe0VbegPf7; fr=0Q1eXeTtiLUaz52p0..Bm7py6..AAA.0.0.Bm7py6.AWVzM2Hv3fc; wd=672x935",
